@@ -1,0 +1,65 @@
+\HeaderA{gcrma.engine}{GCRMA background adjust engine(internal function)}{gcrma.engine}
+\keyword{manip}{gcrma.engine}
+\begin{Description}\relax
+This function adjust for non-specific binding when all arrays in the
+dataset share the same probe affinity information. It takes matrices of PM
+probe intensities, MM probe intensities, other negative control probe
+intensities(optional) and the associated probe affinities, and return
+one matrix of non-specific binding corrected PM probe intensities.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+gcrma.engine(pms,mms,ncs=NULL,
+                         pm.affinities=NULL,mm.affinities=NULL,anc=NULL,
+                         type=c("fullmodel","affinities","mm","constant"),
+                         k=6*fast+0.5*(1-fast),
+                         stretch=1.15*fast+1*(1-fast),correction=1,GSB.adjust=TRUE,rho=0.7,
+                         verbose=TRUE,fast=FALSE)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{pms}] The matrix of PM intensities
+\item[\code{mms}] The matrix of MM intensities
+\item[\code{ncs}] The matrix of negative control probe intensities. When left
+as\code{NULL}, the MMs are considered the negative control probes.
+\item[\code{pm.affinities}] The vector of PM probe affinities. Note: This can be
+shorter than the number of rows in \code{pms} when some probes do not
+have sequence information provided.
+\item[\code{mm.affinities}] The vector of MM probe affinities.
+\item[\code{anc}] The vector of Negative Control probe affinities. This is
+ignored if MMs are used as negative controls (\code{ncs=NULL})
+\item[\code{type}] "fullmodel" for sequence and MM model. "affinities" for
+sequence information only. "mm" for using MM without sequence
+information.
+\item[\code{k}] A tuning factor.
+\item[\code{stretch}] 
+\item[\code{correction}] .
+\item[\code{GSB.adjust}] Logical value. If \code{TRUE}, probe effects in specific binding will
+be adjusted.
+\item[\code{rho}] correlation coefficient of log background intensity in a pair of pm/mm probes. Default=.7
+\item[\code{verbose}] Logical value. If \code{TRUE} messages about the progress of
+the function is printed.
+\item[\code{fast}] Logicalvalue. If \code{TRUE} a faster add-hoc algorithm is
+used.
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+Note that this expression measure is given to you in log base 2
+scale. This differs from most of the other expression measure
+methods.
+
+The tunning factor \code{k} will have different meainngs if one uses
+the fast (add-hoc) algorithm or the empirical bayes approach. See Wu
+et al. (2003)
+\end{Details}
+\begin{Value}
+A matrix of PM intensties.
+\end{Value}
+\begin{Author}\relax
+Rafeal Irizarry \& Zhijin Wu
+\end{Author}
+\begin{SeeAlso}\relax
+gcrma.engine2
+\end{SeeAlso}
+

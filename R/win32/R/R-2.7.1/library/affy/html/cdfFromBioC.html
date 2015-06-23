@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Functions to obtain CDF files</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for cdfFromBioC {affy}"><tr><td>cdfFromBioC {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Functions to obtain CDF files</h2>
+
+
+<h3>Description</h3>
+
+<p>
+A set of functions to obtain CDF files from various locations.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cdfFromBioC(cdfname, lib = .libPaths()[1], verbose = TRUE)
+cdfFromData(cdfname, pkg, verbose=TRUE)
+cdfFromLibPath(cdfname, lib = NULL, verbose=TRUE)
+cdfFromEnvironment(cdfname, where, verbose=TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>cdfname</code></td>
+<td>
+The CDF desired </td></tr>
+<tr valign="top"><td><code>lib</code></td>
+<td>
+Directory to install the CDF package to </td></tr>
+<tr valign="top"><td><code>pkg</code></td>
+<td>
+What package to search</td></tr>
+<tr valign="top"><td><code>where</code></td>
+<td>
+What environment to search</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+Controls extra output</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+These functions all take a requested CDF environment name and will
+attempt to locate that environment in the appropriate location (a
+package's data directory, as a CDF package in the .libPaths(), from a
+loaded environment or on the Bioconductor website.  If the environment
+can not be found, it will return a list of the methods tried that failed.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+The CDF environment or a list detailing the failed locations.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Jeff Gentry
+</p>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

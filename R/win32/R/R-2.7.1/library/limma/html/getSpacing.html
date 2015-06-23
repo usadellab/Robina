@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Get Numerical Spacing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for getSpacing {limma}"><tr><td>getSpacing {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Get Numerical Spacing</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Convert character to numerical spacing measure for within-array replicate spots.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getSpacing(spacing, layout)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>spacing</code></td>
+<td>
+character string or integer.
+Acceptable character strings are <code>columns</code>, <code>rows</code> or <code>topbottom</code>.
+Integer values are simply passed through.</td></tr>
+<tr valign="top"><td><code>layout</code></td>
+<td>
+list containing printer layout information</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+Integer giving spacing between replicate spots in the gene list.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+An overview of LIMMA functions for reading data is given in <a href="03reading.html">03.ReadingData</a>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+getSpacing("columns",list(ngrid.r=2,ngrid.c=2,nspot.r=20,nspot.c=19))
+getSpacing("rows",list(ngrid.r=2,ngrid.c=2,nspot.r=20,nspot.c=19))
+getSpacing("topbottom",list(ngrid.r=2,ngrid.c=2,nspot.r=20,nspot.c=19))
+</pre>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

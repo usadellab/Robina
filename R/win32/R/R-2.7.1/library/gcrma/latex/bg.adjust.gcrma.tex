@@ -1,0 +1,72 @@
+\HeaderA{bg.adjust.gcrma}{GCRMA background adjust (internal function)}{bg.adjust.gcrma}
+\keyword{manip}{bg.adjust.gcrma}
+\begin{Description}\relax
+This function performs background adjustment (optical noise and
+non-specific binding on an \code{AffyBatch}
+project and returns an \code{AffyBatch} object in which the PM
+intensities are adjusted.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+bg.adjust.gcrma(object,affinity.info=NULL,
+      affinity.source=c("reference","local"),
+      NCprobe=NULL,
+      type=c("fullmodel","affinities","mm","constant"),
+      k=6*fast+0.5*(1-fast),stretch=1.15*fast+1*(1-fast),correction=1,
+      GSB.adjust=TRUE,
+      rho=.7,optical.correct=TRUE,verbose=TRUE,fast=TRUE)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{object}] an \code{\LinkA{AffyBatch}{AffyBatch}}
+\item[\code{affinity.info}] \code{NULL} or an \code{AffyBatch} containing the
+affinities in the \code{exprs} slot. This object can be created
+using the function \code{\LinkA{compute.affinities}{compute.affinities}}.
+\item[\code{affinity.source}] \code{reference}: use the package internal
+Non-specific binding data or \code{local}: use the experimental
+data in \code{object}. If \code{local} is chosen, either MM probes or a user-defined
+list of probes (see \code{NCprobes}) are used to estimate affinities.
+\item[\code{NCprobe}] 
+\item[\code{type}] "fullmodel" for sequence and MM model. "affinities" for
+sequence information only. "mm" for using MM without sequence
+information.
+\item[\code{k}] A tuning factor.
+\item[\code{stretch}] 
+\item[\code{correction}] .
+\item[\code{GSB.adjust}] Logical value. If \code{TRUE}, probe effects in specific binding will
+be adjusted.
+\item[\code{rho}] correlation coefficient of log background intensity in a pair of pm/mm probes. Default=.7
+\item[\code{optical.correct}] Logical value. If \code{TRUE}, optical
+background correction is performed.
+\item[\code{verbose}] Logical value. If \code{TRUE} messages about the progress of
+the function is printed.
+\item[\code{fast}] Logical value. If \code{TRUE} a faster ad hoc algorithm is
+used.
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+The returned value is an \code{AffyBatch} object, in which the PM probe intensities
+have been background adjusted. The rest is left the same as the
+starting \code{AffyBatch} object.
+
+The tunning factor \code{k} will have different meainngs if one uses
+the fast (ad hoc) algorithm or the empirical bayes approach. See Wu
+et al. (2003)
+\end{Details}
+\begin{Value}
+An \code{AffyBatch}.
+\end{Value}
+\begin{Author}\relax
+Rafeal Irizarry
+\end{Author}
+\begin{Examples}
+\begin{ExampleCode}
+ if(require(affydata) & require(hgu95av2probe) & require(hgu95av2cdf)){
+          data(Dilution)
+          ai <- compute.affinities(cdfName(Dilution))
+          Dil.adj<-bg.adjust.gcrma(Dilution,affinity.info=ai,type="affinities")
+     }
+\end{ExampleCode}
+\end{Examples}
+

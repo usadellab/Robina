@@ -1,0 +1,48 @@
+pseudo.coloring           package:affyPLM           R Documentation
+
+_C_o_l_o_r_i_n_g _p_s_e_u_d_o _c_h_i_p _i_m_a_g_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     These are routines used for coloring pseudo chip images.
+
+_U_s_a_g_e:
+
+       pseudoPalette(low = "white", high = c("green", "red"), mid = NULL,k =50) 
+       pseudoColorBar(x, horizontal = TRUE, col = heat.colors(50), scale = 1:length(x),k = 11, log.ticks=FALSE,...)
+       
+
+_A_r_g_u_m_e_n_t_s:
+
+     low: color at low end of scale
+
+    high: color at high end of scale
+
+     mid: color at exact middle of scale
+
+       k: number of colors to have
+
+       x: A data series
+
+horizontal: If 'TRUE' then color bar is to be draw horizontally
+
+     col: colors for color bar
+
+   scale: tickmarks for 'x' if 'x' is not numeric
+
+log.ticks: use a log type transformation to assign the colors
+
+     ...: additional parameters to plotting routine
+
+_D_e_t_a_i_l_s:
+
+     Adapted from similar tools in maPlots pacakge.
+
+_A_u_t_h_o_r(_s):
+
+     Ben Bolstad bmb@bmbolstad.com
+
+_S_e_e _A_l_s_o:
+
+     'AffyBatch', 'read.affybatch'
+

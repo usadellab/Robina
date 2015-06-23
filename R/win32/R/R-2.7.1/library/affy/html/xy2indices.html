@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Functions to convert indices to x/y (and reverse)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for xy2indices {affy}"><tr><td>xy2indices {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Functions to convert indices to x/y (and reverse)</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Functions to convert indices to x/y (and reverse)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+xy2indices(x, y, nr = NULL, cel = NULL, abatch = NULL, cdf = NULL, xy.offset = NULL)
+indices2xy(i, nr = NULL, cel = NULL, abatch = NULL, cdf = NULL, xy.offset = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<code>X</code> position for the probes </td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<code>Y</code> position for the probes </td></tr>
+<tr valign="top"><td><code>i</code></td>
+<td>
+indices in the <code>AffyBatch</code> for the probes </td></tr>
+<tr valign="top"><td><code>nr</code></td>
+<td>
+total number of <code>Xs</code> on the chip </td></tr>
+<tr valign="top"><td><code>cel</code></td>
+<td>
+a corresponding object of class <code><a href="Cel-class.html">Cel</a></code> </td></tr>
+<tr valign="top"><td><code>abatch</code></td>
+<td>
+a corresponding object of class
+<code><a href="AffyBatch-class.html">AffyBatch</a></code> </td></tr>
+<tr valign="top"><td><code>cdf</code></td>
+<td>
+character - the name of the corresponding cdf package</td></tr>
+<tr valign="top"><td><code>xy.offset</code></td>
+<td>
+an eventual offset for the XY coordinates. See Details</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The probes intensities for given probe set ids are extracted from an
+<code>AffyBatch</code> object using the indices stored in the corresponding
+<code>cdfenv</code>.
+</p>
+<p>
+The parameter <code>xy.offset</code> is there for compatibility.
+For historical reasons, the xy-coordinates for the features
+on Affymetrix chips were decided to start at 1 (one) rather than 0
+(zero). One can set the offset to 1 or to 0. Unless the you _really_
+know what you are doing, it is advisable to let it at the default
+value <code>NULL</code>. This way the package-wide option code{xy.offset} is
+always used.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A vector of indices or a two-columns matrix of Xs and Ys.</p>
+
+<h3>Warning</h3>
+
+<p>
+Even if one really knows what is going on, playing with the
+parameter <code>xy.offset</code> could be risky. Changing the package-wide
+option <code>xy.offset</code> appears much more sane.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+L.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="AffyBatch-class.html">indexProbes</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(affybatch.example)
+
+pm.i &lt;- indexProbes(affybatch.example, which="pm", genenames="AFFX-BioC-5_at")[[1]]
+mm.i &lt;- indexProbes(affybatch.example, which="mm", genenames="AFFX-BioC-5_at")[[1]]
+
+pm.i.xy &lt;- indices2xy(pm.i, abatch = affybatch.example)
+mm.i.xy &lt;- indices2xy(mm.i, abatch = affybatch.example)
+
+image(affybatch.example[1], transfo=log2)
+## plot the pm in red
+plotLocation(pm.i.xy, col="red")
+plotLocation(mm.i.xy, col="blue")
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

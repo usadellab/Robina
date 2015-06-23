@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Apply a function over the ProbeSets in an AffyBatch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for ppsetApply {affy}"><tr><td>ppsetApply {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Apply a function over the ProbeSets in an AffyBatch</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Apply a function over the ProbeSets in an AffyBatch
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ppsetApply(abatch, FUN, genenames = NULL, ...)
+
+ppset.ttest(ppset, covariate, pmcorrect.fun = pmcorrect.pmonly, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>abatch</code></td>
+<td>
+An object inheriting from <code>AffyBatch</code>.</td></tr>
+<tr valign="top"><td><code>ppset</code></td>
+<td>
+An object of class <code>ProbeSet</code>.</td></tr>
+<tr valign="top"><td><code>covariate</code></td>
+<td>
+the name a covariate in the slot <code>phenoData</code>.</td></tr>
+<tr valign="top"><td><code>pmcorrect.fun</code></td>
+<td>
+a function to corrrect PM intensities</td></tr>
+<tr valign="top"><td><code>FUN</code></td>
+<td>
+A function working on a <code>ProbeSet</code> </td></tr>
+<tr valign="top"><td><code>genenames</code></td>
+<td>
+A list of Affymetrix probesets ids to work with. All
+probe set ids used when <code>NULL</code>.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Optional parameters to the function <code>FUN</code> </td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+Returns a <code>list</code> of objects, or values, as returned by the
+function <code>FUN</code>
+for each <code>ProbeSet</code> it processes.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Laurent Gautier &lt;laurent@cbs.dtu.dk&gt;
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="ProbeSet-class.html">ProbeSet-class</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+ppset.ttest &lt;- function(ppset, covariate, pmcorrect.fun = pmcorrect.pmonly, ...) {
+  probes &lt;- do.call("pmcorrect.fun", list(ppset))
+  my.ttest &lt;- function(x) {
+    y &lt;- split(x, get(covariate))
+    t.test(y[[1]], y[[2]])$p.value
+  }
+  r &lt;- apply(probes, 1, my.ttest)
+  return(r)
+}
+
+## create a dataset
+data(affybatch.example)
+abatch &lt;- merge(affybatch.example, affybatch.example2)
+intensity(abatch) &lt;- 2^jitter(log2(intensity(abatch)),1,1)
+chip.variate &lt;- c("a", "b", "a", "a", "b", "a")
+phenoData(abatch) &lt;- new("AnnotatedDataFrame", data=data.frame(whatever=chip.variate))
+## run a test over _all_ probes.
+all.ttest &lt;- ppsetApply(abatch, ppset.ttest, covariate="whatever")
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

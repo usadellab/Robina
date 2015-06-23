@@ -1,0 +1,37 @@
+Package: AnnotationDbi
+Title: Annotation Database Interface
+Description: Provides user interface and database connection code for
+        annotation data packages using SQLite data storage.
+Version: 1.2.2
+Author: Herve Pages, Marc Carlson, Seth Falcon, Nianhua Li
+Maintainer: Biocore Team c/o BioC user list
+        <bioconductor@stat.math.ethz.ch>
+Depends: R (>= 2.7.0), methods, utils, Biobase (>= 1.17.0), DBI (>=
+        0.2-4), RSQLite (>= 0.6-4)
+Imports: methods, utils, Biobase, DBI, RSQLite
+Suggests: hgu95av2.db, hgu95av2, GO.db, GO, human.db0, mouse.db0,
+        rat.db0, fly.db0, yeast.db0, arabidopsis.db0
+Collate: 00RTobjs.R AllGenerics.R AllClasses.R FlatBimap.R SQL.R
+        AnnDbObj-lowAPI.R Bimap.R GOTerms.R BimapFormatting.R
+        AnnDbBimap-envirAPI.R flatten.R createAnnObjs-utils.R
+        createAnnObjs.HUMANCHIP_DB.R createAnnObjs.MOUSECHIP_DB.R
+        createAnnObjs.RATCHIP_DB.R createAnnObjs.FLYCHIP_DB.R
+        createAnnObjs.YEASTCHIP_DB.R createAnnObjs.ARABIDOPSISCHIP_DB.R
+        createAnnObjs.HUMAN_DB.R createAnnObjs.MALARIA_DB.R
+        createAnnObjs.MOUSE_DB.R createAnnObjs.RAT_DB.R
+        createAnnObjs.FLY_DB.R createAnnObjs.YEAST_DB.R
+        createAnnObjs.YEASTLEGACY_DB.R createAnnObjs.GO_DB.R
+        createAnnObjs.KEGG_DB.R createAnnObjs.INPARANOIDHOMSA_DB.R
+        createAnnObjs.INPARANOIDMUSMU_DB.R
+        createAnnObjs.INPARANOIDRATNO_DB.R
+        createAnnObjs.INPARANOIDDROME_DB.R
+        createAnnObjs.INPARANOIDSACCE_DB.R createAnnObjs.PFAM_DB.R
+        createAnnObjs.AFFYHUEX_DB.R AnnDbPkg-templates-common.R
+        AnnDbPkg-maker.R AnnDbPkg-checker.R makeMap.R
+        sqlForge_baseMapBuilder.R sqlForge_schemaGen.R
+        sqlForge_tableBuilder.R sqlForge_makeAnnPkgs.R
+        sqlForge_wrapBaseDBPkgs.R zzz.R
+License: Artistic-2.0
+biocViews: Annotation, Infrastructure
+Packaged: Tue Jun 17 03:52:35 2008; biocbuild
+Built: R 2.7.0; ; 2008-06-17 07:54:42; windows

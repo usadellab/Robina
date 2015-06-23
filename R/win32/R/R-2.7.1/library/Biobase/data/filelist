@@ -1,0 +1,13 @@
+SW.rda
+aaMap.R
+filelist
+geneCov.R
+geneCovariate.rda
+geneData.R
+reporter.rda
+sample.ExpressionSet.rda
+sample.MultiSet.rda
+sample.eSet.R
+sample.exprSet.1.R
+sample.exprSet.R
+seD.rda

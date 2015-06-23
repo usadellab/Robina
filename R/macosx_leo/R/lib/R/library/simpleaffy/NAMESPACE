@@ -1,0 +1,34 @@
+useDynLib("simpleaffy")
+
+importFrom("utils", "data")
+import("methods")
+
+exportPattern("^[^.]")
+
+exportClasses("PairComp",
+              "QCStats"
+              )
+
+exportMethods(
+              "[",
+              "avbg",
+              "calculated.from",
+              "calls",
+              "fc",
+              "get.array.subset",
+              "group",
+              "maxbg",
+              "means",
+              "members",
+              "minbg",
+              "pData",
+              "percent.present",
+              "plot",
+              "qc",
+              "qcProbes",
+              "ratios",
+              "sfs",
+              "spikeInProbes",
+              "target",
+              "tt"
+              )

@@ -1,0 +1,60 @@
+\HeaderA{plotRP}{Graphical Display of the Rank Product/Sum analysis}{plotRP}
+\keyword{htest}{plotRP}
+\begin{Description}\relax
+Plot a graphical display of the estimated pfp vs 
+number of identified genes
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+     plotRP(x, cutoff=NULL)\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] the value returned by function RP, 
+RPadvance or RSadvance 
+\item[\code{cutoff}] threshold in pfp used to select genes
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+A graphical display of the estimated pfp vs number of 
+identified genes, which is also the gene rank of its 
+original rank product/sum across all comparison. If cutoff 
+is sepcified, a horizontal line will be plotted on the 
+graphic to indicate the positon of the cutoff point, and 
+all genes identified will be marked red.
+
+Two plots will be displayed, one for the identification of 
+up-regulated genes in class 2, one for the identification of 
+down-regulated genes in class 2
+\end{Value}
+\begin{Author}\relax
+Fangxin Hong \email{fhong@salk.edu}
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{topGene}{topGene}}   \code{\LinkA{RP}{RP}}  
+\code{\LinkA{RPadvance}{RPadvance}} \code{\LinkA{RSadvance}{RSadvance}}
+\end{SeeAlso}
+\begin{Examples}
+\begin{ExampleCode}
+     
+      # Load the data of Golub et al. (1999). data(golub) 
+      #contains a 3051x38 gene expression
+      # matrix called golub, a vector of length called golub.cl 
+      #that consists of the 38 class labels,
+      # and a matrix called golub.gnames whose third column contains the gene names.
+      data(golub)
+ 
+      #use a subset of data as example, apply the rank product method
+      subset <- c(1:4,28:30)
+      #Setting rand=123, to make the results reproducible,
+
+      #identify genes that are up-regulated in class 2 
+      #(class label =1)
+      RP.out <- RP(golub[,subset],golub.cl[subset], rand=123)
+      
+      #plot the results
+      plotRP(RP.out,cutoff=0.05)
+      
+\end{ExampleCode}
+\end{Examples}
+

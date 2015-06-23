@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Read RGList from SPOT Image Analysis Output Files</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for rg.series.spot {limma}"><tr><td>rg.series.spot {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Read RGList from SPOT Image Analysis Output Files</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Extracts an RGList from a series of Spot image analysis files.
+</p>
+<p>
+This is a depreciated function.
+Use <code><a href="read.maimages.html">read.maimages</a></code> instead.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+rg.series.spot(slides,path=NULL,names.slides=names(slides),suffix="spot",wt.fun=NULL,verbose=TRUE,...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>slides</code></td>
+<td>
+character vector giving the names of the files containing the Spot output</td></tr>
+<tr valign="top"><td><code>path</code></td>
+<td>
+character string giving the directory containing the files. Can be omitted if the files are in the current working directory.</td></tr>
+<tr valign="top"><td><code>names.slides</code></td>
+<td>
+names to be associated with each slide as column name</td></tr>
+<tr valign="top"><td><code>suffix</code></td>
+<td>
+the file names are assumed to have this suffix added to names in <code>slides</code></td></tr>
+<tr valign="top"><td><code>wt.fun</code></td>
+<td>
+function to calculate quality weights</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+<code>TRUE</code> to report each time a file in read in</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+any other arguments to be passed to <code>scan</code></td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function extracts the foreground and background intensities from a series of files, produced by the image analysis program SPOT, and assembles them in the components of one list.
+</p>
+<p>
+Spot quality weights may also be extracted using an optional weight function.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list containing the components
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>R</code></td>
+<td>
+matrix containing the red channel foreground intensities for each spot for each array.</td></tr>
+<tr valign="top"><td><code>Rb</code></td>
+<td>
+matrix containing the red channel background intensities for each spot for each array.</td></tr>
+<tr valign="top"><td><code>G</code></td>
+<td>
+matrix containing the green channel foreground intensities for each spot for each array.</td></tr>
+<tr valign="top"><td><code>Gb</code></td>
+<td>
+matrix containing the green channel background intensities for each spot for each array.</td></tr>
+<tr valign="top"><td><code>weights</code></td>
+<td>
+spot quality weights, if <code>wt.fun</code> is not <code>NULL</code></td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+An overview of LIMMA functions for reading data is given in <a href="03reading.html">03.ReadingData</a>.
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

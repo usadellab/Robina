@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: From raw probe intensities to expression values</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for expresso {affy}"><tr><td>expresso {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>From raw probe intensities to expression values</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Goes from raw probe intensities to expression values
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+expresso(
+        afbatch,
+    # background correction
+        bg.correct = TRUE,
+        bgcorrect.method = NULL,
+        bgcorrect.param = list(),
+    # normalize
+        normalize = TRUE,
+        normalize.method = NULL,
+        normalize.param = list(),
+    # pm correction
+        pmcorrect.method = NULL,
+        pmcorrect.param = list(),
+    # expression values
+        summary.method = NULL,
+        summary.param = list(),
+        summary.subset = NULL,
+    # misc.
+        verbose = TRUE,
+        widget = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>afbatch</code></td>
+<td>
+An <code><a href="AffyBatch-class.html">AffyBatch</a></code> object </td></tr>
+<tr valign="top"><td><code>bg.correct</code></td>
+<td>
+a boolean to express whether background correction
+is wanted or not.</td></tr>
+<tr valign="top"><td><code>bgcorrect.method</code></td>
+<td>
+the name of the background adjustment method</td></tr>
+<tr valign="top"><td><code>bgcorrect.param</code></td>
+<td>
+a list of parameters for bgcorrect.method (if needed/wanted)</td></tr>
+<tr valign="top"><td><code>normalize</code></td>
+<td>
+normalization step wished or not.</td></tr>
+<tr valign="top"><td><code>normalize.method</code></td>
+<td>
+the normalization method to use</td></tr>
+<tr valign="top"><td><code>normalize.param</code></td>
+<td>
+a list of parameters to be passed to the
+normalization method (if wanted).</td></tr>
+<tr valign="top"><td><code>pmcorrect.method</code></td>
+<td>
+the name of the PM adjustement method</td></tr>
+<tr valign="top"><td><code>pmcorrect.param</code></td>
+<td>
+a list of parameters for pmcorrect.method (if needed/wanted)</td></tr>
+<tr valign="top"><td><code>summary.method</code></td>
+<td>
+the method used for the computation of expression values</td></tr>
+<tr valign="top"><td><code>summary.param</code></td>
+<td>
+a list of parameters to be passed to the
+<code>summary.method</code> (if wanted).</td></tr>
+<tr valign="top"><td><code>summary.subset</code></td>
+<td>
+a list of 'affyids'. If <code>NULL</code>, a
+expression summary value is computed for everything on the chip.</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+logical value. If <code>TRUE</code> it writes out some
+messages.</td></tr>
+<tr valign="top"><td><code>widget</code></td>
+<td>
+a boolean to specify the use of widgets (the package
+tkWidget is required).</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Some arguments can be left to <code>NULL</code> if the <code>widget=TRUE</code>.
+In this case, a widget pops up and let the user choose with the mouse.
+The arguments are: <code>AffyBatch</code>,
+<code>bgcorrect.method</code>, <code>normalize.method</code>, <code>pmcorrect.method</code> and <code>summary.method</code>.
+</p>
+<p>
+For the mas 5.0 and 4.0 methods ones need to normalize after obtaining
+expression. The function <code><a href="affy.scalevalue.exprSet.html">affy.scalevalue.exprSet</a></code> does this.
+</p>
+<p>
+To see what background methods are available you can look at the
+object <code>bgcorrect.methods</code>.
+</p>
+<p>
+For the Li and Wong summary method notice you will not get
+the same results as you would get with dChip. dChip is not open source
+so it is not easy to reproduce. 
+Notice also that this iterative algorithm will not always converge.
+If you run the algorithm on thousands of probes expect some non-convergence
+warnings. These are more likely when few arrays are used. We recommend
+using this method only if you have 10 or more arrays.
+Please refer to the <code><a href="fit.li.wong.html">fit.li.wong</a></code> help page for more details.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+An object of class <code><a href="../../Biobase/html/class.ExpressionSet.html">ExpressionSet</a></code>, with an attribute
+<code>pps.warnings</code> as returned by the method <code><a href="generateExprSet-methods.html">computeExprSet</a></code>.</p>
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="AffyBatch-class.html">AffyBatch</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(affybatch.example)
+
+eset &lt;- expresso(affybatch.example, bgcorrect.method="rma",
+                 normalize.method="constant",pmcorrect.method="pmonly",
+                 summary.method="avgdiff")
+
+##to see options available for bg correction type:
+bgcorrect.methods
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

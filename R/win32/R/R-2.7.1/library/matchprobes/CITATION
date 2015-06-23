@@ -1,0 +1,17 @@
+citHeader("To cite matchprobes in publications use:")
+
+citEntry(entry="article",
+         title = "matchprobes: a Bioconductor package for the sequence-matching of microarray probe elements",
+         author = personList(person(last="Huber", first="W."),
+                             person(last="Gentleman", first="R.")),
+         journal = "Bioinformatics",
+         year = "2004",
+         pages = "1651--1652",
+         volume = "20",
+         textVersion = paste("Huber W. and Gentleman R.", 
+                             "matchprobes: a Bioconductor package for the sequence-matching of microarray probe elements.", 
+                             "Bioinformatics, 20, 1651--1652, 2004."))
+
+citFooter("We have invested a lot of time and effort in creating matchprobes,",
+          "please cite it when using it for data analysis.")
+

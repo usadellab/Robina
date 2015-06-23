@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Combine marrayRaw,  marrayNorm or marrayInfo Objects</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for cbind {marray}"><tr><td>cbind {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Combine marrayRaw,  marrayNorm or marrayInfo Objects</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Combine a series of <code>marrayRaw</code>, <code>marrayNorm</code> and
+<code>marrayInfo</code> objects.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'marrayRaw':
+cbind(..., deparse.level=1)
+## S3 method for class 'marrayNorm':
+cbind(..., deparse.level=1)
+## S3 method for class 'marrayInfo':
+rbind(..., deparse.level=1)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>...</code></td>
+<td>
+<code>marrayRaw</code> objects or <code>marrayNorm</code> objects</td></tr>
+<tr valign="top"><td><code>deparse.level</code></td>
+<td>
+not currently used, see <code><a href="../../base/html/cbind.html">cbind</a></code> in the base package</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+<code>cbind</code> combines data objects assuming the same gene lists but
+different arrays. 
+<code>rbind</code> combines data objects assuming equivalent arrays, i.e., the
+same RNA targets, but different genes. 
+</p>
+<p>
+For <code>cbind</code>, the matrices o f expression data from the individual
+objects are cbinded. 
+The data.frames of target information, if they exist, are rbinded. 
+The combined data object will preserve any additional components or
+attributes found in the first object to be combined. 
+For <code>rbind</code>, the matrices of expression data are rbinded while the
+target information, in any, is unchanged.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yang
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/cbind.html">cbind</a></code> in the base package.
+</p>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

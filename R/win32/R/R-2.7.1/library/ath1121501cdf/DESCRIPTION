@@ -1,0 +1,14 @@
+Package: ath1121501cdf
+Title: ath1121501cdf
+Version: 2.2.0
+Created: Thu Apr 17 15:39:21 2008
+Author: The Bioconductor Project
+Description: A package containing an environment representing the
+        ATH1-121501.CDF file.
+Maintainer: Biocore Data Team <biocannotation@lists.fhcrc.org>
+License: LGPL
+biocViews: AnnotationData, AffymetrixChip, ath1121501,
+        Arabidopsis_thaliana
+Depends: utils
+Packaged: Fri Apr 18 09:09:22 2008; jmacdon
+Built: R 2.7.0; ; 2008-05-28 11:58:11; windows

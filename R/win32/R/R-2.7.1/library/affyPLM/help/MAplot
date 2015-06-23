@@ -1,0 +1,32 @@
+MAplot                package:affyPLM                R Documentation
+
+_R_e_l_a_t_i_v_e _M _v_s. _A _p_l_o_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Create boxplots of M or M vs A plots. Where M is determined
+     relative to a specified chip or to a pseudo-median reference chip.
+
+_A_r_g_u_m_e_n_t_s:
+
+     ...: Additional parameters for the routine
+
+       A: A vector to plot along the horizonal axis
+
+       M: A vector to plot along vertical axis
+
+  subset: A set of indices to use when drawing the loess curve
+
+show.statistics: If true some summary statistics of the M values are
+          drawn
+
+    span: span to be used for loess fit.
+
+family.loess: '"guassian"' or '"symmetric"' as in 'loess'.
+
+     cex: Size of text when writing summary statistics on plot
+
+_S_e_e _A_l_s_o:
+
+     'mva.pairs'
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Stratified bivariate robust local regression</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for ma2D {marray}"><tr><td>ma2D {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Stratified bivariate robust local regression</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function performs robust local regression of a variable <code>z</code> on predictor variables <code>x</code> and <code>y</code>, separately within values of a fourth variable <code>g</code>. It is used by <code><a href="maNorm2D.html">maNorm2D</a></code> for 2D spatial location normalization.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ma2D(x, y, z, g, w=NULL, subset=TRUE, span=0.4, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+A numeric vector of predictor variables.</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+A numeric vector of predictor variables.</td></tr>
+<tr valign="top"><td><code>z</code></td>
+<td>
+A numeric vector of responses.</td></tr>
+<tr valign="top"><td><code>g</code></td>
+<td>
+Variables used to stratify the data.</td></tr>
+<tr valign="top"><td><code>w</code></td>
+<td>
+An optional numeric vector of weights.</td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+A "logical" or "numeric" vector indicating the subset of points used to compute the fits. </td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+The argument <code>span</code> which controls the degree of
+smoothing in the  <code><a href="../../stats/html/loess.html">loess</a></code> function.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Misc arguments</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+<code>z</code> is regressed on <code>x</code> and <code>y</code>, separately within values of <code>g</code> using the <code><a href="../../stats/html/loess.html">loess</a></code> function.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A numeric vector of fitted values.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="maNormMain.html">maNormMain</a></code>, <code><a href="maNorm2D.html">maNorm2D</a></code>, <code><a href="../../stats/html/loess.html">loess</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# See examples for maNormMain.
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

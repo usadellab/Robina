@@ -1,0 +1,80 @@
+gcrma.engine2             package:gcrma             R Documentation
+
+_G_C_R_M_A _b_a_c_k_g_r_o_u_n_d _a_d_j_u_s_t _e_n_g_i_n_e(_i_n_t_e_r_n_a_l _f_u_n_c_t_i_o_n)
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function adjust for non-specific binding when each array has
+     its own probe affinity information. It takes an AffyBatch object
+     of probe intensities and an AffyBatch of probe  affinity, returns
+     one matrix of non-specific binding corrected PM probe intensities.
+
+_U_s_a_g_e:
+
+     gcrma.engine2(object,pmIndex=NULL,mmIndex=NULL,
+                   NCprobe=NULL,affinity.info,
+                   type=c("fullmodel","affinities","mm","constant"),
+                   k=6*fast+0.5*(1-fast),
+                   stretch=1.15*fast+1*(1-fast),correction=1,GSB.adjust=TRUE,rho=0.7,
+                   verbose=TRUE,fast=TRUE)
+
+_A_r_g_u_m_e_n_t_s:
+
+  object: an 'AffyBatch'. Note: this is an internal function. Optical
+          noise should have been corrected for. 
+
+ pmIndex: Index of PM probes.This will be computed within the function
+          if left 'NULL'
+
+ mmIndex: Index of MM probes.This will be computed within the function
+          if left 'NULL'
+
+ NCprobe: 
+
+affinity.info: 'NULL' or an 'AffyBatch' containing the affinities in
+          the 'exprs' slot. This object can be created using the
+          function 'compute.affinities'.
+
+    type: "fullmodel" for sequence and MM model. "affinities" for
+          sequence information only. "mm" for using MM without sequence
+          information.
+
+       k: A tuning factor.
+
+ stretch: 
+
+correction: .
+
+GSB.adjust: Logical value. If 'TRUE', probe effects in specific binding
+          will be adjusted.
+
+     rho: correlation coefficient of log background intensity in a pair
+          of pm/mm probes. Default=.7
+
+ verbose: Logical value. If 'TRUE' messages about the progress of the
+          function is printed.
+
+    fast: Logicalvalue. If 'TRUE' a faster add-hoc algorithm is used.
+
+_D_e_t_a_i_l_s:
+
+     Note that this expression measure is given to you in log base 2
+     scale. This differs from most of the other expression measure
+     methods.
+
+     The tunning factor 'k' will have different meainngs if one uses
+     the fast (add-hoc) algorithm or the empirical bayes approach. See
+     Wu et al. (2003)
+
+_V_a_l_u_e:
+
+     A matrix of PM intensties.
+
+_A_u_t_h_o_r(_s):
+
+     Rafeal Irizarry & Zhijin Wu
+
+_S_e_e _A_l_s_o:
+
+     gcrma.engine
+

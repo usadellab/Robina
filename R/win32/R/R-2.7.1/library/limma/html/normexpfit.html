@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Fit Normal+Exp Convolution Model to Observed Intensities</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for normexp.fit {limma}"><tr><td>normexp.fit {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Fit Normal+Exp Convolution Model to Observed Intensities</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Fit normal+exponential convolution model to observed intensities.
+The normal part represents the background and the exponential represents the signal intensities.
+This function is called by <code>backgroundCorrect</code> and is not normally called directly by the user.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+normexp.fit(x, method="saddle", n.pts=NULL, trace=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+numeric vector of (background corrected) intensities</td></tr>
+<tr valign="top"><td><code>method</code></td>
+<td>
+method used to estimate the three parameters, choices are <code>"saddle"</code>, <code>"neldermead"</code>, <code>"bfgs"</code>, <code>"rma"</code> and <code>"mcgee"</code>.</td></tr>
+<tr valign="top"><td><code>n.pts</code></td>
+<td>
+number of quantiles of <code>x</code> to use for the fit. If <code>NA</code> then all values of <code>x</code> will be used.</td></tr>
+<tr valign="top"><td><code>trace</code></td>
+<td>
+logical, if <code>TRUE</code>, tracing information on the progress of the optimization is given.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function uses maximum likelihood estimation to fit a model to the background-corrected intensities.
+The model is a $normal(&mu;,&sigma;^2)+exponential(&alpha;)$ convolution model for the background corrected intensities.
+</p>
+<p>
+This is essentially the same model which is used by <code>bg.correct.rma</code> in the affy package.
+The difference is that the parameters are estimated by maximum likelihood and that the estimated background is subtracted before applying the model-based background.
+</p>
+<p>
+For speed and numerical stability, the likelihood function is approximated by default using a saddle-point approximation.
+Other choices are <code>"neldermead"</code> or <code>"bfgs"</code> which attempt to maximize the exact log-likelihood, which may be numerically unstable.
+<code>"rma"</code> uses the kernel estimation method from the RMA algorithm of affy package.
+<code>"mcgee"</code> uses the RMA-75 method from McGee and Chen (2006).
+</p>
+<p>
+If the number of rows of <code>x</code> is large, computation time can be saved by setting <code>n.pts</code> to a value less than the total number of probes, for example <code>n.pts=2^14</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list containing the components
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>par</code></td>
+<td>
+numeric vector giving estimated values of $&mu;$, $log(&sigma;)$ and $log&alpha;$</td></tr>
+<tr valign="top"><td><code>m2loglik</code></td>
+<td>
+numeric scalar giving minus twice the log-likelihood</td></tr>
+<tr valign="top"><td><code>convergence</code></td>
+<td>
+integer code indicating successful convergence or otherwise of the optimization. See <code>optim</code>.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth and Jeremy Silver
+</p>
+
+
+<h3>References</h3>
+
+<p>
+McGee, M., and Chen, Z. (2006).
+Parameter estimation for the exponential-normal convolution model for background correction of Affymetrix GeneChip data.
+<EM>Stat Appl Genet Mol Biol</EM>, 5(1), Article 24.
+</p>
+<p>
+Ritchie, M. E., Silver, J., Oshlack, A., Silver, J., Holmes, M., Diyagama, D., Holloway, A., and Smyth, G. K. (2007).
+A comparison of background correction methods for two-colour microarrays.
+<EM>Bioinformatics</EM>
+<a href="http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btm412">http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btm412</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="normexpsignal.html">normexp.signal</a></code>
+</p>
+<p>
+An overview of background correction functions is given in <code><a href="04Background.html">04.Background</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+f &lt;- c(2,3,1,10,3,20,5,6)
+b &lt;- c(2,2,2,2,2,2,2,2)
+out &lt;- normexp.fit(f-b)
+normexp.signal(out$par, x=f-b)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

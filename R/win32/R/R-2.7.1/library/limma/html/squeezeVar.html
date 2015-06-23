@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Smooth Sample Variances</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for squeezeVar {limma}"><tr><td>squeezeVar {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Smooth Sample Variances</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Smooth a set of sample variances by computing empirical Bayes posterior means.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+squeezeVar(var, df)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>var</code></td>
+<td>
+numeric vector of independent sample variances</td></tr>
+<tr valign="top"><td><code>df</code></td>
+<td>
+numeric vector of degrees of freedom for the sample variances</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The sample variances <code>var</code> are assumed to follow scaled chi-squared distributions.
+An inverse chi-squared prior is assumed for the true variances.
+The scale and degrees of freedom for the prior distribution are estimated from the data.
+</p>
+<p>
+The effect of this function is to smooth or shrink the variances towards a common value.
+The smoothed variances have a smaller expected mean square error to the true variances than do the sample variances themselves.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list with components
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>var.post</code></td>
+<td>
+numeric vector of posterior variances</td></tr>
+<tr valign="top"><td><code>var.prior</code></td>
+<td>
+location of prior distribution</td></tr>
+<tr valign="top"><td><code>df.prior</code></td>
+<td>
+degrees of freedom of prior distribution</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Smyth, G. K. (2004). Linear models and empirical Bayes methods for
+assessing differential expression in microarray experiments.
+<EM>Statistical Applications in Genetics and Molecular Biology</EM>, <B>3</B>,
+No. 1, Article 3. <a href="http://www.bepress.com/sagmb/vol3/iss1/art3">http://www.bepress.com/sagmb/vol3/iss1/art3</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+s2 &lt;- rchisq(20,df=5)/5
+squeezeVar(s2, df=5)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

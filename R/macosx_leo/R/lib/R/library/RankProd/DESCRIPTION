@@ -1,0 +1,21 @@
+Package: RankProd
+Version: 2.12.0
+Date: 2006-02-02
+Title: Rank Product method for identifying differentially expressed
+        genes with application in meta-analysis
+Author: Fangxin Hong <fahong@coh.org> and Ben Wittner
+        <Wittner.Ben@mgh.harvard.edu> with contribution from Rainer
+        Breitling <r.breitling@bio.gla.ac.uk> and Colin Smith
+        <colin@colinsmith.org>
+Maintainer: Fangxin Hong <fahong@coh.org>
+Depends: R (>= 1.9.0)
+Description: Non-paramteric method for identifying differentially
+        expressed (up- or down- regulated )genes based on the estimated
+        percentage of false predictions (pfp).The method can combine
+        data sets from different origins (meta-analysis)to increase the
+        power of the identification.
+License: free for non-commercial users. Non-academic users MUST have
+        requested from the author
+biocViews: DifferentialExpression
+Packaged: Wed Apr 30 02:18:27 2008; biocbuild
+Built: R 2.7.0; ; 2008-06-26 12:47:33; unix

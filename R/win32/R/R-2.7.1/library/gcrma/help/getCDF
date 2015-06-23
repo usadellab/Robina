@@ -1,0 +1,38 @@
+getCDF                 package:gcrma                 R Documentation
+
+_F_u_n_c_t_i_o_n_s _f_o_r _A_u_t_o_m_a_t_i_c _D_o_w_n_l_o_a_d _o_f _P_a_c_k_a_g_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     These are internal functions that are called by 'justGCRMA' and
+     'GCRMA' in order to automatically download and install cdf
+     environments and probe packages.
+
+_U_s_a_g_e:
+
+     getCDF(cdfname, lib = .libPaths()[1], verbose = TRUE)
+     getProbePackage(probepackage, lib = .libPaths()[1], verbose = TRUE)
+
+_A_r_g_u_m_e_n_t_s:
+
+ cdfname: Name of the cdfenv to install. 
+
+probepackage: Name of the probe package to install. 
+
+     lib: Directory of the R library where packages will be installed. 
+
+ verbose: Output informative comments? Defaults to 'TRUE'
+
+_V_a_l_u_e:
+
+     Nothing is returned. These functions are called simply to install
+     environments.
+
+_A_u_t_h_o_r(_s):
+
+     James W. MacDonald, based on 'getCDFinfo', written by Jeff Gentry.
+
+_S_e_e _A_l_s_o:
+
+     ~~objects to See Also as 'getCDFinfo'
+

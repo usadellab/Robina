@@ -1,0 +1,81 @@
+plotGene              package:RankProd              R Documentation
+
+_G_r_a_p_h_i_c_a_l _D_i_s_p_l_a_y _o_f _T_h_e _e_x_p_r_e_s_s_i_o_n _l_e_v_e_l_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Plot the expression values and print statistical results  for each
+     individual gene based on a user query
+
+_U_s_a_g_e:
+
+          plotGene(gene.to.plot,x,gene.names=NULL, data, cl,origin,
+                   logged=TRUE,logbase=2)
+
+_A_r_g_u_m_e_n_t_s:
+
+gene.to.plot: Name of the gene to be plotted
+
+       x: the value returned by function RP,  RPadvance or RSadvance 
+
+gene.names: Names of all genes in the data set. If "NULL", rownames  of
+          the data will be used
+
+    data: the same as that used in RP or RPadvance
+
+      cl: the same as that used in RP or RPadvance
+
+  origin: a vector containing the origin labels of the  sample. e.g.
+          for  the data sets generated at multiple laboratories, the
+          label is the same for samples within one lab and different
+          for samples  from different labs. The same as that used in
+          RPadvance
+
+  logged: if "TRUE", data has bee logged, otherwise set it  to "FALSE"
+
+ logbase: base used when taking log, used to restore the  fold
+          change.The default value is 2, this will be  ignored if
+          logged=FALSE
+
+_V_a_l_u_e:
+
+     A graphical display of the expression levels of the input gene. 
+     The estimated statistics for differential expression will be
+     printed  on the plot as well as output in the screen.The
+     statistics include:  F.C.:fold-change under each dataset if
+     multiple datasets are used AveFC: average fold-change across all
+     datasets pfp(pval): estimated percentage of false prediction
+     (p-value) for  differential expression under each of the two
+     tests: up-regulation  in class 2 compared with classs 1 and
+     down-regulation in class 2  compared with class 1
+
+_A_u_t_h_o_r(_s):
+
+     Fangxin Hong fhong@salk.edu
+
+_S_e_e _A_l_s_o:
+
+     'topGene'   'RP'   'RPadvance' 'RSadvance'
+
+_E_x_a_m_p_l_e_s:
+
+          
+           # Load the data of Golub et al. (1999). data(golub) 
+           #contains a 3051x38 gene expression
+           # matrix called golub, a vector of length called golub.cl 
+           #that consists of the 38 class labels,
+           # and a matrix called golub.gnames whose third column contains the gene names.
+           data(golub)
+      
+           #use a subset of data as example, apply the rank product method
+           subset <- c(1:4,28:30)
+           #Setting rand=123, to make the results reproducible,
+
+           #identify genes that are up-regulated in class 2 
+           #(class label =1)
+           RP.out <- RP(golub[,subset],golub.cl[subset], rand=123)
+           
+           #plot the results
+           plotRP(RP.out,cutoff=0.05)
+           
+

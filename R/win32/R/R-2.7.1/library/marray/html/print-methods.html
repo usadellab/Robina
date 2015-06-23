@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Printing summary methods for microarray objects</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for summary-methods {marray}"><tr><td>summary-methods {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Printing summary methods for microarray objects</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Print methods were defined for the microarray classes,
+<code>"<a href="marrayInfo-class.html">marrayInfo</a>"</code>, <code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code>,
+<code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code>, <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>. These methods
+produce summaries of the intensity and textual data stored in different
+classes of microarray objects.
+</p>
+
+
+<h3>Methods</h3>
+
+<dl>
+<dt>x = ANY</dt><dd>generic print method</dd>
+<dt>x = marrayLayout</dt><dd>for an object of class <code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code>, the method prints main layout parameters such as the number of spots and the dimensions of the spot and grid matrices.</dd>
+<dt>x = marrayInfo</dt><dd>for an object of class <code>"<a href="marrayInfo-class.html">marrayInfo</a>"</code>, the method prints the first 10 rows of the <code>"maInfo"</code> and <code>"maLabels"</code> slots.</dd>
+<dt>x = marrayRaw</dt><dd>for an object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code>, the method prints a short description of the microarray layout <code>"maLayout"</code> and the target samples hybridized to the arrays <code>"maTargets"</code>, and a summary of the distribution of the log-ratio statistics <code>"maM"</code>.</dd>
+<dt>x = marrayNorm</dt><dd>for an object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>, the method prints a short description of the microarray layout <code>"maLayout"</code> and the target samples hybridized to the arrays <code>"maTargets"</code>, and a summary of the distribution of the log-ratio statistics <code>"maM"</code>.</dd>
+</dl>
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

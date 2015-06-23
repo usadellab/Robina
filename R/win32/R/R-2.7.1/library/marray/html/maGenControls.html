@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Generating a vector recording the control status of the spotted probe sequences.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maGenControls {marray}"><tr><td>maGenControls {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Generating a vector recording the control status of the spotted probe sequences.</h2>
+
+
+<h3>Description</h3>
+
+<p>
+ControlCode is a matrix representing certain regular expression
+pattern and the control status of the spotted probe sequences.
+This function uses `grep' searches for matches to `pattern' (its first argument)
+within the character vector `x' (second argument).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maGenControls(Gnames, controlcode, id = "ID")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Gnames</code></td>
+<td>
+An object of class <code>matrix</code>, <code>data.frame</code> or <code>marrayInfo</code>
+which contains  description of spotted probe sequences.</td></tr>
+<tr valign="top"><td><code>controlcode</code></td>
+<td>
+A character matrix of n by 2 columns. The first
+column contains a few regular expression of spotted probe sequences
+and the second column contains the corresponding control status.</td></tr>
+<tr valign="top"><td><code>id</code></td>
+<td>
+the column number of column name in <code>Gnames</code> that
+contains description of each spot on the array.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+A vector of characters recording the control status of the spotted probe sequences.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yee Hwa Yang
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/grep.html">grep</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(swirl)
+maControls(swirl) &lt;- maGenControls(maGnames(swirl), id="Name")
+table(maControls(swirl))
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

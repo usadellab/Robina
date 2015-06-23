@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Graphical Display of The expression levels</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for plotGene {RankProd}"><tr><td>plotGene {RankProd}</td><td align="right">R Documentation</td></tr></table>
+<h2>Graphical Display of The expression levels</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Plot the expression values and print statistical results 
+for each individual gene based on a user query
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+     plotGene(gene.to.plot,x,gene.names=NULL, data, cl,origin,
+              logged=TRUE,logbase=2)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>gene.to.plot</code></td>
+<td>
+Name of the gene to be plotted</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+the value returned by function RP, 
+RPadvance or RSadvance </td></tr>
+<tr valign="top"><td><code>gene.names</code></td>
+<td>
+Names of all genes in the data set. If "NULL", rownames 
+of the data will be used</td></tr>
+<tr valign="top"><td><code>data</code></td>
+<td>
+the same as that used in RP or RPadvance</td></tr>
+<tr valign="top"><td><code>cl</code></td>
+<td>
+the same as that used in RP or RPadvance</td></tr>
+<tr valign="top"><td><code>origin</code></td>
+<td>
+a vector containing the origin labels of the 
+sample. e.g. for 
+the data sets generated at multiple laboratories, the label
+is the same for samples within one lab and different for samples 
+from different labs. The same as that used in RPadvance</td></tr>
+<tr valign="top"><td><code>logged</code></td>
+<td>
+if "TRUE", data has bee logged, otherwise set it 
+to "FALSE"</td></tr>
+<tr valign="top"><td><code>logbase</code></td>
+<td>
+base used when taking log, used to restore the 
+fold change.The default value is 2, this will be 
+ignored if logged=FALSE</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+A graphical display of the expression levels of the input gene. 
+The estimated statistics for differential expression will be printed 
+on the plot as well as output in the screen.The statistics include: 
+F.C.:fold-change under each dataset if multiple datasets are used
+AveFC: average fold-change across all datasets
+pfp(pval): estimated percentage of false prediction (p-value) for 
+differential expression under each of the two tests: up-regulation 
+in class 2 compared with classs 1 and down-regulation in class 2 
+compared with class 1</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Fangxin Hong <a href="mailto:fhong@salk.edu">fhong@salk.edu</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="topGene.html">topGene</a></code>   <code><a href="RP.html">RP</a></code>  
+<code><a href="RPadvance.html">RPadvance</a></code> <code><a href="RSadvance.html">RSadvance</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+     
+      # Load the data of Golub et al. (1999). data(golub) 
+      #contains a 3051x38 gene expression
+      # matrix called golub, a vector of length called golub.cl 
+      #that consists of the 38 class labels,
+      # and a matrix called golub.gnames whose third column contains the gene names.
+      data(golub)
+ 
+      #use a subset of data as example, apply the rank product method
+      subset &lt;- c(1:4,28:30)
+      #Setting rand=123, to make the results reproducible,
+
+      #identify genes that are up-regulated in class 2 
+      #(class label =1)
+      RP.out &lt;- RP(golub[,subset],golub.cl[subset], rand=123)
+      
+      #plot the results
+      plotRP(RP.out,cutoff=0.05)
+      
+</pre>
+
+
+
+<hr><div align="center">[Package <em>RankProd</em> version 2.12.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

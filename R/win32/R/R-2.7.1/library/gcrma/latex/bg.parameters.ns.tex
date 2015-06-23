@@ -1,0 +1,37 @@
+\HeaderA{bg.parameters.ns}{Estimation of non-specific Binding Background Parameters}{bg.parameters.ns}
+\aliasA{average.for.PAV}{bg.parameters.ns}{average.for.PAV}
+\aliasA{left.sigma}{bg.parameters.ns}{left.sigma}
+\aliasA{PAV}{bg.parameters.ns}{PAV}
+\keyword{manip}{bg.parameters.ns}
+\begin{Description}\relax
+An internal function to be used by \code{\LinkA{gcrma}{gcrma}}
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+bg.parameters.ns(x, affinities, affinities2 = NULL, affinities3 = NULL, span = 0.2)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] PM or MM intensities after optical background correction, before non-specific-binding correction.
+\item[\code{affinities}] Probe affinities for probes with known sequences.
+Used to estimate the function between non-specific binding and affinities.
+\item[\code{affinities2}] Probe affinities for the probes whose expected non-specific binding
+intensity is to be predicted.
+
+\item[\code{affinities3}] Probe affinities for another extra group of probes whose expected non-specific binding
+intensity is to be predicted.
+
+\item[\code{span}] 
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+a vector of same length as x.
+\end{Value}
+\begin{Author}\relax
+Rafeal Irizarry, Zhijin (Jean) Wu
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{gcrma}{gcrma}}
+\end{SeeAlso}
+

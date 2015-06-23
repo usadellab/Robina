@@ -1,0 +1,15 @@
+basecontent             Obtain the ATCG content of a gene
+combineAffyBatch        A function to combine data from different
+                        Affymetrix genechip types into one AffyBatch.
+complementSeq           Complementary sequence.
+getProbeDataAffy        Read a data file describing the probe sequences
+                        on an Affymetrix genechip
+getProbeData_1lq        Read a 1lq file for an Affymetrix genechip
+longestConsecutive      Obtain the length of the longest substring
+                        containing only 'letter'
+makeProbePackage        Make a package with probe sequence related data
+                        for microarrays
+matchprobes             A function to match a query sequence to the
+                        sequences of a set of probes.
+print.probetable        Print method for probetable objects
+reverseSeq              Reverse Sequence

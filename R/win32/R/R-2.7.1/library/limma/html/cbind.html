@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Combine RGList or MAList Objects</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for cbind {limma}"><tr><td>cbind {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Combine RGList or MAList Objects</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Combine a series of <code>RGList</code> objects or combine a series of <code>MAList</code> objects.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'RGList':
+cbind(..., deparse.level=1)
+## S3 method for class 'RGList':
+rbind(..., deparse.level=1)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>...</code></td>
+<td>
+<code>RGList</code> objects or <code>MAList</code> objects</td></tr>
+<tr valign="top"><td><code>deparse.level</code></td>
+<td>
+not currently used, see <code><a href="../../base/html/cbind.html">cbind</a></code> in the base package</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+<code>cbind</code> combines data objects assuming the same gene lists but different arrays.
+<code>rbind</code> combines data objects assuming equivalent arrays, i.e., the same RNA targets, but different genes.
+</p>
+<p>
+For <code>cbind</code>, the matrices of expression data from the individual objects are cbinded.
+The data.frames of target information, if they exist, are rbinded.
+The combined data object will preserve any additional components or attributes found in the first object to be combined.
+For <code>rbind</code>, the matrices of expression data are rbinded while the target information, in any, is unchanged.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+An <code><a href="rglist.html">RGList</a></code> or <code><a href="malist.html">MAList</a></code> object holding data from all the arrays and all genes from the individual objects.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/cbind.html">cbind</a></code> in the base package.
+</p>
+<p>
+<a href="03reading.html">03.ReadingData</a> gives an overview of data input and manipulation functions in LIMMA.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+M &lt;- A &lt;- matrix(11:14,4,2)
+rownames(M) &lt;- rownames(A) &lt;- c("a","b","c","d")
+colnames(M) &lt;- colnames(A) &lt;- c("A1","A2")
+MA1 &lt;- new("MAList",list(M=M,A=A))
+
+M &lt;- A &lt;- matrix(21:24,4,2)
+rownames(M) &lt;- rownames(A) &lt;- c("a","b","c","d")
+colnames(M) &lt;- colnames(A) &lt;- c("B1","B2")
+MA2 &lt;- new("MAList",list(M=M,A=A))
+
+cbind(MA1,MA2)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

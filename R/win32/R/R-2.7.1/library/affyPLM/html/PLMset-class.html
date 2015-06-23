@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Class PLMset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for PLMset-class {affyPLM}"><tr><td>PLMset-class {affyPLM}</td><td align="right">R Documentation</td></tr></table>
+<h2>Class PLMset</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This is a class representation for Probe level Linear
+Models fitted to Affymetrix GeneChip probe level data.
+</p>
+
+
+<h3>Objects from the Class</h3>
+
+<p>
+Objects can be created using the function <code><a href="fitPLM.html">fitPLM</a></code>
+</p>
+
+
+<h3>Slots</h3>
+
+<dl>
+<dt><code>probe.coefs</code>:</dt><dd>Object of class "matrix". Contains model
+coefficients related to probe effects.</dd>
+<dt><code>se.probe.coefs</code>:</dt><dd>Object of class "matrix". Contains
+standard error estimates for the probe coefficients.</dd>  
+<dt><code>chip.coefs</code>:</dt><dd>Object of class "matrix". Contains model
+coefficients related to chip (or chip level) effects for each fit.</dd>
+<dt><code>se.chip.coefs</code>:</dt><dd>Object of class "matrix". Contains
+standard error estimates for the chip coefficients.</dd>
+<dt><code>model.description</code>:</dt><dd>Object of class "character". This
+string describes the probe level model fitted.</dd>
+<dt><code>weights</code>:</dt><dd>List of objects of class "matrix". Contains probe
+weights for each fit. The matrix has columns for chips and rows
+are probes.</dd>
+<dt><code>phenoData</code>:</dt><dd>Object of class "phenoData" This is an
+instance of class <code>phenoData</code> containing the patient
+(or case) level data. The columns of the pData slot of this
+entity represent variables and the rows represent patients or cases.</dd>
+<dt><code>annotation</code></dt><dd>A character string identifying the
+annotation that may be used for the <code>ExpressionSet</code> instance.</dd>
+<dt><code>description</code>:</dt><dd>Object of class "MIAME". For
+compatibility with previous version of this class description can
+also be a "character". The class <code>characterOrMIAME</code> has been
+defined just for this.</dd>
+<dt><code>cdfName</code>:</dt><dd>A character string giving the name of the
+cdfFile.</dd>
+<dt><code>nrow</code>:</dt><dd>Object of class "numeric". Number of rows in chip.</dd>
+<dt><code>ncol</code>:</dt><dd>Object of class "numeric". Number of cols in chip.</dd>
+<dt><code>notes</code>:</dt><dd>Object of class "character" Vector of
+explanatory text.</dd>
+<dt><code>varcov</code>:</dt><dd>Object of class "list". A list of
+variance/covariance matrices.</dd>
+<dt><code>residualSE</code>:</dt><dd>Object of class "matrix". Contains residual
+standard error and df.</dd>
+<dt><code>residuals</code>:</dt><dd>List of objects of class "matrix". Contains
+residuals from model fit (if stored).</dd>
+</dl>
+
+<h3>Methods</h3>
+
+<dl>
+<dt>weights&lt;-</dt><dd><code>signature(object = "PLMset")</code>: replaces the weights.</dd>
+<dt>weights</dt><dd><code>signature(object = "PLMset")</code>: extracts the
+model fit weights.</dd>
+<dt>coefs&lt;-</dt><dd><code>signature(object = "PLMset")</code>: replaces the
+chip coefs.</dd>
+<dt>coefs</dt><dd><code>signature(object = "PLMset")</code>: extracts the
+chip coefs.</dd>
+<dt>se</dt><dd><code>signature(object = "PLMset")</code>: extracts the
+standard error estimates of the chip coefs.</dd>
+<dt>se&lt;-</dt><dd><code>signature(object = "PLMset")</code>: replaces the
+standard error estimates of the chip coefs.</dd>
+<dt>coefs.probe</dt><dd><code>signature(object = "PLMset")</code>: extracts the
+probe coefs.</dd>
+<dt>se.probe</dt><dd><code>signature(object = "PLMset")</code>: extracts the
+standard error estimates of the probe coefs.</dd>    
+<dt>coefs.const</dt><dd><code>signature(object = "PLMset")</code>: extracts the
+intercept coefs.</dd>
+<dt>se.const</dt><dd><code>signature(object = "PLMset")</code>: extracts the
+standard error estimates of the intercept coefs.</dd>
+<dt>getCdfInfo</dt><dd><code>signature(object = "PLMset")</code>: retrieve
+the environment that defines the location of probes by probe set.</dd>
+<dt>image</dt><dd><code>signature(x = "PLMset")</code>: creates an image
+of the robust linear model fit weights for each sample.</dd>
+<dt>indexProbes</dt><dd><code>signature(object = "PLMset", which =
+        "character")</code>: returns a list with locations of the probes in
+each probe  set. The list names defines the probe set
+names. <code>which</code> can be "pm", "mm", or "both". If "both" then
+perfect match locations are given followed by mismatch locations.</dd>
+<dt>Mbox</dt><dd><code>signature(object = "PLMset")</code>: gives a boxplot of
+M's for each chip. The M's are computed relative to a "median"
+chip.</dd>
+<dt>normvec</dt><dd><code>signature(x = "PLMset")</code>: will return the normalization vector
+(if it has been stored).</dd>
+<dt>residSE</dt><dd><code>signature(x = "PLMset")</code>: will return the residual SE
+(if it has been stored).</dd>
+<dt>boxplot</dt><dd><code>signature(x = "PLMset")</code>: Boxplot of Normalized
+Unscaled Standard Errors (NUSE).</dd>
+<dt>NUSE</dt><dd><code>signature(x = "PLMset")</code> : Boxplot of Normalized
+Unscaled Standard Errors (NUSE) or NUSE values.</dd>
+<dt>RLE|</dt><dd><code>signature(x = "PLMset")</code> : Relative Log Expression
+boxplot or values.</dd>
+</dl>
+
+<h3>Note</h3>
+
+<p>
+This class is better described in the vignette.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+B. M. Bolstad <a href="mailto:bmb@bmbolstad.com">bmb@bmbolstad.com</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Bolstad, BM (2004) <EM>Low Level Analysis of High-density
+Oligonucleotide Array Data: Background, Normalization and
+Summarization</EM>. PhD Dissertation. University of California,
+Berkeley.
+</p>
+
+
+
+<hr><div align="center">[Package <em>affyPLM</em> version 1.16.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

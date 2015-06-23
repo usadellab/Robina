@@ -1,0 +1,46 @@
+\HeaderA{bg.correct.LESN}{LESN - Low End Signal is Noise Background corrections}{bg.correct.LESN}
+\keyword{manip}{bg.correct.LESN}
+\begin{Description}\relax
+This function background corrects PM probe data using LESN - Low End
+Signal is Noise concepts.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+bg.correct.LESN(object,method = 2,baseline = 0.25, theta=4)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{object}] an \code{\LinkA{AffyBatch}{AffyBatch}}
+\item[\code{method}] an integer code specifying which method to use
+\item[\code{baseline}] A baseline value to use
+\item[\code{theta}] A parameter used in the background correction process
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+This method will be more formally documented at a later date.
+
+The basic concept is to consider that the lowest end of intensites is
+most likely just noise (and should be heavily corrected) and the
+highest end signals are most likely signal and should have little
+adjustment. Low end signals are made much smaller while high end
+signals get less adjustment relative adjustment.
+\end{Details}
+\begin{Value}
+An \code{\LinkA{AffyBatch}{AffyBatch}}
+\end{Value}
+\begin{Author}\relax
+Ben Bolstad \email{bmb@bmbolstad.com}
+\end{Author}
+\begin{References}\relax
+Bolstad, BM (2004) \emph{Low Level Analysis of High-density
+Oligonucleotide Array Data: Background, Normalization and
+Summarization}. PhD Dissertation. University of California, Berkeley.
+\end{References}
+\begin{Examples}
+\begin{ExampleCode}
+data(affybatch.example)
+affybatch.example.bgcorrect <- bg.correct.LESN(affybatch.example)
+\end{ExampleCode}
+\end{Examples}
+

@@ -1,0 +1,29 @@
+Entry: check.cdf.type
+Aliases: check.cdf.type
+Keywords: IO
+Description: CDF file format function
+URL: ../../../library/affyio/html/check.cdf.type.html
+
+Entry: read.cdffile.list
+Aliases: read.cdffile.list
+Keywords: IO
+Description: Read CDF file into an R list
+URL: ../../../library/affyio/html/read.cdffile.list.html
+
+Entry: read.celfile
+Aliases: read.celfile
+Keywords: IO
+Description: Read a CEL file into an R list
+URL: ../../../library/affyio/html/read.celfile.html
+
+Entry: read.celfile.header
+Aliases: read.celfile.header
+Keywords: IO
+Description: Read header information from cel file
+URL: ../../../library/affyio/html/read.celfile.header.html
+
+Entry: read.celfile.probeintensity.matrices
+Aliases: read.celfile.probeintensity.matrices
+Keywords: IO
+Description: Read PM or MM from CEL file into matrices
+URL: ../../../library/affyio/html/read.celfile.probeintensity.matrices.html

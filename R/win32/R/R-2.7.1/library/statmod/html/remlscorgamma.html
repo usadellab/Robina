@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Approximate REML for gamma regression with structured dispersion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for remlscoregamma {statmod}"><tr><td>remlscoregamma {statmod}</td><td align="right">R Documentation</td></tr></table>
+<h2>Approximate REML for gamma regression with structured dispersion</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Estimates structured dispersion effects using approximate REML with gamma responses.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+remlscoregamma(y,X,Z,mlink="log",dlink="log",trace=FALSE,tol=1e-5,maxit=40)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y</code></td>
+<td>
+numeric vector of responses</td></tr>
+<tr valign="top"><td><code>X</code></td>
+<td>
+design matrix for predicting the mean</td></tr>
+<tr valign="top"><td><code>Z</code></td>
+<td>
+design matrix for predicting the variance</td></tr>
+<tr valign="top"><td><code>mlink</code></td>
+<td>
+character string or numeric value specifying link for mean model</td></tr>
+<tr valign="top"><td><code>dlink</code></td>
+<td>
+character string or numeric value specifying link for dispersion model</td></tr>
+<tr valign="top"><td><code>trace</code></td>
+<td>
+Logical variable. If true then output diagnostic information at each iteration.</td></tr>
+<tr valign="top"><td><code>tol</code></td>
+<td>
+Convergence tolerance</td></tr>
+<tr valign="top"><td><code>maxit</code></td>
+<td>
+Maximum number of iterations allowed</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Write <i>&mu;_i=E(y_i)</i> for the expectation of the $i$th response and $s_i=var(y_i)$.
+We assume the heteroscedastic regression model
+</p><p align="center"><i>&mu;_i=<B>x</B>_i^T<B>&beta;</B></i></p><p align="center"><i>log(&sigma;^2_i)=<B>z</B>_i^T<B>gamma</B>,</i></p><p>
+where $<B>x</B>_i$ and $<B>z</B>_i$ are vectors of covariates, and $<B>&beta;</B>$ and $<B>gamma</B>$ are vectors of regression coefficients affecting the mean and variance respectively.
+</p>
+<p>
+Parameters are estimated by maximizing the REML likelihood using REML scoring as described in Smyth and Verbyla (2001).
+See also Smyth and Verbyla (1999a,b).
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+List with the following components:
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>beta</code></td>
+<td>
+Vector of regression coefficients for predicting the mean</td></tr>
+<tr valign="top"><td><code>se.beta</code></td>
+<td>
+&lt;Standard errors for beta</td></tr>
+<tr valign="top"><td><code>gamma</code></td>
+<td>
+Vector of regression coefficients for predicting the variance</td></tr>
+<tr valign="top"><td><code>se.gam</code></td>
+<td>
+Standard errors for gamma</td></tr>
+<tr valign="top"><td><code>mu</code></td>
+<td>
+Estimated means</td></tr>
+<tr valign="top"><td><code>phi</code></td>
+<td>
+Estimated dispersions</td></tr>
+<tr valign="top"><td><code>deviance</code></td>
+<td>
+Minus twice the REML log-likelihood</td></tr>
+<tr valign="top"><td><code>h</code></td>
+<td>
+Leverages</td></tr>
+</table>
+
+<h3>References</h3>
+
+<p>
+Smyth, G. K., and Verbyla, A. P. (1999a). Adjusted likelihood methods for modelling dispersion in generalized linear models. <EM>Environmetrics</EM> 10, 695-709. 
+<a href="http://www.statsci.org/smyth/pubs/earlier.html">http://www.statsci.org/smyth/pubs/earlier.html</a>
+</p>
+<p>
+Smyth, G. K., and Verbyla, A. P. (1999b). Double generalized linear models: approximate REML and diagnostics. In <EM>Statistical Modelling: Proceedings of the 14th International Workshop on Statistical Modelling</EM>, Graz, Austria, July 19-23, 1999, H. Friedl, A. Berghold, G. Kauermann (eds.), Technical University, Graz, Austria, pages 66-80.
+<a href="http://www.statsci.org/smyth/pubs/earlier.html">http://www.statsci.org/smyth/pubs/earlier.html</a>
+</p>
+<p>
+Smyth, G. K., and Verbyla, A. P. (2001). Leverage adjustments for dispersion modelling in generalized nonlinear models. Unpublished technical report.
+<a href="http://www.statsci.org/smyth/pubs/dglm.ps">http://www.statsci.org/smyth/pubs/dglm.ps</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(welding)
+attach(welding)
+y &lt;- Strength
+X &lt;- cbind(1,(Drying+1)/2,(Material+1)/2)
+colnames(X) &lt;- c("1","B","C")
+Z &lt;- cbind(1,(Material+1)/2,(Method+1)/2,(Preheating+1)/2)
+colnames(Z) &lt;- c("1","C","H","I")
+out &lt;- remlscoregamma(y,X,Z)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>statmod</em> version 1.3.8 <a href="00Index.html">Index]</a></div>
+
+</body></html>

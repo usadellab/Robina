@@ -1,0 +1,21 @@
+Package: affyPLM
+Version: 1.16.0
+Date: 2008-03-31
+Title: Methods for fitting probe-level models
+Author: Ben Bolstad <bmb@bmbolstad.com>
+Maintainer: Ben Bolstad <bmb@bmbolstad.com>
+Depends: R (>= 2.6.0), affy (>= 1.11.0), Biobase, methods, gcrma,
+        stats, preprocessCore (>= 1.1.7)
+Suggests: affydata
+LinkingTo: preprocessCore
+Description: A package that extends and improves the functionality of
+        the base affy package. Routines that make heavy use of compiled
+        code for speed. Central focus is on implementation of methods
+        for fitting probe-level models and tools using these models.
+        PLM based quality assessment tools.
+License: GPL version 2 or newer
+URL: http://bmbolstad.com
+biocViews: Microarray, OneChannel, Preprocessing, QualityControl
+LazyLoad: yes
+Packaged: Mon May 12 03:05:30 2008; biocbuild
+Built: R 2.7.0; i386-pc-mingw32; 2008-05-12 08:15:29; windows

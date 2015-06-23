@@ -1,0 +1,767 @@
+Entry: 01.Introduction
+Aliases: 01.Introduction limma
+Keywords: documentation
+Description: Introduction to the LIMMA Package
+URL: ../../../library/limma/html/01Introduction.html
+
+Entry: 02.Classes
+Aliases: 02.Classes
+Keywords: documentation
+Description: Classes Defined by this Package
+URL: ../../../library/limma/html/02classes.html
+
+Entry: 03.ReadingData
+Aliases: 03.ReadingData
+Keywords: documentation
+Description: Reading Microarray Data from Files
+URL: ../../../library/limma/html/03reading.html
+
+Entry: 04.Background
+Aliases: 04.Background
+Keywords: documentation
+Description: Background Correction
+URL: ../../../library/limma/html/04Background.html
+
+Entry: 05.Normalization
+Aliases: 05.Normalization
+Keywords: documentation
+Description: Normalization of Microarray Data
+URL: ../../../library/limma/html/05Normalization.html
+
+Entry: 06.LinearModels
+Aliases: 06.LinearModels
+Keywords: documentation
+Description: Linear Models for Microarrays
+URL: ../../../library/limma/html/06linearmodels.html
+
+Entry: 07.SingleChannel
+Aliases: 07.SingleChannel
+Keywords: documentation
+Description: Individual Channel Analysis of Two-Color Microarrays
+URL: ../../../library/limma/html/07SingleChannel.html
+
+Entry: 08.Tests
+Aliases: 08.Tests
+Keywords: documentation
+Description: Hypothesis Testing for Linear Models
+URL: ../../../library/limma/html/08Tests.html
+
+Entry: 09.Diagnostics
+Aliases: 09.Diagnostics
+Keywords: documentation
+Description: Diagnostics and Quality Assessment
+URL: ../../../library/limma/html/09Diagnostics.html
+
+Entry: 10.Other
+Aliases: 10.Other
+Keywords: documentation
+Description: Other Functions
+URL: ../../../library/limma/html/10Other.html
+
+Entry: LargeDataObject-class
+Aliases: LargeDataObject-class show,LargeDataObject-method
+Keywords: classes data
+Description: Large Data Object - class
+URL: ../../../library/limma/html/LargeDataObject.html
+
+Entry: PrintLayout
+Aliases: PrintLayout-class
+Keywords: classes data
+Description: Print Layout - class
+URL: ../../../library/limma/html/PrintLayout.html
+
+Entry: TestResults-class
+Aliases: TestResults-class show,TestResults-method summary.TestResults
+Keywords: classes htest
+Description: Matrix of Test Results - class
+URL: ../../../library/limma/html/TestResults.html
+
+Entry: anova.MAList-method
+Aliases: anova.MAList
+Keywords: models
+Description: ANOVA Table - method
+URL: ../../../library/limma/html/anova-method.html
+
+Entry: arrayWeights
+Aliases: arrayWeights arrayWeightsSimple
+Keywords: regression models
+Description: Array Quality Weights
+URL: ../../../library/limma/html/arrayWeights.html
+
+Entry: arrayWeightsQuick
+Aliases: arrayWeightsQuick
+Keywords: regression
+Description: Array Quality Weights
+URL: ../../../library/limma/html/arrayWeightsQuick.html
+
+Entry: asMatrixWeights
+Aliases: asMatrixWeights
+Keywords: hplot
+Description: asMatrixWeights
+URL: ../../../library/limma/html/asMatrixWeights.html
+
+Entry: as.data.frame
+Aliases: as.data.frame.MArrayLM
+Keywords: array
+Description: Turn a Microarray Linear Model Object into a Dataframe
+URL: ../../../library/limma/html/asdataframe.html
+
+Entry: as.MAList
+Aliases: as.MAList
+Keywords: classes data
+Description: Convert marrayNorm Object to an MAList Object
+URL: ../../../library/limma/html/asmalist.html
+
+Entry: as.matrix
+Aliases: as.matrix.RGList as.matrix.MAList as.matrix.MArrayLM as.matrix.marrayNorm as.matrix.PLMset as.matrix.ExpressionSet as.matrix.LumiBatch as.matrix.vsn
+Keywords: array
+Description: Turn a Microarray Data Object into a Matrix
+URL: ../../../library/limma/html/asmatrix.html
+
+Entry: auROC
+Aliases: auROC
+Keywords: htest
+Description: Area Under Receiver Operating Curve
+URL: ../../../library/limma/html/auROC.html
+
+Entry: avedups
+Aliases: avedups avedups.default avedups.MAList
+Keywords: array
+Description: Average Over Duplicate Spots
+URL: ../../../library/limma/html/avedups.html
+
+Entry: avereps
+Aliases: avereps avereps.default avereps.MAList
+Keywords: array
+Description: Average Over Irregular Replicate Spots
+URL: ../../../library/limma/html/avereps.html
+
+Entry: backgroundCorrect
+Aliases: backgroundCorrect
+Keywords: models
+Description: Correct Intensities for Background
+URL: ../../../library/limma/html/backgroundcorrect.html
+
+Entry: blockDiag
+Aliases: blockDiag
+Keywords: array
+Description: Block Diagonal Matrix
+URL: ../../../library/limma/html/blockDiag.html
+
+Entry: bwss
+Aliases: bwss
+Keywords: models
+Description: Between and within sums of squares
+URL: ../../../library/limma/html/bwss.html
+
+Entry: bwss.matrix
+Aliases: bwss.matrix
+Keywords: models
+Description: Between and within sums of squares for matrix
+URL: ../../../library/limma/html/bwss.matrix.html
+
+Entry: cbind
+Aliases: cbind.RGList cbind.MAList rbind.RGList rbind.MAList
+Keywords: manip
+Description: Combine RGList or MAList Objects
+URL: ../../../library/limma/html/cbind.html
+
+Entry: changeLog
+Aliases: changeLog
+Keywords: documentation
+Description: Limma Change Log
+URL: ../../../library/limma/html/changelog.html
+
+Entry: designI2M
+Aliases: designI2M designI2A
+Keywords: regression
+Description: Convert Individual Channel Design Matrix to M-A Format
+URL: ../../../library/limma/html/channel2M.html
+
+Entry: classifyTests
+Aliases: FStat classifyTestsF classifyTestsT classifyTestsP
+Keywords: htest
+Description: Multiple Testing Genewise Across Contrasts
+URL: ../../../library/limma/html/classifytests.html
+
+Entry: contrasts.fit
+Aliases: contrasts.fit
+Keywords: htest
+Description: Compute Contrasts from Linear Model Fit
+URL: ../../../library/limma/html/contrasts.fit.html
+
+Entry: controlStatus
+Aliases: controlStatus
+Keywords: IO
+Description: Set Status of each Spot from List of Spot Types
+URL: ../../../library/limma/html/controlStatus.html
+
+Entry: convest
+Aliases: convest
+Keywords: htest
+Description: Estimate Proportion of True Null Hypotheses
+URL: ../../../library/limma/html/convest.html
+
+Entry: decideTests
+Aliases: decideTests
+Keywords: htest
+Description: Multiple Testing Across Genes and Contrasts
+URL: ../../../library/limma/html/decideTests.html
+
+Entry: dim
+Aliases: dim.RGList dim.MAList dim.MArrayLM length.RGList length.MAList length.MArrayLM
+Keywords: array
+Description: Retrieve the Dimensions of an RGList, MAList or MArrayLM Object
+URL: ../../../library/limma/html/dim.html
+
+Entry: dimnames
+Aliases: dimnames.RGList dimnames.MAList dimnames.MArrayLM dimnames<-.RGList dimnames<-.MAList
+Keywords: array
+Description: Retrieve the Dimension Names of an RGList, MAList or MArrayLM Object
+URL: ../../../library/limma/html/dimnames.html
+
+Entry: dnormexp
+Aliases: dnormexp dnormexp.saddle
+Keywords: models
+Description: The Normal + Exponential Convolution Distribution
+URL: ../../../library/limma/html/dnormexp.html
+
+Entry: dupcor
+Aliases: duplicateCorrelation
+Keywords: multivariate
+Description: Correlation Between Duplicates
+URL: ../../../library/limma/html/dupcor.html
+
+Entry: ebayes
+Aliases: ebayes eBayes
+Keywords: htest
+Description: Empirical Bayes Statistics for Differential Expression
+URL: ../../../library/limma/html/ebayes.html
+
+Entry: exprs.MA
+Aliases: exprs.MA
+Keywords: array
+Description: Extract Log-Expression Matrix from MAList
+URL: ../../../library/limma/html/exprsMA.html
+
+Entry: fitFDist
+Aliases: fitFDist
+Keywords: distribution
+Description: Moment Estimation of Scaled F-Distribution
+URL: ../../../library/limma/html/fitfdist.html
+
+Entry: fitted.MArrayLM
+Aliases: fitted.MArrayLM
+Keywords: models regression
+Description: Fitted Values Method for MArrayLM Fits
+URL: ../../../library/limma/html/fitted.MArrayLM.html
+
+Entry: geneSetTest
+Aliases: geneSetTest
+Keywords: htest
+Description: Gene Set Test
+URL: ../../../library/limma/html/geneSetTest.html
+
+Entry: getEAWP
+Aliases: getEAWP
+Keywords: array
+Description: Extract Basic Data from Microarray Data Objects
+URL: ../../../library/limma/html/getEAWP.html
+
+Entry: getSpacing
+Aliases: getSpacing
+Keywords: IO
+Description: Get Numerical Spacing
+URL: ../../../library/limma/html/getSpacing.html
+
+Entry: getLayout
+Aliases: getLayout getLayout2
+Keywords: IO
+Description: Extract the Print Layout of an Array from the GAL File
+URL: ../../../library/limma/html/getlayout.html
+
+Entry: gls.series
+Aliases: gls.series
+Keywords: models regression
+Description: Fit Linear Model to Microarray Data by Generalized Least Squares
+URL: ../../../library/limma/html/gls.series.html
+
+Entry: gridr
+Aliases: gridr gridc spotr spotc
+Keywords: IO
+Description: Row and Column Positions on Microarray
+URL: ../../../library/limma/html/gridspotrc.html
+
+Entry: heatdiagram
+Aliases: heatdiagram heatDiagram
+Keywords: hplot
+Description: Stemmed Heat Diagram
+URL: ../../../library/limma/html/heatdiagram.html
+
+Entry: helpMethods
+Aliases: helpMethods
+Keywords: methods
+Description: Prompt for Method Help Topics
+URL: ../../../library/limma/html/helpMethods.html
+
+Entry: imageplot
+Aliases: imageplot
+Keywords: hplot
+Description: Image Plot of Microarray Statistics
+URL: ../../../library/limma/html/imageplot.html
+
+Entry: imageplot3by2
+Aliases: imageplot3by2
+Keywords: hplot
+Description: Write Imageplots to Files
+URL: ../../../library/limma/html/imageplot3by2.html
+
+Entry: intraspotCorrelation
+Aliases: intraspotCorrelation
+Keywords: multivariate
+Description: Intra-Spot Correlation for Two Color Data
+URL: ../../../library/limma/html/intraspotCorrelation.html
+
+Entry: is.fullrank
+Aliases: is.fullrank nonEstimable
+Keywords: algebra
+Description: Check for Full Column Rank
+URL: ../../../library/limma/html/isfullrank.html
+
+Entry: isNumeric
+Aliases: isNumeric
+Keywords: programming
+Description: Test for Numeric Argument
+URL: ../../../library/limma/html/isnumeric.html
+
+Entry: kooperberg
+Aliases: kooperberg
+Keywords: models
+Description: Kooperberg Model-Based Background Correction
+URL: ../../../library/limma/html/kooperberg.html
+
+Entry: limmaUsersGuide
+Aliases: limmaUsersGuide
+Keywords: documentation
+Description: View Limma User's Guide
+URL: ../../../library/limma/html/limmaUsersGuide.html
+
+Entry: lm.series
+Aliases: lm.series
+Keywords: models regression
+Description: Fit Linear Model to Microrray Data by Ordinary Least Squares
+URL: ../../../library/limma/html/lm.series.html
+
+Entry: lmFit
+Aliases: lmFit
+Keywords: models regression
+Description: Linear Model for Series of Arrays
+URL: ../../../library/limma/html/lmFit.html
+
+Entry: lmscFit
+Aliases: lmscFit
+Keywords: models regression
+Description: Fit Linear Model to Individual Channels of Two-Color Data
+URL: ../../../library/limma/html/lmscFit.html
+
+Entry: loessFit
+Aliases: loessFit
+Keywords: models
+Description: Fast Simple Loess
+URL: ../../../library/limma/html/loessfit.html
+
+Entry: m.spot
+Aliases: m.spot a.spot
+Keywords: IO
+Description: Extract M or A-values from SPOT data.frame or matrix
+URL: ../../../library/limma/html/m.spot.html
+
+Entry: ma3x3
+Aliases: ma3x3.matrix ma3x3.spottedarray
+Keywords: smooth
+Description: Two dimensional Moving Averages with 3x3 Window
+URL: ../../../library/limma/html/ma3x3.html
+
+Entry: makeContrasts
+Aliases: makeContrasts
+Keywords: regression
+Description: Construct Matrix of Custom Contrasts
+URL: ../../../library/limma/html/makeContrasts.html
+
+Entry: makeUnique
+Aliases: makeUnique
+Keywords: character
+Description: Make Values of Character Vector Unique
+URL: ../../../library/limma/html/makeunique.html
+
+Entry: MAList-class
+Aliases: MAList-class
+Keywords: classes data
+Description: M-value, A-value Expression List - class
+URL: ../../../library/limma/html/malist.html
+
+Entry: MArrayLM-class
+Aliases: MArrayLM-class
+Keywords: classes regression
+Description: Microarray Linear Model Fit - class
+URL: ../../../library/limma/html/marraylm.html
+
+Entry: mdplot
+Aliases: mdplot
+Keywords: hplot
+Description: mdplot
+URL: ../../../library/limma/html/mdplot.html
+
+Entry: merge
+Aliases: merge.RGList merge.MAList
+Keywords: manip
+Description: Merge RGList or MAList Data Objects
+URL: ../../../library/limma/html/merge.html
+
+Entry: mergeScans
+Aliases: mergeScans mergeScansRG
+Keywords: models
+Description: Merge two scans of two-color arrays
+URL: ../../../library/limma/html/mergeScansRG.html
+
+Entry: modelMatrix
+Aliases: modelMatrix uniqueTargets
+Keywords: regression
+Description: Construct Design Matrix
+URL: ../../../library/limma/html/modelMatrix.html
+
+Entry: modifyWeights
+Aliases: modifyWeights
+Keywords: hplot
+Description: modifyWeights
+URL: ../../../library/limma/html/modifyWeights.html
+
+Entry: mrlm
+Aliases: mrlm
+Keywords: models regression
+Description: Fit Linear Model to Microrray Data by Robust Regression
+URL: ../../../library/limma/html/mrlm.html
+
+Entry: normalizeMedianAbsValues
+Aliases: normalizeMedianAbsValues
+Keywords: array
+Description: Normalize Columns of a Matrix to have the Median Absolute Value
+URL: ../../../library/limma/html/normalizeMedianAbsValues.html
+
+Entry: normalizeRobustSpline
+Aliases: normalizeRobustSpline
+Keywords: models
+Description: Normalize Single Microarray Using Shrunk Robust Splines
+URL: ../../../library/limma/html/normalizeRobustSpline.html
+
+Entry: normalizeWithinArrays
+Aliases: normalizeWithinArrays MA.RG RG.MA
+Keywords: models
+Description: Normalize Within Arrays
+URL: ../../../library/limma/html/normalizeWithinArrays.html
+
+Entry: normalizeBetweenArrays
+Aliases: normalizeBetweenArrays
+Keywords: models multivariate
+Description: Normalize Between Arrays
+URL: ../../../library/limma/html/normalizebetweenarrays.html
+
+Entry: normalizeForPrintorder
+Aliases: normalizeForPrintorder normalizeForPrintorder.rg plotPrintorder
+Keywords: models
+Description: Print-Order Normalization
+URL: ../../../library/limma/html/normalizeprintorder.html
+
+Entry: normalizeQuantiles
+Aliases: normalizeQuantiles
+Keywords: models
+Description: Normalize Columns of a Matrix to have the same Quantiles
+URL: ../../../library/limma/html/normalizequantiles.html
+
+Entry: normexp
+Aliases: normexp.m2loglik normexp.m2loglik.saddle normexp.grad
+Keywords: models
+Description: Normal + Exponential Log-Likelihood
+URL: ../../../library/limma/html/normexp.html
+
+Entry: normexp.fit
+Aliases: normexp.fit
+Keywords: models
+Description: Fit Normal+Exp Convolution Model to Observed Intensities
+URL: ../../../library/limma/html/normexpfit.html
+
+Entry: normexp.signal
+Aliases: normexp.signal
+Keywords: models
+Description: Expected Signal Given Observed Foreground Under Normal+Exp Model
+URL: ../../../library/limma/html/normexpsignal.html
+
+Entry: plotDensities
+Aliases: plotDensities
+Keywords: hplot
+Description: Individual-channel Densities Plot
+URL: ../../../library/limma/html/plotDensities.html
+
+Entry: plotFB
+Aliases: plotFB
+Keywords: hplot
+Description: FB-Plot
+URL: ../../../library/limma/html/plotFB.html
+
+Entry: plotlines
+Aliases: plotlines
+Keywords: hplot
+Description: plotlines
+URL: ../../../library/limma/html/plotlines.html
+
+Entry: plotMA
+Aliases: plotMA
+Keywords: hplot
+Description: MA-Plot
+URL: ../../../library/limma/html/plotma.html
+
+Entry: plotMA3by2
+Aliases: plotMA3by2
+Keywords: hplot
+Description: Write MA-Plots to Files
+URL: ../../../library/limma/html/plotma3by2.html
+
+Entry: plotPrintTipLoess
+Aliases: plotPrintTipLoess
+Keywords: hplot
+Description: MA Plots by Print-Tip Group
+URL: ../../../library/limma/html/plotprinttiploess.html
+
+Entry: poolVar
+Aliases: poolVar
+Keywords: htest
+Description: Pool Sample Variances with Unequal Variances
+URL: ../../../library/limma/html/poolvar.html
+
+Entry: printHead
+Aliases: printHead
+Keywords: hplot
+Description: Print Leading Rows of Large Objects
+URL: ../../../library/limma/html/printHead.html
+
+Entry: printorder
+Aliases: printorder
+Keywords: IO
+Description: Identify Order in which Spots were Printed
+URL: ../../../library/limma/html/printorder.html
+
+Entry: printtipWeights
+Aliases: printtipWeights printtipWeightsSimple
+Keywords: regression models
+Description: Sub-array Quality Weights
+URL: ../../../library/limma/html/printtipWeights.html
+
+Entry: protectMetachar
+Aliases: protectMetachar
+Keywords: character
+Description: Protect Metacharacters
+URL: ../../../library/limma/html/protectMetachar.html
+
+Entry: qqt
+Aliases: qqt
+Keywords: distribution
+Description: Student's t Quantile-Quantile Plot
+URL: ../../../library/limma/html/qqt.html
+
+Entry: QualityWeights
+Aliases: QualityWeights wtarea wtflags wtIgnore.Filter
+Keywords: regression
+Description: Spot Quality Weights
+URL: ../../../library/limma/html/qualwt.html
+
+Entry: read.columns
+Aliases: read.columns
+Keywords: file
+Description: Read specified columns from a file
+URL: ../../../library/limma/html/read.columns.html
+
+Entry: read.maimages
+Aliases: read.maimages read.imagene
+Keywords: file
+Description: Read RGList from Image Analysis Output Files
+URL: ../../../library/limma/html/read.maimages.html
+
+Entry: read.matrix
+Aliases: read.matrix
+Keywords: file
+Description: Read Matrix with Headers from File
+URL: ../../../library/limma/html/read.matrix.html
+
+Entry: read.series
+Aliases: read.series
+Keywords: file
+Description: Read series of image files
+URL: ../../../library/limma/html/read.series.html
+
+Entry: readHeader
+Aliases: readGenericHeader readGPRHeader readSMDHeader
+Keywords: file
+Description: Read Header Information from Image Analysis Raw Data File
+URL: ../../../library/limma/html/readGPRHeader.html
+
+Entry: readImaGeneHeader
+Aliases: readImaGeneHeader
+Keywords: file
+Description: Read ImaGene Header Information
+URL: ../../../library/limma/html/readImaGeneHeader.html
+
+Entry: readSpotTypes
+Aliases: readSpotTypes
+Keywords: IO
+Description: Read Spot Types File
+URL: ../../../library/limma/html/readSpotTypes.html
+
+Entry: readTargets
+Aliases: readTargets
+Keywords: IO
+Description: Read Targets File
+URL: ../../../library/limma/html/readTargets.html
+
+Entry: readGAL
+Aliases: readGAL
+Keywords: IO
+Description: Read a GAL file
+URL: ../../../library/limma/html/readgal.html
+
+Entry: removeExt
+Aliases: removeExt
+Keywords: character file
+Description: Remove Common Extension from File Names
+URL: ../../../library/limma/html/removeext.html
+
+Entry: residuals.MArrayLM
+Aliases: residuals.MArrayLM
+Keywords: models regression
+Description: Extract Residuals from MArrayLM Fit
+URL: ../../../library/limma/html/residuals.MArrayLM.html
+
+Entry: rg.genepix
+Aliases: rg.genepix
+Keywords: IO
+Description: Extract RGList from data.frames Containing GenePix Data
+URL: ../../../library/limma/html/rg.genepix.html
+
+Entry: rg.quantarray
+Aliases: rg.quantarray
+Keywords: IO
+Description: Extract RGList from data.frames Containing Quantarray Data
+URL: ../../../library/limma/html/rg.quantarray.html
+
+Entry: rg.series.spot
+Aliases: rg.series.spot
+Keywords: IO
+Description: Read RGList from SPOT Image Analysis Output Files
+URL: ../../../library/limma/html/rg.series.spot.html
+
+Entry: rg.spot
+Aliases: rg.spot
+Keywords: IO
+Description: Extract RGList from data.frames Containing SPOT Data
+URL: ../../../library/limma/html/rg.spot.html
+
+Entry: RGList-class
+Aliases: RGList-class coerce,RGList,exprSet2-method
+Keywords: classes data
+Description: Red, Green Intensity List - class
+URL: ../../../library/limma/html/rglist.html
+
+Entry: squeezeVar
+Aliases: squeezeVar
+Keywords: htest
+Description: Smooth Sample Variances
+URL: ../../../library/limma/html/squeezeVar.html
+
+Entry: strsplit2
+Aliases: strsplit2
+Keywords: character
+Description: Split Composite Names
+URL: ../../../library/limma/html/strsplit2.html
+
+Entry: subsetting
+Aliases: [.RGList [.MAList [.MArrayLM
+Keywords: manip
+Description: Subset RGList, MAList or MArrayLM Objects
+URL: ../../../library/limma/html/subsetting.html
+
+Entry: summary
+Aliases: summary.RGList summary.MAList summary.MArrayLM
+Keywords: methods
+Description: Summaries of Microarray Data Objects
+URL: ../../../library/limma/html/summary.html
+
+Entry: targetsA2C
+Aliases: targetsA2C array2channel
+Keywords: htest
+Description: Convert Two-Color Targets Dataframe from One-Row-Per-Array to One-Row-Per-Channel
+URL: ../../../library/limma/html/targetsA2C.html
+
+Entry: tmixture
+Aliases: tmixture.vector tmixture.matrix
+Keywords: htest
+Description: Estimate Scale Factor in Mixture of t-Distributions
+URL: ../../../library/limma/html/tmixture.html
+
+Entry: toptable
+Aliases: toptable topTable topTableF
+Keywords: htest
+Description: Table of Top Genes from Linear Model Fit
+URL: ../../../library/limma/html/toptable.html
+
+Entry: trigammaInverse
+Aliases: trigammaInverse
+Keywords: math
+Description: Inverse Trigamma Function
+URL: ../../../library/limma/html/trigammainverse.html
+
+Entry: trimWhiteSpace
+Aliases: trimWhiteSpace
+Keywords: character
+Description: Trim Leading and Trailing White Space
+URL: ../../../library/limma/html/trimWhiteSpace.html
+
+Entry: uniquegenelist
+Aliases: uniquegenelist
+Keywords: array
+Description: Eliminate Duplicate Names from the Gene List
+URL: ../../../library/limma/html/uniquegenelist.html
+
+Entry: unwrapdups
+Aliases: unwrapdups
+Keywords: array
+Description: Unwrap Duplicate Spot Values from Rows into Columns
+URL: ../../../library/limma/html/unwrapdups.html
+
+Entry: venn
+Aliases: vennCounts vennDiagram
+Keywords: htest
+Description: Venn Diagrams
+URL: ../../../library/limma/html/venn.html
+
+Entry: volcanoplot
+Aliases: volcanoplot
+Keywords: hplot
+Description: Volcano Plot
+URL: ../../../library/limma/html/volcanoplot.html
+
+Entry: weighted.median
+Aliases: weighted.median
+Keywords: univar
+Description: Weighted Median
+URL: ../../../library/limma/html/weightedmedian.html
+
+Entry: write.fit
+Aliases: write.fit
+Keywords: IO
+Description: Write MArrayLM Object to a File
+URL: ../../../library/limma/html/writefit.html
+
+Entry: zscore
+Aliases: zscoreGamma zscoreT tZscore
+Keywords: distribution
+Description: Z-score Equivalents
+URL: ../../../library/limma/html/zscore.html

@@ -1,0 +1,57 @@
+compute.affinities           package:gcrma           R Documentation
+
+_P_r_o_b_e _A_f_f_i_n_i_t_y _c_o_m_p_u_t_a_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     An internal function to calculate probe affinities from their
+     sequences.
+
+_U_s_a_g_e:
+
+     compute.affinities(cdfname,verbose=TRUE)
+
+     check.probes(probepackage,cdfname)
+
+_A_r_g_u_m_e_n_t_s:
+
+ cdfname: Object of class 'character' representing the name of 'CDF'
+          file associated with the arrays in the 'AffyBatch'.
+
+probepackage: 'character' representing the name of the package with the
+          probe sequence information.
+
+ verbose: Logical value. If 'TRUE' messages about the progress of the
+          function is printed.
+
+_D_e_t_a_i_l_s:
+
+     The affinity of a probe is described as the sum of
+     position-dependent base affinities. Each base at each position
+     contributes to the total affinity of a probe in an additive
+     fashion. For a given type of base, the positional effect is
+     modeled as a spline function with 5 degrees of freedom.
+
+     'check.probes' makes sure things are matching as they should.
+
+_V_a_l_u_e:
+
+     'compute.affinities' returns an 'AffyBatch' with the affinities
+     for PM probes in the pm locations and the affinities for MM probes
+     in the mm locations. NA  will be added for probes with no sequence
+     information.
+
+_A_u_t_h_o_r(_s):
+
+     Rafeal Irizarry
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Hekstra, D., Taussig, A. R., Magnasco, M., and Naef, F. (2003)
+     Absolute mRNA concentrations from sequence-specific calibration of
+     oligonucleotide array. Nucleic Acids Research, 31. 1962-1968.
+
+_S_e_e _A_l_s_o:
+
+     'gcrma,affinity.spline.coefs'
+

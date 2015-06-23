@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Main function for location and scale normalization of cDNA microarray data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maNormMain {marray}"><tr><td>maNormMain {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Main function for location and scale normalization of cDNA microarray data</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This is the main function for location and scale normalization of cDNA microarray data. Normalization is performed for a batch of arrays using location and scale normalization procedures specified by the lists of functions <code>f.loc</code> and <code>f.scale</code>. Typically, only one function is given in each list, otherwise composite normalization is performed using the weights computed by the functions <code>a.loc</code> and <code>a.scale</code>. The function operates on an object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code> (or possibly <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>, if normalization is performed in several steps) and returns an object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>. Simple wrapper functions are provided by <code><a href="maNorm.html">maNorm</a></code> and <code><a href="maNormScale.html">maNormScale</a></code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maNormMain(mbatch, f.loc=list(maNormLoess()), f.scale=NULL,
+a.loc=maCompNormEq(), a.scale=maCompNormEq(), Mloc=TRUE, Mscale=TRUE, echo=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mbatch</code></td>
+<td>
+An object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code>, containing intensity data for the batch of arrays to be normalized. An object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code> may also be passed if normalization is performed in several steps.</td></tr>
+<tr valign="top"><td><code>f.loc</code></td>
+<td>
+A list of location normalization functions, e.g., <code><a href="maNormLoess.html">maNormLoess</a></code>, <code><a href="maNormMed.html">maNormMed</a></code>, or <code><a href="maNorm2D.html">maNorm2D</a></code>.</td></tr>
+<tr valign="top"><td><code>f.scale</code></td>
+<td>
+A list of scale normalization functions, .e.g, <code><a href="maNormMAD.html">maNormMAD</a></code>.</td></tr>
+<tr valign="top"><td><code>a.loc</code></td>
+<td>
+For composite normalization, a function for computing the weights used in combining several location normalization functions, e.g., <code><a href="maCompNormA.html">maCompNormA</a></code>.</td></tr>
+<tr valign="top"><td><code>a.scale</code></td>
+<td>
+For composite normalization, a function for computing
+the weights used in combining several scale normalization functions.</td></tr>
+<tr valign="top"><td><code>Mloc</code></td>
+<td>
+If <code>TRUE</code>, the location normalization values are stored in the slot <code>maMloc</code> of the object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code> returned by the function, if <code>FALSE</code>, these values are not retained.</td></tr>
+<tr valign="top"><td><code>Mscale</code></td>
+<td>
+If <code>TRUE</code>, the scale normalization values are stored in the slot <code>maMscale</code> of the object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code> returned by the function, if <code>FALSE</code>, these values are not retained.</td></tr>
+<tr valign="top"><td><code>echo</code></td>
+<td>
+If <code>TRUE</code>, the index of the array currently being
+normalized is printed.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+When both location and scale normalization functions (<code>f.loc</code> and <code>f.scale</code>) are passed, location normalization is performed before scale normalization. That is, scale values are computed for the location normalized log-rations. The same results could be obtained by two applications of the function <code>maNormMain</code>, first with only the location normalization function and <code>f.scale=NULL</code>, and second with only the scale normalization function and <code>f.loc=NULL</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mnorm</code></td>
+<td>
+An object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>, containing the normalized intensity data.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.<br> <br>
+</p>
+<p>
+Y. H. Yang, S. Dudoit, P. Luu, and T. P. Speed (2001). Normalization for cDNA microarray data. In M. L. Bittner, Y. Chen, A. N. Dorsel, and E. R. Dougherty (eds), <EM>Microarrays: Optical Technologies and Informatics</EM>, Vol. 4266 of <EM>Proceedings of SPIE</EM>.<br> <br>
+</p>
+<p>
+Y. H. Yang, S. Dudoit, P. Luu, D. M. Lin, V. Peng, J. Ngai, and T. P. Speed (2002). Normalization for cDNA microarray data: a robust composite method addressing single and multiple slide systematic variation. <EM>Nucleic Acids Research</EM>, Vol. 30, No. 4.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="maNorm.html">maNorm</a></code>, <code><a href="maNormScale.html">maNormScale</a></code>, <code><a href="maNormLoess.html">maNormLoess</a></code>, <code><a href="maLoess.html">maLoess</a></code>,
+<code><a href="maNormMAD.html">maNormMAD</a></code>, <code><a href="maMAD.html">maMAD</a></code>,
+<code><a href="maNormMed.html">maNormMed</a></code>, <code><a href="maMed.html">maMed</a></code>,
+<code><a href="maNorm2D.html">maNorm2D</a></code>, <code><a href="ma2D.html">ma2D</a></code>,
+<code><a href="maCompNormA.html">maCompNormA</a></code>, <code><a href="maCompNormA.html">maCompNormEq</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# Examples use swirl dataset, for description type ? swirl
+data(swirl)
+
+# Within-print-tip-group loess location normalization of batch swirl
+# - Default normalization
+swirl.norm&lt;-maNormMain(swirl)
+
+boxplot(swirl.norm)
+boxplot(swirl.norm[,3])
+plot(swirl.norm[,3])
+
+# Global median normalization for arrays 81 and 82
+swirl.norm &lt;- maNormMain(swirl[,1:2], f.loc = list(maNormMed(x=NULL,y="maM")))
+
+# Global loess normalization for array 81
+swirl.norm &lt;- maNormMain(swirl[,1], f.loc = list(maNormLoess(x="maA",y="maM",z=NULL)))
+
+# Composite normalization as in Yang et al. (2002)
+# No MSP controls are available here, so all spots are used for illustration
+# purposes
+swirl.norm &lt;- maNormMain(swirl[,1], f.loc = list(maNormLoess(x="maA",y="maM",z=NULL),maNormLoess(x="maA",y="maM",z="maPrintTip")), a.loc=maCompNormA())
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

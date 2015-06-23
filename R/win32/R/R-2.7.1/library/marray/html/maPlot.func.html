@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Scatter-plots with fitted curves and text</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maPlot.func {marray}"><tr><td>maPlot.func {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Scatter-plots with fitted curves and text</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function produces scatter-plots of <code>x</code> vs. <code>y</code>. It also allows the user to highlight and annotate subsets of points on the plot, and display fitted curves from robust local regression or other smoothing procedures.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maPlot.func(x, y, z, 
+        lines.func = maLowessLines(subset = TRUE, f = 0.3, col = 1:length(unique(z)), lty = 1, lwd = 2.5),
+        text.func = maText(), 
+        legend.func = maLegendLines(legend = as.character(unique(z)), col = 1:length(unique(z)), lty = 1, lwd = 2.5, ncol = 1),
+         ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+A "numeric" vector for the abscissa.</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+A "numeric" vector for the ordinates.</td></tr>
+<tr valign="top"><td><code>z</code></td>
+<td>
+A vector of statistic used to stratify the data, smoothed curves are fitted separately within values of <code>z</code></td></tr>
+<tr valign="top"><td><code>lines.func</code></td>
+<td>
+A function for computing and plotting smoothed fits of <code>y</code> as a function of <code>x</code>, separately within values of <code>z</code>, e.g. <code><a href="maLoessLines.html">maLoessLines</a></code>.</td></tr>
+<tr valign="top"><td><code>text.func</code></td>
+<td>
+A function for highlighting a subset of points, e.g., <code>maText</code>.</td></tr>
+<tr valign="top"><td><code>legend.func</code></td>
+<td>
+A function for adding a legend to the plot, e.g. <code><a href="maLegendLines.html">maLegendLines</a></code>.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Optional graphical parameters, see <code><a href="../../graphics/html/par.html">par</a></code>.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="maPlot.html">maPlot</a></code>, <code><a href="maLoessLines.html">maLoessLines</a></code>, <code><a href="maLegendLines.html">maLegendLines</a></code>, <code><a href="maText.html">maText</a></code>, <code><a href="../../graphics/html/plot.html">plot</a></code>, <code><a href="../../stats/html/lowess.html">lowess</a></code>, <code><a href="../../stats/html/loess.html">loess</a></code>, <code><a href="../../graphics/html/legend.html">legend</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# See examples for maPlot.
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

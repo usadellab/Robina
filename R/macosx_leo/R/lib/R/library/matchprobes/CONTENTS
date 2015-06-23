@@ -1,0 +1,59 @@
+Entry: basecontent
+Aliases: basecontent countbases
+Keywords: manip
+Description: Obtain the ATCG content of a gene
+URL: ../../../library/matchprobes/html/basecontent.html
+
+Entry: combineAffyBatch
+Aliases: combineAffyBatch
+Keywords: manip
+Description: A function to combine data from different Affymetrix genechip types into one AffyBatch.
+URL: ../../../library/matchprobes/html/combineAffyBatch.html
+
+Entry: complementSeq
+Aliases: complementSeq
+Keywords: manip
+Description: Complementary sequence.
+URL: ../../../library/matchprobes/html/complementSeq.html
+
+Entry: getProbeDataAffy
+Aliases: getProbeDataAffy
+Keywords: IO utilities
+Description: Read a data file describing the probe sequences on an Affymetrix genechip
+URL: ../../../library/matchprobes/html/getProbeDataAffy.html
+
+Entry: getProbeData_1lq
+Aliases: getProbeData_1lq
+Keywords: IO utilities
+Description: Read a 1lq file for an Affymetrix genechip
+URL: ../../../library/matchprobes/html/getProbeData_1lq.html
+
+Entry: longestConsecutive
+Aliases: longestConsecutive
+Keywords: manip
+Description: Obtain the length of the longest substring containing only 'letter'
+URL: ../../../library/matchprobes/html/longestConsecutive.html
+
+Entry: makeProbePackage
+Aliases: makeProbePackage
+Keywords: IO utilities
+Description: Make a package with probe sequence related data for microarrays
+URL: ../../../library/matchprobes/html/makeProbePackage.html
+
+Entry: matchprobes
+Aliases: matchprobes
+Keywords: manip
+Description: A function to match a query sequence to the sequences of a set of probes.
+URL: ../../../library/matchprobes/html/matchprobes.html
+
+Entry: print.probetable
+Aliases: print.probetable
+Keywords: print
+Description: Print method for probetable objects
+URL: ../../../library/matchprobes/html/print.probetable.html
+
+Entry: reverseSeq
+Aliases: reverseSeq revcompDNA revcompRNA
+Keywords: manip
+Description: Reverse Sequence
+URL: ../../../library/matchprobes/html/reverseSeq.html

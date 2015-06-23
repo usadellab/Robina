@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Verifying the order between intensities matrix and target file information</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for checkTargetInfo {marray}"><tr><td>checkTargetInfo {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Verifying the order between intensities matrix and target file information</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Check that the foreground and backgruond intensities are stored in the
+same order as provided in the first column of target file.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+checkTargetInfo(mraw)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mraw</code></td>
+<td>
+Object of class <code>marrayRaw</code> or <code>marryNorm</code>.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+A logical value.  This function returns "TRUE" if the first column from
+the Target information is the same order as the foreground and
+backgruond intensities.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Yee Hwa (Jean) Yang
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+datadir &lt;- system.file("swirldata", package="marray")
+swirl.targets &lt;- read.marrayInfo(file.path(datadir, "SwirlSample.txt"))
+data(swirl)
+swirl@maTargets &lt;- swirl.targets
+
+checkTargetInfo(swirl)
+
+checkTargetInfo(swirl[, 2:4])
+
+## reorder
+swirl@maTargets &lt;- swirl.targets[c(2:4, 1),]
+checkTargetInfo(swirl)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,23 @@
+TODO List for Robin
+===================
+
+
+- 	integration of tiling array support using the code to be written/ported to R by
+	Liam Childs
+	
+- 	Configurability of PCA plot (asked for by John and Mark) - ability to plot PCs upt to PC5 against PC6 and Show a 
+	scree plot to give an overview on the distribution of variances explained by ordered
+	PCs.
+	
+- 	Integration of RNA-Seq analysis. Unsure at what point of the RNA-Seq pipeline we can
+	enter the business. Just implementing an interface for packages like edgeR would be
+	a rather thin solution but require a lot of prior manual work from the user. Integrating
+	moe steps like
+		
+		- raw read quality checking (different for different platforms)
+		- quality-based preprocessing and filtering of reads (not so extremely platform-dependent)
+		- mapping to user-provided target genome (FASTA) and inferrence of coverage vector
+		- normalization
+		- statistical analysis of differential expression (again egdeR and the like)
+			
+	would be nicer

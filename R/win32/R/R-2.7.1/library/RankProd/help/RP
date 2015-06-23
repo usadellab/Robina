@@ -1,0 +1,122 @@
+RP                 package:RankProd                 R Documentation
+
+_R_a_n_k _P_r_o_d_u_c_t _A_n_a_l_y_s_i_s _o_f _M_i_c_r_o_a_r_r_a_y
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Perform rank product method to identify differentially  expressed
+     genes. It is possible to do either a one-class or two-class
+     analysis.
+
+_U_s_a_g_e:
+
+         RP(data,cl,num.perm=100,logged=TRUE,
+            na.rm=FALSE,gene.names=NULL,plot=FALSE, rand=NULL)
+
+_A_r_g_u_m_e_n_t_s:
+
+    data: the data set that should be analyzed. Every  row of this data
+          set must correspond to a gene.
+
+      cl: a vector containing the class labels of the samples. In the
+          two class unpaired case, the label of a  sample is either 0
+          (e.g., control group) or 1  (e.g., case group). For one class
+           data, the label for  each sample should be 1.
+
+num.perm: number of permutations used in the  calculation of the null
+          density. Default is 'num.perm=100'.
+
+  logged: if "TRUE", data has bee logged, otherwise set it  to "FALSE"
+
+   na.rm: if 'FALSE' (default), the NA value will not be used in
+          computing rank. If 'TRUE', the missing  values will be
+          replaced by the gene-wise mean of the non-missing values.
+          Gene with all values missing  will be assigned "NA"
+
+gene.names: if "NULL", no gene name will be assigned  to the estimated
+          percentage of  false positive predictions (pfp).
+
+    plot: If "TRUE", plot the estimated pfp verse the  rank of each
+          gene.
+
+    rand: if specified, the random number generator will  be put in a
+          reproducible state using the rand value as seed.
+
+_V_a_l_u_e:
+
+     A result of identifying differentially expressed genes  between
+     two classes. The identification consists of two parts, the
+     identification of  up-regulated  and down-regulated genes in 
+     class 2 compared to class 1, respectively.
+
+     pfp: estimated percentage of false positive predictions (pfp) up
+          to  the position of each gene under two  identificaiton each
+
+    pval: estimated pvalue for each gene being up- and down-regulated
+
+     RPs: Original rank-product of each genes for two  dentificaiton
+          each 
+
+  RPrank: rank of the rank product of each genes
+
+ Orirank: original rank in each comparison, which  is used to construct
+          rank product
+
+   AveFC: fold change of average expression under class 1 over  that
+          under class 2. log-fold change if data is in log  scaled,
+          original fold change if data is unlogged. 
+
+_N_o_t_e:
+
+     Percentage of false prediction (pfp), in theory, is  equivalent of
+     false  discovery rate (FDR), and it is possible to be large than
+     1.
+
+     The function looks for up- and down- regulated genes in two
+     seperate steps, thus two pfps and pvalues are computed and used to
+     identify  gene that belong to each group.   
+
+     This function is suitable to deal with data from a  single origin,
+     e.g. single  experiment. If the data has  different origin, e.g.
+     generated at different  laboratories, please refer RP.advance.
+
+_A_u_t_h_o_r(_s):
+
+     Fangxin Hong fhong@salk.edu
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Breitling, R., Armengaud, P., Amtmann, A., and Herzyk,  P.(2004)
+     Rank Products:A simple, yet powerful, new method to  detect
+     differentially regulated genes in replicated microarray
+     experiments, _FEBS Letter_, 57383-92
+
+_S_e_e _A_l_s_o:
+
+     'topGene'   'RPadvance'   'plotRP'
+
+_E_x_a_m_p_l_e_s:
+
+          
+           # Load the data of Golub et al. (1999). data(golub) 
+           # contains a 3051x38 gene expression
+           # matrix called golub, a vector of length called golub.cl 
+           # that consists of the 38 class labels,
+           # and a matrix called golub.gnames whose third column 
+           # contains the gene names.
+           data(golub)
+
+      
+           #use a subset of data as example, apply the rank 
+           #product method
+           subset <- c(1:4,28:30)
+           #Setting rand=123, to make the results reproducible,
+
+           RP.out <- RP(golub[,subset],golub.cl[subset],rand=123) 
+           
+           # class 2: label =1, class 1: label = 0
+           #pfp for identifying genes that are up-regulated in class 2 
+           #pfp for identifying genes that are down-regulated in class 2 
+           head(RP.out$pfp)
+       
+

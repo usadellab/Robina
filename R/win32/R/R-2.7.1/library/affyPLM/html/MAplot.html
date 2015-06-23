@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Relative M vs. A plots</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for MAplot {affyPLM}"><tr><td>MAplot {affyPLM}</td><td align="right">R Documentation</td></tr></table>
+<h2>Relative M vs. A plots</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Create boxplots of M or M vs A plots. Where M is determined relative
+to a specified chip or to a pseudo-median reference chip.
+</p>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>...</code></td>
+<td>
+Additional parameters for the routine</td></tr>
+<tr valign="top"><td><code>A</code></td>
+<td>
+A vector to plot along the horizonal axis</td></tr>
+<tr valign="top"><td><code>M</code></td>
+<td>
+A vector to plot along vertical axis</td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+A set of indices to use when drawing the loess curve</td></tr>
+<tr valign="top"><td><code>show.statistics</code></td>
+<td>
+If true some summary statistics of the M values
+are drawn</td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+span to be used for loess fit.</td></tr>
+<tr valign="top"><td><code>family.loess</code></td>
+<td>
+<code>"guassian"</code> or <code>"symmetric"</code> as in
+<code><a href="../../modreg/html/loess.html">loess</a></code>.</td></tr>
+<tr valign="top"><td><code>cex</code></td>
+<td>
+Size of text when writing summary statistics on plot</td></tr>
+</table>
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../affy/html/mva.pairs.html">mva.pairs</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>affyPLM</em> version 1.16.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

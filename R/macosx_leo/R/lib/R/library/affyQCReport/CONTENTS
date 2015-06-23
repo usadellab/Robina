@@ -1,0 +1,41 @@
+Entry: QCReport
+Aliases: QCReport
+Keywords: hplot
+Description: QC Report for AffyBatch objects
+URL: ../../../library/affyQCReport/html/QCReport.html
+
+Entry: affyQAReport
+Aliases: affyQAReport openQAReport rmQAReport
+Keywords: manip
+Description: Generate a QA Report for Affymetrix arrays
+URL: ../../../library/affyQCReport/html/affyQAReport.html
+
+Entry: borderQC1
+Aliases: borderQC1
+Keywords: hplot
+Description: Distribution of intensities of the border elements
+URL: ../../../library/affyQCReport/html/borderQC1.html
+
+Entry: borderQC2
+Aliases: borderQC2
+Keywords: hplot
+Description: Center of intensity QC plots
+URL: ../../../library/affyQCReport/html/borderQC2.html
+
+Entry: correlationPlot
+Aliases: correlationPlot QCReport-correlationPlot
+Keywords: hplot
+Description: Array-array intensity correlation plot
+URL: ../../../library/affyQCReport/html/correlationPlot.html
+
+Entry: signalDist
+Aliases: signalDist QCReport-signalDist
+Keywords: hplot
+Description: Intensity distribution plots for a AffyBatch object
+URL: ../../../library/affyQCReport/html/signalDist.html
+
+Entry: titlePage
+Aliases: titlePage QCReport-titlePage
+Keywords: hplot
+Description: QC report title page with array names
+URL: ../../../library/affyQCReport/html/titlePage.html

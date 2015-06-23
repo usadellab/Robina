@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Generate a marrayLayout object</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maCompLayout {marray}"><tr><td>maCompLayout {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Generate a marrayLayout object</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Take a matrix of cooordiates and generate a marrayLayout object.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maCompLayout(mat, ncolumns = 4)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mat</code></td>
+<td>
+a matrix of coordinates, this can either be n by 3 matrix
+with columns (Block, Row, Column) or n by 4 matrix with columns
+(Grid.R, Grid.C, Spot.R, Spot.C)</td></tr>
+<tr valign="top"><td><code>ncolumns</code></td>
+<td>
+For n by 3 matrix, the number of meta-grid columns.
+By default, it is set to 4.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+An object of class <code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code>.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yang
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+X &lt;- cbind(Block = c(1,1,2,2,3,3,4,4), Rows=c(1,2,1,2,1,2,1,2), Columns=rep(1,8))
+maCompLayout(X, ncolumns=2)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

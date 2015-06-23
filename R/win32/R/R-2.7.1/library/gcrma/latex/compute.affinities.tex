@@ -1,0 +1,54 @@
+\HeaderA{compute.affinities}{Probe Affinity computation}{compute.affinities}
+\aliasA{base.profiles}{compute.affinities}{base.profiles}
+\methaliasA{base.profiles.mm}{compute.affinities}{base.profiles.mm}
+\methaliasA{base.profiles.nc}{compute.affinities}{base.profiles.nc}
+\aliasA{check.probes}{compute.affinities}{check.probes}
+\methaliasA{compute.affinities.local}{compute.affinities}{compute.affinities.local}
+\aliasA{compute.affinity.coef}{compute.affinities}{compute.affinity.coef}
+\aliasA{plotBaseProfiles}{compute.affinities}{plotBaseProfiles}
+\keyword{manip}{compute.affinities}
+\begin{Description}\relax
+An internal function to calculate probe affinities from their
+sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+compute.affinities(cdfname,verbose=TRUE)
+
+check.probes(probepackage,cdfname)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{cdfname}] Object of class \code{character} representing the name of
+\code{CDF} file associated with the arrays in the \code{AffyBatch}.
+\item[\code{probepackage}] \code{character} representing the name of the
+package with the probe sequence information.
+\item[\code{verbose}] Logical value. If \code{TRUE} messages about the progress of
+the function is printed.
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+The affinity of a probe is described as the sum of position-dependent base affinities.
+Each base at each position contributes to the total affinity of a probe
+in an additive fashion. For a given type of base, the positional effect
+is modeled as a spline function with 5 degrees of freedom.
+
+\code{check.probes} makes sure things are matching as they should.
+\end{Details}
+\begin{Value}
+\code{compute.affinities} returns an \code{AffyBatch} with the
+affinities for PM probes in the pm locations and the affinities for MM
+probes in the mm locations. NA  will be added for probes with no
+sequence information.
+\end{Value}
+\begin{Author}\relax
+Rafeal Irizarry
+\end{Author}
+\begin{References}\relax
+Hekstra, D., Taussig, A. R., Magnasco, M., and Naef, F. (2003) Absolute mRNA concentrations from sequence-specific calibration of oligonucleotide array. Nucleic Acids Research, 31. 1962-1968.
+\end{References}
+\begin{SeeAlso}\relax
+\code{\LinkA{gcrma}{gcrma},\LinkA{gcrma}{gcrma}}
+\end{SeeAlso}
+

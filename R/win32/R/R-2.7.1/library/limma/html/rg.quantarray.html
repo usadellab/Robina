@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Extract RGList from data.frames Containing Quantarray Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for rg.quantarray {limma}"><tr><td>rg.quantarray {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Extract RGList from data.frames Containing Quantarray Data</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Extracts an RGList from Quantarray image analysis output when the data has already been read from files into data.frames objects.
+</p>
+<p>
+This function is deprecated in limma 2.9.7 (1 January 2007).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+rg.quantarray(slides,names.slides=names(slides),suffix="qta")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>slides</code></td>
+<td>
+Character vector giving the names of the data frames containing the Spot output.</td></tr>
+<tr valign="top"><td><code>names.slides</code></td>
+<td>
+Names to be associated with each slide as column name.</td></tr>
+<tr valign="top"><td><code>suffix</code></td>
+<td>
+The dataframe names are assumed to have this suffix added to names in <code>slides</code>.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function extracts the foreground and background intensities from a series of data frames and assembles them in the components of one list.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list containing the components
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>R</code></td>
+<td>
+A matrix containing the red channel foreground intensities for each spot for each array.</td></tr>
+<tr valign="top"><td><code>Rb</code></td>
+<td>
+A matrix containing the red channel background intensities for each spot for each array.</td></tr>
+<tr valign="top"><td><code>G</code></td>
+<td>
+A matrix containing the green channel foreground intensities for each spot for each array.</td></tr>
+<tr valign="top"><td><code>Gb</code></td>
+<td>
+A matrix containing the green channel background intensities for each spot for each array.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+An overview of LIMMA functions for reading data is given in <a href="03reading.html">03.ReadingData</a>.
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

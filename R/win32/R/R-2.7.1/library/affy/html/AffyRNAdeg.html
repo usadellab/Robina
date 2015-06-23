@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Function to assess RNA degradation in Affymetrix GeneChip data.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for AffyRNAdeg {affy}"><tr><td>AffyRNAdeg {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Function to assess RNA degradation in Affymetrix GeneChip data.</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Uses ordered probes in probeset to detect possible RNA degradation.
+Plots and statistics used for evaluation.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+AffyRNAdeg(abatch,log.it=TRUE)
+summaryAffyRNAdeg(rna.deg.obj,signif.digits=3)
+plotAffyRNAdeg(rna.deg.obj, transform = "shift.scale", cols = NULL,
+                 ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>abatch</code></td>
+<td>
+An object of class <code><a href="AffyBatch-class.html">AffyBatch-class</a></code>.</td></tr>
+<tr valign="top"><td><code>log.it</code></td>
+<td>
+A logical argument: If log.it=T, then probe data is log2 tranformed</td></tr>
+<tr valign="top"><td><code>rna.deg.obj</code></td>
+<td>
+Output from AffyRNAdeg</td></tr>
+<tr valign="top"><td><code>signif.digits</code></td>
+<td>
+Number of significant digits to show.</td></tr>
+<tr valign="top"><td><code>transform</code></td>
+<td>
+Possible choices are "shift.scale","shift.only", and "neither".  "Shift" vertically staggers the plots for individual chips, to make the display easier to read. "Scale" normalizes so that standard deviation is equal to 1.    </td></tr>
+<tr valign="top"><td><code>cols</code></td>
+<td>
+A vector of colors for plot, length = number of chips</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+further arguments for <code><a href="../../graphics/html/plot.html">plot</a></code> function.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Within each probeset, probes are numbered directionally from
+the 5' end to the 3' end. Probe intensities are averaged by probe
+number, across all genes.   If log.it=<code>FALSE</code> and
+transform="Neither", then 
+plotAffyRNAdeg  simply shows these means for each chip.  Shifted and
+scaled versions of the plot can make it easier to see.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+<code>AffyRNAdeg</code> returns a list with the following components:
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>sample.names </code></td>
+<td>
+names of samples, derived from affy batch object</td></tr>
+<tr valign="top"><td><code>means.by.number</code></td>
+<td>
+average intensity by probe position</td></tr>
+<tr valign="top"><td><code>ses</code></td>
+<td>
+standard errors for probe position averages</td></tr>
+<tr valign="top"><td><code>slope</code></td>
+<td>
+from linear regression of means.by.number</td></tr>
+<tr valign="top"><td><code>pvalue</code></td>
+<td>
+from linear regression of means.by.number</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Leslie Cope
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(affybatch.example)
+RNAdeg&lt;-AffyRNAdeg(affybatch.example)
+plotAffyRNAdeg(RNAdeg)
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

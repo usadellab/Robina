@@ -1,0 +1,37 @@
+AnnDbBimap-envirAPI     Environment-like API for AnnDbBimap objects
+AnnDbObj-objects        AnnDbObj objects
+AnnDbPkg-checker        Check the SQL data contained in an SQLite-based
+                        annotation package
+AnnDbPkg-maker          Creates an SQLite-based annotation package
+Bimap                   Bimap objects and the Bimap interface
+Bimap-direction         Methods for getting/setting the direction of a
+                        Bimap object, and undirected methods for
+                        getting/counting/setting its keys
+Bimap-keys              Methods for manipulating the keys of a Bimap
+                        object
+Bimap-toTable           Methods for manipulating a Bimap object in a
+                        data-frame style
+BimapFormatting         Formatting a Bimap as a list or character
+                        vector
+GOTerms-class           Class "GOTerms"
+makeARABIDOPSISCHIP_DB
+                        Creates a sqlite database, and then makes an
+                        annotation package with it
+makeHUMANCHIP_DB        Creates a sqlite database, and then makes an
+                        annotation package with it
+makeYEASTCHIP_DB        Creates a sqlite database, and then makes an
+                        annotation package with it
+make_eg_to_go_map       Create GO to Entrez Gene maps for chip-based
+                        packages
+popARABIDOPSISCHIPDB    Populates an SQLite DB with and produces a
+                        schema definition
+popHUMANCHIPDB          Populates an SQLite DB with and produces a
+                        schema definition
+popHUMANDB              Populates an SQLite DB with and produces a
+                        schema definition
+popYEASTCHIPDB          Populates an SQLite DB with and produces a
+                        schema definition
+toSQLStringSet          Convert a vector to a quoted string for use as
+                        a SQL value list
+wrapBaseDBPackages      Wrap up all the Base Databases into Packages
+                        for distribution

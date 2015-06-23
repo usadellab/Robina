@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Individual Channel Analysis of Two-Color Microarrays</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for 07.SingleChannel {limma}"><tr><td>07.SingleChannel {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Individual Channel Analysis of Two-Color Microarrays</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This page gives an overview of the LIMMA functions fit linear models to two-color microarray data in terms of the log-intensities rather than log-ratios.
+</p>
+<p>
+The function <code><a href="intraspotCorrelation.html">intraspotCorrelation</a></code> estimates the intra-spot correlation between the two channels.
+The regression function <code><a href="lmscFit.html">lmscFit</a></code> takes the correlation as an argument and fits linear models to the two-color data in terms of the individual log-intensities.
+The output of <code>lmscFit</code> is an <code>MArrayLM</code> object just the same as from <code>lmFit</code>, so inference proceeds in the same way as for log-ratios once the linear model is fitted.
+See <a href="06linearmodels.html">06.LinearModels</a>.
+</p>
+<p>
+The function <code><a href="targetsA2C.html">targetsA2C</a></code> converts two-color format target data frames to single channel format, i.e, converts from array-per-line to channel-per-line, to facilitate the formulation of the design matrix.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

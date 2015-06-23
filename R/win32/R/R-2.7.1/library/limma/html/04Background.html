@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Background Correction</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for 04.Background {limma}"><tr><td>04.Background {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Background Correction</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This page deals with background correction methods for two-color microarray data.
+</p>
+<p>
+Usually one doesn't need to explicitly ask for background correction of the intensities because this is done by default by <code><a href="normalizeWithinArrays.html">normalizeWithinArrays</a></code>,
+which subtracts the background from the foreground intensities before applying the normalization method.
+This default background correction method can be over-ridden by using <code><a href="backgroundcorrect.html">backgroundCorrect</a></code> which offers a number of alternative
+background correct methods to simple subtraction.
+The function <code>backgroundCorrect</code> is used to correct the <code>RGList</code> before applying <code>normalizeWithinArrays</code>.
+</p>
+<p>
+The <code>movingmin</code> method of <code>backgroundCorrect</code> uses utility functions <code><a href="ma3x3.html">ma3x3.matrix</a></code> and <code><a href="ma3x3.html">ma3x3.spottedarray</a></code>.
+</p>
+<p>
+The <code>normexp</code> method of <code>backgroundCorrect</code> uses ulility functions <code><a href="normexpfit.html">normexp.fit</a></code>, <code><a href="normexpsignal.html">normexp.signal</a></code>, <code><a href="normexp.html">normexp.m2loglik</a></code>, <code><a href="normexp.html">normexp.grad</a></code>, <code><a href="dnormexp.html">dnormexp</a></code> and <code><a href="dnormexp.html">dnormexp.saddle</a></code>.
+</p>
+<p>
+<code><a href="kooperberg.html">kooperberg</a></code> is a Bayesian background correction tool designed specifically for GenePix data.
+<code>kooperberg</code> is not currently used as the default method for GenePix data because it is computationally intensive.
+It requires several additional columns from the GenePix data files which can be read in using <code>read.maimages</code> and specifying the <code>other.columns</code> argument.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,72 @@
+bg.adjust.affinities          package:gcrma          R Documentation
+
+_B_a_c_k_g_r_o_u_n_d _a_d_j_u_s_t_m_e_n_t _w_i_t_h _s_e_q_u_e_n_c_e _i_n_f_o_r_m_a_t_i_o_n (_i_n_t_e_r_n_a_l _f_u_n_c_t_i_o_n)
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     An internal function to be used by 'gcrma'.
+
+_U_s_a_g_e:
+
+     bg.adjust.fullmodel(pms,mms,ncs=NULL,apm,amm,anc=NULL,index.affinities,k=k,rho=.7,fast)
+     bg.adjust.affinities(pms,ncs,apm,anc,index.affinities,k=k,fast=FALSE,nomm=FALSE)
+
+_A_r_g_u_m_e_n_t_s:
+
+     pms: PM intensities after optical background correction, before
+          non-specific-binding correction.
+
+     mms: MM intensities after optical background correction, before
+          non-specific-binding correction.
+
+     ncs: Negative control probe intensities after optical background
+          correction, before non-specific-binding correction. If
+          'ncs=NULL', the MM probes are considered the negative control
+          probes.
+
+index.affinities: The index of pms with known sequences. (For some
+          types of arrays the sequences of a small subset of probes are
+          not provided by Affymetrix.)
+
+     apm: Probe affinities for PM probes with known sequences.
+
+     amm: Probe affinities for MM probes with known sequences.
+
+     anc: Probe affinities for Negative control probes with known
+          sequences. This is ignored when 'ncs=NULL'.
+
+     rho: correlation coefficient of log background intensity in a pair
+          of pm/mm probes. Default=.7
+
+       k: A tuning parameter. See details.
+
+    fast: Logical value. If 'TRUE' a faster add-hoc algorithm is used.
+
+    nomm: 
+
+_D_e_t_a_i_l_s:
+
+     Assumes PM=background1+signal,mm=background2,
+     (log(background1),log(background2))'  follow bivariate normal
+     distribution, signal distribution follows power law. 
+     'bg.parameters.gcrma' and 'sg.parameters.gcrma'  provide adhoc
+     estimates of the parameters.
+
+     the original gcrma uses an empirical Bayes estimate. this requires
+     a complicated numerical integration. An add-hoc method tries to
+     imitate the empirical Bayes estimate with a PM-B but values of
+     PM-B<'k' going to 'k'. This can be thought as a shrunken MVUE. For
+     more details see Wu et al. (2003).
+
+_V_a_l_u_e:
+
+     a vector of same length as x.
+
+_A_u_t_h_o_r(_s):
+
+     Rafeal Irizarry, Zhijin(Jean) Wu
+
+_S_e_e _A_l_s_o:
+
+     'gcrma'
+

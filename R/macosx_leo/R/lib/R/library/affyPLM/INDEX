@@ -1,0 +1,20 @@
+MAplot                  Relative M vs. A plots
+PLMset-class            Class PLMset
+PLMset2exprSet          Convert a PLMset to an ExpressionSet
+ReadRMAExpress          Read RMAExpress computed expression values
+bg.correct.LESN         LESN - Low End Signal is Noise Background
+                        corrections
+fitPLM                  Fit a Probe Level Model to Affymetrix Genechip
+                        Data.
+normalize.AffyBatch.quantiles.probeset
+                        Quantile Normalization applied to probesets
+normalize.ExpressionSet.quantiles
+                        Normalization applied to ExpressionSets
+normalize.scaling       Scaling normalization
+preprocess              Background correct and Normalize
+pseudoColorBar          Coloring pseudo chip images
+rmaPLM                  Fit a RMA to Affymetrix Genechip Data as a
+                        PLMset
+threestep               Three Step expression measures
+threestepPLM            Three Step expression measures returned as a
+                        PLMset

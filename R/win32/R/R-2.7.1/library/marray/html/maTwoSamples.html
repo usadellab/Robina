@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Changing signs for two sample analysis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maTwoSamples {marray}"><tr><td>maTwoSamples {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Changing signs for two sample analysis</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Taking target file information and flip the dye swaps experiments.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maTwoSamples(targetfile, normdata, Trt, Ctl, targetID = "TargetName", slidesID = "Slides", dyesID = "Dyes", RedID = 5, path = ".", output = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>targetfile</code></td>
+<td>
+A data.frame containing target samples information.</td></tr>
+<tr valign="top"><td><code>normdata</code></td>
+<td>
+A R object of class 'marrayNorm'</td></tr>
+<tr valign="top"><td><code>Trt</code></td>
+<td>
+A character string representing "treatment" sample.</td></tr>
+<tr valign="top"><td><code>Ctl</code></td>
+<td>
+A character string representing "controls" sample.</td></tr>
+<tr valign="top"><td><code>targetID</code></td>
+<td>
+A character string representing the column name
+in 'targetfile' containing target samples information.</td></tr>
+<tr valign="top"><td><code>slidesID</code></td>
+<td>
+A character string representing the column name
+in 'targetfile' containing the slide label.</td></tr>
+<tr valign="top"><td><code>dyesID</code></td>
+<td>
+A character string representing the column name
+in 'targetfile' containing dye labeled information.</td></tr>
+<tr valign="top"><td><code>RedID</code></td>
+<td>
+The character use to represent the Cy5 dye.</td></tr>
+<tr valign="top"><td><code>path</code></td>
+<td>
+A character string representing the data directory. By
+default this is set to the current working directory ("."). </td></tr>
+<tr valign="top"><td><code>output</code></td>
+<td>
+Save and tab delimited file</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+An objects of 'marrayNorm' with the dye assignment adjusted.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Yee Hwa (Jean) Yang
+</p>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

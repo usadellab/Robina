@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Simple scale normalization function</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maNormScale {marray}"><tr><td>maNormScale {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Simple scale normalization function</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function is a simple wrapper function around the main normalization
+function <code><a href="maNormMain.html">maNormMain</a></code>. It allows the user to choose from a
+set of two basic scale normalization procedures. The function operates
+on an object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code> (or possibly
+<code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>, if normalization is performed in several
+steps) and returns an object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>. This
+function can be used to conormalize a batch of arrays 
+(<code>norm="globalMAD"</code> option).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maNormScale(mbatch, norm=c("globalMAD", "printTipMAD"), subset=TRUE, geo=TRUE,  Mscale=TRUE, echo=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mbatch</code></td>
+<td>
+An object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code>, containing 
+intensity data for the batch of arrays to be normalized. An object of class 
+<code><a href="marrayNorm-class.html">marrayNorm</a></code> may also be passed if normalization is performed 
+in several steps.</td></tr>
+<tr valign="top"><td><code>norm</code></td>
+<td>
+A character string specifying the normalization
+procedures: 
+<dl>
+<dt>globalMAD</dt><dd>for global scale
+normalization using the median absolute deviation (MAD), this allows between 
+slide scale normalization</dd>
+<dt>printTipMAD</dt><dd>for within-print-tip-group scale normalization
+using the median absolute deviation (MAD).</dd>
+This argument can be
+specified using the first letter of each method.</dl></td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+A "logical" or "numeric" vector indicating the subset of points used to
+compute the  normalization values.</td></tr>
+<tr valign="top"><td><code>geo</code></td>
+<td>
+If <code>TRUE</code>, the MAD of each group is divided by the
+geometric mean of the MADs across groups (cf. Yang et al. (2002)). This allows observations to
+retain their original units.</td></tr>
+<tr valign="top"><td><code>Mscale</code></td>
+<td>
+If <code>TRUE</code>, the scale normalization values are stored in the slot <code>maMscale</code> of the object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code> returned by the function, if <code>FALSE</code>, these values are not retained.</td></tr>
+<tr valign="top"><td><code>echo</code></td>
+<td>
+If <code>TRUE</code>, the index of the array currently being
+normalized is printed.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+See <code><a href="maNormMain.html">maNormMain</a></code> for details and more general procedures.
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mnorm</code></td>
+<td>
+An object of class <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>, containing the normalized intensity data.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.<br> <br>
+</p>
+<p>
+Y. H. Yang, S. Dudoit, P. Luu, and T. P. Speed (2001). Normalization for cDNA microarray data. In M. L. Bittner, Y. Chen, A. N. Dorsel, and E. R. Dougherty (eds), <EM>Microarrays: Optical Technologies and Informatics</EM>, Vol. 4266 of <EM>Proceedings of SPIE</EM>.<br> <br>
+</p>
+<p>
+Y. H. Yang, S. Dudoit, P. Luu, D. M. Lin, V. Peng, J. Ngai, and T. P. Speed (2002). Normalization for cDNA microarray data: a robust composite method addressing single and multiple slide systematic variation. <EM>Nucleic Acids Research</EM>, Vol. 30, No. 4.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="maNormMain.html">maNormMain</a></code>, <code><a href="maNorm.html">maNorm</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# Examples use swirl dataset, for description type ? swirl
+data(swirl)
+
+# Global median normalization followed by global MAD normalization for 
+# only arrays 2 and 3 in the batch swirl
+
+mnorm1&lt;-maNorm(swirl[,2:3], norm="m")
+mnorm2&lt;-maNormScale(mnorm1, norm="g")
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

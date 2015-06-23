@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Reading GenePix Gal file</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for read.Galfile {marray}"><tr><td>read.Galfile {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Reading GenePix Gal file</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Reading a standard Gal file containing gene information.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+read.Galfile(galfile, path = ".", info.id = c("ID", "Name"),
+layout.id =c(Block="Block", Row="Row", Column="Column"),
+labels = "ID", notes = "", sep = "\t", skip = NULL,   ncolumns=4, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>galfile</code></td>
+<td>
+a character string representing the Gal file.</td></tr>
+<tr valign="top"><td><code>path</code></td>
+<td>
+a character string representing the data directory. By
+default this is set to the current working directory ("."). </td></tr>
+<tr valign="top"><td><code>info.id</code></td>
+<td>
+the column numbers or names in `fname' that contain the required
+information.</td></tr>
+<tr valign="top"><td><code>layout.id</code></td>
+<td>
+the column names in `fname' that specified the
+printer layout information.</td></tr>
+<tr valign="top"><td><code>labels</code></td>
+<td>
+the column number in <code>fname</code> which contains the names that the user would like to use to label spots or arrays (e.g. for default titles in <code><a href="maPlot.html">maPlot</a></code>.</td></tr>
+<tr valign="top"><td><code>notes</code></td>
+<td>
+object of class character, vector of explanatory text</td></tr>
+<tr valign="top"><td><code>sep</code></td>
+<td>
+the field separator character.  Values on each line of the
+file are separated by this character. The
+default is to read a tab delimited file.</td></tr>
+<tr valign="top"><td><code>skip</code></td>
+<td>
+the number of lines of the data file to skip before
+beginning to read data.</td></tr>
+<tr valign="top"><td><code>ncolumns</code></td>
+<td>
+an integer representing the number of columns of
+sub-array (print-tips) on a slides.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+further arguments to <code><a href="../../base/html/scan.html">scan</a></code>.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>gnames</code></td>
+<td>
+An object of class <code><a href="marrayInfo-class.html">marrayInfo</a></code>.</td></tr>
+<tr valign="top"><td><code>layout</code></td>
+<td>
+An object of class <code><a href="marrayLayout-class.html">marrayLayout</a></code>.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Yee Hwa (Jean) Yang
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="read.marrayInfo.html">read.marrayInfo</a></code>, <code><a href="read.marrayLayout.html">read.marrayLayout</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(marray)
+datadir &lt;- system.file("swirldata", package="marray")
+try &lt;- read.Galfile(galfile="fish.gal", path=datadir)
+names(try)
+try$layout
+try$gnames
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

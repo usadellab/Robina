@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Creating URL strings for external database links</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for mapGeneInfo {marray}"><tr><td>mapGeneInfo {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Creating URL strings for external database links</h2>
+
+
+<h3>Description</h3>
+
+<p>
+These functions are used with <code><a href="htmlPage.html">htmlPage</a></code>.
+The function <code>mapGeneInfo</code>, takes all the arguments and generate
+a character matrix of two columns.  The first columns representing the
+name of the argument and the second columns represents the value of an
+argument. 
+The function <code>widget.mapGeneInfo</code> allows the user to enter this
+information  interactively.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+mapGeneInfo(widget = FALSE, Gnames, Name = "pubmed", ID =
+                 "genbank", ACC = "SMDacc", ...)
+widget.mapGeneInfo(Gnames) 
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>widget</code></td>
+<td>
+A logical value specifying if widgets should be used.</td></tr>
+<tr valign="top"><td><code>Name</code></td>
+<td>
+The external database for spot description, E.g. "pubmed".</td></tr>
+<tr valign="top"><td><code>ID</code></td>
+<td>
+The external database for spot ID, E.g. "operon", "Riken", "locuslink".</td></tr>
+<tr valign="top"><td><code>ACC</code></td>
+<td>
+The external database for gene accession number, E.g. "genebank".</td></tr>
+<tr valign="top"><td><code>Gnames</code></td>
+<td>
+An object of class <code>matrix</code>, <code>data.frame</code> or <code>marrayInfo</code>
+which contains  description of spotted probe sequences.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Other column names</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The function <code>mapGeneInfo</code> generates a character matrix with the
+first column representing the column headings of "Gnames" and the
+second column representing the corresponding names in the list
+<code>URLstring</code>.  For example, if a particular column in "Gnames"
+with column names "ID" contains genebank accession number, then the
+function <code>mapGeneInfo</code> generates a row containing "ID" in the
+first column and "genbank" in the second.  Examples are <code>SFGL</code>
+and <code>UCBFGL</code>.<br>
+</p>
+<p>
+<code>URLstring</code> is a list contains the URL to various external
+database, E.g. operon, Riken, genbank. <br>
+The current choices are: 
+"pubmed",  "locuslink",  "riken",   "SMDclid",    "SMDacc",    "operonh2",  "operonh1" ,
+"operonm2",  "operonm1" and  "genbank" .  
+"SMDclid" and "SMDacc" are links to Stanford Microarray Databases.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yee Hwa Yang
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+ mapGeneInfo(ID="genebank", ll="locuslink")
+ mapGeneInfo(ID="locuslink", Sample.ID="riken")
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

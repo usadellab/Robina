@@ -1,0 +1,17 @@
+Package: matchprobes
+Version: 1.12.0
+Title: Basic infrastructure for using oligonucleotide microarray
+        reporter sequence information for preprocessing and quality
+        assessment
+Author: Robert Gentleman, Wolfgang Huber
+Maintainer: Biocore Team c/o BioC user list
+        <bioconductor@stat.math.ethz.ch>
+Depends: R (>= 2.6.0), Biobase, affy
+Suggests: hgu95av2cdf, hgu95av2probe, hu6800cdf, hu6800probe
+Description: For general work with genomic sequences, this package is
+        inadequate. Please refer to the Biostrings package for that.
+License: Artistic-2.0
+biocViews: Microarray, Annotation
+LazyLoad: yes
+Packaged: Mon May 12 03:01:53 2008; biocbuild
+Built: R 2.7.0; i386-pc-mingw32; 2008-05-12 08:36:21; windows

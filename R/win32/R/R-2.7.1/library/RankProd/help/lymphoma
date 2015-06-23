@@ -1,0 +1,54 @@
+lymphoma              package:RankProd              R Documentation
+
+_S_u_b_s_e_t _o_f _t_h_e _I_n_t_e_n_s_i_t_y _d_a_t_a _f_o_r _8 _c_D_N_A _s_l_i_d_e_s _w_i_t_h _C_L_L _a_n_d _D_L_B_L _s_a_m_p_l_e_s
+_f_r_o_m _t_h_e _A_l_i_z_a_d_e_h _e_t _a_l. _p_a_p_e_r _i_n _N_a_t_u_r_e _2_0_0_0
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     8 cDNA chips from Alizadeh lymphoma paper
+
+_U_s_a_g_e:
+
+     data(lymphoma)
+
+_F_o_r_m_a_t:
+
+     'lymphoma' is an 'exprSet' containing the data from 8 chips from
+     the lymphoma data set by Alizadeh et al. (see references). Each
+     chip represents two samples: on color channel 1 (CH1, Cy3, green)
+     the common reference sample, and on color channel 2 (CH2, Cy5,
+     red) the various disease samples. See 'pData(lymphoma)'. The
+     9216x16 matrix 'exprs(lymphoma)' contains the
+     background-subtracted spot intensities (CH1I-CH1B and CH2I-CH2B,
+     respectively).
+
+_D_e_t_a_i_l_s:
+
+     The chip intensity files were downloaded from the Stanford
+     microarray database. Starting from the link below, this was done
+     by following the links _Published Data_ ->  _Alizadeh AA, et al.
+     (2000) Nature 403(6769):503-11_ ->  _Data in SMD_ -> _Display
+     Data_, and selecting the following  8 slides:
+
+       lc7b019
+       lc7b047
+       lc7b048
+       lc7b056
+       lc7b057
+       lc7b058
+       lc7b069
+       lc7b070
+
+     Then, the script 'makedata.R' from the 'scripts' subdirectory of
+     this package was run to generate the R data object.
+
+_S_o_u_r_c_e:
+
+     http://genome-www5.stanford.edu/MicroArray/SMD
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     A. Alizadeh et al., Distinct types of diffuse large B-cell 
+     lymphoma identified by gene expression profiling. Nature
+     403(6769):503-11,  Feb 3, 2000.
+

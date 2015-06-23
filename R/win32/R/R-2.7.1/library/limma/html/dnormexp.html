@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: The Normal + Exponential Convolution Distribution</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for dnormexp {limma}"><tr><td>dnormexp {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>The Normal + Exponential Convolution Distribution</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Density of the normal + exponential convolution distribution.
+This function is called by <code>normexp.fit</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+dnormexp(x,normmean,normsd,expmean,log=FALSE)
+dnormexp.saddle(x,normmean,normsd,expmean,log=FALSE,secondorder=TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+numeric vector of quantiles</td></tr>
+<tr valign="top"><td><code>normmean</code></td>
+<td>
+mean of normal distribution</td></tr>
+<tr valign="top"><td><code>normsd</code></td>
+<td>
+standard deviation of normal distribution</td></tr>
+<tr valign="top"><td><code>expmean</code></td>
+<td>
+mean of exponential distribution</td></tr>
+<tr valign="top"><td><code>log</code></td>
+<td>
+logical, if <code>TRUE</code>, density values <code>d</code> are given as <code>log(d)</code></td></tr>
+<tr valign="top"><td><code>secondorder</code></td>
+<td>
+logical, if <code>TRUE</code> the second order saddle-point approximation is used</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+<code>dnormexp</code> computes the exact density but may fail for some extreme parameter values.
+<code>dnormexp.saddle</code> computes the saddle-point approximation to the density.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+numeric vector of density or log-density values.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Jeremy Silver and Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+An overview of background correction functions is given in <code><a href="04Background.html">04.Background</a></code>.
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,89 @@
+Entry: MAplot
+Aliases: MAplot MAplot,PLMset-method
+Keywords: hplot
+Description: Relative M vs. A plots
+URL: ../../../library/affyPLM/html/MAplot.html
+
+Entry: PLMset-class
+Aliases: PLMset-class PLMset weights<- coefs coefs<- se se<- coefs.probe coefs.const se.probe se.const Mbox normvec varcov residSE resid<- residuals<- indexProbesProcessed model.description sampleNames<- coefs,PLMset-method weights<-,PLMset-method weights,PLMset-method coefs<-,PLMset-method se,PLMset-method se<-,PLMset-method coefs.probe,PLMset-method coefs.const,PLMset-method se.probe,PLMset-method se.const,PLMset-method Mbox,PLMset-method image,PLMset-method show,PLMset-method boxplot,PLMset-method getCdfInfo,PLMset-method indexProbes,PLMset,character-method cdfName,PLMset-method normvec,PLMset-method resid,PLMset-method residuals,PLMset-method resid<-,PLMset-method residuals<-,PLMset-method residSE,PLMset-method varcov,PLMset-method indexProbesProcessed,PLMset-method model.description,PLMset-method summary,PLMset-method sampleNames,PLMset-method sampleNames<-,PLMset,character-method annotation,PLMset-method description,PLMset-method phenoData,PLMset-method phenoData<-,PLMset,AnnotatedDataFrame-method pData,PLMset-method pData<-,PLMset,data.frame-method nuse NUSE RLE nuse,PLMset-method NUSE,PLMset-method RLE,PLMset-method
+Keywords: classes
+Description: Class PLMset
+URL: ../../../library/affyPLM/html/PLMset-class.html
+
+Entry: PLMset2exprSet
+Aliases: PLMset2exprSet pset2eset
+Keywords: manip
+Description: Convert a PLMset to an ExpressionSet
+URL: ../../../library/affyPLM/html/PLMset2exprSet.html
+
+Entry: ReadRMAExpress
+Aliases: ReadRMAExpress
+Keywords: manip
+Description: Read RMAExpress computed expression values
+URL: ../../../library/affyPLM/html/ReadRMAExpress.html
+
+Entry: internal functions
+Aliases: bg.correct.shift bg.correct.stretch bg.correct.gcrma get.background.code get.normalization.code get.psi.code get.summary.code get.default.psi.k convert.LESN.param PLM.designmatrix PLM.designmatrix2 fitPLM.old PLM.designmatrix3 verify.bg.param verify.constraint.types verify.model.param verify.norm.param verify.output.param verify.variable.types normalize.AffyBatch.quantiles.chromosome
+Keywords: internal
+Description: Internal affyPLM functions
+URL: ../../../library/affyPLM/html/affyPLM-internal.html
+
+Entry: bg.correct.LESN
+Aliases: bg.correct.LESN
+Keywords: manip
+Description: LESN - Low End Signal is Noise Background corrections
+URL: ../../../library/affyPLM/html/bg.correct.LESN.html
+
+Entry: fitPLM
+Aliases: fitPLM
+Keywords: manip
+Description: Fit a Probe Level Model to Affymetrix Genechip Data.
+URL: ../../../library/affyPLM/html/fitPLM.html
+
+Entry: normalize.ExpressionSet
+Aliases: normalize.ExpressionSet.quantiles normalize.ExpressionSet.loess normalize.ExpressionSet.contrasts normalize.ExpressionSet.qspline normalize.ExpressionSet.invariantset normalize.ExpressionSet.scaling normalize.ExpressionSet.methods
+Keywords: manip
+Description: Normalization applied to ExpressionSets
+URL: ../../../library/affyPLM/html/normalize.exprSet.html
+
+Entry: normalize.quantiles.probeset
+Aliases: normalize.AffyBatch.quantiles.probeset
+Keywords: manip
+Description: Quantile Normalization applied to probesets
+URL: ../../../library/affyPLM/html/normalize.quantiles.probeset.html
+
+Entry: normalize.scaling
+Aliases: normalize.scaling normalize.AffyBatch.scaling
+Keywords: manip
+Description: Scaling normalization
+URL: ../../../library/affyPLM/html/normalize.scaling.html
+
+Entry: preprocess
+Aliases: preprocess
+Keywords: manip
+Description: Background correct and Normalize
+URL: ../../../library/affyPLM/html/preprocess.html
+
+Entry: pseudo.coloring
+Aliases: pseudoColorBar pseudoPalette
+Keywords: manip
+Description: Coloring pseudo chip images
+URL: ../../../library/affyPLM/html/pseudo.html
+
+Entry: rmaPLM
+Aliases: rmaPLM
+Keywords: manip
+Description: Fit a RMA to Affymetrix Genechip Data as a PLMset
+URL: ../../../library/affyPLM/html/rmaPLM.html
+
+Entry: threestep
+Aliases: threestep
+Keywords: manip
+Description: Three Step expression measures
+URL: ../../../library/affyPLM/html/threestep.html
+
+Entry: threestepPLM
+Aliases: threestepPLM
+Keywords: manip
+Description: Three Step expression measures returned as a PLMset
+URL: ../../../library/affyPLM/html/threestepPLM.html

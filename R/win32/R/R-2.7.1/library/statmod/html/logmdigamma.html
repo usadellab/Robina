@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Log Minus Digamma Function</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for logmdigamma {statmod}"><tr><td>logmdigamma {statmod}</td><td align="right">R Documentation</td></tr></table>
+<h2>Log Minus Digamma Function</h2>
+
+
+<h3>Description</h3>
+
+<p>
+The difference between the <code>log</code> and <code>digamma</code> functions.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+logmdigamma(x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+numeric vector or array of positive values. Negative or zero values will return <code>NA</code>.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+<code>digamma(x)</code> is asymptotically equivalent to <code>log(x)</code>.  <code>logmdigamma(x)</code> computes <code>log(x) - digamma(x)</code> without subtractive cancellation for large <code>x</code>.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Abramowitz, M., and Stegun, I. A. (1970). <EM>Handbook of
+mathematical functions.</EM> Dover, New York.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/digamma.html">digamma</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+log(10^15) - digamma(10^15) # returns 0
+logmdigamma(10^15) # returns value correct to 15 figures
+</pre>
+
+
+
+<hr><div align="center">[Package <em>statmod</em> version 1.3.8 <a href="00Index.html">Index]</a></div>
+
+</body></html>

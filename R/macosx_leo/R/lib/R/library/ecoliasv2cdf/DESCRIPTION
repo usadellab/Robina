@@ -1,0 +1,13 @@
+Package: ecoliasv2cdf
+Title: ecoliasv2cdf
+Version: 2.2.0
+Created: Thu Apr 17 15:53:42 2008
+Author: The Bioconductor Project
+Description: A package containing an environment representing the
+        Ecoli_ASv2.CDF file.
+Maintainer: Biocore Data Team <biocannotation@lists.fhcrc.org>
+License: LGPL
+biocViews: AnnotationData, AffymetrixChip, ecoliasv2, Escherichia_coli
+Depends: utils
+Packaged: Fri Apr 18 09:09:27 2008; jmacdon
+Built: R 2.7.0; ; 2008-05-01 20:26:22; unix

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Sort Genes According to the Value of a Statistic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for stat.gnames {marray}"><tr><td>stat.gnames {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Sort Genes According to the Value of a Statistic</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Lists genes and corresponding statistics in decreasing order of the
+statistics. This function applies to any type of statistic, including
+log ratios, one and two-sample t-statistics, and F-statistics. Missing
+values are ignored, as in <code><a href="../../base/html/sort.html">sort</a>(..., na.last=NA)</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+stat.gnames(x, gnames, crit= 50)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+a numeric vector containing the statistics for each
+gene. Missing values (NAs) are allowed. </td></tr>
+<tr valign="top"><td><code>gnames</code></td>
+<td>
+a character vector containing the gene names.</td></tr>
+<tr valign="top"><td><code>crit</code></td>
+<td>
+specifies the number of genes to be returned. If crit &lt;
+1, the crit*100% genes with the largest x values are listed. If crit
+&gt;= 1, the crit genes with the largest x values are listed. </td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+List containing the following components 
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>gnames</code></td>
+<td>
+gene names sorted in decreasing order of the
+statistics in x.</td></tr>
+<tr valign="top"><td><code>t</code></td>
+<td>
+statistics sorted in decreasing order.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Yee Hwa Yang, <a href="mailto:yeehwa@stat.berkeley.edu">yeehwa@stat.berkeley.edu</a> <br>
+Sandrine Dudoit, <a href="mailto:sandrine@stat.berkeley.edu">sandrine@stat.berkeley.edu</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/order.html">order</a></code>, <code><a href="../../base/html/sort.html">sort</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(swirl)
+aveM &lt;- apply(maM(swirl), 1, mean.na)
+Gnames &lt;- maGeneTable(swirl)
+
+stat.gnames(abs(aveM), Gnames, crit=10)
+stat.gnames(aveM, Gnames, crit=0.01)
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

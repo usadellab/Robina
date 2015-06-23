@@ -1,0 +1,44 @@
+PLMset2exprSet            package:affyPLM            R Documentation
+
+_C_o_n_v_e_r_t _a _P_L_M_s_e_t _t_o _a_n _E_x_p_r_e_s_s_i_o_n_S_e_t
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function converts a PLMset to an ExpressionSet. This is often
+     useful since many Bioconductor functions operate on ExpressionSet
+     objects.
+
+_U_s_a_g_e:
+
+     PLMset2exprSet(pset)
+     pset2eset(pset)
+
+_A_r_g_u_m_e_n_t_s:
+
+    pset: The 'PLMset' to convert to 'ExpressionSet'.
+
+_D_e_t_a_i_l_s:
+
+     These functions convert PLMset objects to 'ExpressionSet' objects.
+     This is often useful since many Bioconductor functions operate on
+     'ExpressionSet' objects. Note that the function 'pset2eset' is a
+     wrapper for 'PLMset2exprSet'.
+
+_V_a_l_u_e:
+
+     returns a 'ExpressionSet'
+
+_A_u_t_h_o_r(_s):
+
+     Ben Bolstad bmb@bmbolstad.com
+
+_S_e_e _A_l_s_o:
+
+     'ExpressionSet'
+
+_E_x_a_m_p_l_e_s:
+
+     data(affybatch.example)
+     Pset <- fitPLM(affybatch.example)
+     eset <- pset2eset(Pset)
+

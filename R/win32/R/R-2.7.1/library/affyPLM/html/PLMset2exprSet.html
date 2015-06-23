@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Convert a PLMset to an ExpressionSet</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for PLMset2exprSet {affyPLM}"><tr><td>PLMset2exprSet {affyPLM}</td><td align="right">R Documentation</td></tr></table>
+<h2>Convert a PLMset to an ExpressionSet</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function converts a PLMset to an ExpressionSet. This is often useful
+since many Bioconductor functions operate on ExpressionSet objects.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+PLMset2exprSet(pset)
+pset2eset(pset)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>pset</code></td>
+<td>
+The <code><a href="PLMset-class.html">PLMset</a></code> to convert to <code><a href="../../Biobase/html/ExpressionSet.html">ExpressionSet</a></code>.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+These functions convert PLMset objects to <code>ExpressionSet</code> objects.
+This is often useful since many Bioconductor functions operate on
+<code>ExpressionSet</code> objects. Note that the function <code>pset2eset</code>
+is a wrapper for <code>PLMset2exprSet</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+returns a <code><a href="../../Biobase/html/ExpressionSet.html">ExpressionSet</a></code></p>
+
+<h3>Author(s)</h3>
+
+<p>
+Ben Bolstad <a href="mailto:bmb@bmbolstad.com">bmb@bmbolstad.com</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../Biobase/html/ExpressionSet.html">ExpressionSet</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(affybatch.example)
+Pset &lt;- fitPLM(affybatch.example)
+eset &lt;- pset2eset(Pset)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affyPLM</em> version 1.16.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

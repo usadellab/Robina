@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+
+<!-- 
+    A sample installation file.
+    Use it as a base for your own installers :-)
+    
+    To compile it :
+    - go in the bin directory where you installed IzPack
+    - call "compile ../sample/install.xml -b ../sample"
+-->
+
+<installation version="1.0">
+
+    <!-- 
+        The info section.
+        The mean<javaversion>ing of the tags should be natural ...
+    -->
+    <info>
+        <appname>RobiNA</appname>
+        <appversion>#VERSION#</appversion>
+        <javaversion>1.6</javaversion>
+        <authors>
+            <author name="Marc Lohse" email="lohse@mpimp-golm.mpg.de"/>
+        </authors>
+        <url>http://mapman.gabipd.org/web/guest/robin</url>
+        <run-privileged/>
+    </info>
+    
+    <uninstaller write="yes" name="RobiNAUnInstaller.jar"/>
+    
+    <!-- 
+        The gui preferences indication.
+        Sets the installer window to 640x480. It will not be able to change the size.
+    -->
+    <guiprefs width="640" height="480" resizable="no">
+   	<laf name="metouia">
+        <os family="unix" />
+   	</laf>
+   	<laf name="looks">
+       <os family="windows" />
+       <param name="variant" value="extwin" />
+   	</laf>    
+    </guiprefs>
+    
+    <!-- 
+        The locale section.
+        Asks here to include the English and French langpacks.
+    -->
+    <locale>
+		  <langpack iso3="deu"/>        
+        <langpack iso3="eng"/>
+        <langpack iso3="fra"/>        
+    </locale>
+    
+	 <!-- 
+	 		Include native windows library for
+	 		shortcut generation
+	 -->   
+    <native type="izpack" name="ShellLink_x64.dll"/>
+    
+    <!-- 
+        The resources section.
+        The ids must be these ones if you want to use the LicencePanel and/or the InfoPanel.
+    -->
+    <resources>
+        <res id="LicencePanel.licence" src="text/License.txt"/>
+        <res id="HTMLInfoPanel.info" src="text/Readme.html"/>
+        <res id="Installer.image" src="images/robin_installer.png" />
+        <res id="shortcutSpec.xml" src="conf/shortcutSpec.xml" />
+        <res id="Unix_shortcutSpec.xml" src="conf/Unix_shortcutSpec.xml" />
+        <res id="installer.langsel.img" src="images/langselect_robin.png"/>
+    </resources>
+    
+    <!-- 
+        The panels section.
+        We indicate here which panels we want to use. The order will be respected.
+    -->
+    <panels>
+        <panel classname="HelloPanel"/>
+        <panel classname="HTMLInfoPanel"/>
+        <panel classname="LicencePanel"/>
+        <panel classname="TargetPanel"/> 
+        <panel classname="PacksPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="ShortcutPanel"/>
+        <panel classname="SimpleFinishPanel"/>
+    </panels>
+    
+    <!-- 
+        The packs section.
+        We specify here our packs.
+    -->
+    <packs>
+        <pack name="Base files" required="yes">
+            <description>These files are required to run Robin</description>
+            <file src="text/Readme.html" targetdir="$INSTALL_PATH"/>
+            <file src="text/License.txt" targetdir="$INSTALL_PATH"/>
+            <file src="images/Robin.ico" targetdir="$INSTALL_PATH/icons" os="windows"/>
+            <file src="images/robinlogo32.png" targetdir="$INSTALL_PATH/icons" os="unix"/>
+
+            <!-- In order to make the JNAtive stuff needed to use the native windows dialogs work
+                the dll file needs to be copied to a folder in the path. We lazily require admin rights
+                and copy it to c:windows system32...-->
+            <file src="../../lib/JNativeCpp.dll" targetdir="c:\WINDOWS" os="windows" />
+			
+			<!-- little script that removes a possibly present old configuration file -->
+            <file src="launchers/deleteconf.bat" targetdir="$INSTALL_PATH" os="windows"/>
+			<parsable targetfile="$INSTALL_PATH/deleteconf.bat" os="windows"/>
+            <executable targetfile="$INSTALL_PATH/deleteconf.bat" os="windows" stage="postinstall" keep="false" failure="warn"/>
+            
+            <file src="launchers/cleanup.bat" targetdir="$INSTALL_PATH/Uninstaller" os="windows"/>
+			<parsable targetfile="$INSTALL_PATH/Uninstaller/cleanup.bat" os="windows"/>
+            <executable targetfile="$INSTALL_PATH/Uninstaller/cleanup.bat" os="windows" stage="uninstall" keep="false" failure="warn"/>
+
+            <file src="launchers/deleteconf.sh" targetdir="$INSTALL_PATH" os="unix" />
+            <parsable targetfile="$INSTALL_PATH/deleteconf.sh" os="unix"/>
+            <executable targetfile="$INSTALL_PATH/deleteconf.sh" os="unix" stage="postinstall" keep="false" failure="warn"/>
+            
+            <file src="launchers/deleteconf.sh" targetdir="$INSTALL_PATH/Uninstaller" os="unix"/>
+            <parsable targetfile="$INSTALL_PATH/Uninstaller/deleteconf.sh" os="unix"/>
+            <executable targetfile="$INSTALL_PATH/Uninstaller/deleteconf.sh" os="unix" stage="uninstall" keep="false" failure="warn"/>
+
+            
+            <file src="launchers/start-robin.sh" targetdir="$INSTALL_PATH" os="unix"/>
+            <executable targetfile="$INSTALL_PATH/start-robin.sh" os="unix" stage="never" keep="true"/>
+            
+            <!-- binaries needed for read mapping
+            -->
+            <file src="packs/win_bowtie.zip" targetdir="$INSTALL_PATH" os="windows" unpack="true"/>
+            <file src="packs/linux_bowtie.zip" targetdir="$INSTALL_PATH" os="unix" unpack="true"/>
+            
+            <!-- file src="packs/index" targetdir="$INSTALL_PATH"/ -->  
+            
+            <file src="../Robin2.jar" targetdir="$INSTALL_PATH" os="unix"/>      
+            <file src="../Robin2.exe" targetdir="$INSTALL_PATH" os="windows"/>
+            
+            <file src="packs/lib.zip" targetdir="$INSTALL_PATH/lib" unpack="true"/>
+            
+            <!-- this pack contains the presets and mappings that are shipped by default -->
+            <!--file src="packs/default_mappings_presets.zip" targetdir="$USER_HOME/.robindata" unpack="true"/-->
+            <file src="packs/mappings.zip" targetdir="$USER_HOME/.robindata" unpack="true"/>
+            <file src="packs/presets.zip" targetdir="$USER_HOME/.robindata" unpack="true"/>
+            <file src="packs/R-2.13.2_win.zip" targetdir="$INSTALL_PATH" unpack="true" os="windows"/>
+        </pack>
+        <!--pack name="Documentation" required="no">
+            <description>Javadoc documentation of the source code</description>
+            <file src="javadoc.zip" targetdir="$INSTALL_PATH" unpack="true"/> 
+        </pack-->
+        <pack name="Sources" required="no">
+            <description>RobiNA source code</description>
+            <file src="packs/src.zip" targetdir="$INSTALL_PATH/src" unpack="true"/> <!-- Reccursive adding -->
+        </pack>
+        <pack name="Robin and RobiNA Manual" required="no">
+            <description>RobiNA user guide containing step-by-step walkthroughs for the analysis workflows and further detailed information about normalization, quality assessment and statistical analysis (recommended)</description>
+            <file src="../../manual/release/RobinRobiNAUsersGuide_may12.pdf" targetdir="$INSTALL_PATH" />
+        </pack>
+        
+    </packs>
+    
+</installation>

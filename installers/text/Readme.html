@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<h1 style="font-family: Helvetica,Arial,sans-serif; color: rgb(102, 102, 102);">ROBIN, a User Friendly Graphical Interface to Powerful Open Source Microarray Processing</h1>
+<span style="font-family: Helvetica,Arial,sans-serif;">
+Using Robin you can easily
+</span>
+<h2 style="font-family: Helvetica,Arial,sans-serif; color: rgb(102, 102, 102);">Background</h2>
+<span style="font-family: Helvetica,Arial,sans-serif;">
+Currently, several commercial programs such as GeneSpring featuring a rich and simple user interface to statistically analyze microarrays are available. However, these are usually very expensive and might even require an annual subscription. On the other hand, there are free, open source tools such as BioConductor which offer great statistical options and support for free, but this power often comes at the price of usability, since these tools often feature either only a command line interface or solely very basic user interaction.
+Finally, there are tools such as RMA Express which offer a rich user interface but only a very limited set of options.
+</span>
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<h2 style="font-family: Helvetica,Arial,sans-serif; color: rgb(102, 102, 102);">Robin</h2>
+<span style="font-family: Helvetica,Arial,sans-serif;">
+Here, we present ROBIN which comes as one installable file, that installs the R and BioConductor framework as well as a flexible user friendly graphical interface to unleash the power of R/BioConductor for the individual biologist. Currently, using ROBIN it is possible to normalize Affymetrix data and tabular two color array data using a range of different normalization methods. 
+Furthermore, ROBIN offers a variety of quality control methods that can be used to gain an overview of the experimental data technical quality and structure. Using the built-in graphical experiment designer researchers can define which samples to compare (even combinations of samples are possible) and finally produce tables giving the log fold change, (M) and average expression (A) values as a (user-adjustable) probability for differential expression. Additional tables summarizing information on the top 100 differentially regulated genes and several plots visualizing the quality of each chip are also generated. The results can directly be imported into MapMan for visualization and further analysis.
+</span>
+<h2 style="font-family: Helvetica,Arial,sans-serif; color: rgb(102, 102, 102);">Conclusion</h2>
+<span style="font-family: Helvetica,Arial,sans-serif;">
+Using ROBIN it is possible to normalize data, asses microarray quality and finally identify differentially expressed genes.
+</span>
+<span style="font-family: Helvetica,Arial,sans-serif;">
+It's completely for free (And comes with absolutely no warranty).
+</span>
+<h1 style="font-family: Helvetica,Arial,sans-serif; color: rgb(102, 102, 102);">Release Notes</h1>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif;">
+<ul>
+  <li>Treatment of replicates: The current Version of Robin assumes that  all replicates that you enter are true biological replicates. Technical  replication is not yet taken into account. When entering technical replicates  the significance of differential expression will be overestimated leading  to an artificially increased number of genes that are significantly called  differentially expressed.</li>    <li>Unconnected designs in two color experiments: Comparing results from two  sets of two color microarrays that are not connected requires analysing the  color channels separately. This is not yet supported in Robin.</li>    <li>Single channel microarray data: The only type of single channel  microarray data supported by Robin is Affymetrix<sup>&reg;</sup> .cel files. Other  types will be added on demand.</li>   
+</ul>
+</span>
+</body>
+</html>

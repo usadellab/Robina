@@ -1,0 +1,16 @@
+affinity.spline.coefs         package:gcrma         R Documentation
+
+_S_p_l_i_n_e _c_o_e_f_f_i_c_i_e_n_t_s _f_o_r _e_s_t_i_m_a_t_i_o_n _o_f _a_f_f_i_n_i_t_y _f_r_o_m _p_r_o_b_e _s_e_q_u_e_n_c_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Spline coefficients for estimation of affinity from probe sequence
+
+_U_s_a_g_e:
+
+     data(affinity.spline.coefs)
+
+_S_e_e _A_l_s_o:
+
+     'compute.affinities'
+

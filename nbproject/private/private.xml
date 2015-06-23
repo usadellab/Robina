@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/profiler/1" version="0.9.1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1">
+        <file>
+            <url>src/de/mpimp/golm/robin/GUI/RobinMainGUI.java</url>
+            <line>2423</line>
+        </file>
+        <file>
+            <url>src/de/mpimp/golm/robin/gui/RobinMainGUI.java</url>
+            <line>2183</line>
+            <line>2197</line>
+        </file>
+        <file>
+            <url>src/de/mpimp/golm/robin/RobinMainGUI.java</url>
+            <line>1618</line>
+            <line>1764</line>
+            <line>1903</line>
+            <line>2051</line>
+            <line>2118</line>
+        </file>
+        <file>
+            <url>src/de/mpimp/golm/robin/resources/R/robinSingleChannelMainTemplate.R</url>
+            <line>14</line>
+        </file>
+    </editor-bookmarks>
+</project-private>

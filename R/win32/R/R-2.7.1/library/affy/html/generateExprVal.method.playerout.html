@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Generate an expression value from the probes informations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for generateExprVal.method.playerout {affy}"><tr><td>generateExprVal.method.playerout {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Generate an expression value from the probes informations</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Generate an expression from the probes
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+  generateExprVal.method.playerout(probes, weights=FALSE, optim.method="L-BFGS-B")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>probes</code></td>
+<td>
+a list of <code>probes</code> slots from <code>PPSet.container</code></td></tr>
+<tr valign="top"><td><code>weights</code></td>
+<td>
+Should the resulting weights be returned ?</td></tr>
+<tr valign="top"><td><code>optim.method</code></td>
+<td>
+see parameter 'optim' for the function <code><a href="../../stats/html/optim.html">optim</a></code></td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+A non-parametrical method to weight each perfect match
+probe in the set and to compute a weighted mean of the perfect match
+values. One will notice this method only makes use of the perfect
+matches. (see function <code>playerout.costfunction</code> for the cost function).
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A vector of expression values.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Laurent &lt;laurent@cbs.dtu.dk&gt;<br>
+(Thanks to E. Lazaridris for the original playerout code and the
+discussions about it)
+</p>
+
+
+<h3>References</h3>
+
+<p>
+<li>Emmanuel N. Lazaridis, Dominic Sinibaldi, Gregory Bloom, Shrikant Mane and Richard Jove
+A simple method to improve probe set estimates from oligonucleotide
+arrays, Mathematical Biosciences, Volume 176, Issue 1, March 2002, Pages 53-58
+</p>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

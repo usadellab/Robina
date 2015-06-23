@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Genomic Response to Brassinosteroid in Arabidopsis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for arab {RankProd}"><tr><td>arab {RankProd}</td><td align="right">R Documentation</td></tr></table>
+<h2>Genomic Response to Brassinosteroid in Arabidopsis</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This data if from Affy ATH1 array experiments of 
+genomic response to brassinosteroid in Arabidopsis 
+conducted at two laoratories. The data set contains 
+random selected 500 genes and 10 samples, 6 from lab 1 and 4 from 
+lab 2. Data was pre-processed by RMA
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(arab)</pre>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>arab</code></td>
+<td>
+matrix of gene expression levels of 500 genes 
+from 10 samples, rows correspond to genes  and 
+columns to mRNA samples.</td></tr>
+<tr valign="top"><td><code>arab.cl</code></td>
+<td>
+numeric vector indicating the treatment class, 
+5 brassinosteroid-treated cases (code 1) 
+and 5 control cases (code 0) </td></tr>
+<tr valign="top"><td><code>arab.gnames</code></td>
+<td>
+character vector containing the AffyID of 
+the 500 genes for the expression matrix <code>arab</code></td></tr>
+<tr valign="top"><td><code>arab.origin</code></td>
+<td>
+numeric vector indicating the origin of 
+the samples, 6 samples from lab 1 (code 1) 
+and 4 samples from lab 2 (code 2)</td></tr>
+</table>
+
+<h3>References</h3>
+
+<p>
+Nemhauser JL, Mockler TC, Chory J.  Interdependency of 
+brassinosteroid and auxin signaling in Arabidopsis. 
+<EM>PLoS Biol.</EM> 2004 21460.
+</p>
+<p>
+Microarray data from AtGenExpress 
+(http://arabidopsis.org/info/expression/ATGenExpress.jsp)
+</p>
+
+
+
+<hr><div align="center">[Package <em>RankProd</em> version 2.12.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

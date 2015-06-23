@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Limiting Dilution Analysis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for limdil {statmod}"><tr><td>limdil {statmod}</td><td align="right">R Documentation</td></tr></table>
+<h2>Limiting Dilution Analysis</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Fit single-hit model to a dilution series using complementary log-log binomial regression.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+limdil(response, dose, tested=rep(1,length(response)), group=rep(1,length(response)), observed=FALSE, confidence=0.95, test.unit.slope=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>response</code></td>
+<td>
+numeric of integer counts of positive cases, out of <code>tested</code> trials</td></tr>
+<tr valign="top"><td><code>dose</code></td>
+<td>
+numeric vector of expected number of cells in assay</td></tr>
+<tr valign="top"><td><code>tested</code></td>
+<td>
+numeric vector giving number of trials at each dose</td></tr>
+<tr valign="top"><td><code>group</code></td>
+<td>
+vector or factor giving group to which the response belongs</td></tr>
+<tr valign="top"><td><code>observed</code></td>
+<td>
+logical, is the actual number of cells observed?</td></tr>
+<tr valign="top"><td><code>confidence</code></td>
+<td>
+numeric level for confidence interval</td></tr>
+<tr valign="top"><td><code>test.unit.slope</code></td>
+<td>
+logical, should the adequacy of the single-hit model be tested?</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+A binomial generalized linear model is fitted for each group with cloglog link and offset <code>log(dose)</code>.
+If <code>observed=FALSE</code>, a classic Poisson single-hit model is assumed, and the Poisson frequency of the stem cells is the <code>exp</code> of the intercept.
+If <code>observed=TRUE</code>, the values of <code>dose</code> are treated as actual cell numbers rather than expected values.
+This doesn't changed the generalized linear model fit but changes how the frequencies are extracted from the estimated model coefficient.
+</p>
+<p>
+The confidence interval is a Wald confidence interval, unless all the responses are zero or at the maximum value, in which case Clopper-Pearson intervals are computed.
+</p>
+<p>
+If <code>group</code> takes several values, then separate confidence intervals are computed for each group.
+In this case it also possible to test for non-equality in frequency between the groups.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+List with components
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>CI</code></td>
+<td>
+numeric vector giving estimated frequency and lower and upper limits of Wald confidence interval of each group</td></tr>
+<tr valign="top"><td><code>test.difference</code></td>
+<td>
+numeric vector giving chisquare likelihood ratio test statistic and p-value for testing the difference between groups</td></tr>
+<tr valign="top"><td><code>test.unit.slope</code></td>
+<td>
+numeric vector giving chisquare likelihood ratio test statistic and p-value for testing the slope of the offset equal to one</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Yifang Hu and Gordon Smyth
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Bonnefoix T, Bonnefoix P, Verdiel P, Sotto JJ. (1996).
+Fitting limiting dilution experiments with generalized linear models results in a test of the single-hit Poisson assumption.
+<EM>J Immunol Methods</EM> 194, 113-119.
+</p>
+<p>
+Clopper, C. and Pearson, S. (1934).
+The use of confidence or fiducial limits illustrated in the case of the binomial.
+<EM>Biometrika</EM> 26, 404-413.
+</p>
+<p>
+Shackleton, M., Vaillant, F., Simpson, K. J., Stingl, J., Smyth, G. K., Asselin-Labat, M.-L., Wu, L., Lindeman, G. J., and Visvader, J. E. (2006).
+Generation of a functional mammary gland from a single stem cell.
+<EM>Nature</EM> 439, 84-88.
+<a href="http://www.nature.com/nature/journal/v439/n7072/abs/nature04372.html">http://www.nature.com/nature/journal/v439/n7072/abs/nature04372.html</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# When there is one group
+Dose &lt;- c(50,100,200,400,800)
+Responses &lt;- c(2,6,9,15,21)
+Tested &lt;- c(24,24,24,24,24)
+Group &lt;- c(1,1,1,1,1)
+limdil(Responses,Dose,Tested,Group,test.unit.slope=TRUE)
+
+# When there are four groups
+Dose &lt;- c(30000,20000,4000,500,30000,20000,4000,500,30000,20000,4000,500,30000,20000,4000,500)
+Responses &lt;- c(2,3,2,1,6,5,6,1,2,3,4,2,6,6,6,1)
+Tested &lt;- c(6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6)
+Group &lt;- c(1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4)
+limdil(Responses,Dose,Tested,Group,test.unit.slope=TRUE)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>statmod</em> version 1.3.8 <a href="00Index.html">Index]</a></div>
+
+</body></html>

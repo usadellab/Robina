@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Scaling normalization</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for normalize.scaling {affyPLM}"><tr><td>normalize.scaling {affyPLM}</td><td align="right">R Documentation</td></tr></table>
+<h2>Scaling normalization</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Allows the user to apply scaling normalization.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+normalize.scaling(X,trim=0.02,baseline=-1,log.scalefactors=FALSE)
+normalize.AffyBatch.scaling(abatch,type=c("together","pmonly","mmonly","separate"),trim=0.02,baseline=-1,log.scalefactors=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>X</code></td>
+<td>
+A matrix. The columns of which are to be normalized.</td></tr>
+<tr valign="top"><td><code>abatch</code></td>
+<td>
+An <code><a href="../../affy/html/AffyBatch-class.html">AffyBatch</a></code></td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+A parameter controlling how normalization is applied to
+the Affybatch.</td></tr>
+<tr valign="top"><td><code>trim</code></td>
+<td>
+How much to trim from the top and bottom before computing
+the mean when using the scaling normalization.</td></tr>
+<tr valign="top"><td><code>baseline</code></td>
+<td>
+Index of array to use as baseline, negative values
+(-1,-2,-3,-4) control different baseline selection methods.</td></tr>
+<tr valign="top"><td><code>log.scalefactors</code></td>
+<td>
+Compute the scale factors based on log2
+transformed data.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+These function carries out scaling normalization of expression values.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A normalized <code><a href="../../Biobase/html/ExpressionSet-class.html">ExpressionSet</a></code>.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Ben Bolstad, <a href="mailto:bmb@bmbolstad.com">bmb@bmbolstad.com</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../affy/html/normalize.html">normalize</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(affybatch.example)
+normalize.AffyBatch.scaling(affybatch.example)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affyPLM</em> version 1.16.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

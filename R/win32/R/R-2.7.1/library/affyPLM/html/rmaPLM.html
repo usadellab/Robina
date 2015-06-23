@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Fit a RMA to Affymetrix Genechip Data as a PLMset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for rmaPLM {affyPLM}"><tr><td>rmaPLM {affyPLM}</td><td align="right">R Documentation</td></tr></table>
+<h2>Fit a RMA to Affymetrix Genechip Data as a PLMset</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function converts an <code><a href="../../affy/html/AffyBatch.html">AffyBatch</a></code> into an
+<code><a href="PLMset-class.html">PLMset</a></code> by fitting a multichip model. In particular we
+concentrate on the RMA model.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+rmaPLM(object,subset=NULL,normalize=TRUE,background=TRUE,background.method="RMA.2",normalize.method="quantile",background.param = list(),normalize.param=list(),output.param=list(),model.param=list(),verbosity.level=0)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+an <code><a href="../../affy/html/AffyBatch.html">AffyBatch</a></code></td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+a vector with the names of probesets to be used. If NULL
+then all probesets are used.</td></tr>
+<tr valign="top"><td><code>normalize</code></td>
+<td>
+logical value. If <code>TRUE</code> normalize data using
+quantile normalization</td></tr>
+<tr valign="top"><td><code>background</code></td>
+<td>
+logical value. If <code>TRUE</code> background correct
+using RMA background correction</td></tr>
+<tr valign="top"><td><code>background.method</code></td>
+<td>
+name of background method to use.</td></tr>
+<tr valign="top"><td><code>normalize.method</code></td>
+<td>
+name of normalization method to use.</td></tr>
+<tr valign="top"><td><code>background.param</code></td>
+<td>
+A list of parameters for background routines</td></tr>
+<tr valign="top"><td><code>normalize.param</code></td>
+<td>
+A list of parameters for normalization
+routines</td></tr>
+<tr valign="top"><td><code>output.param</code></td>
+<td>
+A list of parameters controlling optional output
+from the routine.</td></tr>
+<tr valign="top"><td><code>model.param</code></td>
+<td>
+A list of parameters controlling model procedure</td></tr>
+<tr valign="top"><td><code>verbosity.level</code></td>
+<td>
+An integer specifying how much to print
+out. Higher values indicate more verbose. A value of 0 will print nothing</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function fits the RMA as a Probe Level Linear models to all the probesets in
+an <code><a href="../../affy/html/AffyBatch.html">AffyBatch</a></code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+An <code><a href="PLMset-class.html">PLMset</a></code></p>
+
+<h3>Author(s)</h3>
+
+<p>
+Ben Bolstad <a href="mailto:bmb@bmbolstad.com">bmb@bmbolstad.com</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Bolstad, BM (2004) <EM>Low Level Analysis of High-density
+Oligonucleotide Array Data: Background, Normalization and
+Summarization</EM>. PhD Dissertation. University of California,
+<br> <br> Irizarry RA, Bolstad BM, Collin F, Cope LM, Hobbs B and Speed
+TP (2003) <EM>Summaries of Affymetrix GeneChip probe level data</EM>
+Nucleic Acids Research 31(4):e15
+<br> <br> Bolstad, BM, Irizarry RA, Astrand, M, and Speed, TP (2003)
+<EM>A Comparison of Normalization Methods for High Density
+Oligonucleotide Array Data Based on Bias and Variance.</EM>
+Bioinformatics 19(2):185-193
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../affy/html/expresso.html">expresso</a></code>,
+<code><a href="../../affy/html/rma.html">rma</a></code>, <code><a href="threestep.html">threestep</a></code>,<code><a href="fitPLM.html">fitPLM</a></code>, <code><a href="threestepPLM.html">threestepPLM</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# A larger example testing weight image function
+data(Dilution)
+## Not run: Pset &lt;- rmaPLM(Dilution,output.param=list(weights=TRUE))
+## Not run: image(Pset)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affyPLM</em> version 1.16.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

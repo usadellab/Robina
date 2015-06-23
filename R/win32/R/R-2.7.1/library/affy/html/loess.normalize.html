@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Normalize arrays</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for loess.normalize {affy}"><tr><td>loess.normalize {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Normalize arrays</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function treats PM and MM as the raw data on each chip. It fits
+loess curves to MVA plots and tries to
+normalize the chips with respect to each other by forcing log ratios to
+be scattered around the same constant.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+loess.normalize(mat, subset = sample(1:(dim(mat)[2]), 5000), epsilon
+                 = 10^-2, maxit = 1, log.it = TRUE, verbose = TRUE,
+                 span = 2/3, family.loess = "symmetric")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mat</code></td>
+<td>
+a matrix with columns containing the values of the chips
+to normalize.</td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+a subset of the data to fit a loess to.</td></tr>
+<tr valign="top"><td><code>epsilon</code></td>
+<td>
+small value used for the stopping criterion.</td></tr>
+<tr valign="top"><td><code>maxit</code></td>
+<td>
+maximum number of iterations.</td></tr>
+<tr valign="top"><td><code>log.it</code></td>
+<td>
+logical. If <code>TRUE</code> it takes the log2 of <code>mat</code></td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+logical. If <code>TRUE</code> displays current pair of chip being
+worked on.</td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+span to be used by loess</td></tr>
+<tr valign="top"><td><code>family.loess</code></td>
+<td>
+<code>"gaussian"</code> or <code>"symmetric"</code>
+as in <code><a href="../../modreg/html/loess.html">loess</a></code></td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Experience shows that you only need 1-2 iterations to obtain useful
+results. This function is not written in an efficient way. In order to
+make it faster, loess is fit to a sample of the data which we then use to
+predict the curve for all the data. By setting
+<code>family.loess="gaussian"</code> the function is faster, but you risk
+losing information on differentially expressed genes. The function
+<code><a href="../../preprocessCore/html/normalize.quantiles.html">normalize.quantiles</a></code> is faster.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A matrix with normalized values for chips in columns.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Rafael A. Irizarry
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../preprocessCore/html/normalize.quantiles.html">normalize.quantiles</a></code>, <code><a href="maffy.normalise.html">maffy.normalize</a></code>,
+<code><a href="maffy.subset.html">maffy.subset</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

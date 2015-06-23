@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Subset RGList, MAList or MArrayLM Objects</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for subsetting {limma}"><tr><td>subsetting {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Subset RGList, MAList or MArrayLM Objects</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Extract a subset of an <code>RGList</code>, <code>MAList</code> or <code>MArrayLM</code> object.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'RGList':
+object[i, j, ...]
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+object of class <code>RGList</code>, <code>MAList</code> or <code>MArrayLM</code></td></tr>
+<tr valign="top"><td><code>i,j</code></td>
+<td>
+elements to extract. <code>i</code> subsets the genes or spots while <code>j</code> subsets the arrays</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+not used</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+<code>i,j</code> may take any values acceptable for the matrix components of <code>object</code>.
+See the <a href="../../base/html/Extract.html">Extract</a> help entry for more details on subsetting matrices.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+An object of the same class as <code>object</code> holding data from the specified subset of genes and arrays.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/Extract.html">Extract</a></code> in the base package.
+</p>
+<p>
+<a href="03reading.html">03.ReadingData</a> gives an overview of data input and manipulation functions in LIMMA.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+M &lt;- A &lt;- matrix(11:14,4,2)
+rownames(M) &lt;- rownames(A) &lt;- c("a","b","c","d")
+colnames(M) &lt;- colnames(A) &lt;- c("A","B")
+MA &lt;- new("MAList",list(M=M,A=A))
+MA[1:2,]
+MA[1:2,2]
+MA[,2]
+</pre>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

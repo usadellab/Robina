@@ -1,0 +1,57 @@
+\HeaderA{preprocess}{Background correct and Normalize}{preprocess}
+\keyword{manip}{preprocess}
+\begin{Description}\relax
+This function pre-processes an \code{\LinkA{AffyBatch}{AffyBatch}}.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+preprocess(object,subset=NULL, normalize=TRUE,background=TRUE,background.method="RMA.2",normalize.method="quantile",background.param = list(),normalize.param=list(),verbosity.level=0)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{object}] an \code{\LinkA{AffyBatch}{AffyBatch}}
+\item[\code{subset}] a vector with the names of probesets to be used. If NULL
+then all probesets are used.
+\item[\code{normalize}] logical value. If \code{TRUE} normalize data using
+quantile normalization
+\item[\code{background}] logical value. If \code{TRUE} background correct
+using RMA background correction
+\item[\code{background.method}] name of background method to use.
+\item[\code{normalize.method}] name of normalization method to use.
+\item[\code{background.param}] list of parameters for background correction methods
+\item[\code{normalize.param}] list of parameters for normalization methods
+\item[\code{verbosity.level}] An integer specifying how much to print
+out. Higher values indicate more verbose. A value of 0 will print nothing
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+This function carries out background correction and normalization
+pre-processing steps. It does not summarize to produce gene expression
+measures. All the same pre-processing methods supplied by
+\code{\LinkA{threestep}{threestep}} are supported by this function.
+\end{Details}
+\begin{Value}
+An \code{\LinkA{AffyBatch}{AffyBatch}}
+\end{Value}
+\begin{Author}\relax
+Ben Bolstad \email{bmb@bmbolstad.com}
+\end{Author}
+\begin{References}\relax
+Bolstad, BM (2004) \emph{Low Level Analysis of High-density
+Oligonucleotide Array Data: Background, Normalization and
+Summarization}. PhD Dissertation. University of California, Berkeley.
+\end{References}
+\begin{SeeAlso}\relax
+\code{\LinkA{expresso}{expresso}}, \code{\LinkA{rma}{rma}}
+\end{SeeAlso}
+\begin{Examples}
+\begin{ExampleCode}
+data(affybatch.example)
+
+# should be equivalent to the bg and norm of rma()
+abatch.preprocessed <- preprocess(affybatch.example)
+
+\end{ExampleCode}
+\end{Examples}
+

@@ -1,0 +1,23 @@
+import("methods")
+import("AnnotationDbi")
+importFrom("annotate", "getAnnMap")
+import("Biobase")
+import("survival")
+importFrom("graphics", "plot")
+
+useDynLib("genefilter")
+
+export("Anova", "allNA", "anyNA", "coxfilter",
+  "cv", "eSetFilter", "varFilter", "featureFilter",
+  "fastT", "ttest", "shorth", "half.range.mode",
+  "rowttests", "colttests", "rowFtests", "colFtests",
+  "rowSds", "rowVars", "dist2",
+  "filterfun", "findLargest", "gapFilter", 
+  "genefilter", "genescale", "getFilterNames",
+  "getFuncDesc", "getRdAsText", "isESet", "kOverA", "maxA", "pOverA",
+  "parseArgs", "parseDesc", "setESetArgs", "showESet") 
+
+exportClasses("rowROC")
+exportMethods("genefinder", "show", "plot", "[", "sens", "spec",
+              "area", "pAUC", "AUC", "rowpAUCs", "nsFilter")
+

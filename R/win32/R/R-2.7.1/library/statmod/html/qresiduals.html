@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Randomized Quantile Residuals</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for qresiduals {statmod}"><tr><td>qresiduals {statmod}</td><td align="right">R Documentation</td></tr></table>
+<h2>Randomized Quantile Residuals</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Compute randomized quantile residuals for generalized linear models.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+qresiduals(glm.obj,dispersion=NULL)
+qresid(glm.obj,dispersion=NULL)
+qres.binom(glm.obj)
+qres.pois(glm.obj)
+qres.nbinom(glm.obj)
+qres.gamma(glm.obj,dispersion=NULL)
+qres.invgauss(glm.obj,dispersion=NULL)
+qres.tweedie(glm.obj,dispersion=NULL)
+qres.default(glm.obj,dispersion=NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>glm.obj</code></td>
+<td>
+Object of class <code>glm</code>. The generalized linear model family is assumed to be binomial for <code>qres.binom</code>, poisson for
+<code>qres.pois</code>, negative binomial for <code>qres.nbinom</code>, Gamma for
+<code>qres.gamma</code>, inverse Gaussian for <code>qres.invgauss</code> or
+tweedie for <code>qres.tweedie</code>.</td></tr>
+<tr valign="top"><td><code>dispersion</code></td>
+<td>
+a positive real number. Specifies the value of the
+dispersion parameter for a Gamma or inverse Gaussian generalized linear
+model if known. If <code>NULL</code>, the dispersion will be estimated by its
+Pearson estimator.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Quantile residuals are based on the idea of inverting the
+estimated distribution function for each observation to
+obtain exactly standard normal residuals. In the case of
+discrete distributions, such as the binomial and Poisson,
+some randomization is introduced to produce continuous
+normal residuals. Quantile residuals are the residuals of
+choice for generalized linear models in large dispersion
+situations when the deviance and Pearson residuals can be
+grossly non-normal. Quantile residuals are the only
+useful residuals for binomial or Poisson data when the
+response takes on only a small number of distinct values.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+Numeric vector of standard normal quantile residuals.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Dunn, K. P., and Smyth, G. K. (1996). Randomized quantile residuals. <EM>Journal of Computational and Graphical Statistics</EM> <B>5</B>, 1-10.
+<a href="http://www.statsci.org/smyth/pubs/residual.html">http://www.statsci.org/smyth/pubs/residual.html</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../stats/html/residuals.glm.html">residuals.glm</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+#  Poisson example: quantile residuals show no granularity
+y &lt;- rpois(20,lambda=4)
+x &lt;- 1:20
+fit &lt;- glm(y~x, family=poisson)
+qr &lt;- qresiduals(fit)
+qqnorm(qr)
+abline(0,1)
+
+#  Gamma example:
+#  Quantile residuals are nearly normal while usual resids are not
+y &lt;- rchisq(20, df=1)
+fit &lt;- glm(y~1, family=Gamma)
+qr &lt;- qresiduals(fit, dispersion=2)
+qqnorm(qr)
+abline(0,1)
+
+#  Negative binomial example:
+if(require("MASS")) {
+fit &lt;- glm(Days~Age,family=negative.binomial(2),data=quine)
+summary(qresiduals(fit))
+fit &lt;- glm.nb(Days~Age,link=log,data = quine)
+summary(qresiduals(fit))
+}
+</pre>
+
+
+
+<hr><div align="center">[Package <em>statmod</em> version 1.3.8 <a href="00Index.html">Index]</a></div>
+
+</body></html>

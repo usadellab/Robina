@@ -1,0 +1,141 @@
+PLMset-class             package:affyPLM             R Documentation
+
+_C_l_a_s_s _P_L_M_s_e_t
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This is a class representation for Probe level Linear Models
+     fitted to Affymetrix GeneChip probe level data.
+
+_O_b_j_e_c_t_s _f_r_o_m _t_h_e _C_l_a_s_s:
+
+     Objects can be created using the function 'fitPLM'
+
+_S_l_o_t_s:
+
+
+     '_p_r_o_b_e._c_o_e_f_s': Object of class "matrix". Contains model
+          coefficients related to probe effects.
+
+     '_s_e._p_r_o_b_e._c_o_e_f_s': Object of class "matrix". Contains standard
+          error estimates for the probe coefficients.  
+
+     '_c_h_i_p._c_o_e_f_s': Object of class "matrix". Contains model
+          coefficients related to chip (or chip level) effects for each
+          fit.
+
+     '_s_e._c_h_i_p._c_o_e_f_s': Object of class "matrix". Contains standard error
+          estimates for the chip coefficients.
+
+     '_m_o_d_e_l._d_e_s_c_r_i_p_t_i_o_n': Object of class "character". This string
+          describes the probe level model fitted.
+
+     '_w_e_i_g_h_t_s': List of objects of class "matrix". Contains probe
+          weights for each fit. The matrix has columns for chips and
+          rows are probes.
+
+     '_p_h_e_n_o_D_a_t_a': Object of class "phenoData" This is an instance of
+          class 'phenoData' containing the patient (or case) level
+          data. The columns of the pData slot of this entity represent
+          variables and the rows represent patients or cases.
+
+     '_a_n_n_o_t_a_t_i_o_n' A character string identifying the annotation that
+          may be used for the 'ExpressionSet' instance.
+
+     '_d_e_s_c_r_i_p_t_i_o_n': Object of class "MIAME". For compatibility with
+          previous version of this class description can also be a
+          "character". The class 'characterOrMIAME' has been defined
+          just for this.
+
+     '_c_d_f_N_a_m_e': A character string giving the name of the cdfFile.
+
+     '_n_r_o_w': Object of class "numeric". Number of rows in chip.
+
+     '_n_c_o_l': Object of class "numeric". Number of cols in chip.
+
+     '_n_o_t_e_s': Object of class "character" Vector of explanatory text.
+
+     '_v_a_r_c_o_v': Object of class "list". A list of variance/covariance
+          matrices.
+
+     '_r_e_s_i_d_u_a_l_S_E': Object of class "matrix". Contains residual standard
+          error and df.
+
+     '_r_e_s_i_d_u_a_l_s': List of objects of class "matrix". Contains residuals
+          from model fit (if stored).
+
+_M_e_t_h_o_d_s:
+
+
+     _w_e_i_g_h_t_s<- 'signature(object = "PLMset")': replaces the weights.
+
+     _w_e_i_g_h_t_s 'signature(object = "PLMset")': extracts the model fit
+          weights.
+
+     _c_o_e_f_s<- 'signature(object = "PLMset")': replaces the chip coefs.
+
+     _c_o_e_f_s 'signature(object = "PLMset")': extracts the chip coefs.
+
+     _s_e 'signature(object = "PLMset")': extracts the standard error
+          estimates of the chip coefs.
+
+     _s_e<- 'signature(object = "PLMset")': replaces the standard error
+          estimates of the chip coefs.
+
+     _c_o_e_f_s._p_r_o_b_e 'signature(object = "PLMset")': extracts the probe
+          coefs.
+
+     _s_e._p_r_o_b_e 'signature(object = "PLMset")': extracts the standard
+          error estimates of the probe coefs.    
+
+     _c_o_e_f_s._c_o_n_s_t 'signature(object = "PLMset")': extracts the intercept
+          coefs.
+
+     _s_e._c_o_n_s_t 'signature(object = "PLMset")': extracts the standard
+          error estimates of the intercept coefs.
+
+     _g_e_t_C_d_f_I_n_f_o 'signature(object = "PLMset")': retrieve the
+          environment that defines the location of probes by probe set.
+
+     _i_m_a_g_e 'signature(x = "PLMset")': creates an image of the robust
+          linear model fit weights for each sample.
+
+     _i_n_d_e_x_P_r_o_b_e_s 'signature(object = "PLMset", which = "character")':
+          returns a list with locations of the probes in each probe 
+          set. The list names defines the probe set names. 'which' can
+          be "pm", "mm", or "both". If "both" then perfect match
+          locations are given followed by mismatch locations.
+
+     _M_b_o_x 'signature(object = "PLMset")': gives a boxplot of M's for
+          each chip. The M's are computed relative to a "median" chip.
+
+     _n_o_r_m_v_e_c 'signature(x = "PLMset")': will return the normalization
+          vector (if it has been stored).
+
+     _r_e_s_i_d_S_E 'signature(x = "PLMset")': will return the residual SE (if
+          it has been stored).
+
+     _b_o_x_p_l_o_t 'signature(x = "PLMset")': Boxplot of Normalized Unscaled
+          Standard Errors (NUSE).
+
+     _N_U_S_E 'signature(x = "PLMset")' : Boxplot of Normalized Unscaled
+          Standard Errors (NUSE) or NUSE values.
+
+     _R_L_E| 'signature(x = "PLMset")' : Relative Log Expression boxplot
+          or values.
+
+_N_o_t_e:
+
+     This class is better described in the vignette.
+
+_A_u_t_h_o_r(_s):
+
+     B. M. Bolstad bmb@bmbolstad.com
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Bolstad, BM (2004) _Low Level Analysis of High-density
+     Oligonucleotide Array Data: Background, Normalization and
+     Summarization_. PhD Dissertation. University of California,
+     Berkeley.
+

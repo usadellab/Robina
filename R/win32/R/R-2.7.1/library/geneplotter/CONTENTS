@@ -1,0 +1,113 @@
+Entry: GetColor
+Aliases: GetColor dChip.colors greenred.colors
+Keywords: manip
+Description: A function to get the Red-Blue color scheme used by dChip
+URL: ../../../library/geneplotter/html/GetColor.html
+
+Entry: Makesense
+Aliases: Makesense Makesense,matrix,character-method Makesense,ExpressionSet,missing-method Makesense,ExpressionSet,character-method
+Keywords: dplot
+Description: Produce Smoothed Sense/Anti-sense For All Chromosomes
+URL: ../../../library/geneplotter/html/Makesense.html
+
+Entry: alongChrom
+Aliases: alongChrom buildACMainLabel doACImagePlot fixACPhysPoints getACGeneSyms limitACXRange cullACXPoints doACLocalPlot getACClosestPos getACPlotLabs scaleACData dispACXaxis doACMatPlot getACDataEnv getACStrandVals doACCumPlot emptyACPlot getACExprs highlightACDups
+Keywords: utilities
+Description: A function for plotting expression data from an ExpressionSet for a given chromosome.
+URL: ../../../library/geneplotter/html/alongChrom.html
+
+Entry: amplicon.plot
+Aliases: amplicon.plot
+Keywords: hplot
+Description: Create an amplicon plot
+URL: ../../../library/geneplotter/html/amplicon.plot.html
+
+Entry: cColor
+Aliases: cColor
+Keywords: utilities
+Description: A function for marking specific probes on a cPlot.
+URL: ../../../library/geneplotter/html/cColor.html
+
+Entry: cPlot
+Aliases: cPlot
+Keywords: utilities
+Description: A plotting function for chromosomes.
+URL: ../../../library/geneplotter/html/cPlot.html
+
+Entry: cScale
+Aliases: cScale
+Keywords: utilities
+Description: A function for mapping chromosome length to a number of points.
+URL: ../../../library/geneplotter/html/cScale.html
+
+Entry: connection-class
+Aliases: connection-class file-class
+Keywords: classes
+Description: Virtual S4 classes for method dispatching
+URL: ../../../library/geneplotter/html/classes.html
+
+Entry: expressionSet133a
+Aliases: expressionSet133a
+Keywords: datasets
+Description: A small dataset for testing
+URL: ../../../library/geneplotter/html/eset133a.html
+
+Entry: histStack
+Aliases: histStack
+Keywords: hplot
+Description: Stacked histogram
+URL: ../../../library/geneplotter/html/histStack.html
+
+Entry: imageMap-methods
+Aliases: imageMap imageMap-methods imageMap,matrix-method imageMap,matrix,connection,list,character-method
+Keywords: manip
+Description: Write an HTML IMG tag together with a MAP image map.
+URL: ../../../library/geneplotter/html/imageMap.html
+
+Entry: make.chromOrd
+Aliases: make.chromOrd
+Keywords: utilities
+Description: Make a chromOrd object
+URL: ../../../library/geneplotter/html/make.chromOrd.html
+
+Entry: multiecdf
+Aliases: multiecdf multiecdf.default multiecdf.formula multiecdf.matrix multidensity multidensity.default multidensity.formula multidensity.matrix
+Keywords: hplot
+Description: Multiple empirical cumulative distribution functions (ecdf) and densities
+URL: ../../../library/geneplotter/html/multiecdf.html
+
+Entry: openHtmlPage
+Aliases: openHtmlPage closeHtmlPage
+Keywords: IO
+Description: Open and close an HTML file for writing.
+URL: ../../../library/geneplotter/html/openHtmlPage.html
+
+Entry: panel.smoothScatter
+Aliases: panel.smoothScatter
+Keywords: hplot
+Description: Lattice panel function analogous to smoothScatter
+URL: ../../../library/geneplotter/html/panel.smoothScatter.html
+
+Entry: plotChr
+Aliases: plotChr
+Keywords: hplot
+Description: Plot Smoothed Sense/Anti-sense of Specified Chromosomes
+URL: ../../../library/geneplotter/html/plotChr.html
+
+Entry: plotExpressionGraph
+Aliases: plotExpressionGraph getPlotExpressionColors IMCAEntrezLink defMapFun
+Keywords: utilities graphs hplot
+Description: A function to plot a graph colored by expression data
+URL: ../../../library/geneplotter/html/plotExpressionGraph.html
+
+Entry: savepng
+Aliases: savepdf saveeps savepng savetiff
+Keywords: programming error
+Description: Save the contents of the current graphics device to a file
+URL: ../../../library/geneplotter/html/savepng.html
+
+Entry: smoothScatter
+Aliases: smoothScatter densCols
+Keywords: hplot
+Description: Scatterplots with smoothed densities color representation
+URL: ../../../library/geneplotter/html/smoothscatter.html

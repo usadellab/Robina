@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Introduction to the StatMod Package</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for 1.StatMod {statmod}"><tr><td>1.StatMod {statmod}</td><td align="right">R Documentation</td></tr></table>
+<h2>Introduction to the StatMod Package</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This library packages together those functions, other than those for microarray data analysis, which I wish to make public.
+A change-log for this package is available from
+<a href="http://www.statsci.org/r/changelog.txt">http://www.statsci.org/r/changelog.txt</a>.
+</p>
+<p>
+Contributions to this library have also been made by Paul Bagshaw, Centre National d'Etudes des Telecommunications (DIH/DIPS), France (<code>qinvgauss</code>), and Trevor Park, Department of Statistics, University of Florida (<code>rinvgauss</code>).
+</p>
+
+
+<h3>Generalized Linear Models</h3>
+
+<p>
+<code>tweedie</code>,
+<code>canonic.digamma</code>,
+<code>unitdeviance.digamma</code>,
+<code>varfun.digamma</code>,
+<code>cumulant.digamma</code>,
+<code>d2cumulant.digamma</code>,
+<code>meanval.digamma</code>
+and <code>logmdigamma</code>
+are functions to fit non-standard generalized linear models related to the gamma distribution. 
+</p>
+<p>
+<code>qres</code> implements randomized quantile residuals for generalized linear models.
+</p>
+
+
+<h3>Growth Curves</h3>
+
+<p>
+<code>compareGrowthCurves</code>,
+<code>compareTwoGrowthCurves</code> and
+<code>meanT</code>
+are functions to test for differences between growth curves with repeated measurements on subjects.
+</p>
+
+
+<h3>Limiting Dilution Analysis</h3>
+
+<p>
+<code><a href="limdil.html">limdil</a></code>
+implements limiting dilution analysis using complemenary log-log binomial generalized linear model regression, with some improvements on previous programs.
+</p>
+
+
+<h3>Probability Distributions</h3>
+
+<p>
+<code>qinvgauss</code>,
+<code>dinvgauss</code>,
+<code>pinvgauss</code> and
+<code>rinvgauss</code>
+perform probability calculations for the inverse Gaussian distribution. 
+</p>
+<p>
+<code>gauss.quad</code> and
+<code>gauss.quad.prob</code> compute Gaussian Quadrature with probability distributions.
+</p>
+
+
+<h3>Tests</h3>
+
+<p>
+<code>hommel.test</code> performs Hommel's multiple comparison tests.
+</p>
+<p>
+<code>power.fisher.test</code> computes the power of Fisher's Exact Test for comparing proportions.
+</p>
+<p>
+<code>sage.test</code> is a fast approximation to Fisher's exact test for each tag for comparing two Serial Analysis of Gene Expression (SAGE) libraries.
+</p>
+
+
+<h3>Variance Models</h3>
+
+<p>
+<code>mixedModel2</code>,
+<code>mixedModel2Fit</code> and
+<code>glmgam.fit</code> fit mixed linear models.
+</p>
+<p>
+<code>remlscore</code> and <code>remlscoregamma</code> fit heteroscedastic and varying dispersion models by REML.
+<code>welding</code> is an example data set.
+</p>
+
+
+<h3>Matrix Computations</h3>
+
+<p>
+<code>matvec</code> and <code>vecmat</code> facilitate multiplying matrices by vectors.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+
+<hr><div align="center">[Package <em>statmod</em> version 1.3.8 <a href="00Index.html">Index]</a></div>
+
+</body></html>

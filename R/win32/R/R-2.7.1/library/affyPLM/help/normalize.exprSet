@@ -1,0 +1,83 @@
+normalize.ExpressionSet       package:affyPLM       R Documentation
+
+_N_o_r_m_a_l_i_z_a_t_i_o_n _a_p_p_l_i_e_d _t_o _E_x_p_r_e_s_s_i_o_n_S_e_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Allows the user to apply normalization routines to ExpressionSets.
+
+_U_s_a_g_e:
+
+       normalize.ExpressionSet.quantiles(eset,transfn=c("none","log","antilog"))
+       normalize.ExpressionSet.loess(eset,transfn=c("none","log","antilog"),...)
+       normalize.ExpressionSet.contrasts(eset, span = 2/3, choose.subset = TRUE, subset.size = 5000, verbose = TRUE, family = "symmetric",transfn=c("none","log","antilog"))
+       normalize.ExpressionSet.qspline(eset,transfn=c("none","log","antilog"),...)
+       normalize.ExpressionSet.invariantset(eset,prd.td = c(0.003, 0.007),verbose=FALSE,transfn=c("none","log","antilog"),baseline.type=c("mean","median","pseudo-mean","pseudo-median"))
+     normalize.ExpressionSet.scaling(eset,trim=0.02,baseline=-1,transfn=c("none","log","antilog"))
+
+_A_r_g_u_m_e_n_t_s:
+
+    eset: An 'ExpressionSet'
+
+    span: parameter to be passed to the function 'loess'.
+
+choose.subset: 
+
+subset.size: 
+
+ verbose: verbosity flag
+
+  family: parameter to be passed to the function 'loess'.
+
+  prd.td: cutoff parameter (details in the bibliographic reference)
+
+    trim: How much to trim from the top and bottom before computing the
+          mean when using the scaling normalization
+
+baseline: Index of array to use as baseline, negative values
+          (-1,-2,-3,-4) control different baseline selection methods
+
+ transfn: Transform the ExpressionSet before normalizing. Useful when
+          dealing with expression values that are log-scale
+
+baseline.type: A method of selecting the baseline array
+
+     ...: Additional parameters that may be passed to the normalization
+          routine
+
+_D_e_t_a_i_l_s:
+
+     This function carries out normalization of expression values. In
+     general you should either normalize at the probe level or at the
+     expression value level, not both.
+
+     Typing 'normalize.ExpressionSet.methods' should give you a list of
+     methods that you may use. note that you can also use the
+     'normalize' function on ExpressionSets. Use 'method' to select the
+     normalization method.
+
+_V_a_l_u_e:
+
+     A normalized 'ExpressionSet'.
+
+_A_u_t_h_o_r(_s):
+
+     Ben Bolstad, bmb@bmbolstad.com
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Bolstad, BM (2004) _Low Level Analysis of High-density
+     Oligonucleotide Array Data: Background, Normalization and
+     Summarization_. PhD Dissertation. University of California,
+     Berkeley.
+
+_S_e_e _A_l_s_o:
+
+     'normalize'
+
+_E_x_a_m_p_l_e_s:
+
+     data(affybatch.example)
+     eset <- rma(affybatch.example,normalize=FALSE,background=FALSE)
+     normalize(eset)
+

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="937"
+   height="707"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="tcimport_wiz.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5086">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop5088" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:0;"
+         offset="1"
+         id="stop5090" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend"
+       style="overflow:visible">
+      <path
+         id="path3286"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         id="path3280"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3262"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2447"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5086"
+       id="radialGradient5094"
+       cx="636.66559"
+       cy="746.36414"
+       fx="636.66559"
+       fy="746.36414"
+       r="46.98444"
+       gradientTransform="matrix(1,0,0,0.2131369,-117.5,561.14853)"
+       gradientUnits="userSpaceOnUse" />
+    <inkscape:perspective
+       id="perspective2487"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2537"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="527.39717"
+     inkscape:cy="433.73757"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1566"
+     inkscape:window-height="1034"
+     inkscape:window-x="188"
+     inkscape:window-y="44" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(124,-169.36218)">
+    <image
+       y="169.36218"
+       x="-124"
+       id="image2539"
+       height="707"
+       width="937"
+       sodipodi:absref="/Users/marc/Development/workspace/Robin_CURRENT/manual/tcimport.tiff"
+       xlink:href="tcimport.tiff"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/manual/tcimport_new.png"
+       inkscape:export-xdpi="144.10184"
+       inkscape:export-ydpi="144.10184" />
+    <g
+       id="g3229"
+       transform="translate(648,-52)"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/manual/tcimport_new.png"
+       inkscape:export-xdpi="144.10184"
+       inkscape:export-ydpi="144.10184">
+      <path
+         transform="translate(-170.5,130.86218)"
+         d="M 273,250 A 29,28 0 1 1 215,250 A 29,28 0 1 1 273,250 z"
+         sodipodi:ry="28"
+         sodipodi:rx="29"
+         sodipodi:cy="250"
+         sodipodi:cx="244"
+         id="path2453"
+         style="opacity:0.65602872;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:5.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <text
+         id="text3225"
+         y="393.86218"
+         x="62.5"
+         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Bitstream Vera Sans Mono;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+           y="393.86218"
+           x="62.5"
+           id="tspan3227"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <g
+       transform="translate(692,80)"
+       id="g3234"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/manual/tcimport_new.png"
+       inkscape:export-xdpi="144.10184"
+       inkscape:export-ydpi="144.10184">
+      <path
+         sodipodi:type="arc"
+         style="opacity:0.65602872;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:5.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path3236"
+         sodipodi:cx="244"
+         sodipodi:cy="250"
+         sodipodi:rx="29"
+         sodipodi:ry="28"
+         d="M 273,250 A 29,28 0 1 1 215,250 A 29,28 0 1 1 273,250 z"
+         transform="translate(-170.5,130.86218)" />
+      <text
+         xml:space="preserve"
+         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="62.5"
+         y="393.86218"
+         id="text3238"><tspan
+           sodipodi:role="line"
+           id="tspan3240"
+           x="62.5"
+           y="393.86218"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Bitstream Vera Sans Mono;-inkscape-font-specification:Bitstream Vera Sans Mono Bold">2</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="703"
+       y="449"
+       id="text3242"
+       transform="translate(-170.5,130.86218)"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/manual/tcimport_new.png"
+       inkscape:export-xdpi="144.10184"
+       inkscape:export-ydpi="144.10184"><tspan
+         sodipodi:role="line"
+         id="tspan3244"
+         x="703"
+         y="449" /></text>
+    <g
+       id="g3246"
+       transform="translate(539,383)"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/manual/tcimport_new.png"
+       inkscape:export-xdpi="144.10184"
+       inkscape:export-ydpi="144.10184">
+      <path
+         transform="translate(-170.5,130.86218)"
+         d="M 273,250 A 29,28 0 1 1 215,250 A 29,28 0 1 1 273,250 z"
+         sodipodi:ry="28"
+         sodipodi:rx="29"
+         sodipodi:cy="250"
+         sodipodi:cx="244"
+         id="path3248"
+         style="opacity:0.65602872;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:5.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <text
+         id="text3250"
+         y="393.86218"
+         x="62.5"
+         style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Bitstream Vera Sans Mono;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+           y="393.86218"
+           x="62.5"
+           id="tspan3252"
+           sodipodi:role="line">3</tspan></text>
+    </g>
+    <path
+       style="fill:url(#radialGradient5094);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.29999995;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow2Mend);stroke-miterlimit:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 617.5,722.86218 L 637.5,614.86218"
+       id="path3254"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/manual/tcimport_new.png"
+       inkscape:export-xdpi="144.10184"
+       inkscape:export-ydpi="144.10184" />
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<html>
+    <style type="text/css">
+    <!--
+    .style2 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #6A6A6A;
+    }
+    .style3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+    }
+    body {
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: white;
+        color:#000000;
+    }
+    .style4 {
+        font-size: small;
+        font-style: italic;
+    }-->
+    </style>
+</head>
+<body>
+    <h1 class="style2">Release Notes</h1>
+    <p class="style4">1.2.4_build647</p>
+    <br>
+    <p>Welcome to RobiNA and thank you for using it to evaluate and analyse<br>
+        your microarray and RNA-Seq data. Before taking off please take the time to read the<br>
+        release notes carefully.</p>
+    <ul>
+        <li>New workflow for RNA-Seq based transcript profiling: Check out the new workflow<br>
+            for RNA-Seq based analysis of differential gene expression. To-date it supports<br>
+            import ofIllumina/Solexa-type raw sequence data in FASTQ format, SAM/BAM prealigned<br> 
+            reads and precomputed counts tables. <br>
+            <br>
+        </li>
+        <li>Treatment of replicates: The current Version of RobiNA assumes that<br>
+            all replicates that you enter are true biological replicates. Technical<br>
+            replication is not yet taken into account. When entering technical replicates<br>
+            the significance of differential expression will be overestimated leading<br>
+            to an artificially increased number of genes that are significantly called<br>
+            differentially expressed.
+            <br>
+        </li>
+        <li>Unconnected designs in two color experiments: Comparing results from two<br>
+            sets of two color microarrays that are not connected requires analysing the<br>
+            color channels separately. This is not yet supported in RobiNA.
+            <br>
+        </li>          
+    </ul>
+</body>
+</html>

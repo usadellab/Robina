@@ -1,0 +1,38 @@
+\HeaderA{i2xy}{Convert (x,y)-coordinates to single-number indices and back.}{i2xy}
+\aliasA{xy2i}{i2xy}{xy2i}
+\keyword{datasets}{i2xy}
+\begin{Description}\relax
+Convert (x,y)-coordinates on the chip (and in the CEL file) to the
+single-number indices used in AffyBatch and CDF environment, and back.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}i2xy(i)
+xy2i(x,y)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] numeric. x-coordinate (from 1 to 544)
+\item[\code{y}] numeric. y-coordinate (from 1 to 544)
+\item[\code{i}] numeric. single-number index (from 1 to 295936)
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+Type \code{i2xy} and \code{xy2i} at the \R{} prompt to 
+view the function definitions.
+\end{Details}
+\begin{SeeAlso}\relax
+\code{\LinkA{ecoliasv2cdf}{ecoliasv2cdf}}
+\end{SeeAlso}
+\begin{Examples}
+\begin{ExampleCode}
+  xy2i(5,5)
+  i     = 1:(544*544)
+  coord = i2xy(i)
+  j     = xy2i(coord[, "x"], coord[, "y"])
+  stopifnot(all(i==j))
+  range(coord[, "x"])
+  range(coord[, "y"])
+\end{ExampleCode}
+\end{Examples}
+

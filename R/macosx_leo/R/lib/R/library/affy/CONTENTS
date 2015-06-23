@@ -1,0 +1,359 @@
+Entry: AffyBatch-class
+Aliases: AffyBatch-class AffyBatch,ANY AffyBatch probes geneNames geneNames<- getCdfInfo image indexProbes intensity<- intensity pmindex mmindex probeset $.AffyBatch cdfName cdfName,AffyBatch-method checkValidFilenames probes,AffyBatch-method exprs,AffyBatch-method exprs<-,AffyBatch,ANY-method se.exprs,AffyBatch-method se.exprs<-,AffyBatch-method featureNames,AffyBatch-method featureNames<-,AffyBatch-method geneNames,AffyBatch-method geneNames<-,AffyBatch,ANY-method getCdfInfo,AffyBatch-method image,AffyBatch-method initialize,AffyBatch-method indexProbes,AffyBatch-method intensity<-,AffyBatch-method intensity,AffyBatch-method pmindex,AffyBatch-method mmindex,AffyBatch-method probeset,AffyBatch-method boxplot,AffyBatch-method dim,AffyBatch-method row,AffyBatch-method col,AffyBatch-method show,AffyBatch-method pm,AffyBatch-method pm<-,AffyBatch,ANY-method mm,AffyBatch-method mm<-,AffyBatch,ANY-method probeNames,AffyBatch-method hist,AffyBatch-method [<-,AffyBatch-method [,AffyBatch-method [[,AffyBatch-method length,AffyBatch-method bg.correct,AffyBatch,character-method indexProbes,AffyBatch,character-method indexProbes,AffyBatch,missing-method computeExprSet,AffyBatch,character,character-method cdfName,AffyBatch-method updateObject,AffyBatch-method
+Keywords: classes
+Description: Class AffyBatch
+URL: ../../../library/affy/html/AffyBatch-class.html
+
+Entry: AffyRNAdeg
+Aliases: AffyRNAdeg summaryAffyRNAdeg plotAffyRNAdeg
+Keywords: hplot manip
+Description: Function to assess RNA degradation in Affymetrix GeneChip data.
+URL: ../../../library/affy/html/AffyRNAdeg.html
+
+Entry: MAplot
+Aliases: ma.plot Mbox MAplot Mbox,AffyBatch-method MAplot,AffyBatch-method
+Keywords: hplot
+Description: Relative M vs. A plots
+URL: ../../../library/affy/html/MAplot.html
+
+Entry: ProbeSet-class
+Aliases: ProbeSet-class mm,ProbeSet-method mm<-,ProbeSet,matrix-method pm<-,ProbeSet,matrix-method pm,ProbeSet-method show,ProbeSet-method barplot,ProbeSet-method colnames,ProbeSet-method express.summary.stat,ProbeSet,character,character-method sampleNames,ProbeSet-method
+Keywords: classes
+Description: Class ProbeSet
+URL: ../../../library/affy/html/ProbeSet-class.html
+
+Entry: ProgressBarText-class
+Aliases: ProgressBarText-class close,ProgressBarText-method initialize,ProgressBarText-method open,ProgressBarText-method update,ProgressBarText-method
+Keywords: classes
+Description: Class "ProgressBarText"
+URL: ../../../library/affy/html/ProgressBarText-class.html
+
+Entry: SpikeIn
+Aliases: SpikeIn concentrations
+Keywords: datasets
+Description: SpikeIn Experiment Data: ProbeSet Example
+URL: ../../../library/affy/html/SpikeIn.html
+
+Entry: affy-options
+Aliases: affy-options
+Keywords: manip
+Description: Options for the affy package
+URL: ../../../library/affy/html/affy-options.html
+
+Entry: affy.scalevalue.exprSet
+Aliases: affy.scalevalue.exprSet
+Keywords: manip
+Description: Scale normalization for expreSets
+URL: ../../../library/affy/html/affy.scalevalue.exprSet.html
+
+Entry: affybatch.example
+Aliases: affybatch.example affybatch.example2
+Keywords: methods
+Description: AffyBatch instance affybatch.example
+URL: ../../../library/affy/html/affybatch.example.html
+
+Entry: barplot.ProbeSet
+Aliases: barplot.ProbeSet
+Keywords: hplot
+Description: show a ProbeSet as barplots
+URL: ../../../library/affy/html/barplot.ProbeSet.html
+
+Entry: bg.adjust
+Aliases: bg.adjust bg.parameters
+Keywords: manip
+Description: Background ajustment (internal function)
+URL: ../../../library/affy/html/bg.adjust.html
+
+Entry: bg.correct
+Aliases: bg.correct bg.correct.none bg.correct.rma bg.correct.mas
+Keywords: manip
+Description: Background Correction
+URL: ../../../library/affy/html/bgc.html
+
+Entry: cdfFromBioC
+Aliases: cdfFromBioC cdfFromData cdfFromLibPath cdfFromEnvironment
+Keywords: utilities
+Description: Functions to obtain CDF files
+URL: ../../../library/affy/html/cdfFromBioC.html
+
+Entry: cdfenv.example
+Aliases: cdfenv.example
+Keywords: datasets
+Description: Example cdfenv
+URL: ../../../library/affy/html/cdfenv.example.html
+
+Entry: cleancdfname
+Aliases: cleancdfname mapCdfName
+Keywords: character
+Description: Clean Affymetrix's CDF name
+URL: ../../../library/affy/html/cleancdfname.html
+
+Entry: debug.affy123
+Aliases: debug.affy123
+Keywords: methods
+Description: Debugging Flag
+URL: ../../../library/affy/html/debug.affy123.html
+
+Entry: expresso
+Aliases: expresso bgcorrect.methods bgcorrect
+Keywords: manip
+Description: From raw probe intensities to expression values
+URL: ../../../library/affy/html/expresso.html
+
+Entry: expressoWidget
+Aliases: expressoWidget
+Keywords: interface
+Description: A widget for users to pick correction methods
+URL: ../../../library/affy/html/expressoWidget.html
+
+Entry: fit.li.wong
+Aliases: fit.li.wong li.wong
+Keywords: manip models
+Description: Fit Li and Wong Model to a Probe Set
+URL: ../../../library/affy/html/fit.li.wong.html
+
+Entry: generateExprSet-method
+Aliases: generateExprSet-methods computeExprSet generateExprSet.methods
+Keywords: manip
+Description: generate a set of expression values
+URL: ../../../library/affy/html/generateExprSet-methods.html
+
+Entry: generateExprVal
+Aliases: generateExprVal generateExprVal-methods generateExprVal.methods express.summary.stat express.summary.stat-methods express.summary.stat.methods
+Keywords: manip
+Description: Compute a summary expression value from the probes intensities
+URL: ../../../library/affy/html/generateExprVal-methods.html
+
+Entry: generateExprVal.method.avgdiff
+Aliases: generateExprVal.method.avgdiff generateExprVal.method.medianpolish generateExprVal.method.liwong generateExprVal.method.mas
+Keywords: manip
+Description: Generate an expression value from the probes informations
+URL: ../../../library/affy/html/generateExprVal.method.avgdiff.html
+
+Entry: generateExprVal.method.playerout
+Aliases: generateExprVal.method.playerout playerout.costfunction
+Keywords: manip
+Description: Generate an expression value from the probes informations
+URL: ../../../library/affy/html/generateExprVal.method.playerout.html
+
+Entry: hlog
+Aliases: hlog
+Keywords: math
+Description: Hybrid Log
+URL: ../../../library/affy/html/hlog.html
+
+Entry: justRMA
+Aliases: justRMA just.rma
+Keywords: manip
+Description: Read CEL files into an ExpressionSet
+URL: ../../../library/affy/html/justrma.html
+
+Entry: list.celfiles
+Aliases: list.celfiles
+Keywords: character
+Description: List the Cel Files in a Directory/Folder
+URL: ../../../library/affy/html/list.celfiles.html
+
+Entry: loess.normalize
+Aliases: loess.normalize
+Keywords: smooth
+Description: Normalize arrays
+URL: ../../../library/affy/html/loess.normalize.html
+
+Entry: maffy.normalize
+Aliases: maffy.normalize normalize.contrast
+Keywords: internal
+Description: Normalize Itensities
+URL: ../../../library/affy/html/maffy.normalise.html
+
+Entry: maffy.subset
+Aliases: maffy.subset
+Keywords: internal
+Description: Select Subset
+URL: ../../../library/affy/html/maffy.subset.html
+
+Entry: mas5
+Aliases: mas5
+Keywords: manip
+Description: MAS 5.0 expression measure
+URL: ../../../library/affy/html/mas5.html
+
+Entry: mas5calls
+Aliases: mas5calls,AffyBatch-method mas5calls,ProbeSet-method mas5calls mas5.detection mas5calls.AffyBatch mas5calls.ProbeSet
+Keywords: manip
+Description: MAS 5.0 Absolute Detection
+URL: ../../../library/affy/html/mas5calls.html
+
+Entry: merge.AffyBatch
+Aliases: merge.AffyBatch
+Keywords: manip
+Description: merge two AffyBatch objects
+URL: ../../../library/affy/html/merge.AffyBatch.html
+
+Entry: multiloess
+Aliases: multiloess
+Keywords: internal
+Description: Local Polynomial Regression Fitting
+URL: ../../../library/affy/html/multiloess.html
+
+Entry: mva.pairs
+Aliases: mva.pairs
+Keywords: hplot
+Description: M vs. A Matrix
+URL: ../../../library/affy/html/mva.pairs.html
+
+Entry: normalize-methods
+Aliases: normalize.AffyBatch normalize.methods normalize.AffyBatch.methods normalize,AffyBatch-method normalize.methods,AffyBatch-method
+Keywords: manip
+Description: Normalize Affymetrix Probe Level Data - methods
+URL: ../../../library/affy/html/normalize-methods.html
+
+Entry: normalize
+Aliases: normalize
+Keywords: models
+Description: Normalize - generic
+URL: ../../../library/affy/html/normalize.html
+
+Entry: normalize.constant
+Aliases: normalize.constant normalize.AffyBatch.constant
+Keywords: manip
+Description: Scale probe intensities
+URL: ../../../library/affy/html/normalize.constant.html
+
+Entry: normalize.contrasts
+Aliases: normalize.contrasts normalize.AffyBatch.contrasts
+Keywords: manip
+Description: Normalize intensities using the contrasts method
+URL: ../../../library/affy/html/normalize.contrast.html
+
+Entry: normalize.invariantset
+Aliases: normalize.invariantset normalize.AffyBatch.invariantset
+Keywords: manip
+Description: Invariante Set normalization
+URL: ../../../library/affy/html/normalize.invariantset.html
+
+Entry: normalize.loess
+Aliases: normalize.loess normalize.AffyBatch.loess
+Keywords: smooth
+Description: Scale microarray data
+URL: ../../../library/affy/html/normalize.loess.html
+
+Entry: normalize.qspline
+Aliases: qspline-normalize normalize.qspline normalize.AffyBatch.qspline
+Keywords: manip
+Description: Normalize arrays
+URL: ../../../library/affy/html/normalize.qspline.html
+
+Entry: normalize.quantiles
+Aliases: normalize.AffyBatch.quantiles
+Keywords: manip
+Description: Quantile Normalization
+URL: ../../../library/affy/html/normalize.quantiles.html
+
+Entry: normalize.quantiles.robust
+Aliases: normalize.AffyBatch.quantiles.robust
+Keywords: manip
+Description: Robust Quantile Normalization
+URL: ../../../library/affy/html/normalize.quantiles.robust.html
+
+Entry: pairs.AffyBatch
+Aliases: pairs.AffyBatch
+Keywords: hplot
+Description: plot intensities using 'pairs'
+URL: ../../../library/affy/html/pairs.AffyBatch.html
+
+Entry: plot.ProbeSet
+Aliases: plot.ProbeSet
+Keywords: hplot
+Description: plot a probe set
+URL: ../../../library/affy/html/plot.ProbeSet.html
+
+Entry: plotDensity
+Aliases: plotDensity plotDensity.AffyBatch
+Keywords: hplot
+Description: Plot Densities
+URL: ../../../library/affy/html/plot.density.html
+
+Entry: plotLocation
+Aliases: plotLocation
+Keywords: aplot
+Description: Plot a location on a cel image
+URL: ../../../library/affy/html/plotLocation.html
+
+Entry: pmcorrect
+Aliases: pmcorrect pmcorrect.methods pmcorrect.pmonly pmcorrect.mas pmcorrect.subtractmm
+Keywords: manip
+Description: PM Correction
+URL: ../../../library/affy/html/pmcorrect.html
+
+Entry: ppsetApply
+Aliases: ppsetApply ppset.ttest
+Keywords: manip
+Description: Apply a function over the ProbeSets in an AffyBatch
+URL: ../../../library/affy/html/ppsetApply.html
+
+Entry: probeMatch-methods
+Aliases: probeMatch-methods probeMatch pm pm<- mm mm<-
+Keywords: methods
+Description: Methods for accessing perfect matches and mismatches
+URL: ../../../library/affy/html/probeMatch-methods.html
+
+Entry: probeNames-methods
+Aliases: probeNames-methods probeNames probeNames<-
+Keywords: methods
+Description: Methods for accessing the Probe Names
+URL: ../../../library/affy/html/probeNames-methods.html
+
+Entry: read.affybatch
+Aliases: read.affybatch AllButCelsForReadAffy ReadAffy
+Keywords: manip
+Description: Read CEL files into an AffyBatch
+URL: ../../../library/affy/html/read.affybatch.html
+
+Entry: read.probematrix
+Aliases: read.probematrix
+Keywords: manip
+Description: Read CEL file data into PM or MM matrices
+URL: ../../../library/affy/html/read.probematrix.html
+
+Entry: rma
+Aliases: rma
+Keywords: manip
+Description: Robust Multi-Array Average expression measure
+URL: ../../../library/affy/html/rma.html
+
+Entry: .setAffyOptions
+Aliases: .setAffyOptions
+Keywords: manip
+Description: ~~function to set options ~~
+URL: ../../../library/affy/html/setAffyOptions.html
+
+Entry: simplemultiLoess
+Aliases: simplemultiLoess
+Keywords: internal
+Description: Internal function for multiloess
+URL: ../../../library/affy/html/simplemultiLoess.html
+
+Entry: summary
+Aliases: summary medianpolish tukeybiweight avdiff
+Keywords: manip
+Description: Probe Set Summarizing Functions
+URL: ../../../library/affy/html/summary.html
+
+Entry: tukey.biweight
+Aliases: tukey.biweight
+Keywords: manip
+Description: One-step Tukey's biweight
+URL: ../../../library/affy/html/tukey.biweight.html
+
+Entry: whatcdf
+Aliases: whatcdf
+Keywords: manip
+Description: Find which CDF corresponds
+URL: ../../../library/affy/html/whatcdf.html
+
+Entry: xy2indices
+Aliases: xy2indices indices2xy
+Keywords: manip
+Description: Functions to convert indices to x/y (and reverse)
+URL: ../../../library/affy/html/xy2indices.html

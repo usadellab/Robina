@@ -1,0 +1,86 @@
+bg.adjust.gcrma            package:gcrma            R Documentation
+
+_G_C_R_M_A _b_a_c_k_g_r_o_u_n_d _a_d_j_u_s_t (_i_n_t_e_r_n_a_l _f_u_n_c_t_i_o_n)
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function performs background adjustment (optical noise and
+     non-specific binding on an 'AffyBatch' project and returns an
+     'AffyBatch' object in which the PM intensities are adjusted.
+
+_U_s_a_g_e:
+
+     bg.adjust.gcrma(object,affinity.info=NULL,
+           affinity.source=c("reference","local"),
+           NCprobe=NULL,
+           type=c("fullmodel","affinities","mm","constant"),
+           k=6*fast+0.5*(1-fast),stretch=1.15*fast+1*(1-fast),correction=1,
+           GSB.adjust=TRUE,
+           rho=.7,optical.correct=TRUE,verbose=TRUE,fast=TRUE)
+
+_A_r_g_u_m_e_n_t_s:
+
+  object: an 'AffyBatch'
+
+affinity.info: 'NULL' or an 'AffyBatch' containing the affinities in
+          the 'exprs' slot. This object can be created using the
+          function 'compute.affinities'.
+
+affinity.source: 'reference': use the package internal Non-specific
+          binding data or 'local': use the experimental data in
+          'object'. If 'local' is chosen, either MM probes or a
+          user-defined list of probes (see 'NCprobes') are used to
+          estimate affinities.
+
+ NCprobe: 
+
+    type: "fullmodel" for sequence and MM model. "affinities" for
+          sequence information only. "mm" for using MM without sequence
+          information.
+
+       k: A tuning factor.
+
+ stretch: 
+
+correction: .
+
+GSB.adjust: Logical value. If 'TRUE', probe effects in specific binding
+          will be adjusted.
+
+     rho: correlation coefficient of log background intensity in a pair
+          of pm/mm probes. Default=.7
+
+optical.correct: Logical value. If 'TRUE', optical background
+          correction is performed.
+
+ verbose: Logical value. If 'TRUE' messages about the progress of the
+          function is printed.
+
+    fast: Logical value. If 'TRUE' a faster ad hoc algorithm is used.
+
+_D_e_t_a_i_l_s:
+
+     The returned value is an 'AffyBatch' object, in which the PM probe
+     intensities have been background adjusted. The rest is left the
+     same as the starting 'AffyBatch' object.
+
+     The tunning factor 'k' will have different meainngs if one uses
+     the fast (ad hoc) algorithm or the empirical bayes approach. See
+     Wu et al. (2003)
+
+_V_a_l_u_e:
+
+     An 'AffyBatch'.
+
+_A_u_t_h_o_r(_s):
+
+     Rafeal Irizarry
+
+_E_x_a_m_p_l_e_s:
+
+      if(require(affydata) & require(hgu95av2probe) & require(hgu95av2cdf)){
+               data(Dilution)
+               ai <- compute.affinities(cdfName(Dilution))
+               Dil.adj<-bg.adjust.gcrma(Dilution,affinity.info=ai,type="affinities")
+          }
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Normalize - generic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for normalize {affy}"><tr><td>normalize {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Normalize - generic</h2>
+
+
+<h3>Description</h3>
+
+<p>
+A generic function which normalizes microarray data.
+Normalization is intended to remove from the intensity measures any
+systematic trends which arise from the microarray technology rather than
+from differences between the probes or between the target RNA samples
+hybridized to the arrays.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+normalize(object, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+a data object containing microarray data</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+any other arguments</td></tr>
+</table>
+
+<h3>See Also</h3>
+
+<p>
+Type <code>showMethods("normalize")</code> at the R prompt to see what
+methods are available. Help on individual methods is generally available
+as <code>normalize</code>.&lt;class&gt; where &lt;class&gt; is the class of the data
+object. For example, for the main class in the <code>affy</code> package use <code>?normalize.AffyBatch</code>.
+</p>
+<p>
+Other Bioconductor packages include some related generic functions:
+<code><a href="../../limma/html/normalizeWithinArrays.html">normalizeWithinArrays</a></code>, and 
+<code><a href="../../limma/html/normalizeBetweenArrays.html">normalizeBetweenArrays</a></code>, in the LIMMA package, and 
+<code><a href="../../marrayNorm/html/maNorm.html">maNorm</a></code> in the marrayNorm package.
+</p>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

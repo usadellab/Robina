@@ -1,0 +1,44 @@
+MINOR THINGS:
+-------------
+
+The user guide shortcut is also broken (points to program instead).
+----> SHOULD BE FIXED - TEST IT!
+
+The start menu link to the help guide is broken and the
+----> SHOULD BE FIXED - TEST IT!
+
+Then I tried windows (it actually comes with R). It complains about R being too recent evn though it installed it.
+----> FIXED 
+
+
+MAJOR THINGS
+------------
+
+Everything worked fine in windows, except that it produces an error when I try to compare two single samples (no replicates), which I am sure some users will want to do.
+----> FIXED - the error was caused by the plotMDS function and not by the general analysis
+
+
+guide provided with the package is outdated; it only talks about microarray analysis. 
+----> FIXED  -- STILL NEEDS A FAQ AND OUTPUT SECTION
+
+Also, I could never reload my old projects (those that hit an error along the way).
+----> IMPLEMENTED PLUS A POSSIBILITY TO BROWSE COMPLETED PROJECTS
+
+
+I think its a considerable limitation that there is no option to report the expressions per sample or group. 
+----> INCLUDED OPTIONAL RPKM OUTPUT TABLE
+
+
+LINUX-ONLY ISSUES
+-----------------
+
+I made the mistake of trying to install it on linux first. They state that no external tool is required but it would also ask me where to find R every time.
+
+I got the program working up to the point where it had to build the bowtie index. It would work on building the index forever.
+
+
+
+
+THANKS
+Overall, the program is user friendly and provides useful information. So I would accept submission of the manuscript if they fix the bugs.
+

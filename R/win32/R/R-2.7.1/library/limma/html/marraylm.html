@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Microarray Linear Model Fit - class</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for MArrayLM-class {limma}"><tr><td>MArrayLM-class {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Microarray Linear Model Fit - class</h2>
+
+
+<h3>Description</h3>
+
+<p>
+A list-based class for storing the results of fitting gene-wise linear models to a batch of microarrays.
+Objects are normally created by <code><a href="lmFit.html">lmFit</a></code>.
+</p>
+
+
+<h3>Slots/Components</h3>
+
+<p>
+<code>MArrayLM</code> objects do not contain any slots (apart from <code>.Data</code>) but they should contain the following list components:
+<dl>
+<dt><code>coefficients</code>:</dt><dd><code>matrix</code> containing fitted coefficients or contrasts</dd>
+<dt><code>stdev.unscaled</code>:</dt><dd><code>matrix</code> containing unscaled standard deviations of the coefficients or contrasts</dd>
+<dt><code>sigma</code>:</dt><dd><code>numeric</code> vector containing residual standard deviations for each gene</dd>
+<dt><code>df.residual</code>:</dt><dd><code>numeric</code> vector containing residual degrees of freedom for each gene</dd>
+</dl>
+<p>
+Objects may also contain the following optional components:
+<dl>
+<dt><code>Amean</code>:</dt><dd><code>numeric</code> vector containing the average log-intensity for each probe over all the arrays in the original linear model fit.
+Note this vector does not change when a contrast is applied to the fit using <code>contrasts.fit</code>.</dd>
+<dt><code>genes</code>:</dt><dd><code>data.frame</code> containing gene names and annotation</dd>
+<dt><code>design</code>:</dt><dd>design <code>matrix</code> of full column rank</dd>
+<dt><code>contrasts</code>:</dt><dd><code>matrix</code> defining contrasts of coefficients for which results are desired</dd>
+<dt><code>F</code>:</dt><dd><code>numeric</code> vector giving moderated F-statistics for testing all contrasts equal to zero</dd>
+<dt><code>F.p.value</code>:</dt><dd><code>numeric</code> vector giving p-value corresponding to <code>F.stat</code></dd>
+<dt><code>s2.prior</code>:</dt><dd><code>numeric</code> value giving empirical Bayes estimated prior value for residual variances</dd>
+<dt><code>df.prior</code>:</dt><dd><code>numeric</code> vector giving empirical Bayes estimated degrees of freedom associated with <code>s2.prior</code> for each gene</dd>
+<dt><code>s2.post</code>:</dt><dd><code>numeric</code> vector giving posterior residual variances</dd>
+<dt><code>t</code>:</dt><dd><code>matrix</code> containing empirical Bayes t-statistics</dd>
+<dt><code>var.prior</code>:</dt><dd><code>numeric</code> vector giving empirical Bayes estimated prior variance for each true coefficient</dd>
+<dt><code>cov.coefficients</code>:</dt><dd>numeric <code>matrix</code> giving the unscaled covariance matrix of the estimable coefficients</dd>
+<dt><code>pivot</code>:</dt><dd><code>integer</code> vector giving the order of coefficients in <code>cov.coefficients</code>. Is computed by the QR-decomposition of the design matrix.</dd>  
+</dl>
+<p>
+If there are no weights and no missing values, then the <code>MArrayLM</code> objects returned by <code>lmFit</code> will also contain the QR-decomposition of the design matrix, and any other components returned by <code>lm.fit</code>.
+</p>
+
+
+<h3>Methods</h3>
+
+<p>
+<code>RGList</code> objects will return dimensions and hence functions such as <code><a href="dim.html">dim</a></code>, <code><a href="../../base/html/nrow.html">nrow</a></code> and <code><a href="../../base/html/nrow.html">ncol</a></code> are defined. 
+<code>MArrayLM</code> objects inherit a <code>show</code> method from the virtual class <code>LargeDataObject</code>.
+</p>
+<p>
+The functions <code><a href="ebayes.html">ebayes</a></code> and <code><a href="classifytests.html">classifyTestsF</a></code> accept <code>MArrayLM</code> objects as arguments.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<a href="02classes.html">02.Classes</a> gives an overview of all the classes defined by this package.
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

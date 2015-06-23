@@ -1,0 +1,9 @@
+Package: datasets
+Version: 2.7.1
+Priority: base
+Title: The R Datasets Package
+Author: R Development Core Team and contributors worldwide
+Maintainer: R Core Team <R-core@r-project.org>
+Description: Base R datasets
+License: GPL (>= 2)
+Built: R 2.7.1; ; 2008-06-23 08:15:12; windows

@@ -1,0 +1,149 @@
+Entry: S4R
+Aliases: ErrorClass usingR
+Keywords: internal
+Description: R compatibility with S version 4/S-Plus 5+ support functions
+URL: ../../../library/RSQLite/html/S4R.html
+
+Entry: SQLite
+Aliases: SQLite SQLiteDriver
+Keywords: interface database
+Description: Instantiate the SQLite engine from the current R session.
+URL: ../../../library/RSQLite/html/SQLite.html
+
+Entry: SQLiteConnection-class
+Aliases: SQLiteConnection-class
+Keywords: database interface classes
+Description: Class SQLiteConnection
+URL: ../../../library/RSQLite/html/SQLiteConnection-class.html
+
+Entry: SQLiteDriver-class
+Aliases: SQLiteDriver-class
+Keywords: database interface classes
+Description: Class SQLiteDriver
+URL: ../../../library/RSQLite/html/SQLiteDriver-class.html
+
+Entry: SQLiteObject-class
+Aliases: SQLiteObject-class
+Keywords: database interface classes
+Description: Class SQLiteObject
+URL: ../../../library/RSQLite/html/SQLiteObject-class.html
+
+Entry: SQLiteResult-class
+Aliases: SQLiteResult-class
+Keywords: database interface classes
+Description: Class SQLiteResult
+URL: ../../../library/RSQLite/html/SQLiteResult-class.html
+
+Entry: dbBuildTableDefinition
+Aliases: dbBuildTableDefinition
+Keywords: methods interface database
+Description: Build the SQL CREATE TABLE definition as a string
+URL: ../../../library/RSQLite/html/dbBuildTableDefinition.html
+
+Entry: dbCallProc-methods
+Aliases: dbCallProc-methods dbCallProc,SQLiteConnection-method
+Keywords: methods interface database
+Description: Call an SQL stored procedure
+URL: ../../../library/RSQLite/html/dbCallProc-methods.html
+
+Entry: dbCommit-methods
+Aliases: dbBeginTransaction dbBeginTransaction-methods dbCommit-methods dbRollback-methods dbBeginTransaction,SQLiteConnection-method dbCommit,SQLiteConnection-method dbRollback,SQLiteConnection-method
+Keywords: methods interface database
+Description: DBMS Transaction Management
+URL: ../../../library/RSQLite/html/dbCommit-methods.html
+
+Entry: dbConnect-methods
+Aliases: dbDisconnect-methods dbConnect-methods dbDisconnect,SQLiteConnection-method dbConnect,SQLiteDriver-method dbConnect,SQLiteConnection-method dbConnect,character-method
+Keywords: methods interface database
+Description: Create a connection object to an SQLite DBMS
+URL: ../../../library/RSQLite/html/dbConnect-methods.html
+
+Entry: dbDataType-methods
+Aliases: dbDataType-methods dbDataType,SQLiteObject-method
+Keywords: methods interface database
+Description: Determine the SQL Data Type of an S object
+URL: ../../../library/RSQLite/html/dbDataType-methods.html
+
+Entry: dbDriver-methods
+Aliases: dbDriver-methods dbUnloadDriver-methods dbDriver,character-method dbUnloadDriver,SQLiteDriver-method
+Keywords: methods interface database
+Description: SQLite implementation of the Database Interface (DBI) classes and drivers
+URL: ../../../library/RSQLite/html/dbDriver-methods.html
+
+Entry: dbGetInfo-methods
+Aliases: dbGetInfo dbGetDBIVersion-methods dbGetStatement-methods dbGetRowCount-methods dbGetRowsAffected-methods dbColumnInfo-methods dbHasCompleted-methods dbGetInfo,SQLiteObject-method dbGetInfo,SQLiteDriver-method dbGetInfo,SQLiteConnection-method dbGetInfo,SQLiteResult-method dbGetStatement,SQLiteResult-method dbGetRowCount,SQLiteResult-method dbGetRowsAffected,SQLiteResult-method dbColumnInfo,SQLiteResult-method dbHasCompleted,SQLiteResult-method
+Keywords: methods interface database
+Description: Database interface meta-data
+URL: ../../../library/RSQLite/html/dbGetInfo-methods.html
+
+Entry: dbListTables-methods
+Aliases: dbListTables-methods dbListFields-methods dbListConnections-methods dbListResults-methods dbListTables,SQLiteConnection-method dbListFields,SQLiteConnection,character-method dbListConnections,SQLiteDriver-method dbListResults,SQLiteConnection-method
+Keywords: methods interface database
+Description: List items from an SQLite DBMS and from objects
+URL: ../../../library/RSQLite/html/dbListTables-methods.html
+
+Entry: dbObjectId-class
+Aliases: dbObjectId-class
+Keywords: classes
+Description: Class dbObjectId
+URL: ../../../library/RSQLite/html/dbObjectId-class.html
+
+Entry: dbReadTable-methods
+Aliases: dbReadTable-methods dbWriteTable-methods dbExistsTable-methods dbRemoveTable-methods dbReadTable,SQLiteConnection,character-method dbWriteTable,SQLiteConnection,character,data.frame-method dbWriteTable,SQLiteConnection,character,character-method dbExistsTable,SQLiteConnection,character-method dbRemoveTable,SQLiteConnection,character-method
+Keywords: methods interface database
+Description: Convenience functions for Importing/Exporting DBMS tables
+URL: ../../../library/RSQLite/html/dbReadTable-methods.html
+
+Entry: dbSendQuery-methods
+Aliases: dbSendQuery-methods dbGetQuery-methods dbSendPreparedQuery dbGetPreparedQuery dbSendPreparedQuery-methods dbGetPreparedQuery-methods dbGetException-methods dbSendQuery,SQLiteConnection,character-method dbGetQuery,SQLiteConnection,character-method dbSendPreparedQuery,SQLiteConnection,character,data.frame-method dbGetPreparedQuery,SQLiteConnection,character,data.frame-method dbClearResult,SQLiteResult-method dbGetException,SQLiteConnection-method
+Keywords: methods interface database
+Description: Execute a SQL statement on a database connection
+URL: ../../../library/RSQLite/html/dbSendQuery-methods.html
+
+Entry: dbSetDataMappings-methods
+Aliases: dbSetDataMappings-methods dbSetDataMappings,SQLiteResult,data.frame-method
+Keywords: methods interface database
+Description: Set data mappings between SQLite and R/S-Plus
+URL: ../../../library/RSQLite/html/dbSetDataMappings-methods.html
+
+Entry: fetch-methods
+Aliases: fetch-methods fetch,SQLiteResult,numeric-method fetch,SQLiteResult-method
+Keywords: methods interface database
+Description: Fetch records from a previously executed query
+URL: ../../../library/RSQLite/html/fetch-methods.html
+
+Entry: isIdCurrent
+Aliases: isIdCurrent
+Keywords: interface database
+Description: Check whether an dbObjectId handle object is valid or not
+URL: ../../../library/RSQLite/html/isIdCurrent.html
+
+Entry: make.db.names-methods
+Aliases: SQLKeywords-methods isSQLKeyword-methods make.db.names,SQLiteObject,character-method SQLKeywords,SQLiteObject-method SQLKeywords,missing-method isSQLKeyword,SQLiteObject,character-method
+Keywords: methods interface database
+Description: Make R/S-Plus identifiers into legal SQL identifiers
+URL: ../../../library/RSQLite/html/make.db.names-methods.html
+
+Entry: safe.write
+Aliases: safe.write
+Keywords: internal
+Description: Write a data.frame avoiding exceeding memory limits
+URL: ../../../library/RSQLite/html/safe.write.html
+
+Entry: sqliteQuickColumn
+Aliases: sqliteQuickColumn
+Keywords: interface
+Description: Return an entire column from a SQLite database
+URL: ../../../library/RSQLite/html/sqliteQuickColumn.html
+
+Entry: sqliteSupport
+Aliases: sqliteInitDriver sqliteDriverInfo sqliteDescribeDriver sqliteCloseDriver sqliteNewConnection sqliteConnectionInfo sqliteDescribeConnection sqliteCloseConnection sqliteExecStatement sqliteFetch sqliteQuickSQL sqliteTransactionStatement sqliteResultInfo sqliteDescribeResult sqliteCloseResult sqliteReadTable sqliteWriteTable sqliteImportFile sqliteTableFields sqliteDataType sqliteFetchOneColumn .SQLitePkgName .SQLitePkgVersion .SQLitePkgRCS .SQLite.NA.string last.warning .conflicts.OK
+Keywords: datasets interface database
+Description: Support Functions
+URL: ../../../library/RSQLite/html/sqliteSupport.html
+
+Entry: summary-methods
+Aliases: coerce-methods summary-methods format-methods show-methods coerce,dbObjectId,integer-method coerce,dbObjectId,numeric-method coerce,dbObjectId,character-method coerce,SQLiteConnection,SQLiteDriver-method coerce,SQLiteResult,SQLiteConnection-method format,dbObjectId-method print,dbObjectId-method show,dbObjectId-method summary,SQLiteObject-method summary,SQLiteDriver-method summary,SQLiteConnection-method summary,SQLiteResult-method
+Keywords: methods database interface
+Description: Summarize an SQLite object
+URL: ../../../library/RSQLite/html/summary-methods.html

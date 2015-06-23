@@ -1,0 +1,39 @@
+\HeaderA{pseudo.coloring}{Coloring pseudo chip images}{pseudo.coloring}
+\aliasA{pseudoColorBar}{pseudo.coloring}{pseudoColorBar}
+\aliasA{pseudoPalette}{pseudo.coloring}{pseudoPalette}
+\keyword{manip}{pseudo.coloring}
+\begin{Description}\relax
+These are routines used for coloring pseudo chip images.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+  pseudoPalette(low = "white", high = c("green", "red"), mid = NULL,k =50) 
+  pseudoColorBar(x, horizontal = TRUE, col = heat.colors(50), scale = 1:length(x),k = 11, log.ticks=FALSE,...)
+  
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{low}] color at low end of scale
+\item[\code{high}] color at high end of scale
+\item[\code{mid}] color at exact middle of scale
+\item[\code{k}] number of colors to have
+\item[\code{x}] A data series
+\item[\code{horizontal}] If \code{TRUE} then color bar is to be draw
+horizontally
+\item[\code{col}] colors for color bar
+\item[\code{scale}] tickmarks for \code{x} if \code{x} is not numeric
+\item[\code{log.ticks}] use a log type transformation to assign the colors
+\item[\code{...}] additional parameters to plotting routine
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+Adapted from similar tools in maPlots pacakge.
+\end{Details}
+\begin{Author}\relax
+Ben Bolstad \email{bmb@bmbolstad.com}
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{AffyBatch}{AffyBatch}}, \code{\LinkA{read.affybatch}{read.affybatch}}
+\end{SeeAlso}
+

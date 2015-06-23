@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Class "marrayLayout", classes and methods for layout parameters of cDNA microarrays</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for marrayLayout-class {marray}"><tr><td>marrayLayout-class {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Class "marrayLayout", classes and methods for layout parameters of cDNA microarrays</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This class is used to keep track of important layout
+parameters for two-color cDNA microarrays. It contains slots for: the
+total number of spotted probe sequences on the array, the dimensions
+of the spot and grid matrices, the plate origin of the probes,
+information on spotted control sequences (e.g. probe sequences which
+should have equal abundance in the two target samples, such as
+housekeeping genes). The terms <EM>print-tip-group</EM>, <EM>grid</EM>,
+<EM>spot matrix</EM>, and <EM>sector</EM> are used interchangeably and
+refer to a set of spots printed using the same print-tip.
+</p>
+
+
+<h3>Objects from the Class</h3>
+
+<p>
+Objects can be created by calls of the form <code>  new('marrayLayout',</code><br>
+<code>    maNgr      = ...., # Object of class numeric</code><br>
+<code>    maNgc      = ...., # Object of class numeric</code><br>
+<code>    maNsr      = ...., # Object of class numeric</code><br>
+<code>    maNsc      = ...., # Object of class numeric</code><br>
+<code>    maNspots   = ...., # Object of class numeric</code><br>
+<code>    maSub      = ...., # Object of class logical</code><br>
+<code>    maPlate    = ...., # Object of class factor</code><br>
+<code>    maControls = ...., # Object of class factor</code><br>
+<code>    maNotes    = ...., # Object of class character</code><br>
+<code>  )</code>
+</p>
+
+
+<h3>Slots</h3>
+
+<dl>
+<dt><code>maNgr</code>:</dt><dd>Object of class <code>"numeric"</code>, number of rows for the grid matrix.</dd>
+<dt><code>maNgc</code>:</dt><dd>Object of class <code>"numeric"</code>, number of columns for the grid matrix.</dd>
+<dt><code>maNsr</code>:</dt><dd>Object of class <code>"numeric"</code>, number of rows for the spot matrices.</dd>
+<dt><code>maNsc</code>:</dt><dd>Object of class <code>"numeric"</code>, number of columns for the spot matrices.</dd>
+<dt><code>maNspots</code>:</dt><dd>Object of class <code>"numeric"</code>, total number of spots on the array, equal to <i>maNgr x maNgc x maNsr x maNsc</i>.</dd>
+<dt><code>maSub</code>:</dt><dd>Object of class <code>"logical"</code>,  indicating which spots are currently being considered.</dd>
+<dt><code>maPlate</code>:</dt><dd>Object of class <code>"factor"</code>, recording the plate origin of the spotted probe sequences.</dd>
+<dt><code>maControls</code>:</dt><dd>Object of class <code>"factor"</code>, recording the control status of the spotted probe sequences.</dd>
+<dt><code>maNotes</code>:</dt><dd>Object of class <code>"character"</code>, any notes concerning the microarray layout, e.g., printing conditions.</dd>
+</dl>
+
+<h3>Methods</h3>
+
+<dl>
+<dt>[</dt><dd><code>signature(x = "marrayLayout")</code>: subsetting operator for spots on the array, ensures that all slots are subset properly.</dd>
+<dt>maControls&lt;-</dt><dd><code>signature(object = "marrayLayout")</code>: slot assignment method.</dd> 
+<dt>maControls</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maGridCol</dt><dd><code>signature(object = "marrayLayout")</code>: method which computes a vector of grid column coordinates for each spot.</dd>
+<dt>maGridRow</dt><dd><code>signature(object = "marrayLayout")</code>: method which computes a vector of grid row coordinates for each spot.</dd>
+<dt>maLayout&lt;-</dt><dd><code>signature(object = "marrayRaw", value = "marrayLayout")</code>: slot assignment method.</dd> 
+<dt>maLayout&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "marrayLayout")</code>: slot assignment method.</dd> 
+<dt>maNgc</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maNgc&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "numeric")</code>: slot assignment method.</dd>
+<dt>maNgr</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maNgr&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "numeric")</code>: slot assignment method.</dd>
+<dt>maNotes</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maNotes&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "character")</code>: slot assignment method.</dd> 
+<dt>maNsc</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maNsc&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "numeric")</code>: slot assignment method.</dd>
+<dt>maNspots</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maNspots&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "numeric")</code>: slot assignment method.</dd>
+<dt>maNsr</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maNsr&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "numeric")</code>: slot assignment method.</dd>
+<dt>maPlate</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maPlate&lt;-</dt><dd><code>signature(object = "marrayLayout")</code>: slot assignment method.</dd> 
+<dt>maPrintTip</dt><dd><code>signature(object = "marrayLayout")</code>: method which computes a vector of print-tip-group indices for each spot.</dd>
+<dt>maSpotCol</dt><dd><code>signature(object = "marrayLayout")</code>: method which computes a vector of spot column coordinates for each spot.</dd>
+<dt>maSpotRow</dt><dd><code>signature(object = "marrayLayout")</code>: method which computes a vector of spot row coordinates for each spot.</dd>
+<dt>maSub</dt><dd><code>signature(object = "marrayLayout")</code>: slot accessor method.</dd>
+<dt>maSub&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "logical")</code>: slot assignment method.</dd> 
+<dt>maSub&lt;-</dt><dd><code>signature(object = "marrayLayout", value = "numeric")</code>: slot assignment method.</dd> 
+<dt>print</dt><dd><code>signature(x = "marrayLayout")</code>: print method for <code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code> class.</dd>
+</dl>
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="marrayRaw-class.html">marrayRaw</a></code>, <code><a href="marrayNorm-class.html">marrayNorm</a></code>,
+<code><a href="marrayInfo-class.html">marrayInfo</a></code> and <code><a href="bracketMethods.html">[-methods</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## See marrayRaw
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

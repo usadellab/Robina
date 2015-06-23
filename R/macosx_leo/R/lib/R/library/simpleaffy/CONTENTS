@@ -1,0 +1,227 @@
+Entry: PairComp-class
+Aliases: PairComp-class [,PairComp-method [<-,PairComp-method calls,PairComp-method fc,PairComp-method group,PairComp-method means,PairComp-method members,PairComp-method pairwise.filter,PairComp-method tt,PairComp-method pData,PairComp-method calculated.from,PairComp-method calls fc group means members tt pData calculated.from plot,PairComp,ANY-method
+Keywords: classes
+Description: Class "PairComp" Represents the results of pairwise comparison between two experimental factors
+URL: ../../../library/simpleaffy/html/PairComp-class.html
+
+Entry: QCStats-class
+Aliases: QCStats-class avbg,QCStats-method maxbg,QCStats-method minbg,QCStats-method percent.present,QCStats-method sfs,QCStats-method target,QCStats-method spikeInProbes,QCStats-method qcProbes,QCStats-method ratios,QCStats-method arrayType,QCStats-method avbg-method maxbg-method minbg-method percent.present-method sfs-method target-method spikeInProbes-method qcProbes-method ratios-method arrayType-method avbg maxbg minbg percent.present sfs target spikeInProbes qcProbes ratios arrayType plot,QCStats,ANY-method
+Keywords: classes
+Description: Class "QCStats"
+URL: ../../../library/simpleaffy/html/QCStats-class.html
+
+Entry: all.present
+Aliases: all.present
+Keywords: misc
+Description: Filter by PMA call
+URL: ../../../library/simpleaffy/html/all.present.html
+
+Entry: all.present.in.group
+Aliases: all.present.in.group
+Keywords: misc
+Description: Filter by PMA call
+URL: ../../../library/simpleaffy/html/all.present.in.group.html
+
+Entry: bg.correct.sa
+Aliases: bg.correct.sa
+Keywords: misc
+Description: Simpleaffy Implementation of Mas5 Background Correction
+URL: ../../../library/simpleaffy/html/bg.correct.sa.html
+
+Entry: call.exprs
+Aliases: call.exprs
+Keywords: misc
+Description: Generate Expression Summaries for Affymetrix Data
+URL: ../../../library/simpleaffy/html/call.exprs.html
+
+Entry: detection.p.val
+Aliases: detection.p.val
+Keywords: misc
+Description: Calculate Detection p-values
+URL: ../../../library/simpleaffy/html/detection.p.val.html
+
+Entry: get.annotation
+Aliases: get.annotation write.annotation results.summary
+Keywords: misc
+Description: Get annotation data for a gene list
+URL: ../../../library/simpleaffy/html/get.annotation.html
+
+Entry: get.array.indices
+Aliases: get.array.indices get.array.indices,AffyBatch-method get.array.indices,ExpressionSet-method
+Keywords: misc
+Description: Find arrays in an AffyBatch object defined by their phenoData
+URL: ../../../library/simpleaffy/html/get.array.indices.html
+
+Entry: get.array.subset
+Aliases: get.array.subset get.array.subset,AffyBatch-method get.array.subset,ExpressionSet-method
+Keywords: misc
+Description: Get a subset of arrays from an affybatch object, split by phnotypic data
+URL: ../../../library/simpleaffy/html/get.array.subset.html
+
+Entry: get.array.subset.affybatch
+Aliases: get.array.subset.affybatch get.array.subset.exprset
+Keywords: misc
+Description: Get a subset of arrays from an affybatch object, split by phnotypic data
+URL: ../../../library/simpleaffy/html/get.array.subset.affy.html
+
+Entry: get.fold.change.and.t.test
+Aliases: get.fold.change.and.t.test
+Keywords: misc
+Description: Compute fold change and t-test statistics between two experimental groups
+URL: ../../../library/simpleaffy/html/get.fold.change.and.t.test.html
+
+Entry: blue.white.red.cols
+Aliases: blue.white.red.cols red.black.green.cols red.yellow.white.cols
+Keywords: misc
+Description: Generate colourings for heatmaps
+URL: ../../../library/simpleaffy/html/hmap.colors.html
+
+Entry: hmap.eset
+Aliases: hmap.eset
+Keywords: misc
+Description: Draw a heatmap from an AffyBatch object
+URL: ../../../library/simpleaffy/html/hmap.eset.html
+
+Entry: hmap.pc
+Aliases: hmap.pc
+Keywords: misc
+Description: Draw a heatmap from an PairComp object
+URL: ../../../library/simpleaffy/html/hmap.pc.html
+
+Entry: journalpng
+Aliases: journalpng screenpng
+Keywords: misc
+Description: Produce a device for producing artwork for presentations and journals
+URL: ../../../library/simpleaffy/html/journalpng.html
+
+Entry: justMAS
+Aliases: justMAS
+Keywords: misc
+Description: Generate Expression calls using a C implementation of the MAS 5.0 Algorithm
+URL: ../../../library/simpleaffy/html/justMAS.html
+
+Entry: pairwise.comparison
+Aliases: pairwise.comparison
+Keywords: misc
+Description: Compute pairwise comparison statistics between two experimental groups
+URL: ../../../library/simpleaffy/html/pairwise.comparison.html
+
+Entry: pairwise.filter
+Aliases: pairwise.filter
+Keywords: misc
+Description: Filter pairwise comparison statistics between two experimental groups
+URL: ../../../library/simpleaffy/html/pairwise.filter.html
+
+Entry: plot.pairwise.comparison
+Aliases: plot.pairwise.comparison plot,PairComp plot,PairComp-method
+Keywords: misc
+Description: Plots a PairComp object
+URL: ../../../library/simpleaffy/html/plot.pairwise.comparison.html
+
+Entry: plot.qc.stats
+Aliases: plot.qc.stats plot,QCStats plot,QCStats,missing-method
+Keywords: misc
+Description: Plots a QCStats object
+URL: ../../../library/simpleaffy/html/plot.qc.stats.html
+
+Entry: qc
+Aliases: qc qc,AffyBatch-method
+Keywords: misc
+Description: Generate QC stats from an AffyBatch object
+URL: ../../../library/simpleaffy/html/qc.html
+
+Entry: qc.affy
+Aliases: qc.affy
+Keywords: misc
+Description: Generate Affymetrix Style QC Statistics
+URL: ../../../library/simpleaffy/html/qc.affy.html
+
+Entry:  qc.get.alpha1
+Aliases: qc.get.alpha1 qc.set.alpha1 qc.get.alpha2 qc.set.alpha2 qc.get.tau
+Keywords: misc
+Description: Get or set the alpha values for the current QC environment
+URL: ../../../library/simpleaffy/html/qc.get.alpha1.html
+
+Entry:  qc.get.array
+Aliases: qc.get.array qc.set.array
+Keywords: misc
+Description: Get or set the name of the array for which the current QC environment is valid. Currently not used for anything important; is a free text identifier.
+URL: ../../../library/simpleaffy/html/qc.get.array.html
+
+Entry:  qc.get.probes
+Aliases: qc.get.probes qc.get.probe qc.add.probe
+Keywords: misc
+Description: Retrieve QC probeset names for the current array type
+URL: ../../../library/simpleaffy/html/qc.get.probes.html
+
+Entry:  qc.get.ratios
+Aliases: qc.get.ratios qc.get.ratio qc.add.ratio
+Keywords: misc
+Description: Retrieve pairs of probesets used for calculating 3'/5' ratios
+URL: ../../../library/simpleaffy/html/qc.get.ratios.html
+
+Entry:  qc.get.spikes
+Aliases: qc.get.spikes qc.get.spike qc.add.spike
+Keywords: misc
+Description: Retrieve QC spike probeset names for the current array type
+URL: ../../../library/simpleaffy/html/qc.get.spikes.html
+
+Entry:  qc.have.params 
+Aliases: qc.have.params
+Keywords: misc
+Description: Does simpleaffy have a QC definition file for the specified array?
+URL: ../../../library/simpleaffy/html/qc.have.params.html
+
+Entry:  qc.ok 
+Aliases: qc.ok
+Keywords: misc
+Description: Has simpleaffy's QC environment been set up?
+URL: ../../../library/simpleaffy/html/qc.ok.html
+
+Entry:  qc.read.file 
+Aliases: qc.read.file
+Keywords: misc
+Description: Read a file defining the QC parameters for a specified array and set up the QC Environment
+URL: ../../../library/simpleaffy/html/qc.read.file.html
+
+Entry: qcs
+Aliases: qcs
+Keywords: datasets
+Description: an example QC Stats object
+URL: ../../../library/simpleaffy/html/qc.stats.html
+
+Entry: read.affy
+Aliases: read.affy
+Keywords: misc
+Description: Read a Set of .CEL Files and Phenotypic Data
+URL: ../../../library/simpleaffy/html/read.affy.html
+
+Entry: read.affy.mixed
+Aliases: read.affy.mixed
+Keywords: misc
+Description: Read a Set of .CEL Files and Phenotypic Data from mixed chip types
+URL: ../../../library/simpleaffy/html/read.affy.mixed.html
+
+Entry: setQCEnvironment
+Aliases: setQCEnvironment
+Keywords: misc
+Description: Establish the appropriate QC environment for the specified array
+URL: ../../../library/simpleaffy/html/setQCEnvironment.html
+
+Entry:  simpleaffy-deprecated 
+Aliases: simpleaffy-deprecated getTao getAlpha1 getAlpha2 getActin3 getActinM getActin5 getGapdh3 getGapdhM getGapdh5 getAllQCProbes getBioB getBioC getBioD getCreX getAllSpikeProbes haveQCParams
+Keywords: misc
+Description: Does simpleaffy have a QC definition file for the specified array?
+URL: ../../../library/simpleaffy/html/simpleaffy-deprecated.html
+
+Entry: standard.pearson
+Aliases: standard.pearson
+Keywords: misc
+Description: A clustering function based on pearson correlation
+URL: ../../../library/simpleaffy/html/standard.pearson.html
+
+Entry: trad.scatter.plot
+Aliases: trad.scatter.plot
+Keywords: misc
+Description: Does a Traditional Scatter Plot of Expression Data
+URL: ../../../library/simpleaffy/html/trad.scatter.plot.html

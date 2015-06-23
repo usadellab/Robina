@@ -1,0 +1,18 @@
+Package: annotate
+Title: Annotation for microarrays
+Version: 1.18.0
+Author: R. Gentleman
+Description: Using R enviroments for annotation.
+Maintainer: Biocore Team c/o BioC user list
+        <bioconductor@stat.math.ethz.ch>
+Depends: R (>= 2.4.0), methods, Biobase, AnnotationDbi (>= 0.1.15),
+        xtable
+Imports: methods, AnnotationDbi (>= 0.1.15)
+Suggests: hgu95av2.db, genefilter, Biostrings (>= 2.4.4), rae230a.db,
+        rae230aprobe, tkWidgets, XML (>= 0.92-2), hsahomology,
+        xlahomology, GO.db, org.Hs.eg.db
+License: Artistic-2.0
+LazyLoad: yes
+biocViews: Annotation, Pathways, GO, Affymetrix
+Packaged: Mon May 12 02:55:14 2008; biocbuild
+Built: R 2.7.0; ; 2008-05-12 08:16:19; windows

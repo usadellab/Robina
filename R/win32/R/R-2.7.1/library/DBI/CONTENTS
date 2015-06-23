@@ -1,0 +1,107 @@
+Entry: DBI-internal
+Aliases: make.db.names.default isSQLKeyword.default .SQL92Keywords
+Keywords: internal
+Description: Version 4 meta-objects
+URL: ../../../library/DBI/html/DBI-internal.html
+
+Entry: DBIConnection-class
+Aliases: DBIConnection-class
+Keywords: classes database interface
+Description: Class DBIConnection
+URL: ../../../library/DBI/html/DBIConnection-class.html
+
+Entry: DBIDriver-class
+Aliases: DBIDriver-class summary,DBIObject-method
+Keywords: classes database interface
+Description: Class DBIDriver
+URL: ../../../library/DBI/html/DBIDriver-class.html
+
+Entry: DBIObject-class
+Aliases: DBIObject-class
+Keywords: classes interface database
+Description: Class DBIObject
+URL: ../../../library/DBI/html/DBIObject-class.html
+
+Entry: DBIResult-class
+Aliases: DBIResult-class
+Keywords: classes interface database
+Description: Class DBIResult
+URL: ../../../library/DBI/html/DBIResult-class.html
+
+Entry: dbCallProc
+Aliases: dbCallProc
+Keywords: interface database
+Description: Call an SQL stored procedure
+URL: ../../../library/DBI/html/dbCallProc.html
+
+Entry: dbCommit
+Aliases: dbCommit dbRollback
+Keywords: interface database
+Description: DBMS Transaction Management
+URL: ../../../library/DBI/html/dbCommit.html
+
+Entry: dbConnect
+Aliases: dbDisconnect dbConnect
+Keywords: interface database
+Description: Create a connection to a DBMS
+URL: ../../../library/DBI/html/dbConnect.html
+
+Entry: dbDataType
+Aliases: dbDataType dbDataType,DBIObject-method dbDataType.default
+Keywords: interface database
+Description: Determine the SQL Data Type of an S object
+URL: ../../../library/DBI/html/dbDataType.html
+
+Entry: dbDriver
+Aliases: dbDriver dbDriver,character-method dbUnloadDriver
+Keywords: interface database
+Description: Database Interface (DBI) Classes and drivers
+URL: ../../../library/DBI/html/dbDriver.html
+
+Entry: dbGetInfo
+Aliases: dbGetInfo dbGetDBIVersion dbGetStatement dbGetRowCount dbGetRowsAffected dbColumnInfo dbHasCompleted
+Keywords: interface database
+Description: Database interface meta-data
+URL: ../../../library/DBI/html/dbGetInfo.html
+
+Entry: dbListTables
+Aliases: dbListTables dbListFields dbListConnections dbListResults
+Keywords: interface database
+Description: List items from a remote DBMS and from objects that implement the database interface DBI.
+URL: ../../../library/DBI/html/dbListTables.html
+
+Entry: dbReadTable
+Aliases: dbReadTable dbWriteTable dbExistsTable dbRemoveTable
+Keywords: interface database
+Description: Convenience functions for Importing/Exporting DBMS tables
+URL: ../../../library/DBI/html/dbReadTable.html
+
+Entry: dbSendQuery
+Aliases: dbSendQuery dbGetQuery dbClearResult dbGetException
+Keywords: interface database
+Description: Execute a statement on a given database connection
+URL: ../../../library/DBI/html/dbSendQuery.html
+
+Entry: dbSetDataMappings
+Aliases: dbSetDataMappings
+Keywords: interface database
+Description: Set data mappings between an DBMS and R/Splus
+URL: ../../../library/DBI/html/dbSetDataMappings.html
+
+Entry: fetch
+Aliases: fetch
+Keywords: interface database
+Description: Fetch records from a previously executed query
+URL: ../../../library/DBI/html/fetch.html
+
+Entry: make.db.names
+Aliases: make.db.names make.db.names,DBIObject,character-method SQLKeywords SQLKeywords,DBIObject-method SQLKeywords,missing-method isSQLKeyword isSQLKeyword,DBIObject,character-method
+Keywords: interface database
+Description: Make R/Splus identifiers into legal SQL identifiers
+URL: ../../../library/DBI/html/make.db.names.html
+
+Entry: print.list.pairs
+Aliases: print.list.pairs print summary format
+Keywords: interface database
+Description: Support functions
+URL: ../../../library/DBI/html/print.list.pairs.html

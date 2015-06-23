@@ -1,0 +1,473 @@
+Entry: Aggregate
+Aliases: Aggregate
+Keywords: programming methods
+Description: A Simple Aggregation Mechanism.
+URL: ../../../library/Biobase/html/Aggregate.html
+
+Entry: Biobase-package
+Aliases: Biobase-package Biobase
+Keywords: package
+Description: Biobase Package Overview
+URL: ../../../library/Biobase/html/Biobase-package.html
+
+Entry: ScalarObject-class
+Aliases: ScalarObject-class ScalarCharacter-class ScalarInteger-class ScalarNumeric-class mkScalar show,ScalarObject-method show,ScalarCharacter-method
+Keywords: classes
+Description: Utility classes for length one (scalar) objects
+URL: ../../../library/Biobase/html/ScalarObject-class.html
+
+Entry: abstract
+Aliases: abstract pubMedIds pubMedIds<- experimentData experimentData<-
+Keywords: manip
+Description: Retrieve Meta-data from eSets and ExpressionSets.
+URL: ../../../library/Biobase/html/abstract.html
+
+Entry: addVigs2WinMenu
+Aliases: addVigs2WinMenu
+Keywords: interface
+Description: Add Menu Items to an Existing/New Menu of Window
+URL: ../../../library/Biobase/html/addVig2Menu.html
+
+Entry: annotatedDataFrameFrom-methods
+Aliases: annotatedDataFrameFrom annotatedDataFrameFrom,AssayData-method annotatedDataFrameFrom,matrix-method annotatedDataFrameFrom,NULL-method
+Keywords: methods
+Description: Methods for Function annotatedDataFrameFrom in Package 'Biobase'
+URL: ../../../library/Biobase/html/annotatedDataFrameFrom-methods.html
+
+Entry: annotation
+Aliases: annotation annotation<-
+Keywords: manip
+Description: Annotate eSet data.
+URL: ../../../library/Biobase/html/annotation.html
+
+Entry: anyMissing
+Aliases: anyMissing
+Keywords: iteration logic
+Description: Checks if there are any missing values in an object or not
+URL: ../../../library/Biobase/html/anyMissing.html
+
+Entry: assayData
+Aliases: assayData assayData<-
+Keywords: manip
+Description: Retrieve assay data from eSets and ExpressionSets.
+URL: ../../../library/Biobase/html/assayData.html
+
+Entry: biocReposList
+Aliases: biocReposList
+Keywords: utilities
+Description: Return a list of Bioconductor package repositories
+URL: ../../../library/Biobase/html/biocReposList.html
+
+Entry: cache
+Aliases: cache
+Keywords: manip array
+Description: Evaluate an expression if its value is not already cached.
+URL: ../../../library/Biobase/html/cache.html
+
+Entry: channel
+Aliases: channel
+Keywords: manip
+Description: Create a new ExpressionSet instance by selecting a specific channel
+URL: ../../../library/Biobase/html/channel.html
+
+Entry: channelNames
+Aliases: channelNames
+Keywords: manip
+Description: Retrieve channel names from object
+URL: ../../../library/Biobase/html/channelNames.html
+
+Entry: AnnotatedDataFrame
+Aliases: class:AnnotatedDataFrame AnnotatedDataFrame AnnotatedDataFrame-class dimLabels dimLabels<- [,AnnotatedDataFrame-method [[<-,AnnotatedDataFrame-method [[,AnnotatedDataFrame-method $<-,AnnotatedDataFrame-method $,AnnotatedDataFrame-method combine,AnnotatedDataFrame,AnnotatedDataFrame-method initialize,AnnotatedDataFrame-method coerce,data.frame,AnnotatedDataFrame-method coerce,phenoData,AnnotatedDataFrame-method dim,AnnotatedDataFrame-method dimLabels,AnnotatedDataFrame-method dimLabels<-,AnnotatedDataFrame,character-method ncol,AnnotatedDataFrame-method pData<-,AnnotatedDataFrame,data.frame-method pData,AnnotatedDataFrame-method varMetadata<-,AnnotatedDataFrame,data.frame-method varMetadata,AnnotatedDataFrame-method sampleNames<-,AnnotatedDataFrame,ANY-method sampleNames,AnnotatedDataFrame-method featureNames,AnnotatedDataFrame-method featureNames<-,AnnotatedDataFrame-method show,AnnotatedDataFrame-method updateObject,AnnotatedDataFrame-method varLabels<-,AnnotatedDataFrame-method varLabels,AnnotatedDataFrame-method
+Keywords: classes
+Description: Class Containing Measured Variables and Their Meta-Data Description.
+URL: ../../../library/Biobase/html/class.AnnotatedDataFrame.html
+
+Entry: AssayData-class
+Aliases: AssayData-class AssayData assayData,AssayData-method combine,AssayData,AssayData-method featureNames,AssayData-method featureNames<-,AssayData-method sampleNames,AssayData-method sampleNames<-,AssayData,ANY-method sampleNames<-,AssayData,list-method storageMode,AssayData-method storageMode<-,AssayData,character-method assayDataNew assayDataValidMembers
+Keywords: classes
+Description: Class "AssayData"
+URL: ../../../library/Biobase/html/class.AssayData.html
+
+Entry: ExpressionSet
+Aliases: class:ExpressionSet ExpressionSet ExpressionSet-class exprs,ExpressionSet-method exprs<-,ExpressionSet,matrix-method initialize,ExpressionSet-method coerce,exprSet,ExpressionSet-method coerce,eSet,ExpressionSet-method coerce,ExpressionSet,data.frame-method esApply,ExpressionSet-method updateObject,ExpressionSet-method makeDataPackage,ExpressionSet-method as.data.frame.ExpressionSet write.exprs write.exprs,ExpressionSet-method
+Keywords: classes
+Description: Class to Contain and Describe High-Throughput Expression Level Assays.
+URL: ../../../library/Biobase/html/class.ExpressionSet.html
+
+Entry: MIAME
+Aliases: class:MIAME MIAME MIAME-class abstract,MIAME-method combine,MIAME,MIAME-method expinfo,MIAME-method hybridizations,MIAME-method normControls,MIAME-method otherInfo,MIAME-method preproc preproc,MIAME-method preproc<-,MIAME-method preproc<- notes,MIAME-method notes<-,MIAME,list-method notes<-,MIAME,character-method pubMedIds,MIAME-method pubMedIds<-,MIAME,ANY-method samples,MIAME-method show,MIAME-method updateObject,MIAME-method isCurrent,MIAME,missing-method samples
+Keywords: classes
+Description: Class for Storing Microarray Experiment Information
+URL: ../../../library/Biobase/html/class.MIAME.html
+
+Entry: MultiSet
+Aliases: class:MultiSet MultiSet MultiSet-class initialize,MultiSet-method coerce,eSet,MultiSet-method
+Keywords: classes
+Description: Class to Contain and Describe High-Throughput Expression Level Assays.
+URL: ../../../library/Biobase/html/class.MultiSet.html
+
+Entry: NChannelSet-class
+Aliases: NChannelSet-class NChannelSet class.NChannelSet channelNames,NChannelSet-method channel,NChannelSet,character-method sampleNames,NChannelSet-method sampleNames<-,NChannelSet,list-method selectChannels,NChannelSet,character-method initialize,NChannelSet-method
+Keywords: classes
+Description: Class to contain data from multiple channel array technologies
+URL: ../../../library/Biobase/html/class.NChannelSet.html
+
+Entry: SnpSet
+Aliases: class:SnpSet SnpSet SnpSet-class exprs<-,SnpSet,matrix-method exprs,SnpSet-method initialize,SnpSet-method
+Keywords: classes
+Description: Class to Contain Objects Describing High-Throughput SNP Assays.
+URL: ../../../library/Biobase/html/class.SnpSet.html
+
+Entry: Versioned
+Aliases: Versioned-class Versioned initialize,Versioned-method isVersioned,Versioned-method classVersion,Versioned-method classVersion<-,Versioned,Versions-method isCurrent,Versioned,missing-method isCurrent,Versioned,character-method show,Versioned-method
+Keywords: classes
+Description: Class "Versioned"
+URL: ../../../library/Biobase/html/class.Versioned.html
+
+Entry: VersionedBiobase
+Aliases: VersionedBiobase-class VersionedBiobase
+Keywords: classes
+Description: Class "VersionedBiobase"
+URL: ../../../library/Biobase/html/class.VersionedBiobase.html
+
+Entry: Versions
+Aliases: Versions-class Versions initialize,Versions-method [,Versions-method [<-,Versions-method [[<-,Versions-method $<-,Versions-method Compare,Versions,Versions-method Compare,Versions,character-method Compare,character,Versions-method updateObject,Versions-method show,Versions-method coerce,Versions,character-method
+Keywords: classes
+Description: Class "Versions"
+URL: ../../../library/Biobase/html/class.Versions.html
+
+Entry: VersionsNull
+Aliases: VersionsNull-class VersionsNull initialize,VersionsNull-method show,VersionsNull-method
+Keywords: classes
+Description: Class "VersionsNull"
+URL: ../../../library/Biobase/html/class.VersionsNull.html
+
+Entry: aggregator
+Aliases: class:aggregator aggregator aggregator-class initialize,aggregator-method aggenv,aggregator-method aggfun,aggregator-method initfun,aggregator-method
+Keywords: methods classes
+Description: A Simple Class for Aggregators
+URL: ../../../library/Biobase/html/class.aggregator.html
+
+Entry: class:characterORMIAME
+Aliases: class:characterORMIAME characterORMIAME-class
+Keywords: classes
+Description: Class to Make Older Versions Compatible
+URL: ../../../library/Biobase/html/class.characterORmiame.html
+
+Entry: container
+Aliases: class:container container container-class [,container-method [[<-,container-method [[,container-method content,container-method length,container-method locked,container-method show,container-method
+Keywords: methods classes
+Description: A Lockable List Structure with Constraints on Content
+URL: ../../../library/Biobase/html/class.container.html
+
+Entry: eSet
+Aliases: class:eSet eSet eSet-class [,eSet-method $,eSet-method $<-,eSet-method [[,eSet-method [[<-,eSet-method abstract,eSet-method annotation,eSet-method annotation<-,eSet,character-method assayData,eSet-method assayData<-,eSet,AssayData-method assayDataElement assayDataElement<- assayDataElementNames assayDataElementReplace combine,eSet,ANY-method combine,eSet,eSet-method description,eSet-method description<-,eSet,MIAME-method dim,eSet-method dims,eSet-method experimentData,eSet-method experimentData<-,eSet,MIAME-method exprs,eSet-method exprs<-,eSet,AssayData-method featureData,eSet-method featureData<-,eSet,AnnotatedDataFrame-method featureNames,eSet-method featureNames<-,eSet-method fData,eSet-method fData<-,eSet,data.frame-method fvarLabels,eSet-method fvarLabels<-,eSet-method fvarMetadata,eSet-method fvarMetadata<-,eSet,data.frame-method initialize,eSet-method ncol,eSet-method notes,eSet-method notes<-,eSet,ANY-method pData,eSet-method pData<-,eSet,data.frame-method phenoData,eSet-method phenoData<-,eSet,AnnotatedDataFrame-method pubMedIds,eSet-method pubMedIds<-,eSet,character-method preproc,eSet-method preproc<-,eSet-method sampleNames,eSet-method sampleNames<-,eSet,ANY-method show,eSet-method storageMode,eSet-method storageMode<-,eSet,character-method varLabels,eSet-method varLabels<-,eSet-method varMetadata,eSet-method varMetadata<-,eSet,data.frame-method storageMode,eSet-method storageMode<-,eSet,character-method updateObject,eSet-method updateObjectTo,eSet,eSet-method listOrEnv SW
+Keywords: classes
+Description: Class to Contain High-Throughput Assays and Experimental Metadata
+URL: ../../../library/Biobase/html/class.eSet.html
+
+Entry: classVersion
+Aliases: classVersion classVersion<- classVersion,ANY-method classVersion,character-method
+Keywords: manip
+Description: Retrieve information about versioned classes
+URL: ../../../library/Biobase/html/classVersion.html
+
+Entry: combine
+Aliases: combine combine,ANY,missing-method combine,data.frame,data.frame-method combine,matrix,matrix-method
+Keywords: manip
+Description: Methods for Function combine in Package 'Biobase'
+URL: ../../../library/Biobase/html/combine.html
+
+Entry: contents
+Aliases: contents
+Keywords: manip
+Description: Function to retrieve contents of environments
+URL: ../../../library/Biobase/html/contents.html
+
+Entry: copyEnv
+Aliases: copyEnv l2e
+Keywords: utilities
+Description: List-Environment interactions
+URL: ../../../library/Biobase/html/copyEnv.html
+
+Entry: copySubstitute
+Aliases: copySubstitute
+Keywords: connection programming
+Description: Copy Between Connections or Files with Configure-Like Name-Value Substitution
+URL: ../../../library/Biobase/html/copySubstitute.html
+
+Entry: createPackage
+Aliases: createPackage
+Keywords: programming
+Description: Create a Package Directory from a Template
+URL: ../../../library/Biobase/html/createPackage.html
+
+Entry: data:aaMap
+Aliases: data:aaMap aaMap
+Keywords: datasets
+Description: Dataset: Names and Characteristics of Amino Acids
+URL: ../../../library/Biobase/html/data.aaMap.html
+
+Entry: data:geneData
+Aliases: data:geneData geneData data:geneCov geneCov data:geneCovariate geneCovariate data:seD seD
+Keywords: datasets
+Description: Sample expression matrix and phenotype data.frames.
+URL: ../../../library/Biobase/html/data.geneData.html
+
+Entry: reporter
+Aliases: data:reporter reporter
+Keywords: datasets
+Description: Example data.frame representing reporter information
+URL: ../../../library/Biobase/html/data.reporter.html
+
+Entry: data:sample.ExpressionSet
+Aliases: data:sample.ExpressionSet sample.ExpressionSet
+Keywords: datasets
+Description: Dataset of class 'ExpressionSet'
+URL: ../../../library/Biobase/html/data.sample.ExpressionSet.html
+
+Entry: data:sample.MultiSet
+Aliases: data:sample.MultiSet sample.MultiSet
+Keywords: datasets
+Description: Data set of class 'MultiSet'
+URL: ../../../library/Biobase/html/data.sample.MultiSet.html
+
+Entry: Deprecated
+Aliases: class:annotatedDataset annotatedDataset annotatedDataset-class initialize,annotatedDataset-method class:exprList exprList exprList-class class:exprMatrix exprMatrix exprMatrix-class class:exprSet exprSet exprSet-class initialize,exprSet-method class:phenoData phenoData-class initialize,phenoData-method data:sample.eSet sample.eSet data:sample.exprSet.1 sample.exprSet.1 data:sample.exprSet sample.exprSet df2pD read.pD read.exprSet read.phenoData geneNames geneNames,ExpressionSet-method geneNames<- geneNames<-,ExpressionSet,character-method getExpData getExpData,eSet,character-method eList eList,eSet-method eList<- eList<-,eSet,AssayData-method reporterNames reporterNames,eSet-method reporterNames<- reporterNames<-,eSet,character-method updateOldMiame
+Keywords: internal
+Description: Biobase Deprecated and Defunct
+URL: ../../../library/Biobase/html/defunct.html
+
+Entry: description
+Aliases: description description<-
+Keywords: manip
+Description: Retrieve and set overall experimental information eSet-like classes.
+URL: ../../../library/Biobase/html/description.html
+
+Entry: dims
+Aliases: dims
+Keywords: manip
+Description: Retrieve dimensions of all elements in a list or environment
+URL: ../../../library/Biobase/html/dims.html
+
+Entry: dumpPackTxt
+Aliases: dumpPackTxt
+Keywords: models
+Description: Dump Textual Description of a Package
+URL: ../../../library/Biobase/html/dumpPackTxt.html
+
+Entry: esApply
+Aliases: esApply
+Keywords: models methods
+Description: An apply-like function for ExpressionSet and related structures.
+URL: ../../../library/Biobase/html/esApply.html
+
+Entry: exprs
+Aliases: exprs exprs<- se.exprs se.exprs<-
+Keywords: manip
+Description: Retrieve expression data from eSets.
+URL: ../../../library/Biobase/html/exprs.html
+
+Entry: featureData
+Aliases: featureData featureData<- fData fData<- fvarLabels fvarLabels<- fvarMetadata fvarMetadata<-
+Keywords: manip
+Description: Retrieve information on features recorded in eSet-derived classes.
+URL: ../../../library/Biobase/html/featureData.html
+
+Entry: featureNames
+Aliases: featureNames featureNames<- sampleNames sampleNames<-
+Keywords: manip
+Description: Retrieve feature and sample names from eSets.
+URL: ../../../library/Biobase/html/featureNames.html
+
+Entry: getPkgVigs
+Aliases: getPkgVigs
+Keywords: utilities
+Description: List Vignette Files for a Package
+URL: ../../../library/Biobase/html/getPkgVigs.html
+
+Entry: abstract
+Aliases: aggenv aggfun content expinfo hybridizations initfun locked normControls otherInfo data.frameOrNULL-class listOrEnv-class contents,environment-method
+Keywords: internal
+Description: Internals
+URL: ../../../library/Biobase/html/internals.html
+
+Entry: isCurrent
+Aliases: isCurrent isCurrent,ANY,ANY-method
+Keywords: manip
+Description: Use version information to test whether class is current
+URL: ../../../library/Biobase/html/isCurrent.html
+
+Entry: isUnique
+Aliases: isUnique
+Keywords: logic manip
+Description: Determine Unique Elements
+URL: ../../../library/Biobase/html/isUnique.html
+
+Entry: isVersioned
+Aliases: isVersioned isVersioned,ANY-method isVersioned,character-method
+Keywords: manip
+Description: Determine whether object or class contains versioning information
+URL: ../../../library/Biobase/html/isVersioned.html
+
+Entry: lcSuffix
+Aliases: lcSuffix lcPrefix lcPrefixC
+Keywords: manip
+Description: Compute the longest common prefix or suffix of a string
+URL: ../../../library/Biobase/html/lcSuffix.html
+
+Entry: listLen
+Aliases: listLen
+Keywords: utilities
+Description: Lengths of list elements
+URL: ../../../library/Biobase/html/listLen.html
+
+Entry: makeDataPackage
+Aliases: makeDataPackage makeDataPackage,ANY-method
+Keywords: manip
+Description: Make an R package from a data object
+URL: ../../../library/Biobase/html/makeDataPackage.html
+
+Entry: matchpt
+Aliases: matchpt
+Keywords: manip array
+Description: Nearest neighbor search.
+URL: ../../../library/Biobase/html/matchpt.html
+
+Entry: multiassign
+Aliases: multiassign
+Keywords: data
+Description: Assign Values to a Names
+URL: ../../../library/Biobase/html/multiassign.html
+
+Entry: note
+Aliases: note
+Keywords: utilities
+Description: Informational Messages
+URL: ../../../library/Biobase/html/note.html
+
+Entry: notes
+Aliases: notes notes<-
+Keywords: manip
+Description: Retrieve and set eSet notes.
+URL: ../../../library/Biobase/html/notes.html
+
+Entry: openPDF
+Aliases: openPDF
+Keywords: utilities
+Description: Open PDF Files in a Standard Viewer
+URL: ../../../library/Biobase/html/openPDF.html
+
+Entry: openVignette
+Aliases: openVignette
+Keywords: utilities
+Description: Open a Vignette or Show Vignette Selection Menu
+URL: ../../../library/Biobase/html/openVignette.html
+
+Entry: package.version
+Aliases: package.version
+Keywords: utilities
+Description: Report Version of a Package
+URL: ../../../library/Biobase/html/package.version.html
+
+Entry: phenoData
+Aliases: phenoData phenoData<- varLabels varLabels<- varMetadata varMetadata<- pData pData<-
+Keywords: manip
+Description: Retrieve information on experimental phenotypes recorded in eSet and ExpressionSet-derived classes.
+URL: ../../../library/Biobase/html/phenoData.html
+
+Entry: read.AnnotatedDataFrame
+Aliases: read.AnnotatedDataFrame
+Keywords: file manip
+Description: Read 'AnnotatedDataFrame'
+URL: ../../../library/Biobase/html/read.AnnotatedDataFrame.html
+
+Entry: read.MIAME
+Aliases: read.MIAME
+Keywords: file
+Description: Read MIAME Information into an Instance of Class 'MIAME'
+URL: ../../../library/Biobase/html/read.MIAME.html
+
+Entry: readExpressionSet
+Aliases: readExpressionSet
+Keywords: file manip
+Description: Read 'ExpressionSet'
+URL: ../../../library/Biobase/html/readExpressionSet.html
+
+Entry: reverseSplit
+Aliases: reverseSplit
+Keywords: manip
+Description: A function to reverse the role of names and values in a list.
+URL: ../../../library/Biobase/html/reverseSplit.html
+
+Entry: rowMedians
+Aliases: rowMedians rowMedians,matrix-method rowMedians,ExpressionSet-method
+Keywords: manip
+Description: Calculates the median for each row in a matrix
+URL: ../../../library/Biobase/html/rowMedians.html
+
+Entry: rowQ
+Aliases: rowQ rowQ,matrix,numeric-method rowQ,ExpressionSet,numeric-method rowMin rowMax
+Keywords: 
+Description: A function to compute empirical row quantiles.
+URL: ../../../library/Biobase/html/rowQ.html
+
+Entry: selectChannels
+Aliases: selectChannels
+Keywords: manip
+Description: Create a new NChannelSet instance by selecting specific channels
+URL: ../../../library/Biobase/html/selectChannels.html
+
+Entry: selectSome
+Aliases: selectSome
+Keywords: utilities
+Description: Extract elements of a vector for concise rendering
+URL: ../../../library/Biobase/html/selectSome.html
+
+Entry: storageMode
+Aliases: storageMode storageMode<-
+Keywords: manip
+Description: Retrieve or set storage mode for eSets.
+URL: ../../../library/Biobase/html/storageMode.html
+
+Entry: strbreak
+Aliases: strbreak
+Keywords: character
+Description: Break Character Strings to Fit Width
+URL: ../../../library/Biobase/html/strbreak.html
+
+Entry: subListExtract
+Aliases: subListExtract
+Keywords: manip
+Description: Extract the same element from the sublists of a list
+URL: ../../../library/Biobase/html/subListExtract.html
+
+Entry: testBioCConnection
+Aliases: testBioCConnection
+Keywords: utilities
+Description: A function to check internet connectivity to Bioconductor
+URL: ../../../library/Biobase/html/testBioCConnection.html
+
+Entry: updateObject
+Aliases: updateObject updateObjectTo updateObject,ANY-method updateObject,list-method updateObject,environment-method updateObjectTo,ANY,ANY-method updateObjectFromSlots getObjectSlots
+Keywords: manip
+Description: Update an object to its current class definition
+URL: ../../../library/Biobase/html/updateObject.html
+
+Entry: updateOldESet
+Aliases: updateOldESet
+Keywords: manip
+Description: Update previously created eSet object to current eSet structure
+URL: ../../../library/Biobase/html/updateOldESet.html
+
+Entry: userQuery
+Aliases: userQuery
+Keywords: utilities
+Description: A function to query the user for input
+URL: ../../../library/Biobase/html/userQuery.html
+
+Entry: validMsg
+Aliases: validMsg
+Keywords: utilities
+Description: Conditionally append result to validity message
+URL: ../../../library/Biobase/html/validMsg.html

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Fast Simple Loess</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for loessFit {limma}"><tr><td>loessFit {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Fast Simple Loess</h2>
+
+
+<h3>Description</h3>
+
+<p>
+A fast version of locally weighted regression when there is only one x-variable and only the fitted values and residuals are required.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+loessFit(y, x, weights=NULL, span=0.3, bin=0.01/(2-is.null(weights)), iterations=4)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y</code></td>
+<td>
+numeric vector of response values.  Missing values are allowed.</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+numeric vector of predictor values  Missing values are allowed.</td></tr>
+<tr valign="top"><td><code>weights</code></td>
+<td>
+numeric vector of non-negative weights.  Missing values are allowed.</td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+numeric parameter between 0 and 1 specifying proportion of data to be used in the local regression moving window.
+Larger numbers give smoother fits.</td></tr>
+<tr valign="top"><td><code>bin</code></td>
+<td>
+numeric value between 0 and 1 giving the proportion of the data which can be grouped in a single bin when doing local regression fit.
+<code>bin=0</code> forces an exact local regression fit with no interpolation.</td></tr>
+<tr valign="top"><td><code>iterations</code></td>
+<td>
+number of iterations of loess fit</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This is a wrapper function to the Fortran and C code in the stats package which underlies the <code>lowess</code> and <code>loess</code> functions.
+Its is to give a streamlined common interface to <code>lowess</code> and <code>loess</code> for use in <code><a href="normalizeWithinArrays.html">normalizeWithinArrays</a></code>.
+When <code>weights</code> is null, this function is in effect a call to <code>lowess</code> in the stats package, with appropropriate choice of tuning parameters.
+When <code>weights</code> is non-null, it is in effect a call to <code>loess</code>.
+See the help pages for those functions for references and credits.
+</p>
+<p>
+Note tha <code>lowess</code> is faster, needs less memory and is able to use a more accurate interpolation scheme than <code>loess</code>, so it is desirable to use <code>lowess</code> whenever <code>loess</code> is not needed to handle quantitative weights.
+</p>
+<p>
+The arguments <code>span</code>, <code>cell</code> and <code>iterations</code> here have the same meaning as in <code>loess</code>.
+<code>span</code> is equivalent to the argument <code>f</code> of <code>lowess</code> and <code>iterations</code> is equivalent to <code>iter+1</code>.
+The parameter <code>bin</code> is intended to give a simple uniform interface to the <code>delta</code> argument of <code>lowess</code> and the <code>cell</code> argument of <code>loess</code>.
+<code>bin</code> translates to <code>delta=bin*diff(range(x))</code> in a call to <code>lowess</code> or to <code>cell=bin/span</code> in a call to <code>loess</code>.
+</p>
+<p>
+Unlike <code>lowess</code>, <code>loessFit</code> returns values in original rather than sorted order.
+Also unlike <code>lowess</code>, <code>loessFit</code> allows missing values, the treatment being analogous to <code>na.exclude</code>.
+Unlike <code>loess</code>, <code>loessFit</code> returns a linear regression fit if there are insufficient observations to estimate the loess curve.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list with components
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>fitted</code></td>
+<td>
+numeric vector of same length as <code>y</code> giving the loess fit</td></tr>
+<tr valign="top"><td><code>residuals</code></td>
+<td>
+numeric vector of same length as <code>x</code> giving residuals from the fit</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth, based on code from <code>lowess</code> and <code>loess</code> by BD Ripley
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+See <code><a href="../../stats/html/lowess.html">lowess</a></code> and <code><a href="../../stats/html/loess.html">loess</a></code> in the stats package.
+</p>
+<p>
+See <a href="05Normalization.html">05.Normalization</a> for an outline of the limma package normalization functions.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+y &lt;- rnorm(1000)
+x &lt;- rnorm(1000)
+w &lt;- rep(1,1000)
+# The following are equivalent apart from execution time
+# and interpolation inaccuracies
+system.time(fit &lt;- loessFit(y,x)$fitted)
+system.time(fit &lt;- loessFit(y,x,w)$fitted)
+system.time(fit &lt;- fitted(loess(y~x,weights=w,span=0.3,family="symmetric",iterations=4)))
+# The same but with sorted x-values
+system.time(fit &lt;- lowess(x,y,f=0.3)$y)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

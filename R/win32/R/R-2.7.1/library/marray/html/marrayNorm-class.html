@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Class "marrayNorm", classes and methods for post-normalization cDNA microarray intensity data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for marrayNorm-class {marray}"><tr><td>marrayNorm-class {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Class "marrayNorm", classes and methods for post-normalization cDNA microarray intensity data</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This class represents post-normalization intensity data for a batch of cDNA microarrays. A <EM>batch of arrays</EM> consists of a collection of arrays with the same layout  (<code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code>). The class contains slots for the average log-intensities A, the normalized log-ratios M, the location and scale normalization values, the layout of the arrays, and descriptions of the target samples hybridized to the arrays and probe sequences spotted onto the arrays.
+</p>
+
+
+<h3>Objects from the Class</h3>
+
+<p>
+Objects can be created by calls of the form 
+<code>  new('marrayNorm',</code><br>
+<code>    maA        = ...., # Object of class matrix</code><br>
+<code>    maM        = ...., # Object of class matrix</code><br>
+<code>    maMloc     = ...., # Object of class matrix</code><br>
+<code>    maMscale   = ...., # Object of class matrix</code><br>
+<code>    maW        = ...., # Object of class matrix</code><br>
+<code>    maLayout   = ...., # Object of class marrayLayout</code><br>
+<code>    maGnames   = ...., # Object of class marrayInfo</code><br>
+<code>    maTargets  = ...., # Object of class marrayInfo</code><br>
+<code>    maNotes    = ...., # Object of class character</code><br>
+<code>    maNormCall = ...., # Object of class call</code><br>
+<code>  )</code>
+</p>
+
+
+<h3>Slots</h3>
+
+<dl>
+<dt><code>maA</code>:</dt><dd>Object of class <code>"matrix"</code>, average log-intensities (base 2) A, rows correspond to spotted probe sequences, columns to arrays in the batch.</dd>
+<dt><code>maM</code>:</dt><dd>Object of class <code>"matrix"</code>, intensity log-ratios (base 2) M, rows correspond to spotted probe sequences, columns to arrays in the batch.</dd>
+<dt><code>maMloc</code>:</dt><dd>Object of class <code>"matrix"</code>, location normalization values, rows correspond to spotted probe sequences, columns to arrays in the batch.</dd>
+<dt><code>maMscale</code>:</dt><dd>Object of class <code>"matrix"</code>,  scale normalization values, rows correspond to spotted probe sequences, columns to arrays in the batch.</dd>
+<dt><code>maW</code>:</dt><dd>Object of class <code>"matrix"</code>, spot quality weights, rows correspond to spotted probe sequences, columns to arrays in the batch.</dd>
+<dt><code>maLayout</code>:</dt><dd>Object of class <code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code>, layout parameters for cDNA microarrays.</dd>
+<dt><code>maGnames</code>:</dt><dd>Object of class <code>"<a href="marrayInfo-class.html">marrayInfo</a>"</code>, description of spotted probe sequences.</dd>
+<dt><code>maTargets</code>:</dt><dd>Object of class <code>"<a href="marrayInfo-class.html">marrayInfo</a>"</code>, description of target samples hybridized to the arrays.</dd>
+<dt><code>maNotes</code>:</dt><dd>Object of class <code>"character"</code>, any notes concerning the microarray experiments, e.g. hybridization or scanning conditions.</dd>
+<dt><code>maNormCall</code>:</dt><dd>Object of class <code>"call"</code>, function call for normalizing the batch of arrays.</dd>
+</dl>
+
+<h3>Methods</h3>
+
+<dl>
+<dt>[</dt><dd><code>signature(x = "marrayNorm")</code>:  subsetting operator for spots on the array and arrays in the batch, ensures that all slots are subset properly.</dd>
+<dt>coerce</dt><dd><code>signature(from = "marrayRaw", to = "marrayNorm")</code>: coerce an object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code> into an object of class <code><a href="marrayNorm-class.html">marrayNorm</a></code>. </dd>
+<dt>maA</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maA&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "matrix")</code>: slot assignment method.</dd> 
+<dt>maControls&lt;-</dt><dd><code>signature(object = "marrayNorm")</code>: slot assignment method.</dd> 
+<dt>maControls</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maGnames</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maGnames&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "marrayInfo")</code>: slot assignment method.</dd> 
+<dt>maGridCol</dt><dd><code>signature(object = "marrayNorm")</code>: method which computes a vector of grid column coordinates for each spot.</dd>
+<dt>maGridRow</dt><dd><code>signature(object = "marrayNorm")</code>: method which computes a vector of grid row coordinates for each spot.</dd>
+<dt>maLayout</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maLayout&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "marrayLayout")</code>: slot assignment method.</dd> 
+<dt>maM</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maM&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "matrix")</code>: slot assignment method.</dd> 
+<dt>maMloc</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maMloc&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "matrix")</code>: slot assignment method.</dd> 
+<dt>maMscale</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maMscale&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "matrix")</code>: slot assignment method.</dd> 
+<dt>maNgc</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNgc&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "numeric")</code>: slot assignment method.</dd> 
+<dt>maNgr</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNgr&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "numeric")</code>: slot assignment method.</dd> 
+<dt>maNormCall</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNotes</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNotes&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "character")</code>: slot assignment method.</dd> 
+<dt>maNsamples</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNsc</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNsc&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "numeric")</code>: slot assignment method.</dd> 
+<dt>maNspots</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNspots&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "numeric")</code>: slot assignment method.</dd> 
+<dt>maNsr</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maNsr&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "numeric")</code>: slot assignment method.</dd> 
+<dt>maPlate</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maPlate&lt;-</dt><dd><code>signature(object = "marrayNorm")</code>: slot assignment method.</dd> 
+<dt>maPrintTip</dt><dd><code>signature(object = "marrayNorm")</code>: method which computes a vector of print-tip-group indices for each spot.</dd>
+<dt>maSpotCol</dt><dd><code>signature(object = "marrayNorm")</code>: method which computes a vector of spot column coordinates for each spot.</dd>
+<dt>maSpotRow</dt><dd><code>signature(object = "marrayNorm")</code>: method which computes a vector of spot row coordinates for each spot.</dd>
+<dt>maSub</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maSub&lt;-</dt><dd><code>signature(object = "marrayNorm")</code>: slot assignment method.</dd> 
+<dt>maTargets</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maTargets&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "marrayInfo")</code>: slot assignment method.</dd>  
+<dt>maW</dt><dd><code>signature(object = "marrayNorm")</code>: slot accessor method.</dd>
+<dt>maW&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "matrix")</code>: slot assignment method.</dd> 
+<dt>print</dt><dd><code>signature(x = "marrayNorm")</code>: print method for <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code> class.</dd>
+</dl>
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="marrayLayout-class.html">marrayLayout</a></code>, <code><a href="marrayRaw-class.html">marrayRaw</a></code>,
+<code><a href="marrayInfo-class.html">marrayInfo</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# Examples use swirl dataset, for description type ? swirl
+
+data(swirl)
+
+# Median normalization
+mnorm&lt;-maNorm(swirl[,2:3],norm="m")
+
+# Object of class marrayNorm for the second and third swirl arrays
+mnorm
+
+# Function call
+maNormCall(mnorm)
+
+#  Object of class marrayInfo -- Probe sequences
+maGnames(mnorm)
+
+#  Object of class marrayInfo -- Target samples
+ maTargets(mnorm)
+
+# Density plot of log-ratios M for third array
+plot(density(maM(mnorm[,2])), lwd=2, col=2, main="Density plots of log-ratios M")
+lines(density(maM(swirl[,3])), lwd=2)
+abline(v=0)
+legend(2,1,c("Pre-normalization","Post-normalization"))
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

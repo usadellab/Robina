@@ -1,0 +1,35 @@
+ROBIN TODO LIST
+===============
+
+- 	Implement an open plug-in architecture for quality check functions
+	and maybe also for the main analysis so that users and us can easily 
+	extend the functionality. This could consist of an R template using 
+	the placejolders __VALUE__ and a specification file that contains the
+	title, info text and thumbnail path.
+
+- 	Implementation of nice functions like probe ID blacklisting and a
+	present call/absent call filter that can exclude probesets from the
+	analysis and/or takes PC/AC info into account.
+
+-	Implement quality check thresholds specific to chip type (for Affy
+	chips only). Use the Affy lib to extract the chip type and then read 
+	the set of sensible thresholds from a table (file) that can be easily
+	extended/maintained. If chiptype unknown fall back to defaults.
+	Personalized thresholds might be defined for the signal intensity
+	distribution and RNA degradation behaviour (marek)
+
+- 	Implement automatic warnings for more measures! NUSE can easily be
+	incorporated maybe also RLE.
+
+- 	Complete online help
+
+-       properly implement annotation and pvalue correction for rankproduct-based analyses
+
+-       finish the summary/report generator for all workflows and add some
+        material and methods-style text generation that people can copy-paste
+        into their manuscripts.
+
+-       finish HTML output
+
+
+

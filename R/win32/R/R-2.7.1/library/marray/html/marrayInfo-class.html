@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Class "marrayInfo", description of target samples or spotted probe sequences</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for marrayInfo-class {marray}"><tr><td>marrayInfo-class {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Class "marrayInfo", description of target samples or spotted probe sequences</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This class is used to store information on target samples hybridized to a batch of arrays or probe sequences spotted onto these arrays. It is not specific to the microarray context.
+</p>
+
+
+<h3>Objects from the Class</h3>
+
+<p>
+Objects can be created by calls of the form <code>  new('marrayInfo',</code><br>
+<code>    maLabels = ...., # Object of class character</code><br>
+<code>    maInfo   = ...., # Object of class data.frame</code><br>
+<code>    maNotes  = ...., # Object of class character</code><br>
+<code>  )</code>
+</p>
+
+
+<h3>Slots</h3>
+
+<dl>
+<dt><code>maLabels</code>:</dt><dd>Object of class <code>"character"</code>, vector of spot or array labels.</dd>
+<dt><code>maInfo</code>:</dt><dd>Object of class <code>"data.frame"</code>. If the object of class <code>"marrayInfo"</code> is used to describe probe sequences, rows of <code>maInfo</code> correspond to spots and columns to various gene identifiers and annotations. 
+If the object of class <code>"marrayInfo"</code> is used to describe target samples hybridized to the arrays, rows of <code>maInfo</code> correspond to arrays and columns to various descriptions of the hybridizations, e.g., names of Cy3 and Cy5 samples, labels for the arrays etc.</dd>
+<dt><code>maNotes</code>:</dt><dd>Object of class <code>"character"</code>, any notes on the target samples or spotted probe sequences.</dd>
+</dl>
+
+<h3>Methods</h3>
+
+<dl>
+<dt>[</dt><dd><code>signature(x = "marrayInfo")</code>: subsetting operator for spots on the array or arrays in the batch, ensures that all slots are subset properly.</dd>
+<dt>maGnames&lt;-</dt><dd><code>signature(object = "marrayRaw", value = "marrayInfo")</code>: slot assignment method.</dd>
+<dt>maGnames&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "marrayInfo")</code>: slot assignment method.</dd>
+<dt>maGnames&lt;-</dt><dd><code>signature(object = "marraySpots", value = "marrayInfo")</code>: slot assignment method.</dd>
+<dt>maInfo</dt><dd><code>signature(object = "marrayInfo")</code>: slot accessor method.</dd>
+<dt>maInfo&lt;-</dt><dd><code>signature(object = "marrayInfo", value = "data.frame")</code>: slot assignment method.</dd>
+<dt>maLabels</dt><dd><code>signature(object = "marrayInfo")</code>: slot accessor method.</dd>
+<dt>maLabels&lt;-</dt><dd><code>signature(object = "marrayInfo", value = "character")</code>: slot assignment method.</dd>
+<dt>maLabels&lt;-</dt><dd><code>signature(object = "marrayInfo", value = "numeric")</code>: slot assignment method.</dd>
+<dt>maNotes</dt><dd><code>signature(object = "marrayInfo")</code>: slot accessor method.</dd>
+<dt>maNotes&lt;-</dt><dd><code>signature(object = "marrayInfo", value = "character")</code>: slot assignment method.</dd>
+<dt>maTargets&lt;-</dt><dd><code>signature(object = "marrayRaw", value = "marrayInfo")</code>: slot assignment method.</dd>
+<dt>maTargets&lt;-</dt><dd><code>signature(object = "marrayNorm", value = "marrayInfo")</code>: slot assignment method.</dd>
+<dt>print</dt><dd><code>signature(x = "marrayInfo")</code>: print method for <code>"<a href="marrayInfo-class.html">marrayInfo</a>"</code> class.</dd>
+</dl>
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yang and Sandrine Dudoit
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="marrayLayout-class.html">marrayLayout</a></code>, <code><a href="marrayRaw-class.html">marrayRaw</a></code>, <code><a href="marrayNorm-class.html">marrayNorm</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## See marrayRaw
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

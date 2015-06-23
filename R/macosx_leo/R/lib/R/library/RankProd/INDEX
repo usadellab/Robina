@@ -1,0 +1,14 @@
+RP                      Rank Product Analysis of Microarray
+RPadvance               Advanced Rank Product Analysis of Microarray
+RSadvance               Advanced Rank Sum Analysis of Microarray
+arab                    Genomic Response to Brassinosteroid in
+                        Arabidopsis
+golub                   sub set of the Gene expression dataset from
+                        Golub et al. (1999)
+lym.exp                 Subset of the Intensity data for 8 cDNA slides
+                        with CLL and DLBL samples from the Alizadeh et
+                        al. paper in Nature 2000
+plotGene                Graphical Display of The expression levels
+plotRP                  Graphical Display of the Rank Product/Sum
+                        analysis
+topGene                 Output Significant Genes

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Background adjustment with sequence information (internal function)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for bg.adjust.affinities {gcrma}"><tr><td>bg.adjust.affinities {gcrma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Background adjustment with sequence information (internal function)</h2>
+
+
+<h3>Description</h3>
+
+<p>
+An internal function to be used by <code><a href="gcrma.html">gcrma</a></code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+bg.adjust.fullmodel(pms,mms,ncs=NULL,apm,amm,anc=NULL,index.affinities,k=k,rho=.7,fast)
+bg.adjust.affinities(pms,ncs,apm,anc,index.affinities,k=k,fast=FALSE,nomm=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>pms</code></td>
+<td>
+PM intensities after optical background correction, before
+non-specific-binding correction.</td></tr>
+<tr valign="top"><td><code>mms</code></td>
+<td>
+MM intensities after optical background correction, before
+non-specific-binding correction.</td></tr>
+<tr valign="top"><td><code>ncs</code></td>
+<td>
+Negative control probe intensities after optical background correction, before
+non-specific-binding correction. If <code>ncs=NULL</code>, the MM probes
+are considered the negative control probes.</td></tr>
+<tr valign="top"><td><code>index.affinities</code></td>
+<td>
+The index of pms with known sequences. (For some types of
+arrays the sequences of a small subset of probes are not provided by
+Affymetrix.)</td></tr>
+<tr valign="top"><td><code>apm</code></td>
+<td>
+Probe affinities for PM probes with known sequences.</td></tr>
+<tr valign="top"><td><code>amm</code></td>
+<td>
+Probe affinities for MM probes with known sequences.</td></tr>
+<tr valign="top"><td><code>anc</code></td>
+<td>
+Probe affinities for Negative control probes with known
+sequences. This is ignored when <code>ncs=NULL</code>.</td></tr>
+<tr valign="top"><td><code>rho</code></td>
+<td>
+correlation coefficient of log background intensity in a pair of pm/mm probes. Default=.7</td></tr>
+<tr valign="top"><td><code>k</code></td>
+<td>
+A tuning parameter. See details.</td></tr>
+<tr valign="top"><td><code>fast</code></td>
+<td>
+Logical value. If <code>TRUE</code> a faster add-hoc algorithm is used.</td></tr>
+<tr valign="top"><td><code>nomm</code></td>
+<td>
+</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Assumes PM=background1+signal,mm=background2,
+(log(background1),log(background2))' 
+follow bivariate normal distribution, signal distribution follows power
+law. 
+<code>bg.parameters.gcrma</code> and <code>sg.parameters.gcrma</code> 
+provide adhoc estimates of the parameters.
+</p>
+<p>
+the original gcrma uses an empirical Bayes estimate. this requires a
+complicated numerical integration. An add-hoc method tries to imitate
+the empirical Bayes estimate with a PM-B but values of PM-B&lt;<code>k</code>
+going to <code>k</code>. This can be thought as a shrunken MVUE. For more
+details see Wu et al. (2003).
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+a vector of same length as x.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Rafeal Irizarry, Zhijin(Jean) Wu
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="gcrma.html">gcrma</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>gcrma</em> version 2.12.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

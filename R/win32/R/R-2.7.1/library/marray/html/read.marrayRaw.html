@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Create objects of class "marrayRaw"</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for read.marrayRaw {marray}"><tr><td>read.marrayRaw {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Create objects of class "marrayRaw"</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function reads in cDNA microarray data from a directory and creates objects of
+class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code> from spot quantification data files obtained from image analysis software or databases.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+read.marrayRaw(fnames, path=".", name.Gf=NULL, name.Gb=NULL, name.Rf=NULL,
+name.Rb=NULL,name.W=NULL, layout=NULL, gnames=NULL, targets=NULL,
+notes=NULL, skip=NULL, sep="    ", quote="\"", DEBUG=FALSE, ...)
+
+read.GenePix(fnames = NULL, path = NULL, name.Gf = "F532 Median",
+name.Gb ="B532 Median", name.Rf = "F635 Median", name.Rb = "B635 Median",
+name.W ="Flags", layout = NULL, gnames = NULL, targets = NULL,
+notes = NULL, skip=NULL, sep = "        ", quote = "\"", DEBUG=FALSE, ...)
+
+read.SMD(fnames = NULL, path = NULL, name.Gf = "Ch1 Intensity (Median)",
+name.Gb = "Ch1 Background (Median)", name.Rf = "Ch2 Intensity (Median)",
+name.Rb = "Ch2 Background (Median)", name.W = NULL, info.id = c("Name",
+"Clone ID"), layout = NULL, gnames = NULL, targets = NULL, notes = NULL, skip = NULL, sep = "\t", quote = "\"", DEBUG=FALSE, ...)
+
+read.Spot(fnames = NULL, path = ".", name.Gf = "Gmean", name.Gb =
+"morphG", name.Rf = "Rmean", name.Rb = "morphR",name.W = NULL, layout =
+NULL, gnames = NULL, targets = NULL, notes = NULL, skip = NULL, sep = "\t", quote = "\"", DEBUG=FALSE, ...)
+
+read.Agilent(fnames = NULL, path=NULL, name.Gf = "gMedianSignal", name.Gb = "gBGMedianSignal", name.Rf = "rMedianSignal", name.Rb = "rBGMedianSignal", name.W= NULL, layout = NULL, gnames = NULL, targets = NULL, notes=NULL, skip=NULL, sep="\t", quote="\"", DEBUG=FALSE, info.id=NULL, ...)
+
+widget.marrayRaw(ext = c("spot", "xls", "gpr"), skip = 0, sep = "\t",  quote = "\"", ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>fnames</code></td>
+<td>
+a vector of character strings containing the file names of
+each spot quantification data file.  These typically end in <code>.spot</code>
+for the software <code>Spot</code> or <code>.gpr</code> for the software <code>GenePix</code>.</td></tr>
+<tr valign="top"><td><code>path</code></td>
+<td>
+a character string representing the data directory. By
+default this is set to the current working directory (".").  In the
+case where <code>fnames</code> contains the full path name, path should be set
+to NULL.</td></tr>
+<tr valign="top"><td><code>name.Gf</code></td>
+<td>
+character string for the column header for green foreground intensities.</td></tr>
+<tr valign="top"><td><code>name.Gb</code></td>
+<td>
+character string for the column header for green background intensities.</td></tr>
+<tr valign="top"><td><code>name.Rf</code></td>
+<td>
+character string for the column header for red foreground intensities.</td></tr>
+<tr valign="top"><td><code>name.Rb</code></td>
+<td>
+character string for the column header for red background intensities.</td></tr>
+<tr valign="top"><td><code>name.W</code></td>
+<td>
+character string for the column header for spot quality weights.</td></tr>
+<tr valign="top"><td><code>layout</code></td>
+<td>
+object of class <code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code>, containing microarray layout parameters.</td></tr>
+<tr valign="top"><td><code>gnames</code></td>
+<td>
+object of class <code>"<a href="marrayInfo-class.html">marrayInfo</a>"</code> containing probe sequence information.</td></tr>
+<tr valign="top"><td><code>targets</code></td>
+<td>
+object of class <code>"<a href="marrayInfo-class.html">marrayInfo</a>"</code> containing target sample information.</td></tr>
+<tr valign="top"><td><code>notes</code></td>
+<td>
+object of class <code>"character"</code>, vector of explanatory
+text.</td></tr>
+<tr valign="top"><td><code>info.id</code></td>
+<td>
+object of class <code>"character"</code>, vector containing
+the name of the colums of the SMD file containing oligo information
+you want to retrieve. By default, this is set to read Homo sapiens
+data. You may need to modify this argument if your are working on
+another genome.</td></tr>
+<tr valign="top"><td><code>skip</code></td>
+<td>
+the number of lines of the data file to skip before beginning to read in data.</td></tr>
+<tr valign="top"><td><code>sep</code></td>
+<td>
+the field separator character.  Values on each line of the
+file are separated by this character. The
+default is to read a tab delimited file.</td></tr>
+<tr valign="top"><td><code>quote</code></td>
+<td>
+the set of quoting characters. By default, this is
+disabled by setting <code>quote="\""</code>.</td></tr>
+<tr valign="top"><td><code>ext</code></td>
+<td>
+a characters string representing suffix of different image
+analysis output files.</td></tr>
+<tr valign="top"><td><code>DEBUG</code></td>
+<td>
+a logical value, if TRUE, a series of echo statements will be printed.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+further arguments to <code><a href="../../base/html/scan.html">scan</a></code>.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+An object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code>.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yang, <a href="mailto:yeehwa@stat.berkeley.edu">yeehwa@stat.berkeley.edu</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+<a href="http://www.bioconductor.org/">http://www.bioconductor.org/</a>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/scan.html">scan</a></code>, <code><a href="read.marrayLayout.html">read.marrayLayout</a></code>,
+<code><a href="read.marrayInfo.html">read.marrayInfo</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+datadir &lt;- system.file("swirldata", package="marray")
+
+## Quick guide
+swirl.targets &lt;- read.marrayInfo(file.path(datadir, "SwirlSample.txt"))
+data &lt;- read.Spot(path=datadir, targets=swirl.targets)
+
+## Alternate commands
+skip &lt;-  grep("Row", readLines(file.path(datadir,"fish.gal"), n=100)) - 1
+
+swirl.layout &lt;- read.marrayLayout(ngr=4, ngc=4, nsr=22, nsc=24)
+
+swirl.targets &lt;- read.marrayInfo(file.path(datadir, "SwirlSample.txt"))
+
+swirl.gnames &lt;- read.marrayInfo(file.path(datadir, "fish.gal"),
+                                info.id=4:5, labels=5, skip=skip)
+
+x &lt;-  maInfo(swirl.gnames)[,1]
+y &lt;- rep(0, maNspots(swirl.layout))
+y[x == "control"] &lt;- 1
+slot(swirl.layout, "maControls") &lt;- as.factor(y)
+
+fnames &lt;- dir(path=datadir,pattern="spot")
+swirl&lt;- read.Spot(fnames, path=datadir,
+                       layout = swirl.layout,
+                       gnames = swirl.gnames,
+                       targets = swirl.targets)
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

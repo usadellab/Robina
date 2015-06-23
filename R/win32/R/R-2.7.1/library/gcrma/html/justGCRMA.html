@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Compute GCRMA Directly from CEL Files</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for justGCRMA {gcrma}"><tr><td>justGCRMA {gcrma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Compute GCRMA Directly from CEL Files</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function converts CEL files into an <code>ExpressionSet</code>
+using the robust multi-array average (RMA) expression measure with help of probe sequences.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+            just.gcrma(..., filenames=character(0),
+                       phenoData=new("AnnotatedDataFrame"),
+                       description=NULL,
+                       notes="", compress=getOption("BioC")$affy$compress.cel,
+                       normalize=TRUE, bgversion=2, affinity.info=NULL,
+                       type=c("fullmodel","affinities","mm","constant"),
+                       k=6*fast+0.5*(1-fast), stretch=1.15*fast+1*(1-fast),
+                       correction=1, rho=0.7, optical.correct=TRUE,
+                       verbose=TRUE, fast=TRUE, minimum=1, optimize.by = c("speed","memory"),
+                       cdfname = NULL, read.verbose = FALSE)
+
+            justGCRMA(..., filenames=character(0),
+                     widget=getOption("BioC")$affy$use.widgets,
+                     compress=getOption("BioC")$affy$compress.cel,
+                     celfile.path=getwd(),
+                     sampleNames=NULL,
+                     phenoData=NULL,
+                     description=NULL,
+                     notes="",
+                     normalize=TRUE, 
+                     bgversion=2, affinity.info=NULL,
+                     type=c("fullmodel","affinities","mm","constant"),
+                     k=6*fast+0.5*(1-fast), stretch=1.15*fast+1*(1-fast),
+                     correction=1, rho=0.7, optical.correct=TRUE,
+                     verbose=TRUE, fast=TRUE, minimum=1, optimize.by = c("speed","memory"),
+                     cdfname = NULL, read.verbose = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>...</code></td>
+<td>
+file names separated by comma.</td></tr>
+<tr valign="top"><td><code>filenames</code></td>
+<td>
+file names in a character vector.</td></tr>
+<tr valign="top"><td><code>widget</code></td>
+<td>
+a logical specifying if widgets should be used.</td></tr>
+<tr valign="top"><td><code>compress</code></td>
+<td>
+are the CEL files compressed?</td></tr>
+<tr valign="top"><td><code>phenoData</code></td>
+<td>
+a <code><a href="../../Biobase/html/AnnotatedDataFrame.html">AnnotatedDataFrame</a></code> object.</td></tr>
+<tr valign="top"><td><code>description</code></td>
+<td>
+a <code><a href="../../Biobase/html/MIAME.html">MIAME</a></code> object.</td></tr>
+<tr valign="top"><td><code>notes</code></td>
+<td>
+notes.</td></tr>
+<tr valign="top"><td><code>affinity.info</code></td>
+<td>
+<code>NULL</code> or a list of three components:
+apm,amm and index, for PM probe affinities, MM probe affinities,
+the index of probes with known sequence, respectively.</td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+"fullmodel" for sequence and MM model. "affinities" for
+sequence information only. "mm" for using MM without sequence
+information.</td></tr>
+<tr valign="top"><td><code>k</code></td>
+<td>
+A tuning factor.</td></tr>
+<tr valign="top"><td><code>rho</code></td>
+<td>
+correlation coefficient of log background intensity in a pair of pm/mm probes.
+Default=.7.</td></tr>
+<tr valign="top"><td><code>stretch</code></td>
+<td>
+.</td></tr>
+<tr valign="top"><td><code>correction</code></td>
+<td>
+.</td></tr>
+<tr valign="top"><td><code>normalize</code></td>
+<td>
+Logical value. If <code>TRUE</code>, then normalize data using
+quantile normalization.</td></tr>
+<tr valign="top"><td><code>optical.correct</code></td>
+<td>
+Logical value. If <code>TRUE</code>, then optical
+background correction is performed.</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+Logical value. If <code>TRUE</code>, then messages about the progress of
+the function is printed.</td></tr>
+<tr valign="top"><td><code>fast</code></td>
+<td>
+Logical value. If <code>TRUE</code>, then a faster add-hoc algorithm is used.</td></tr>
+<tr valign="top"><td><code>optimize.by</code></td>
+<td>
+"speed" will use a faster algorithm but more RAM, and "memory"
+will be slower, but require less RAM.</td></tr>
+<tr valign="top"><td><code>bgversion</code></td>
+<td>
+integer value indicating which RMA background to use 1: use
+background similar to pure R rma background given in affy
+version 1.0 - 1.0.2 2: use background similar to pure R rma
+background given in affy version 1.1 and above.</td></tr>
+<tr valign="top"><td><code>minimum</code></td>
+<td>
+.</td></tr>
+<tr valign="top"><td><code>celfile.path</code></td>
+<td>
+a character denoting the path 'ReadAffy' should look for
+cel files.</td></tr>
+<tr valign="top"><td><code>sampleNames</code></td>
+<td>
+a character vector of sample names to be used in the
+'AffyBatch'.</td></tr>
+<tr valign="top"><td><code>cdfname</code></td>
+<td>
+Used to specify the name of an alternative cdf package. If set to
+<code>NULL</code>, the usual cdf package based on Affymetrix' mappings
+will be used. Note that the name should not include the 'cdf' on
+the end, and that the corresponding probe package is also required
+to be installed. If either package is missing an error will
+result.</td></tr>
+<tr valign="top"><td><code>read.verbose</code></td>
+<td>
+Logical value. If <code>TRUE</code>, then messages will be
+printed as each celfile is read in.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This method should require much less RAM than the conventional
+method of first creating an <code>AffyBatch</code> and then running
+<code><a href="gcrma.html">gcrma</a></code>.
+</p>
+<p>
+Note that this expression measure is given to you in log base 2
+scale. This differs from most of the other expression measure
+methods.
+</p>
+<p>
+The tuning factor <code>k</code> will have different meanings if one uses
+the fast (add-hoc) algorithm or the empirical Bayes approach. See Wu
+et al. (2003)
+</p>
+<p>
+<code>fast.bkg</code> and <code>mem.bkg</code> are two internal functions.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+An <code>ExpressionSet</code>.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+James W. MacDonald
+</p>
+
+
+
+<hr><div align="center">[Package <em>gcrma</em> version 2.12.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

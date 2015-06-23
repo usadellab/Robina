@@ -1,0 +1,143 @@
+Entry: Anova
+Aliases: Anova
+Keywords: manip
+Description: A filter function for Analysis of Variance
+URL: ../../../library/genefilter/html/Anova.html
+
+Entry: allNA
+Aliases: allNA anyNA
+Keywords: manip
+Description: A filter function to determine if all elements of a vector are NA.
+URL: ../../../library/genefilter/html/allNA.html
+
+Entry: coxfilter
+Aliases: coxfilter
+Keywords: manip
+Description: A filter function for univariate Cox regression.
+URL: ../../../library/genefilter/html/coxfilter.html
+
+Entry: cv
+Aliases: cv
+Keywords: manip
+Description: A filter function for the coefficient of variation.
+URL: ../../../library/genefilter/html/cv.html
+
+Entry: dist2
+Aliases: dist2
+Keywords: manip
+Description: Calculate an n-by-n matrix by applying a function to pairs of columns of an m-by-n matrix.
+URL: ../../../library/genefilter/html/dist2.html
+
+Entry: eSetFilter
+Aliases: eSetFilter getFilterNames getFuncDesc getRdAsText parseDesc parseArgs setESetArgs isESet showESet
+Keywords: manip
+Description: A function to filter an eSet object
+URL: ../../../library/genefilter/html/eSetFilter.html
+
+Entry: filterfun
+Aliases: filterfun
+Keywords: manip
+Description: Creates a first FALSE exiting function from the list of filter functions it is given.
+URL: ../../../library/genefilter/html/filterfun.html
+
+Entry: findLargest
+Aliases: findLargest
+Keywords: manip
+Description: Find the Entrez Gene ID corresponding to the largest statistic
+URL: ../../../library/genefilter/html/findLargest.html
+
+Entry: gapFilter
+Aliases: gapFilter
+Keywords: manip
+Description: A filter to select genes based on there being a gap.
+URL: ../../../library/genefilter/html/gapFilter.html
+
+Entry: genefilter
+Aliases: genefilter
+Keywords: manip
+Description: A function to filter genes.
+URL: ../../../library/genefilter/html/genefilter.html
+
+Entry: genefinder
+Aliases: genefinder genefinder,ExpressionSet,vector-method genefinder,matrix,vector-method
+Keywords: manip
+Description: Finds genes that have similar patterns of expression.
+URL: ../../../library/genefilter/html/genefinder.html
+
+Entry: genescale
+Aliases: genescale
+Keywords: manip
+Description: Scales a matrix or vector.
+URL: ../../../library/genefilter/html/genescale.html
+
+Entry: half.range.mode
+Aliases: half.range.mode
+Keywords: univar robust
+Description: Mode estimation for continuous data
+URL: ../../../library/genefilter/html/half.range.mode.html
+
+Entry: kOverA
+Aliases: kOverA
+Keywords: manip
+Description: A filter function for k elements larger than A.
+URL: ../../../library/genefilter/html/kOverA.html
+
+Entry: maxA
+Aliases: maxA
+Keywords: manip
+Description: A filter function to filter according to the maximum.
+URL: ../../../library/genefilter/html/maxA.html
+
+Entry: nsFilter
+Aliases: nsFilter varFilter featureFilter nsFilter,ExpressionSet-method
+Keywords: manip
+Description: Non-Specific-ly Filter an ExpressionSet
+URL: ../../../library/genefilter/html/nsFilter.html
+
+Entry: pOverA
+Aliases: pOverA
+Keywords: manip
+Description: A filter function to filter according to the proportion of elements larger than A.
+URL: ../../../library/genefilter/html/pOverA.html
+
+Entry: rowFtests
+Aliases: rowFtests rowFtests,matrix,factor-method rowFtests,ExpressionSet,factor-method rowFtests,ExpressionSet,character-method colFtests colFtests,matrix,factor-method colFtests,ExpressionSet,factor-method colFtests,ExpressionSet,character-method rowttests rowttests,matrix,factor-method rowttests,matrix,missing-method rowttests,ExpressionSet,factor-method rowttests,ExpressionSet,character-method rowttests,ExpressionSet,missing-method colttests colttests,matrix,factor-method colttests,matrix,missing-method colttests,ExpressionSet,factor-method colttests,ExpressionSet,character-method colttests,ExpressionSet,missing-method fastT
+Keywords: math
+Description: t-tests and F-tests for rows or columns of a matrix
+URL: ../../../library/genefilter/html/rowFtests.html
+
+Entry: rowROC-class
+Aliases: rowROC-class pAUC AUC sens spec area pAUC,rowROC,numeric-method plot,rowROC,missing-method AUC,rowROC-method spec,rowROC-method sens,rowROC-method area,rowROC-method show,rowROC-method [,rowROC-method
+Keywords: classes
+Description: Class "rowROC"
+URL: ../../../library/genefilter/html/rowROC-class.html
+
+Entry: rowSds
+Aliases: rowSds rowVars
+Keywords: array manip
+Description: Row variance and standard deviation of a numeric array
+URL: ../../../library/genefilter/html/rowSds.html
+
+Entry: rowpAUCs-methods
+Aliases: rowpAUCs-methods rowpAUCs rowpAUCs,matrix,factor-method rowpAUCs,matrix,numeric-method rowpAUCs,ExpressionSet,ANY-method rowpAUCs,ExpressionSet,character-method
+Keywords: math
+Description: Rowwise ROC and pAUC computation
+URL: ../../../library/genefilter/html/rowpAUCs.html
+
+Entry: shorth
+Aliases: shorth
+Keywords: arith
+Description: A location estimator based on the shorth
+URL: ../../../library/genefilter/html/shorth.html
+
+Entry: tdata
+Aliases: tdata
+Keywords: datasets
+Description: A small test dataset of Affymetrix Expression data.
+URL: ../../../library/genefilter/html/tdata.html
+
+Entry: ttest
+Aliases: ttest
+Keywords: manip
+Description: A filter function for a t.test
+URL: ../../../library/genefilter/html/ttest.html

@@ -1,0 +1,22 @@
+Bundle: VR
+Priority: recommended
+Contains: MASS class nnet spatial
+Version: 7.2-41
+Date: 2008-02-16
+Depends: R (>= 2.4.0), grDevices, graphics, stats, utils
+Suggests: lattice, nlme, survival
+Author: S original by Venables & Ripley. R port by Brian Ripley
+        <ripley@stats.ox.ac.uk>, following earlier work by Kurt Hornik
+        and Albrecht Gebhardt.
+Maintainer: Brian Ripley <ripley@stats.ox.ac.uk>
+BundleDescription: Functions and datasets to support Venables and
+        Ripley, 'Modern Applied Statistics with S' (4th edition).
+License: GPL-2 | GPL-3
+URL: http://www.stats.ox.ac.uk/pub/MASS4/
+Packaged: Sun Feb 17 12:24:00 2008; ripley
+Package: MASS
+Description: The main library and the datasets
+Title: Main Package of Venables and Ripley's MASS
+LazyLoad: yes
+LazyData: yes
+Built: R 2.7.0; i386-apple-darwin9.3.0; 2008-06-26 12:29:06; unix

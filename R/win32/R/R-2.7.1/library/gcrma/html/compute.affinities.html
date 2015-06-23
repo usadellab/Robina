@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Probe Affinity computation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for compute.affinities {gcrma}"><tr><td>compute.affinities {gcrma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Probe Affinity computation</h2>
+
+
+<h3>Description</h3>
+
+<p>
+An internal function to calculate probe affinities from their
+sequences.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+compute.affinities(cdfname,verbose=TRUE)
+
+check.probes(probepackage,cdfname)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>cdfname</code></td>
+<td>
+Object of class <code>character</code> representing the name of
+<code>CDF</code> file associated with the arrays in the <code>AffyBatch</code>.</td></tr>
+<tr valign="top"><td><code>probepackage</code></td>
+<td>
+<code>character</code> representing the name of the
+package with the probe sequence information.</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+Logical value. If <code>TRUE</code> messages about the progress of
+the function is printed.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The affinity of a probe is described as the sum of position-dependent base affinities.
+Each base at each position contributes to the total affinity of a probe
+in an additive fashion. For a given type of base, the positional effect
+is modeled as a spline function with 5 degrees of freedom.
+</p>
+<p>
+<code>check.probes</code> makes sure things are matching as they should.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+<code>compute.affinities</code> returns an <code>AffyBatch</code> with the
+affinities for PM probes in the pm locations and the affinities for MM
+probes in the mm locations. NA  will be added for probes with no
+sequence information.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Rafeal Irizarry
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Hekstra, D., Taussig, A. R., Magnasco, M., and Naef, F. (2003) Absolute mRNA concentrations from sequence-specific calibration of oligonucleotide array. Nucleic Acids Research, 31. 1962-1968.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="gcrma.html">gcrma</a>,<a href="affinity.spline.coefs.html">affinity.spline.coefs</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>gcrma</em> version 2.12.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

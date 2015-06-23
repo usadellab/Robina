@@ -1,0 +1,66 @@
+\HeaderA{fast.bkg}{Internal functions for justGCRMA}{fast.bkg}
+\aliasA{mem.bkg}{fast.bkg}{mem.bkg}
+\keyword{internal}{fast.bkg}
+\begin{Description}\relax
+These are internal functions for justGCRMA that are called based on
+memory or speed constraints.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+fast.bkg(filenames, pm.affinities, mm.affinities, index.affinities,
+type, minimum, optical.correct, verbose, k, rho, correction, stretch,
+fast, cdfname, read.verbose)
+mem.bkg(filenames, pm.affinities, mm.affinities, index.affinities, type,
+minimum, optical.correct, verbose, k, rho, correction, stretch, fast,
+cdfname, read.verbose)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{filenames}] A list of cel files.
+\item[\code{pm.affinities}] Values passed from \code{compute.affinities}.
+\item[\code{mm.affinities}] Values passed from \code{compute.affinities}.
+\item[\code{index.affinities}] Values passed from \code{compute.affinities}.
+\item[\code{type}] "fullmodel" for sequence and MM model. "affinities" for
+sequence information only. "mm" for using MM without sequence
+information.
+\item[\code{minimum}] A minimum value to be used for \code{optical.correct}.
+\item[\code{optical.correct}] Logical value. If \code{TRUE}, optical
+background correction is performed.
+\item[\code{verbose}] Logical value. If \code{TRUE}, messages about the
+progress of the function are printed.
+\item[\code{k}] A tuning factor.
+\item[\code{rho}] correlation coefficient of log background intensity in a pair
+of pm/mm probes. Default=.7
+\item[\code{correction}] 
+\item[\code{stretch}] 
+\item[\code{fast}] Logical value. If \code{TRUE}, then a faster ad hoc
+algorithm is used.
+\item[\code{cdfname}] Used to specify the name of an alternative cdf package. If set to
+\code{NULL}, the usual cdf package based on Affymetrix' mappings
+will be used. Note that the name should not include the 'cdf' on
+the end, and that the corresponding probe package is also required
+to be installed. If either package is missing an error will result.
+\item[\code{read.verbose}] Logical value. If \code{TRUE}, a message is
+returned as each celfile is read in.
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+Note that this expression measure is given to you in log base 2
+scale. This differs from most of the other expression measure
+methods.
+
+The tuning factor 'k' will have different meanings if one uses
+the fast (add-hoc) algorithm or the empirical Bayes approach. See
+Wu et al. (2003)
+\end{Details}
+\begin{Value}
+An \code{ExpressionSet}.
+\end{Value}
+\begin{Author}\relax
+James W. MacDonald <jmacdon@med.umich.edu>
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{gcrma}{gcrma}}
+\end{SeeAlso}
+

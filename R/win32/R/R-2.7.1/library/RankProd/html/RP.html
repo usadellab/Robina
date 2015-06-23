@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Rank Product Analysis of Microarray</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for RP {RankProd}"><tr><td>RP {RankProd}</td><td align="right">R Documentation</td></tr></table>
+<h2>Rank Product Analysis of Microarray</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Perform rank product method to identify differentially 
+expressed genes.
+It is possible to do either a one-class or two-class analysis.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+    RP(data,cl,num.perm=100,logged=TRUE,
+       na.rm=FALSE,gene.names=NULL,plot=FALSE, rand=NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+the data set that should be analyzed. Every 
+row of this data set must correspond to a gene.</td></tr>
+<tr valign="top"><td><code>cl</code></td>
+<td>
+a vector containing the class labels of the samples.
+In the two class unpaired case, the label of a 
+sample is either 0 (e.g., control group) or 1 
+(e.g., case group). For one class  data, the label for 
+each sample should be 1.</td></tr>
+<tr valign="top"><td><code>num.perm</code></td>
+<td>
+number of permutations used in the 
+calculation of the null density. Default is 'num.perm=100'.</td></tr>
+<tr valign="top"><td><code>logged</code></td>
+<td>
+if "TRUE", data has bee logged, otherwise set it 
+to "FALSE"</td></tr>
+<tr valign="top"><td><code>na.rm</code></td>
+<td>
+if 'FALSE' (default), the NA value will not
+be used in computing rank. If 'TRUE', the missing 
+values will be replaced by the gene-wise mean of
+the non-missing values. Gene with all values missing 
+will be assigned "NA"</td></tr>
+<tr valign="top"><td><code>gene.names</code></td>
+<td>
+if "NULL", no gene name will be assigned 
+to the estimated percentage of 
+false positive predictions (pfp).</td></tr>
+<tr valign="top"><td><code>plot</code></td>
+<td>
+If "TRUE", plot the estimated pfp verse the 
+rank of each gene.</td></tr>
+<tr valign="top"><td><code>rand</code></td>
+<td>
+if specified, the random number generator will 
+be put in a reproducible state using the rand value as seed.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+A result of identifying differentially expressed genes 
+between two classes. The identification consists of two parts,
+the identification of  up-regulated  and down-regulated genes in 
+class 2 compared to class 1, respectively.
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>pfp</code></td>
+<td>
+estimated percentage of false positive predictions
+(pfp) up to  the position of each gene under two 
+identificaiton each</td></tr>
+<tr valign="top"><td><code>pval</code></td>
+<td>
+estimated pvalue for each gene being up- and down-regulated</td></tr>
+<tr valign="top"><td><code>RPs</code></td>
+<td>
+Original rank-product of each genes for two 
+dentificaiton each </td></tr>
+<tr valign="top"><td><code>RPrank</code></td>
+<td>
+rank of the rank product of each genes</td></tr>
+<tr valign="top"><td><code>Orirank</code></td>
+<td>
+original rank in each comparison, which 
+is used to construct rank product</td></tr>
+<tr valign="top"><td><code>AveFC</code></td>
+<td>
+fold change of average expression under class 1 over 
+that under class 2. log-fold change if data is in log 
+scaled, original fold change if data is unlogged. </td></tr>
+</table>
+
+<h3>Note</h3>
+
+<p>
+Percentage of false prediction (pfp), in theory, is 
+equivalent of false 
+discovery rate (FDR), and it is possible to be large than 1.
+</p>
+<p>
+The function looks for up- and down- regulated genes in two
+seperate steps, thus two pfps and pvalues are computed and used to identify 
+gene that belong to each group.   
+</p>
+<p>
+This function is suitable to deal with data from a 
+single origin, e.g. single  experiment. If the data has 
+different origin, e.g. generated at different 
+laboratories, please refer RP.advance.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Fangxin Hong <a href="mailto:fhong@salk.edu">fhong@salk.edu</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Breitling, R., Armengaud, P., Amtmann, A., and Herzyk, 
+P.(2004) Rank Products:A simple, yet powerful, new method to 
+detect differentially regulated genes in
+replicated microarray experiments, <EM>FEBS Letter</EM>, 57383-92
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="topGene.html">topGene</a></code>   <code><a href="RPadvance.html">RPadvance</a></code>  
+<code><a href="plotRP.html">plotRP</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>     
+      # Load the data of Golub et al. (1999). data(golub) 
+      # contains a 3051x38 gene expression
+      # matrix called golub, a vector of length called golub.cl 
+      # that consists of the 38 class labels,
+      # and a matrix called golub.gnames whose third column 
+      # contains the gene names.
+      data(golub)
+
+ 
+      #use a subset of data as example, apply the rank 
+      #product method
+      subset &lt;- c(1:4,28:30)
+      #Setting rand=123, to make the results reproducible,
+
+      RP.out &lt;- RP(golub[,subset],golub.cl[subset],rand=123) 
+      
+      # class 2: label =1, class 1: label = 0
+      #pfp for identifying genes that are up-regulated in class 2 
+      #pfp for identifying genes that are down-regulated in class 2 
+      head(RP.out$pfp)
+  
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>RankProd</em> version 2.12.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

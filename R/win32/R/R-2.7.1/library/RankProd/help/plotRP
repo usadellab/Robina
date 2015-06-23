@@ -1,0 +1,62 @@
+plotRP               package:RankProd               R Documentation
+
+_G_r_a_p_h_i_c_a_l _D_i_s_p_l_a_y _o_f _t_h_e _R_a_n_k _P_r_o_d_u_c_t/_S_u_m _a_n_a_l_y_s_i_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Plot a graphical display of the estimated pfp vs  number of
+     identified genes
+
+_U_s_a_g_e:
+
+          plotRP(x, cutoff=NULL)
+
+_A_r_g_u_m_e_n_t_s:
+
+       x: the value returned by function RP,  RPadvance or RSadvance 
+
+  cutoff: threshold in pfp used to select genes
+
+_V_a_l_u_e:
+
+     A graphical display of the estimated pfp vs number of  identified
+     genes, which is also the gene rank of its  original rank
+     product/sum across all comparison. If cutoff  is sepcified, a
+     horizontal line will be plotted on the  graphic to indicate the
+     positon of the cutoff point, and  all genes identified will be
+     marked red.
+
+     Two plots will be displayed, one for the identification of 
+     up-regulated genes in class 2, one for the identification of 
+     down-regulated genes in class 2
+
+_A_u_t_h_o_r(_s):
+
+     Fangxin Hong fhong@salk.edu
+
+_S_e_e _A_l_s_o:
+
+     'topGene'   'RP'   'RPadvance' 'RSadvance'
+
+_E_x_a_m_p_l_e_s:
+
+          
+           # Load the data of Golub et al. (1999). data(golub) 
+           #contains a 3051x38 gene expression
+           # matrix called golub, a vector of length called golub.cl 
+           #that consists of the 38 class labels,
+           # and a matrix called golub.gnames whose third column contains the gene names.
+           data(golub)
+      
+           #use a subset of data as example, apply the rank product method
+           subset <- c(1:4,28:30)
+           #Setting rand=123, to make the results reproducible,
+
+           #identify genes that are up-regulated in class 2 
+           #(class label =1)
+           RP.out <- RP(golub[,subset],golub.cl[subset], rand=123)
+           
+           #plot the results
+           plotRP(RP.out,cutoff=0.05)
+           
+

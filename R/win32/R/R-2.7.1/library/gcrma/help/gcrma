@@ -1,0 +1,99 @@
+gcrma                 package:gcrma                 R Documentation
+
+_R_o_b_u_s_t _M_u_l_t_i-_A_r_r_a_y _e_x_p_r_e_s_s_i_o_n _m_e_a_s_u_r_e _u_s_i_n_g _s_e_q_u_e_n_c_e _i_n_f_o_r_m_a_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function converts an 'AffyBatch' into an 'ExpressionSet'
+     using the robust multi-array average (RMA) expression measure with
+     help of probe sequence.
+
+_U_s_a_g_e:
+
+     gcrma(object,affinity.info=NULL,
+           affinity.source=c("reference","local"),NCprobe=NULL,
+           type=c("fullmodel","affinities","mm","constant"),
+           k=6*fast+0.5*(1-fast),stretch=1.15*fast+1*(1-fast),correction=1,
+           GSB.adjust=TRUE,
+           rho=.7,optical.correct=TRUE,verbose=TRUE,fast=TRUE,
+           subset=NULL,normalize=TRUE,...)
+
+_A_r_g_u_m_e_n_t_s:
+
+  object: an 'AffyBatch'
+
+affinity.info: 'NULL' or an 'AffyBatch' containing the affinities in
+          the 'exprs' slot. This object can be created using the
+          function 'compute.affinities'.
+
+affinity.source: 'reference': use the package internal Non-specific
+          binding data or 'local': use the experimental data in
+          'object'. If 'local' is chosen, either MM probes or a
+          user-defined list of probes (see 'NCprobes') are used to
+          estimate affinities.
+
+ NCprobe: Index of negative control probes. When set as 'NULL',the MM
+          probes will be used. These probes are used to estimate
+          parameters of non-specific binding on each array. These will
+          be also used to estimate probe affinity profiles when
+          affinity.info is not provided.
+
+    type: "fullmodel" for sequence and MM model. "affinities" for
+          sequence information only. "mm" for using MM without sequence
+          information.
+
+       k: A tuning factor.
+
+ stretch: 
+
+correction: .
+
+GSB.adjust: Logical value. If 'TRUE', probe effects in specific binding
+          will be adjusted.
+
+     rho: correlation coefficient of log background intensity in a pair
+          of pm/mm probes. Default=.7
+
+optical.correct: Logical value. If 'TRUE', optical background
+          correction is performed.
+
+ verbose: Logical value. If 'TRUE' messages about the progress of the
+          function is printed.
+
+    fast: Logical value. If 'TRUE' a faster ad hoc algorithm is used.
+
+  subset: a character vector with the the names of the probesets to be
+          used in expression calculation.
+
+normalize: logical value. If 'TRUE' normalize data using quantile
+          normalization.
+
+     ...: further arguments to be passed (not currently implemented -
+          stub for future use).
+
+_D_e_t_a_i_l_s:
+
+     Note that this expression measure is given to you in log base 2
+     scale. This differs from most of the other expression measure
+     methods.
+
+     The tuning factor 'k' will have different meanings if one uses the
+     fast (add-hoc) algorithm or the empirical Bayes approach. See Wu
+     et al. (2003)
+
+_V_a_l_u_e:
+
+     An 'ExpressionSet'.
+
+_A_u_t_h_o_r(_s):
+
+     Rafeal Irizarry
+
+_E_x_a_m_p_l_e_s:
+
+     if(require(affydata) & require(hgu95av2probe) & require(hgu95av2cdf)){
+          data(Dilution)
+          ai <- compute.affinities(cdfName(Dilution))
+          Dil.expr<-gcrma(Dilution,affinity.info=ai,type="affinities")
+     }
+

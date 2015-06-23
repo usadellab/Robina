@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Scale normalization for expreSets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for affy.scalevalue.exprSet {affy}"><tr><td>affy.scalevalue.exprSet {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Scale normalization for expreSets</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Normalizes expression values using the method described in the
+Affymetrix user manual.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+affy.scalevalue.exprSet(eset, sc = 500, analysis="absolute")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>eset</code></td>
+<td>
+An <code><a href="../../Biobase/html/class.ExpressionSet.html">ExpressionSet</a></code> object.</td></tr>
+<tr valign="top"><td><code>sc</code></td>
+<td>
+Value at which all arrays will be scaled to.</td></tr>
+<tr valign="top"><td><code>analysis</code></td>
+<td>
+Should we do absolute or comparison analysis, although
+"comparison" is still not implemented.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This is function was implemented from the Affymetrix technical
+documentation for MAS 5.0. It can be downloaded from the website of
+the company. Please refer to this document for details.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A normalized <code><a href="../../Biobase/html/class.ExpressionSet.html">ExpressionSet</a></code></p>
+
+<h3>Author(s)</h3>
+
+<p>
+Laurent
+</p>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

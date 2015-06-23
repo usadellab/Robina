@@ -1,0 +1,67 @@
+PairComp-class          Class "PairComp" Represents the results of
+                        pairwise comparison between two experimental
+                        factors
+QCStats-class           Class "QCStats"
+all.present             Filter by PMA call
+all.present.in.group    Filter by PMA call
+bg.correct.sa           Simpleaffy Implementation of Mas5 Background
+                        Correction
+blue.white.red.cols     Generate colourings for heatmaps
+call.exprs              Generate Expression Summaries for Affymetrix
+                        Data
+detection.p.val         Calculate Detection p-values
+get.annotation          Get annotation data for a gene list
+get.array.indices       Find arrays in an AffyBatch object defined by
+                        their phenoData
+get.array.subset        Get a subset of arrays from an affybatch
+                        object, split by phnotypic data
+get.array.subset.affybatch
+                        Get a subset of arrays from an affybatch
+                        object, split by phnotypic data
+get.fold.change.and.t.test
+                        Compute fold change and t-test statistics
+                        between two experimental groups
+hmap.eset               Draw a heatmap from an AffyBatch object
+hmap.pc                 Draw a heatmap from an PairComp object
+journalpng              Produce a device for producing artwork for
+                        presentations and journals
+justMAS                 Generate Expression calls using a C
+                        implementation of the MAS 5.0 Algorithm
+pairwise.comparison     Compute pairwise comparison statistics between
+                        two experimental groups
+pairwise.filter         Filter pairwise comparison statistics between
+                        two experimental groups
+plot.pairwise.comparison
+                        Plots a PairComp object
+plot.qc.stats           Plots a QCStats object
+qc                      Generate QC stats from an AffyBatch object
+qc.affy                 Generate Affymetrix Style QC Statistics
+qc.get.alpha1           Get or set the alpha values for the current QC
+                        environment
+qc.get.array            Get or set the name of the array for which the
+                        current QC environment is valid. Currently not
+                        used for anything important; is a free text
+                        identifier.
+qc.get.probes           Retrieve QC probeset names for the current
+                        array type
+qc.get.ratios           Retrieve pairs of probesets used for
+                        calculating 3'/5' ratios
+qc.get.spikes           Retrieve QC spike probeset names for the
+                        current array type
+qc.have.params          Does simpleaffy have a QC definition file for
+                        the specified array?
+qc.ok                   Has simpleaffy's QC environment been set up?
+qc.read.file            Read a file defining the QC parameters for a
+                        specified array and set up the QC Environment
+qcs                     an example QC Stats object
+read.affy               Read a Set of .CEL Files and Phenotypic Data
+read.affy.mixed         Read a Set of .CEL Files and Phenotypic Data
+                        from mixed chip types
+setQCEnvironment        Establish the appropriate QC environment for
+                        the specified array
+simpleaffy-deprecated   Does simpleaffy have a QC definition file for
+                        the specified array?
+standard.pearson        A clustering function based on pearson
+                        correlation
+trad.scatter.plot       Does a Traditional Scatter Plot of Expression
+                        Data

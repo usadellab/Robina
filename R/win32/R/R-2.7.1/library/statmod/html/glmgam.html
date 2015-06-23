@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Gamma Generalized Linear Model with Identity Link</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for glmgam.fit {statmod}"><tr><td>glmgam.fit {statmod}</td><td align="right">R Documentation</td></tr></table>
+<h2>Gamma Generalized Linear Model with Identity Link</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Estimates a gamma generalized linear model with identity link using Fisher scoring with Levenberg damping.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+glmgam.fit(X, y, start=NULL, tol=1e-6, maxit=50, trace=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>X</code></td>
+<td>
+design matrix, assumed to be of full column rank.  Missing values not allowed.</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+numeric vector of responses. Negative or missing values not allowed.</td></tr>
+<tr valign="top"><td><code>start</code></td>
+<td>
+numeric vector of starting values for the regression coefficients</td></tr>
+<tr valign="top"><td><code>tol</code></td>
+<td>
+small positive numeric value giving convergence tolerance</td></tr>
+<tr valign="top"><td><code>maxit</code></td>
+<td>
+maximum number of iterations allowed</td></tr>
+<tr valign="top"><td><code>trace</code></td>
+<td>
+logical value. If <code>TRUE</code> then output diagnostic information at each iteration.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function is similar to <code>glm.fit(X,y,family=Gamma(link="identity"))</code> but has more secure convergence.
+</p>
+<p>
+This function is used by <code><a href="mixedmodel.html">mixedModel2Fit</a></code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+List with the following components:
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>coefficients</code></td>
+<td>
+numeric vector of regression coefficients</td></tr>
+<tr valign="top"><td><code>fitted</code></td>
+<td>
+numeric vector of fitted values</td></tr>
+<tr valign="top"><td><code>deviance</code></td>
+<td>
+residual deviance</td></tr>
+<tr valign="top"><td><code>maxit</code></td>
+<td>
+input maximum number of iterations</td></tr>
+<tr valign="top"><td><code>iter</code></td>
+<td>
+number of iterations used to convergence. If convergence was not achieved then <code>iter</code> is set to <code>maxit+1</code>.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+y &lt;- rgamma(10,shape=5)
+X &lt;- cbind(1,1:10)
+fit &lt;- glmgam.fit(X,y,trace=TRUE)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>statmod</em> version 1.3.8 <a href="00Index.html">Index]</a></div>
+
+</body></html>

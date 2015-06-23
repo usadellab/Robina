@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="figure_1.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="349.53268"
+     inkscape:cy="654.02221"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1096"
+     inkscape:window-x="1"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.81786358000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3242"
+       width="591.61072"
+       height="567.32501"
+       x="47.051788"
+       y="117.2711"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ffcccc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path2383"
+       sodipodi:cx="198.57143"
+       sodipodi:cy="320.93362"
+       sodipodi:rx="138.57143"
+       sodipodi:ry="140"
+       d="M 337.14285,320.93362 A 138.57143,140 0 1 1 60,320.93362 A 138.57143,140 0 1 1 337.14285,320.93362 z"
+       transform="translate(42.927685,-3.1955094)"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       d="M 337.14285,320.93362 A 138.57143,140 0 1 1 60,320.93362 A 138.57143,140 0 1 1 337.14285,320.93362 z"
+       sodipodi:ry="140"
+       sodipodi:rx="138.57143"
+       sodipodi:cy="320.93362"
+       sodipodi:cx="198.57143"
+       id="path3155"
+       style="opacity:1;fill:#ccffcc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:type="arc"
+       transform="translate(241.21565,-3.7191042)"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       transform="translate(144.55827,160.66365)"
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ccccff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3157"
+       sodipodi:cx="198.57143"
+       sodipodi:cy="320.93362"
+       sodipodi:rx="138.57143"
+       sodipodi:ry="140"
+       d="M 337.14285,320.93362 A 138.57143,140 0 1 1 60,320.93362 A 138.57143,140 0 1 1 337.14285,320.93362 z"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       style="opacity:1;fill:#ffccff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 342.97322,341.26396 C 276.02219,341.26396 220.0973,389.3012 207.19197,453.10771 C 218.11578,455.90774 229.53515,457.38896 241.31697,457.38896 C 308.268,457.38896 364.1929,409.35171 377.09822,345.54521 C 366.17411,342.74502 354.75539,341.26396 342.97322,341.26396 z"
+       id="path3186"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       style="opacity:1;fill:#ffffcc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 340.26786,219.38897 C 316.03584,244.60319 301.08036,278.96454 301.08036,316.85772 C 301.08036,355.01311 316.23875,389.62845 340.76786,414.88897 C 364.99988,389.67475 379.95536,355.28214 379.95536,317.38897 C 379.95536,279.23358 364.79697,244.64949 340.26786,219.38897 z"
+       id="path3189"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       style="opacity:1;fill:#ccffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 342.97322,341.5653 C 329.52931,341.5653 316.51798,343.51436 304.22322,347.1278 C 317.81059,410.03119 373.31274,457.15904 439.62947,457.15905 C 453.07338,457.15905 466.05346,455.20999 478.34822,451.59655 C 464.76084,388.69316 409.28993,341.56529 342.97322,341.5653 z"
+       id="path3192"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 342.97322,341.26396 C 329.52931,341.26396 316.51798,343.21303 304.22322,346.82647 C 309.8763,372.99768 322.80259,396.43399 340.72322,414.88897 C 358.79143,396.0884 371.70754,372.19784 377.09822,345.54522 C 366.17411,342.74502 354.75539,341.26396 342.97322,341.26396 z"
+       id="path3183"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="174.0714"
+       y="305.17712"
+       id="text3194"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan3196"
+         x="174.0714"
+         y="305.17712"
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">418</tspan></text>
+    <text
+       id="text3198"
+       y="305.17712"
+       x="453.14163"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+         y="305.17712"
+         x="453.14163"
+         id="tspan3200"
+         sodipodi:role="line">200</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="318.2489"
+       y="563.6842"
+       id="text3202"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan3204"
+         x="318.2489"
+         y="563.6842"
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">234</tspan></text>
+    <text
+       id="text3206"
+       y="418.43066"
+       x="246.38573"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+         y="418.43066"
+         x="246.38573"
+         id="tspan3208"
+         sodipodi:role="line">325</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="376.07709"
+       y="418.43066"
+       id="text3210"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan3212"
+         x="376.07709"
+         y="418.43066"
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">315</tspan></text>
+    <text
+       id="text3214"
+       y="371.61682"
+       x="314.62106"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+         y="371.61682"
+         x="314.62106"
+         id="tspan3216"
+         sodipodi:role="line">153</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="315.66672"
+       y="310.99005"
+       id="text3218"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan3220"
+         x="315.66672"
+         y="310.99005"
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">357</tspan></text>
+    <text
+       id="text3226"
+       y="161.74855"
+       x="75.64283"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         y="161.74855"
+         x="75.64283"
+         id="tspan3228"
+         sodipodi:role="line">Leaf - Root</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="418.35712"
+       y="161.74855"
+       id="text3230"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan3232"
+         x="418.35712"
+         y="161.74855"
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Bold">Leaf - Flower</tspan></text>
+    <text
+       id="text3234"
+       y="658.17706"
+       x="245.23808"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         y="658.17706"
+         x="245.23808"
+         id="tspan3236"
+         sodipodi:role="line">Flower - Root</tspan></text>
+    <text
+       id="text3238"
+       y="641.54132"
+       x="527.22449"
+       style="font-size:10.12535477px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/figures/figure_1_new.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         style="font-size:30.3760643px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+         y="641.54132"
+         x="527.22449"
+         id="tspan3240"
+         sodipodi:role="line">10531</tspan></text>
+  </g>
+</svg>

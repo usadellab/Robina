@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Create objects of class marrayInfo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for read.marrayInfo {marray}"><tr><td>read.marrayInfo {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Create objects of class marrayInfo</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function creates objects of class <code><a href="marrayInfo-class.html">marrayInfo</a></code>. The <code><a href="marrayInfo-class.html">marrayInfo</a></code> class is used to store
+information regarding the target mRNA samples co-hybridized on the arrays or
+the spotted probe sequences (e.g. data frame of gene names, annotations, and other identifiers).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+read.marrayInfo(fname, info.id=NULL, labels=NULL, notes=fname, sep="\t",skip=0, quote="\"", ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>fname</code></td>
+<td>
+the name of the file that stores information on target samples or probe sequences. This is usually a file obtained from a database.</td></tr>
+<tr valign="top"><td><code>info.id</code></td>
+<td>
+the column numbers in <code>fname</code> that contain the
+required information.</td></tr>
+<tr valign="top"><td><code>labels</code></td>
+<td>
+the column number in <code>fname</code> which contains the names that the user would like to use to label spots or arrays (e.g. for default titles in <code><a href="maPlot.html">maPlot</a></code>.</td></tr>
+<tr valign="top"><td><code>notes</code></td>
+<td>
+object of class character, vector of explanatory text</td></tr>
+<tr valign="top"><td><code>sep</code></td>
+<td>
+the field separator character.  Values on each line of the
+file are separated by this character. The
+default is to read a tab delimited file.</td></tr>
+<tr valign="top"><td><code>skip</code></td>
+<td>
+the number of lines of the data file to skip before
+beginning to read data.</td></tr>
+<tr valign="top"><td><code>quote</code></td>
+<td>
+the set of quoting characters. By default, this is disable
+by setting `quote="""'.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+further arguments to <code><a href="../../base/html/scan.html">scan</a></code>.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+An object of class <code><a href="marrayInfo-class.html">marrayInfo</a></code>.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yang, <a href="mailto:yeehwa@stat.berkeley.edu">yeehwa@stat.berkeley.edu</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+http://www.bioconductor.org/
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+datadir &lt;- system.file("swirldata", package="marray")
+
+## Reading target sample information
+swirl.samples &lt;- read.marrayInfo(file.path(datadir, "SwirlSample.txt"))
+
+## Reading probe sequence information
+swirl.gnames &lt;- read.marrayInfo(file.path(datadir, "fish.gal"),
+                                info.id=4:5, labels=5, skip=21)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

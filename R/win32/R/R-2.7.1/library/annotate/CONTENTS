@@ -1,0 +1,329 @@
+Entry: ACCNUMStats
+Aliases: ACCNUMStats whatACC
+Keywords: misc
+Description: Provides statistics on the types of ids used for the ACCNUM environment of a given data package
+URL: ../../../library/annotate/html/ACCNUMStats.html
+
+Entry: GO2heatmap
+Aliases: GO2heatmap KEGG2heatmap KEGG2heatmap,character,eSet,character-method KEGG2heatmap,character,matrix,character-method
+Keywords: manip
+Description: Compute a heatmap for the specified data, for either a GO category or a KEGG pathway.
+URL: ../../../library/annotate/html/GO2heatmap.html
+
+Entry: GOmnplot
+Aliases: GOmnplot KEGGmnplot KEGGmnplot,character,eSet,character-method KEGGmnplot,character,matrix,character-method
+Keywords: manip
+Description: A function to plot by group means against each other.
+URL: ../../../library/annotate/html/GOmnplot.html
+
+Entry: HTMLPage-class
+Aliases: HTMLPage-class HTMLPage FramedHTMLPage FramedHTMLPage-class fileName mainPage sidePage pageText toFile topPage pageTitle HTMLPage,HTMLPage-method FramedHTMLPage,HTMLPage-method fileName,HTMLPage-method mainPage,HTMLPage-method sidePage,HTMLPage-method pageText,HTMLPage-method toFile,HTMLPage-method topPage,HTMLPage-method pageTitle,HTMLPage-method show,HTMLPage-method initialize,FramedHTMLPage-method mainPage,FramedHTMLPage-method show,FramedHTMLPage-method sidePage,FramedHTMLPage-method toFile,FramedHTMLPage-method topPage,FramedHTMLPage-method
+Keywords: classes
+Description: Classes to represent HTML pages
+URL: ../../../library/annotate/html/HTMLPage-class.html
+
+Entry: LL2homology
+Aliases: LL2homology HGID2homology ACC2homology
+Keywords: misc
+Description: Functions that find the homology data for a given set of LocusLink ids or HomoloGeneIDs
+URL: ../../../library/annotate/html/LL2homology.html
+
+Entry: PMIDAmat
+Aliases: PMIDAmat
+Keywords: manip
+Description: A function to compute the probe to PubMed id incidence matrix.
+URL: ../../../library/annotate/html/PMIDAmat.html
+
+Entry: PWAmat
+Aliases: PWAmat
+Keywords: manip
+Description: A function to compute the probe to KEGG pathway incidence matrix.
+URL: ../../../library/annotate/html/PWAmat.html
+
+Entry: UniGeneQuery
+Aliases: UniGeneQuery
+Keywords: interface
+Description: Create a Query String for a UniGene Identifier
+URL: ../../../library/annotate/html/UniGeneQuery.html
+
+Entry: accessionToUID
+Aliases: accessionToUID
+Keywords: interface
+Description: A function to convert accession values to NCBI UIDs.
+URL: ../../../library/annotate/html/accessionToUID.html
+
+Entry: annPkgName
+Aliases: annPkgName
+Keywords: manip
+Description: Get annotation package name from chip name
+URL: ../../../library/annotate/html/annPkgName.html
+
+Entry: aqListGOIDs
+Aliases: aqListGOIDs
+Keywords: manip
+Description: List GO Identifiers by GO Ontology
+URL: ../../../library/annotate/html/aqListGOIDs.html
+
+Entry: buildChromLocation
+Aliases: buildChromLocation
+Keywords: utilities
+Description: A function to generate an instantiation of a chromLocation class
+URL: ../../../library/annotate/html/buildChromLocation.html
+
+Entry: buildPubMedAbst
+Aliases: buildPubMedAbst
+Keywords: utilities
+Description: A function to generate an instantiation of a pubMedAbst class
+URL: ../../../library/annotate/html/buildPubMedAbst.html
+
+Entry: chrCats
+Aliases: chrCats createLLChrCats createMAPIncMat
+Keywords: data
+Description: Returns a list of chromosome locations from a MAP environment
+URL: ../../../library/annotate/html/chrCats.html
+
+Entry: chromLocation-class
+Aliases: chromLocation-class organism dataSource nChrom chromNames chromLocs chromLengths probesToChrom geneSymbols chromInfo organism,chromLocation-method dataSource,chromLocation-method nChrom,chromLocation-method chromNames,chromLocation-method chromLocs,chromLocation-method chromLengths,chromLocation-method probesToChrom,chromLocation-method geneSymbols,chromLocation-method chromInfo,chromLocation-method show,chromLocation-method
+Keywords: classes
+Description: Class chromLocation, a class for describing genes and their chromosome mappings.
+URL: ../../../library/annotate/html/chromLocation-class.html
+
+Entry: compatibleVersions
+Aliases: compatibleVersions
+Keywords: misc
+Description: function to check to see if the packages represented by the names passed have the same version number
+URL: ../../../library/annotate/html/compatibleVersions.html
+
+Entry: dropECode
+Aliases: dropECode
+Keywords: manip
+Description: Drop GO labels for specified Evidence Codes
+URL: ../../../library/annotate/html/dropECode.html
+
+Entry: filterGOByOntology
+Aliases: filterGOByOntology
+Keywords: manip
+Description: Filter GO terms by a specified GO ontology
+URL: ../../../library/annotate/html/filterGOByOntology.html
+
+Entry: findNeighbors
+Aliases: findNeighbors checkArgs findChr4LL getValidChr getBoundary weightByConfi
+Keywords: manip
+Description: A function to locate neighboring genes within a defined range around a target gene represented by a Entrez Gene ID
+URL: ../../../library/annotate/html/findNeighbors.html
+
+Entry: genbank
+Aliases: genbank
+Keywords: interface
+Description: A function to open the browser to Genbank with the selected gene.
+URL: ../../../library/annotate/html/genbank.html
+
+Entry: genelocator
+Aliases: genelocator
+Keywords: iplot
+Description: A function to identify genes by their LocusLink (or other id).
+URL: ../../../library/annotate/html/genelocator.html
+
+Entry: getAnnMap
+Aliases: getAnnMap
+Keywords: manip
+Description: Get annotation map
+URL: ../../../library/annotate/html/getAnnMap.html
+
+Entry: getEvidence
+Aliases: getEvidence
+Keywords: manip
+Description: Get the Evidence codes for a set of GO terms.
+URL: ../../../library/annotate/html/getEvidence.html
+
+Entry: getGOTerm
+Aliases: getGOTerm getGOParents getGOChildren getGOOntology
+Keywords: manip
+Description: Functions to Access GO data.
+URL: ../../../library/annotate/html/getGOTerm.html
+
+Entry: getOntology
+Aliases: getOntology
+Keywords: manip
+Description: Get GO terms for a specified ontology
+URL: ../../../library/annotate/html/getOntology.html
+
+Entry: getPMInfo
+Aliases: getPMInfo
+Keywords: models
+Description: extract publication details and abstract from annotate::pubmed function output
+URL: ../../../library/annotate/html/getPMInfo.html
+
+Entry: getSYMBOL
+Aliases: getSYMBOL getGO getGOdesc getPMID getLL getEG lookUp getUniqAnnItem
+Keywords: manip
+Description: Functions to deal with Data Packages
+URL: ../../../library/annotate/html/getSYMBOL.html
+
+Entry: getSEQ
+Aliases: getGI getSEQ
+Keywords: misc
+Description: Queries the NCBI database to obtain the sequence for a given GenBank Accession number
+URL: ../../../library/annotate/html/getSeq4Acc.html
+
+Entry: getQueryLink
+Aliases: getQueryLink getQuery4UG getQuery4SP getQuery4OMIM getQuery4LL getQuery4GB getQuery4Affy getQuery4FB getQuery4EN getCells getTDRows getQuery4TR
+Keywords: manip
+Description: Functions to create hypertext links that can be placed in a table cell of a HTML file
+URL: ../../../library/annotate/html/getTDRows.html
+
+Entry: hasGOannote
+Aliases: hasGOannote
+Keywords: manip
+Description: Check for GO annotation
+URL: ../../../library/annotate/html/hasGOannote.html
+
+Entry: hgByChroms
+Aliases: hgByChroms
+Keywords: datasets
+Description: A dataset to show the human genome base pair locations per chromosome.
+URL: ../../../library/annotate/html/hgByChroms.html
+
+Entry: hgCLengths
+Aliases: hgCLengths
+Keywords: datasets
+Description: A dataset which contains the lengths (in base pairs) of the human chromosomes.
+URL: ../../../library/annotate/html/hgCLengths.html
+
+Entry: hgu95AProbLocs
+Aliases: hgu95AProbLocs
+Keywords: methods
+Description: chromLocation instance hgu95AProbLocs, an example of a chromLocation object
+URL: ../../../library/annotate/html/hgu95AProbLocs.html
+
+Entry: hgu95Achroloc
+Aliases: hgu95Achroloc
+Keywords: datasets
+Description: Annotation data for the Affymetrix HGU95A GeneChip
+URL: ../../../library/annotate/html/hgu95Achroloc.html
+
+Entry: hgu95Achrom
+Aliases: hgu95Achrom
+Keywords: datasets
+Description: Annotation data for the Affymetrix HGU95A GeneChip
+URL: ../../../library/annotate/html/hgu95Achrom.html
+
+Entry: hgu95All
+Aliases: hgu95All
+Keywords: datasets
+Description: Annotation data for the Affymetrix HGU95A GeneChip
+URL: ../../../library/annotate/html/hgu95All.html
+
+Entry: hgu95Asym
+Aliases: hgu95Asym
+Keywords: datasets
+Description: Annotation data for the Affymetrix HGU95A GeneChip
+URL: ../../../library/annotate/html/hgu95Asym.html
+
+Entry: homoData-class
+Aliases: homoData-class homoData homoLL homoOrg homoType homoURL homoACC homoHGID homoPS orgNameNCode homoPS,homoData-method homoLL,homoData-method homoOrg,homoData-method homoType,homoData-method homoURL,homoData-method homoACC,homoData-method homoHGID,homoData-method show,homoData-method
+Keywords: classes
+Description: Class "homoData"
+URL: ../../../library/annotate/html/homoData-class.html
+
+Entry: htmlpage
+Aliases: htmlpage
+Keywords: manip
+Description: Functions to build HTML pages
+URL: ../../../library/annotate/html/htmlpage.html
+
+Entry: makeAnchor
+Aliases: makeAnchor
+Keywords: utilities
+Description: A Function To Generate HTML Anchors
+URL: ../../../library/annotate/html/makeAnchor.html
+
+Entry: mapOrgs
+Aliases: mapOrgs getOrgNameNCode
+Keywords: manip
+Description: Functions to map to organism IDs used by NCBI homology.
+URL: ../../../library/annotate/html/mapOrgs.html
+
+Entry: neighborGeneFinder
+Aliases: neighborGeneFinder
+Keywords: interface
+Description: A widget for locating genes neighboring a target gene
+URL: ../../../library/annotate/html/neighborGeneFinder.html
+
+Entry: p2LL
+Aliases: p2LL
+Keywords: manip
+Description: A function to map from probes to unique Entrez Gene IDs
+URL: ../../../library/annotate/html/p2LL.html
+
+Entry: pm.abstGrep
+Aliases: pm.abstGrep
+Keywords: manip
+Description: An interface to grep for PubMed abstracts.
+URL: ../../../library/annotate/html/pm.abstGrep.html
+
+Entry: pm.getabst
+Aliases: pm.getabst
+Keywords: manip
+Description: Obtain the abstracts for a set PubMed list.
+URL: ../../../library/annotate/html/pm.getabst.html
+
+Entry: pm.titles
+Aliases: pm.titles
+Keywords: manip
+Description: Obtain the titles of the PubMed abstracts.
+URL: ../../../library/annotate/html/pm.titles.html
+
+Entry: pmAbst2HTML
+Aliases: pmAbst2HTML
+Keywords: utilities
+Description: HTML Generation for PubMed Abstracts
+URL: ../../../library/annotate/html/pmAbst2HTML.html
+
+Entry: pmid2MIAME
+Aliases: pmid2MIAME
+Keywords: models
+Description: use web to populate MIAME instance with pubmed details
+URL: ../../../library/annotate/html/pmid2MIAME.html
+
+Entry: pmidQuery
+Aliases: pmidQuery
+Keywords: interface
+Description: A function to query PubMed
+URL: ../../../library/annotate/html/pmidQuery.html
+
+Entry: probesByLL
+Aliases: probesByLL
+Keywords: manip
+Description: A function that does reverse the mappings between probe ids and the corresponding values
+URL: ../../../library/annotate/html/probesByLL.html
+
+Entry: pubMedAbst-class
+Aliases: pubMedAbst-class pubMedAbst authors abstText articleTitle journal pubDate abstUrl pmid pubMedAbst,pubMedAbst-method authors,pubMedAbst-method abstText,pubMedAbst-method articleTitle,pubMedAbst-method journal,pubMedAbst-method pubDate,pubMedAbst-method abstUrl,pubMedAbst-method pmid,pubMedAbst-method show,pubMedAbst-method
+Keywords: classes
+Description: Class pubMedAbst, a class to handle PubMed abstracts, and methods for processing them.
+URL: ../../../library/annotate/html/pubMedAbst-class.html
+
+Entry: pubmed
+Aliases: pubmed
+Keywords: interface
+Description: A function to open the browser to Pubmed with the selected gene.
+URL: ../../../library/annotate/html/pubmed.html
+
+Entry: readGEOAnn
+Aliases: readGEOAnn readIDNAcc getGPLNames getSAGEFileInfo getSAGEGPL readUrl
+Keywords: manip
+Description: Function to extract data from the GEO web site
+URL: ../../../library/annotate/html/readGEOAnn.html
+
+Entry: serializeEnv
+Aliases: serializeEnv serializeDataPkgEnvs
+Keywords: utilities
+Description: A Function To Serialize Environment
+URL: ../../../library/annotate/html/serializeEnv.html
+
+Entry: usedChromGenes
+Aliases: usedChromGenes
+Keywords: interface
+Description: A function to select used genes on a chromosome from an ExpressionSet.
+URL: ../../../library/annotate/html/usedChromGenes.html

@@ -1,0 +1,41 @@
+\HeaderA{PLMset2exprSet}{Convert a PLMset to an ExpressionSet}{PLMset2exprSet}
+\aliasA{pset2eset}{PLMset2exprSet}{pset2eset}
+\keyword{manip}{PLMset2exprSet}
+\begin{Description}\relax
+This function converts a PLMset to an ExpressionSet. This is often useful
+since many Bioconductor functions operate on ExpressionSet objects.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+PLMset2exprSet(pset)
+pset2eset(pset)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{pset}] The \code{\LinkA{PLMset}{PLMset}} to convert to \code{\LinkA{ExpressionSet}{ExpressionSet}}.
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+These functions convert PLMset objects to \code{ExpressionSet} objects.
+This is often useful since many Bioconductor functions operate on
+\code{ExpressionSet} objects. Note that the function \code{pset2eset}
+is a wrapper for \code{PLMset2exprSet}.
+\end{Details}
+\begin{Value}
+returns a \code{\LinkA{ExpressionSet}{ExpressionSet}}
+\end{Value}
+\begin{Author}\relax
+Ben Bolstad \email{bmb@bmbolstad.com}
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{ExpressionSet}{ExpressionSet}}
+\end{SeeAlso}
+\begin{Examples}
+\begin{ExampleCode}
+data(affybatch.example)
+Pset <- fitPLM(affybatch.example)
+eset <- pset2eset(Pset)
+\end{ExampleCode}
+\end{Examples}
+

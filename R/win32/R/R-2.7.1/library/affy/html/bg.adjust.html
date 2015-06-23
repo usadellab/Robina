@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Background ajustment (internal function)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for bg.adjust {affy}"><tr><td>bg.adjust {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Background ajustment (internal function)</h2>
+
+
+<h3>Description</h3>
+
+<p>
+An internal function to be used by <code><a href="bgc.html">bg.correct.rma</a></code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+bg.adjust(pm, n.pts = 2^14, ...)
+bg.parameters(pm, n.pts = 2^14)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>pm</code></td>
+<td>
+a pm matrix</td></tr>
+<tr valign="top"><td><code>n.pts</code></td>
+<td>
+number of points to use in call to <code>density</code>.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+extra arguments to pass to bg.adjust.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Assumes PMs are a convolution of normal and exponentional. So we
+observe X+Y where X is backround and Y is signal. <code>bg.adjust</code>
+returns E[Y|X+Y, Y&gt;0] as our backround corrected
+PM. <code>bg.parameters</code> provides adhoc estimates of the parameters
+of the normal and exponential distributions.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+a matrix</p>
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="bgc.html">bg.correct.rma</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="1000"
+   id="svg2368"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   version="1.0"
+   sodipodi:docbase="/Users/marc/Desktop/img"
+   sodipodi:docname="RobinLogo1.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2370">
+    <linearGradient
+       id="linearGradient4722">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop4724" />
+      <stop
+         style="stop-color:#12ff03;stop-opacity:1;"
+         offset="1"
+         id="stop4726" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3412">
+      <stop
+         id="stop3414"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop3416"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3392">
+      <stop
+         style="stop-color:#000600;stop-opacity:0;"
+         offset="0"
+         id="stop3394" />
+      <stop
+         style="stop-color:#000600;stop-opacity:0.72538859;"
+         offset="1"
+         id="stop3396" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3392"
+       id="radialGradient3398"
+       cx="522.85712"
+       cy="475"
+       fx="522.85712"
+       fy="475"
+       r="254.28572"
+       gradientTransform="matrix(0.9101123,-3.9325842e-8,3.2407409e-8,0.75,46.998407,118.75003)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3412"
+       id="linearGradient3410"
+       x1="563.57141"
+       y1="264.28571"
+       x2="563.57141"
+       y2="375.46448"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3412"
+       id="linearGradient3420"
+       x1="537.14282"
+       y1="766.42859"
+       x2="535.71423"
+       y2="651.42859"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       x="-0.50420509"
+       width="2.0084102"
+       y="-0.50279277"
+       height="2.0055855"
+       id="filter3723">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="106.84346"
+         id="feGaussianBlur3725" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       x="-0.12168418"
+       width="1.2433684"
+       y="-0.11084427"
+       height="1.2216885"
+       id="filter3224">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="13.423522"
+         id="feGaussianBlur3226" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="436.98532"
+     inkscape:cy="486.35613"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     width="1000px"
+     height="1000px"
+     inkscape:window-width="1474"
+     inkscape:window-height="902"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata2373">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9.19999981;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2178"
+       width="601.04077"
+       height="600.03064"
+       x="221.42644"
+       y="183.11148"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3723)"
+       id="path3427"
+       sodipodi:cx="522.85712"
+       sodipodi:cy="475"
+       sodipodi:rx="254.28572"
+       sodipodi:ry="255"
+       d="M 777.14284 475 A 254.28572 255 0 1 1  268.5714,475 A 254.28572 255 0 1 1  777.14284 475 z"
+       transform="matrix(0.6146666,0,0,-9.3341544e-2,192.38297,772.88554)"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551" />
+    <image
+       y="218.28572"
+       x="266.85718"
+       id="image2416"
+       height="512"
+       width="512"
+       sodipodi:absref="/Users/marc/Desktop/img/array_sphere.png"
+       xlink:href="array_sphere.png"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:url(#radialGradient3398);fill-opacity:1.0;fill-rule:nonzero;stroke:none;stroke-width:9.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3390"
+       sodipodi:cx="522.85712"
+       sodipodi:cy="475"
+       sodipodi:rx="254.28572"
+       sodipodi:ry="255"
+       d="M 777.14284 475 A 254.28572 255 0 1 1  268.5714,475 A 254.28572 255 0 1 1  777.14284 475 z"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551" />
+    <path
+       d="M 777.14284 475 A 254.28572 255 0 1 1  268.5714,475 A 254.28572 255 0 1 1  777.14284 475 z"
+       sodipodi:ry="255"
+       sodipodi:rx="254.28572"
+       sodipodi:cy="475"
+       sodipodi:cx="522.85712"
+       id="path3418"
+       style="opacity:1;fill:url(#linearGradient3420);fill-opacity:1.0;fill-rule:nonzero;stroke:none;stroke-width:9.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:url(#linearGradient3410);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:17;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3402"
+       sodipodi:cx="563.57141"
+       sodipodi:cy="347.14285"
+       sodipodi:rx="152.14285"
+       sodipodi:ry="82.85714"
+       d="M 715.71426 347.14285 A 152.14285 82.85714 0 1 1  411.42856,347.14285 A 152.14285 82.85714 0 1 1  715.71426 347.14285 z"
+       transform="matrix(1.0901455,0,0,1.3706897,-89.936179,-143.68227)"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.9836483px;font-style:normal;font-weight:normal;fill:#fdff02;fill-opacity:1;stroke:none;stroke-width:9.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="364.73682"
+       y="642.98328"
+       id="text3422"
+       transform="scale(1.034943,0.9662368)"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551"><tspan
+         sodipodi:role="line"
+         id="tspan3424"
+         x="364.73682"
+         y="642.98328"
+         style="font-size:398.68933105px;font-style:italic;font-weight:bold;fill:#fdff02;fill-opacity:1;stroke:none;stroke-width:9.19999981;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">R</tspan></text>
+    <text
+       transform="scale(1.034943,0.9662368)"
+       id="text3152"
+       y="642.98328"
+       x="364.73682"
+       style="font-size:20.9836483px;font-style:normal;font-weight:normal;fill:#fdff02;fill-opacity:1;stroke:none;stroke-width:9.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;font-family:Bitstream Vera Sans;filter:url(#filter3224)"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/marc/Desktop/img/robinlogo32.png"
+       inkscape:export-xdpi="4.7997551"
+       inkscape:export-ydpi="4.7997551"><tspan
+         style="font-size:398.68933105px;font-style:italic;font-weight:bold;fill:#fdff02;fill-opacity:1;stroke:none;stroke-width:9.19999981;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="642.98328"
+         x="364.73682"
+         id="tspan3154"
+         sodipodi:role="line">R</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<shortcuts>
+  <skipIfNotSupported/>
+  <programGroup defaultName="Robin"
+                location="applications"/>
+  <shortcut
+    name="Start RobiNA"
+    target="$INSTALL_PATH\Robin2.exe"
+    workingDirectory="$INSTALL_PATH"
+    description="This starts Robin"
+    iconFile="$INSTALL_PATH\icons\Robin.ico"
+    iconIndex="0"
+    initialState="minimized"
+    programGroup="yes"
+    desktop="yes"
+    applications="no"
+    startMenu="yes"
+    startup="no">    
+    <createForPack name="Base files"/>
+  </shortcut>
+  
+  <shortcut
+    name="RobiNA User's Guide"
+    target="$INSTALL_PATH\RobinRobiNAUsersGuide_may12.pdf"
+    workingDirectory="$INSTALL_PATH"
+    description="Open RobiNAs User's Guide - requires a PDF reader"
+    initialState="minimized"
+    programGroup="yes"
+    desktop="yes"
+    applications="no"
+    startMenu="yes"
+    startup="no">    
+    <createForPack name="Robin and RobiNA Manual"/>
+  </shortcut>
+  
+  <shortcut
+    name="Uninstall RobiNA"
+    target="$INSTALL_PATH\Uninstaller\uninstaller.jar"
+    workingDirectory="$INSTALL_PATH"
+    description="This starts RobiNA"
+    iconFile="$INSTALL_PATH\icons\Robin.ico"
+    iconIndex="0"
+    initialState="minimized"
+    programGroup="yes"
+    desktop="no"
+    applications="no"
+    startMenu="yes"
+    startup="no">    
+    <createForPack name="Base files"/>
+  </shortcut>
+  
+</shortcuts>

@@ -1,0 +1,55 @@
+normalize.quantiles.probeset     package:affyPLM     R Documentation
+
+_Q_u_a_n_t_i_l_e _N_o_r_m_a_l_i_z_a_t_i_o_n _a_p_p_l_i_e_d _t_o _p_r_o_b_e_s_e_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Using a normalization based upon quantiles, this function
+     normalizes a matrix of probe level intensities.
+
+_U_s_a_g_e:
+
+       normalize.AffyBatch.quantiles.probeset(abatch,type=c("separate","pmonly","mmonly","together"),use.median=FALSE,use.log=TRUE)
+
+_A_r_g_u_m_e_n_t_s:
+
+  abatch: An 'AffyBatch'
+
+    type: how should MM and PM values be handled
+
+use.median: use median rather than mean
+
+ use.log: take logarithms, then normalize
+
+_D_e_t_a_i_l_s:
+
+     This function applies the quantile method in a probeset specific
+     manner.
+
+     In particular a probeset summary is normalized using the quantile
+     method and then the probes adjusted accordingly.
+
+_V_a_l_u_e:
+
+     A normalized 'AffyBatch'.
+
+_A_u_t_h_o_r(_s):
+
+     Ben Bolstad, bmb@bmbolstad.com
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Bolstad, B (2001) _Probe Level Quantile Normalization of High
+     Density Oligonucleotide Array Data_. Unpublished manuscript <URL:
+     http://oz.berkeley.edu/~bolstad/stuff/qnorm.pdf>
+
+     Bolstad, B. M., Irizarry R. A., Astrand, M, and Speed, T. P.
+     (2003) _A Comparison of Normalization Methods for High Density
+     Oligonucleotide Array Data Based on Bias and Variance._
+     Bioinformatics 19(2) ,pp 185-193. <URL:
+     http://www.stat.berkeley.edu/~bolstad/normalize/normalize.html>
+
+_S_e_e _A_l_s_o:
+
+     'normalize', 'normalize.quantiles'
+

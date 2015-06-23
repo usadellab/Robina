@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Background correct and Normalize</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for preprocess {affyPLM}"><tr><td>preprocess {affyPLM}</td><td align="right">R Documentation</td></tr></table>
+<h2>Background correct and Normalize</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function pre-processes an <code><a href="../../affy/html/AffyBatch.html">AffyBatch</a></code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+preprocess(object,subset=NULL, normalize=TRUE,background=TRUE,background.method="RMA.2",normalize.method="quantile",background.param = list(),normalize.param=list(),verbosity.level=0)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+an <code><a href="../../affy/html/AffyBatch-class.html">AffyBatch</a></code></td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+a vector with the names of probesets to be used. If NULL
+then all probesets are used.</td></tr>
+<tr valign="top"><td><code>normalize</code></td>
+<td>
+logical value. If <code>TRUE</code> normalize data using
+quantile normalization</td></tr>
+<tr valign="top"><td><code>background</code></td>
+<td>
+logical value. If <code>TRUE</code> background correct
+using RMA background correction</td></tr>
+<tr valign="top"><td><code>background.method</code></td>
+<td>
+name of background method to use.</td></tr>
+<tr valign="top"><td><code>normalize.method</code></td>
+<td>
+name of normalization method to use.</td></tr>
+<tr valign="top"><td><code>background.param</code></td>
+<td>
+list of parameters for background correction methods</td></tr>
+<tr valign="top"><td><code>normalize.param</code></td>
+<td>
+list of parameters for normalization methods</td></tr>
+<tr valign="top"><td><code>verbosity.level</code></td>
+<td>
+An integer specifying how much to print
+out. Higher values indicate more verbose. A value of 0 will print nothing</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function carries out background correction and normalization
+pre-processing steps. It does not summarize to produce gene expression
+measures. All the same pre-processing methods supplied by
+<code><a href="threestep.html">threestep</a></code> are supported by this function.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+An <code><a href="../../affy/html/AffyBatch.html">AffyBatch</a></code></p>
+
+<h3>Author(s)</h3>
+
+<p>
+Ben Bolstad <a href="mailto:bmb@bmbolstad.com">bmb@bmbolstad.com</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Bolstad, BM (2004) <EM>Low Level Analysis of High-density
+Oligonucleotide Array Data: Background, Normalization and
+Summarization</EM>. PhD Dissertation. University of California, Berkeley.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../affy/html/expresso.html">expresso</a></code>, <code><a href="../../affy/html/rma.html">rma</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(affybatch.example)
+
+# should be equivalent to the bg and norm of rma()
+abatch.preprocessed &lt;- preprocess(affybatch.example)
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affyPLM</em> version 1.16.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

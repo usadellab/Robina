@@ -1,0 +1,59 @@
+Entry: colSumamrize
+Aliases: colSummarizeAvg colSummarizeAvgLog colSummarizeBiweight colSummarizeBiweightLog colSummarizeLogAvg colSummarizeLogMedian colSummarizeMedian colSummarizeMedianLog colSummarizeMedianpolish colSummarizeMedianpolishLog
+Keywords: univar
+Description: Summarize the column of matrices
+URL: ../../../library/preprocessCore/html/colSummarize.html
+
+Entry: normalize.quantiles
+Aliases: normalize.quantiles
+Keywords: manip
+Description: Quantile Normalization
+URL: ../../../library/preprocessCore/html/normalize.quantiles.html
+
+Entry: normalize.quantiles.in.blocks
+Aliases: normalize.quantiles.in.blocks
+Keywords: manip
+Description: Quantile Normalization carried out separately within blocks of rows
+URL: ../../../library/preprocessCore/html/normalize.quantiles.in.blocks.html
+
+Entry: normalize.quantiles.robust
+Aliases: normalize.quantiles.robust normalize.AffyBatch.quantiles.robust
+Keywords: manip
+Description: Robust Quantile Normalization
+URL: ../../../library/preprocessCore/html/normalize.quantiles.robust.html
+
+Entry: normalize.quantiles.target
+Aliases: normalize.quantiles.use.target normalize.quantiles.determine.target
+Keywords: manip
+Description: Quantile Normalization using a specified target distribution vector
+URL: ../../../library/preprocessCore/html/normalize.quantiles.target.html
+
+Entry: rcModelPLMd
+Aliases: rcModelPLMd
+Keywords: models
+Description: Fit robust row-column models to a matrix
+URL: ../../../library/preprocessCore/html/rcModelPLMd.html
+
+Entry: rcModelPLMr
+Aliases: rcModelPLMr rcModelPLMrr rcModelPLMrc rcModelWPLMr rcModelWPLMrr rcModelWPLMrc
+Keywords: models
+Description: Fit robust row-column models to a matrix
+URL: ../../../library/preprocessCore/html/rcModelPLMr.html
+
+Entry: rcModels
+Aliases: rcModelPLM rcModelWPLM rcModelMedianPolish
+Keywords: models
+Description: Fit row-column model to a matrix
+URL: ../../../library/preprocessCore/html/rcModels.html
+
+Entry: rma.background.correct
+Aliases: rma.background.correct
+Keywords: manip
+Description: RMA Background Correction
+URL: ../../../library/preprocessCore/html/rma.background.correct.html
+
+Entry: subColSummarize
+Aliases: subColSummarizeAvg subColSummarizeAvgLog subColSummarizeBiweight subColSummarizeBiweightLog subColSummarizeLogAvg subColSummarizeLogMedian subColSummarizeMedian subColSummarizeMedianLog subColSummarizeMedianpolish subColSummarizeMedianpolishLog convert.group.labels
+Keywords: univar
+Description: Summarize columns when divided into groups of rows
+URL: ../../../library/preprocessCore/html/subColSummarize.html

@@ -1,0 +1,407 @@
+Entry: boxplot
+Aliases: boxplot,marrayRaw-method boxplot,marrayNorm-method
+Keywords: hplot
+Description: Boxplots for cDNA microarray spot statistics
+URL: ../../../library/marray/html/boxplot.html
+
+Entry: [-methods
+Aliases: [-methods [
+Keywords: methods
+Description: Subsetting methods for microarray objects
+URL: ../../../library/marray/html/bracketMethods.html
+
+Entry: cbind
+Aliases: cbind.marrayRaw cbind.marrayNorm rbind.marrayInfo
+Keywords: manip
+Description: Combine marrayRaw, marrayNorm or marrayInfo Objects
+URL: ../../../library/marray/html/cbind.html
+
+Entry: checkTargetInfo
+Aliases: checkTargetInfo
+Keywords: file
+Description: Verifying the order between intensities matrix and target file information
+URL: ../../../library/marray/html/checkTargetInfo.html
+
+Entry: coerce-methods
+Aliases: coerce-methods coerce as
+Keywords: methods
+Description: Coerce an object to belong to a given microarray class
+URL: ../../../library/marray/html/coerce-methods.html
+
+Entry: dim
+Aliases: dim.marrayRaw dim.marrayNorm dim.marrayInfo
+Keywords: array
+Description: Retrieve the Dimensions of an marrayRaw, marrayNorm or marrayInfo Object
+URL: ../../../library/marray/html/dim.html
+
+Entry: findID
+Aliases: findID
+Keywords: manip
+Description: Find ID when given an accession number
+URL: ../../../library/marray/html/findID.html
+
+Entry: htmlPage
+Aliases: htmlPage table2html
+Keywords: file
+Description: Display gene list as a HTML page
+URL: ../../../library/marray/html/htmlPage.html
+
+Entry: image
+Aliases: image,marrayRaw-method image,marrayNorm-method
+Keywords: hplot
+Description: Color image for cDNA microarray spot statistics
+URL: ../../../library/marray/html/image.html
+
+Entry: ma2D
+Aliases: ma2D
+Keywords: smooth
+Description: Stratified bivariate robust local regression
+URL: ../../../library/marray/html/ma2D.html
+
+Entry: maBoxplot
+Aliases: maBoxplot
+Keywords: hplot
+Description: Boxplots for cDNA microarray spot statistics
+URL: ../../../library/marray/html/maBoxplot.html
+
+Entry: maColorBar
+Aliases: maColorBar
+Keywords: aplot hplot
+Description: Calibration bar for color images
+URL: ../../../library/marray/html/maColorBar.html
+
+Entry: maCompCoord
+Aliases: maCompCoord
+Keywords: manip methods
+Description: Generate grid and spot matrix coordinates
+URL: ../../../library/marray/html/maCompCoord.html
+
+Entry: maCompInd
+Aliases: maCompInd
+Keywords: manip methods
+Description: Generate spot indices
+URL: ../../../library/marray/html/maCompInd.html
+
+Entry: maCompLayout
+Aliases: maCompLayout
+Keywords: manip
+Description: Generate a marrayLayout object
+URL: ../../../library/marray/html/maCompLayout.html
+
+Entry: maCompNormA
+Aliases: maCompNormA maCompNormEq
+Keywords: smooth
+Description: Weights for composite normalization
+URL: ../../../library/marray/html/maCompNormA.html
+
+Entry: maCompPlate
+Aliases: maCompPlate
+Keywords: methods
+Description: Generate plate IDs
+URL: ../../../library/marray/html/maCompPlate.html
+
+Entry: maCoord2Ind
+Aliases: maCoord2Ind
+Keywords: manip methods
+Description: Convert grid and spot matrix coordinates to spot indices
+URL: ../../../library/marray/html/maCoord2Ind.html
+
+Entry: maDefaultPar
+Aliases: maDefaultPar
+Keywords: iplot dplot color
+Description: Default graphical parameters for microarray objects
+URL: ../../../library/marray/html/maDefaultPar.html
+
+Entry: maDotsDefaults
+Aliases: maDotsDefaults
+Keywords: misc
+Description: Replace graphical default parameters by user supplied parameters
+URL: ../../../library/marray/html/maDotsDefaults.html
+
+Entry: maDotsMatch
+Aliases: maDotsMatch
+Keywords: misc
+Description: Replace default arguments of a function by user supplied values
+URL: ../../../library/marray/html/maDotsMatch.html
+
+Entry: maGenControls
+Aliases: maGenControls controlCode
+Keywords: manip
+Description: Generating a vector recording the control status of the spotted probe sequences.
+URL: ../../../library/marray/html/maGenControls.html
+
+Entry: maGeneTable
+Aliases: maGeneTable
+Keywords: methods
+Description: Table of spot coordinates and gene names
+URL: ../../../library/marray/html/maGeneTable.html
+
+Entry: maImage
+Aliases: maImage
+Keywords: hplot
+Description: Color image for cDNA microarray spot statistics
+URL: ../../../library/marray/html/maImage.html
+
+Entry: maImage.func
+Aliases: maImage.func
+Keywords: hplot
+Description: Color image for cDNA microarray spot statistics
+URL: ../../../library/marray/html/maImage.func.html
+
+Entry: maInd2Coord
+Aliases: maInd2Coord
+Keywords: manip methods
+Description: Convert spot indices to grid and spot matrix coordinates
+URL: ../../../library/marray/html/maInd2Coord.html
+
+Entry: maLegendLines
+Aliases: maLegendLines
+Keywords: aplot
+Description: Add a legend to a plot
+URL: ../../../library/marray/html/maLegendLines.html
+
+Entry: maLoess
+Aliases: maLoess
+Keywords: smooth
+Description: Stratified univariate robust local regression
+URL: ../../../library/marray/html/maLoess.html
+
+Entry: maLoessLines
+Aliases: maLoessLines maLowessLines
+Keywords: aplot smooth
+Description: Add smoothed fits to a plot
+URL: ../../../library/marray/html/maLoessLines.html
+
+Entry: maMAD
+Aliases: maMAD
+Keywords: univar robust
+Description: Stratified MAD calculation
+URL: ../../../library/marray/html/maMAD.html
+
+Entry: maMed
+Aliases: maMed
+Keywords: univar robust
+Description: Stratified median calculation
+URL: ../../../library/marray/html/maMed.html
+
+Entry: na
+Aliases: log.na sum.na mean.na var.na cor.na quantile.na length.na order.na scale.na prod.na
+Keywords: arith
+Description: Basic Statistical Functions for Handling Missing Values
+URL: ../../../library/marray/html/maNA.html
+
+Entry: maNorm
+Aliases: maNorm
+Keywords: smooth methods
+Description: Simple location and scale normalization function
+URL: ../../../library/marray/html/maNorm.html
+
+Entry: maNorm2D
+Aliases: maNorm2D
+Keywords: smooth
+Description: 2D spatial location normalization function
+URL: ../../../library/marray/html/maNorm2D.html
+
+Entry: maNormLoess
+Aliases: maNormLoess
+Keywords: smooth
+Description: Intensity dependent location normalization function
+URL: ../../../library/marray/html/maNormLoess.html
+
+Entry: maNormMAD
+Aliases: maNormMAD
+Keywords: univar robust
+Description: MAD scale normalization function
+URL: ../../../library/marray/html/maNormMAD.html
+
+Entry: maNormMain
+Aliases: maNormMain
+Keywords: smooth methods
+Description: Main function for location and scale normalization of cDNA microarray data
+URL: ../../../library/marray/html/maNormMain.html
+
+Entry: maNormMed
+Aliases: maNormMed
+Keywords: univar robust
+Description: Median location normalization function
+URL: ../../../library/marray/html/maNormMed.html
+
+Entry: maNormScale
+Aliases: maNormScale
+Keywords: smooth methods
+Description: Simple scale normalization function
+URL: ../../../library/marray/html/maNormScale.html
+
+Entry: maNum2Logic
+Aliases: maNum2Logic
+Keywords: manip
+Description: Convert a numeric vector of indices to a logical vector
+URL: ../../../library/marray/html/maNum2Logic.html
+
+Entry: maPalette
+Aliases: maPalette
+Keywords: color
+Description: Microarray color palette
+URL: ../../../library/marray/html/maPalette.html
+
+Entry: maPlot
+Aliases: maPlot
+Keywords: hplot
+Description: Scatter-plots for cDNA microarray spot statistics
+URL: ../../../library/marray/html/maPlot.html
+
+Entry: maPlot.func
+Aliases: maPlot.func
+Keywords: hplot
+Description: Scatter-plots with fitted curves and text
+URL: ../../../library/marray/html/maPlot.func.html
+
+Entry: maSelectGnames
+Aliases: maSelectGnames
+Keywords: manip
+Description: Select genes according to the values of a few different statistics
+URL: ../../../library/marray/html/maSelectGnames.html
+
+Entry: maText
+Aliases: maText
+Keywords: aplot
+Description: Highlight points on a plot
+URL: ../../../library/marray/html/maText.html
+
+Entry: maTop
+Aliases: maTop
+Keywords: misc
+Description: Identify extreme values
+URL: ../../../library/marray/html/maTop.html
+
+Entry: maTwoSamples
+Aliases: maTwoSamples widget.TwoSamples
+Keywords: manip
+Description: Changing signs for two sample analysis
+URL: ../../../library/marray/html/maTwoSamples.html
+
+Entry: mapGeneInfo
+Aliases: mapGeneInfo widget.mapGeneInfo URLstring SFGL UCBFGL
+Keywords: manip
+Description: Creating URL strings for external database links
+URL: ../../../library/marray/html/mapGeneInfo.html
+
+Entry: Internal functions
+Aliases: read.fname stat.gene.cluster plot.gene.cluster tablegen gsubAnchor
+Keywords: methods
+Description: Internal marray functions
+URL: ../../../library/marray/html/marray-internal.html
+
+Entry: marrayInfo-class
+Aliases: marrayInfo-class marrayInfo maLabels maLabels<- maInfo maInfo<- maNotes maNotes<- [,marrayInfo-method maGnames<-,marrayRaw,marrayInfo-method maGnames<-,marrayNorm,marrayInfo-method maGnames<-,marraySpots,marrayInfo-method maInfo<-,marrayInfo,data.frame-method maInfo,marrayInfo-method maLabels<-,marrayInfo,character-method maLabels<-,marrayInfo,numeric-method maLabels,marrayInfo-method maNotes<-,marrayInfo,character-method maNotes,marrayInfo-method maTargets<-,marrayRaw,marrayInfo-method maTargets<-,marrayNorm,marrayInfo-method print,marrayInfo-method rbind,marrayInfo-method summary,marrayInfo-method
+Keywords: classes
+Description: Class "marrayInfo", description of target samples or spotted probe sequences
+URL: ../../../library/marray/html/marrayInfo-class.html
+
+Entry: marrayLayout-class
+Aliases: marrayLayout-class marrayLayout maNgr maNgr<- maNgc maNgc<- maNsr maNsr<- maNsc maNsc<- maNspots maNspots<- maSub maSub<- maPlate maPlate<- maControls maControls<- [,marrayLayout-method maControls<-,marrayLayout-method maControls,marrayLayout-method maGridCol,marrayLayout-method maGridRow,marrayLayout-method maLayout<-,marrayRaw,marrayLayout-method maLayout<-,marrayNorm,marrayLayout-method maNgc<-,marrayLayout,numeric-method maNgc,marrayLayout-method maNgr<-,marrayLayout,numeric-method maNgr,marrayLayout-method maNotes<-,marrayLayout,character-method maNotes,marrayLayout-method maNsc<-,marrayLayout,numeric-method maNsc,marrayLayout-method maNspots<-,marrayLayout,numeric-method maNspots,marrayLayout-method maNsr<-,marrayLayout,numeric-method maNsr,marrayLayout-method maPlate<-,marrayLayout-method maPlate,marrayLayout-method maPrintTip,marrayLayout-method maSpotCol,marrayLayout-method maSpotRow,marrayLayout-method maSub<-,marrayLayout,logical-method maSub<-,marrayLayout,numeric-method maSub,marrayLayout-method print,marrayLayout-method summary,marrayLayout-method maPrintTip maGridRow maGridCol maSpotRow maSpotCol
+Keywords: classes
+Description: Class "marrayLayout", classes and methods for layout parameters of cDNA microarrays
+URL: ../../../library/marray/html/marrayLayout-class.html
+
+Entry: marrayNorm-class
+Aliases: marrayNorm-class marrayNorm maA maA<- maM maM<- maMloc maMloc<- maMscale maMscale<- [,marrayNorm-method cbind,marrayNorm-method coerce,marrayRaw,marrayNorm-method maA<-,marrayNorm,matrix-method maA,marrayNorm-method maControls<-,marrayNorm-method maControls,marrayNorm-method maGnames,marrayNorm-method maGridCol,marrayNorm-method maGridRow,marrayNorm-method maLayout,marrayNorm-method maMloc<-,marrayNorm,matrix-method maMloc,marrayNorm-method maM<-,marrayNorm,matrix-method maM,marrayNorm-method maMscale<-,marrayNorm,matrix-method maMscale,marrayNorm-method maNgc<-,marrayNorm,numeric-method maNgc,marrayNorm-method maNgr<-,marrayNorm,numeric-method maNgr,marrayNorm-method maNormCall,marrayNorm-method maNotes<-,marrayNorm,character-method maNotes,marrayNorm-method maNsamples,marrayNorm-method maNsc<-,marrayNorm,numeric-method maNsc,marrayNorm-method maNspots<-,marrayNorm,numeric-method maNspots,marrayNorm-method maNsr<-,marrayNorm,numeric-method maNsr,marrayNorm-method maPlate<-,marrayNorm-method maPlate,marrayNorm-method maPrintTip,marrayNorm-method maSpotCol,marrayNorm-method maSpotRow,marrayNorm-method maSub<-,marrayNorm-method maSub,marrayNorm-method maTargets,marrayNorm-method maW<-,marrayNorm,matrix-method maW,marrayNorm-method maLG,marrayNorm-method maLR,marrayNorm-method print,marrayNorm-method show,marrayNorm-method summary,marrayNorm-method maNormCall
+Keywords: classes
+Description: Class "marrayNorm", classes and methods for post-normalization cDNA microarray intensity data
+URL: ../../../library/marray/html/marrayNorm-class.html
+
+Entry: marrayRaw-class
+Aliases: marrayRaw-class marrayRaw maRf maRf<- maGf maGf<- maRb maRb<- maGb maGb<- maW maW<- maLayout maLayout<- [,marrayRaw-method cbind,marrayRaw-method maA,marrayRaw-method maControls<-,marrayRaw-method maControls,marrayRaw-method maGb<-,marrayRaw,matrix-method maGb<-,marrayRaw,NULL-method maGb,marrayRaw-method maGf<-,marrayRaw,matrix-method maGf,marrayRaw-method maGnames,marrayRaw-method maGridCol,marrayRaw-method maGridRow,marrayRaw-method maLayout,marrayRaw-method maLG,marrayRaw-method maLR,marrayRaw-method maM,marrayRaw-method maNgc<-,marrayRaw,numeric-method maNgc,marrayRaw-method maNgr<-,marrayRaw,numeric-method maNgr,marrayRaw-method maNotes<-,marrayRaw,character-method maNotes,marrayRaw-method maNsamples,marrayRaw-method maNsc<-,marrayRaw,numeric-method maNsc,marrayRaw-method maNspots<-,marrayRaw,numeric-method maNspots,marrayRaw-method maNsr<-,marrayRaw,numeric-method maNsr,marrayRaw-method maPlate<-,marrayRaw-method maPlate,marrayRaw-method maPrintTip,marrayRaw-method maRb<-,marrayRaw,matrix-method maRb<-,marrayRaw,NULL-method maRb,marrayRaw-method maRf<-,marrayRaw,matrix-method maRf,marrayRaw-method maSpotCol,marrayRaw-method maSpotRow,marrayRaw-method maSub<-,marrayRaw-method maSub,marrayRaw-method maTargets,marrayRaw-method maW<-,marrayRaw,matrix-method maW,marrayRaw-method print,marrayRaw-method show,marrayRaw-method summary,marrayRaw-method maGnames maGnames<- maTargets maTargets<- maLR maLG maNsamples
+Keywords: classes
+Description: Class "marrayRaw", classes and methods for pre-normalization cDNA microarray intensity data
+URL: ../../../library/marray/html/marrayRaw-class.html
+
+Entry: opVersionID
+Aliases: opVersionID
+Keywords: manip
+Description: Determine the operon oligo set ID
+URL: ../../../library/marray/html/opVersionID.html
+
+Entry: plot
+Aliases: plot.marrayRaw plot.marrayNorm addText addLines addPoints text,marrayRaw-method text,marrayNorm-method lines,marrayRaw-method lines,marrayNorm-method points,marrayRaw-method points,marrayNorm-method
+Keywords: hplot
+Description: Scatter-plots for cDNA microarray spot statistics
+URL: ../../../library/marray/html/plotMA.html
+
+Entry: summary-methods
+Aliases: summary-methods
+Keywords: methods
+Description: Printing summary methods for microarray objects
+URL: ../../../library/marray/html/print-methods.html
+
+Entry: read.Galfile
+Aliases: read.Galfile
+Keywords: file
+Description: Reading GenePix Gal file
+URL: ../../../library/marray/html/read.Galfile.html
+
+Entry: read.marrayInfo
+Aliases: read.marrayInfo widget.marrayInfo
+Keywords: file connection
+Description: Create objects of class marrayInfo
+URL: ../../../library/marray/html/read.marrayInfo.html
+
+Entry: read.marrayLayout
+Aliases: read.marrayLayout widget.marrayLayout
+Keywords: file connection
+Description: Create objects of class marrayLayout
+URL: ../../../library/marray/html/read.marrayLayout.html
+
+Entry: read.marrayRaw
+Aliases: read.marrayRaw read.Spot read.GenePix read.SMD read.Agilent widget.marrayRaw
+Keywords: file
+Description: Create objects of class "marrayRaw"
+URL: ../../../library/marray/html/read.marrayRaw.html
+
+Entry: rm.na
+Aliases: rm.na
+Keywords: manip
+Description: Remove missing values
+URL: ../../../library/marray/html/rm.na.html
+
+Entry: ShowLargeObject-class
+Aliases: ShowLargeObject-class show,ShowLargeObject-method
+Keywords: classes data
+Description: Show Large Data Object - class
+URL: ../../../library/marray/html/showLargeObject.html
+
+Entry: stat.confband.text
+Aliases: stat.confband.text
+Keywords: manip
+Description: Rank genes according to the value of a statistic.
+URL: ../../../library/marray/html/stat.confband.text.html
+
+Entry: stat.gnames
+Aliases: stat.gnames
+Keywords: misc
+Description: Sort Genes According to the Value of a Statistic
+URL: ../../../library/marray/html/stat.gnames.html
+
+Entry: swirl
+Aliases: swirl swirl.1.spot swirl.2.spot swirl.3.spot swirl.4.spot fish.gal SwirlSample.txt SwirlSample
+Keywords: datasets
+Description: Gene expression data from Swirl zebrafish cDNA microarray experiment
+URL: ../../../library/marray/html/swirl.html
+
+Entry: write.list
+Aliases: write.list
+Keywords: file
+Description: Data Output
+URL: ../../../library/marray/html/write.list.html
+
+Entry: write.marray
+Aliases: write.marray
+Keywords: file
+Description: Data Output
+URL: ../../../library/marray/html/write.marray.html
+
+Entry: write.xls
+Aliases: write.xls
+Keywords: file
+Description: Data Output
+URL: ../../../library/marray/html/write.xls.html

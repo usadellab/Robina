@@ -1,0 +1,84 @@
+fast.bkg                package:gcrma                R Documentation
+
+_I_n_t_e_r_n_a_l _f_u_n_c_t_i_o_n_s _f_o_r _j_u_s_t_G_C_R_M_A
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     These are internal functions for justGCRMA that are called based
+     on memory or speed constraints.
+
+_U_s_a_g_e:
+
+     fast.bkg(filenames, pm.affinities, mm.affinities, index.affinities,
+     type, minimum, optical.correct, verbose, k, rho, correction, stretch,
+     fast, cdfname, read.verbose)
+     mem.bkg(filenames, pm.affinities, mm.affinities, index.affinities, type,
+     minimum, optical.correct, verbose, k, rho, correction, stretch, fast,
+     cdfname, read.verbose)
+
+_A_r_g_u_m_e_n_t_s:
+
+filenames: A list of cel files.
+
+pm.affinities: Values passed from 'compute.affinities'.
+
+mm.affinities: Values passed from 'compute.affinities'.
+
+index.affinities: Values passed from 'compute.affinities'.
+
+    type: "fullmodel" for sequence and MM model. "affinities" for
+          sequence information only. "mm" for using MM without sequence
+          information.
+
+ minimum: A minimum value to be used for 'optical.correct'.
+
+optical.correct: Logical value. If 'TRUE', optical background
+          correction is performed.
+
+ verbose: Logical value. If 'TRUE', messages about the progress of the
+          function are printed.
+
+       k: A tuning factor.
+
+     rho: correlation coefficient of log background intensity in a pair
+          of pm/mm probes. Default=.7
+
+correction: 
+
+ stretch: 
+
+    fast: Logical value. If 'TRUE', then a faster ad hoc algorithm is
+          used.
+
+ cdfname: Used to specify the name of an alternative cdf package. If
+          set to 'NULL', the usual cdf package based on Affymetrix'
+          mappings will be used. Note that the name should not include
+          the 'cdf' on the end, and that the corresponding probe
+          package is also required to be installed. If either package
+          is missing an error will result.
+
+read.verbose: Logical value. If 'TRUE', a message is returned as each
+          celfile is read in.
+
+_D_e_t_a_i_l_s:
+
+     Note that this expression measure is given to you in log base 2
+     scale. This differs from most of the other expression measure
+     methods.
+
+     The tuning factor 'k' will have different meanings if one uses the
+     fast (add-hoc) algorithm or the empirical Bayes approach. See Wu
+     et al. (2003)
+
+_V_a_l_u_e:
+
+     An 'ExpressionSet'.
+
+_A_u_t_h_o_r(_s):
+
+     James W. MacDonald <jmacdon@med.umich.edu>
+
+_S_e_e _A_l_s_o:
+
+     'gcrma'
+

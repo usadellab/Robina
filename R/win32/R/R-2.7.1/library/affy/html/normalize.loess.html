@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Scale microarray data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for normalize.loess {affy}"><tr><td>normalize.loess {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Scale microarray data</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Normalizes arrays using loess.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+normalize.loess(mat, subset = sample(1:(dim(mat)[1]), min(c(5000,
+                 nrow(mat)))), epsilon = 10^-2, maxit = 1, log.it =
+                 TRUE, verbose = TRUE, span = 2/3, family.loess =
+                 "symmetric")
+normalize.AffyBatch.loess(abatch,type=c("together","pmonly","mmonly","separate"), ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mat</code></td>
+<td>
+a matrix with columns containing the values of the chips
+to normalize.</td></tr>
+<tr valign="top"><td><code>abatch</code></td>
+<td>
+an <code><a href="AffyBatch-class.html">AffyBatch</a></code> object.</td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+a subset of the data to fit a loess to.</td></tr>
+<tr valign="top"><td><code>epsilon</code></td>
+<td>
+a tolerance value (supposed to be a small value - used
+as a stopping criterium).</td></tr>
+<tr valign="top"><td><code>maxit</code></td>
+<td>
+maximum number of iterations.</td></tr>
+<tr valign="top"><td><code>log.it</code></td>
+<td>
+logical. If <code>TRUE</code> it takes the log2 of <code>mat</code></td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+logical. If <code>TRUE</code> displays current pair of chip being
+worked on.</td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+parameter to be passed the function <code><a href="../../stats/html/loess.html">loess</a></code></td></tr>
+<tr valign="top"><td><code>family.loess</code></td>
+<td>
+parameter to be passed the function
+<code><a href="../../stats/html/loess.html">loess</a></code>. <code>"gaussian"</code> or <code>"symmetric"</code>
+are acceptable values for this parameter.</td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+A string specifying how the normalization should be
+applied. See details for more.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+any of the options of normalize.loess you would like to
+modify (described above).</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The type arguement should be one of
+<code>"separate","pmonly","mmonly","together"</code> which indicates whether
+to normalize only one probe type (PM,MM) or both together or separately.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="normalize.html">normalize</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+     #require(affy)
+     #data(Dilution)
+     #x &lt;- pm(Dilution[,1:3])
+     #mva.pairs(x)
+     #x &lt;- normalize.loess(x,subset=1:nrow(x))
+     #mva.pairs(x)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

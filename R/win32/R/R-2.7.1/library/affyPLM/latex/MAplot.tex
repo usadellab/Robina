@@ -1,0 +1,25 @@
+\HeaderA{MAplot}{Relative M vs. A plots}{MAplot}
+\aliasA{MAplot,PLMset-method}{MAplot}{MAplot,PLMset.Rdash.method}
+\keyword{hplot}{MAplot}
+\begin{Description}\relax
+Create boxplots of M or M vs A plots. Where M is determined relative
+to a specified chip or to a pseudo-median reference chip.
+\end{Description}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{...}] Additional parameters for the routine
+\item[\code{A}] A vector to plot along the horizonal axis
+\item[\code{M}] A vector to plot along vertical axis
+\item[\code{subset}] A set of indices to use when drawing the loess curve
+\item[\code{show.statistics}] If true some summary statistics of the M values
+are drawn
+\item[\code{span}] span to be used for loess fit.
+\item[\code{family.loess}] \code{"guassian"} or \code{"symmetric"} as in
+\code{\LinkA{loess}{loess}}.
+\item[\code{cex}] Size of text when writing summary statistics on plot
+\end{ldescription}
+\end{Arguments}
+\begin{SeeAlso}\relax
+\code{\LinkA{mva.pairs}{mva.pairs}}
+\end{SeeAlso}
+

@@ -1,0 +1,29 @@
+Entry: print.xtable
+Aliases: print.xtable
+Keywords: print
+Description: Print Export Tables
+URL: ../../../library/xtable/html/print.xtable.html
+
+Entry: string
+Aliases: string print.string is.string as.string +.string
+Keywords: print
+Description: String handling functions
+URL: ../../../library/xtable/html/string.html
+
+Entry: table.attributes
+Aliases: caption caption.xtable caption<- caption<-.xtable label label.xtable label<- label<-.xtable align align.xtable align<- align<-.xtable digits digits.xtable digits<- digits<-.xtable display display.xtable display<- display<-.xtable
+Keywords: print
+Description: Retrieve and Set Options for Export Tables
+URL: ../../../library/xtable/html/table.attributes.html
+
+Entry: tli
+Aliases: tli
+Keywords: datasets
+Description: Math scores from Texas Assessment of Academic Skills (TAAS)
+URL: ../../../library/xtable/html/tli.html
+
+Entry: xtable
+Aliases: xtable xtable.anova xtable.aov xtable.aovlist xtable.data.frame xtable.glm xtable.lm xtable.matrix xtable.prcomp xtable.coxph xtable.summary.aov xtable.summary.aovlist xtable.summary.glm xtable.summary.lm xtable.summary.prcomp xtable.ts xtable.table xtable.zoo
+Keywords: file
+Description: Create Export Tables
+URL: ../../../library/xtable/html/xtable.html

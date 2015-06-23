@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Scatter-plots for cDNA microarray spot statistics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maPlot {marray}"><tr><td>maPlot {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Scatter-plots for cDNA microarray spot statistics</h2>
+
+
+<h3>Description</h3>
+
+<p>
+The function <code>maPlot</code> produces scatter-plots of
+microarray spot statistics for the classes <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code> and <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>.
+It also allows the user to highlight and annotate subsets of points on the plot, and display fitted
+curves from robust local regression or other smoothing procedures.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maPlot(m, x="maA", y="maM", z="maPrintTip", lines.func, text.func, legend.func, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>m</code></td>
+<td>
+Microarray object of class <code>"<a href="marrayRaw-class.html">marrayRaw</a>"</code> and <code>"<a href="marrayNorm-class.html">marrayNorm</a>"</code>.</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+Name of accessor function for the abscissa spot statistic, typically a slot name for the microarray object <code>m</code>, such as <code>maA</code>.</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+Name of accessor function for the ordinate spot statistic, typically a slot name for the microarray object <code>m</code>, such as <code>maM</code>.</td></tr>
+<tr valign="top"><td><code>z</code></td>
+<td>
+Name of accessor method for the spot statistic used to stratify the data, typically a slot name for the microarray layout object (see <code>"<a href="marrayLayout-class.html">marrayLayout</a>"</code>) such as <code>maPlate</code> or a method such as <code>maPrintTip</code>. If <code>z</code> is NULL, the data are not stratified.</td></tr>
+<tr valign="top"><td><code>lines.func</code></td>
+<td>
+Function for computing and plotting smoothed fits of <code>y</code> as a function of <code>x</code>, separately within values of <code>z</code>, e.g. <code><a href="maLoessLines.html">maLoessLines</a></code>. If <code>lines.func</code> is NULL, no fitting is performed.</td></tr>
+<tr valign="top"><td><code>text.func</code></td>
+<td>
+Function for highlighting a subset of points, e.g., <code><a href="maText.html">maText</a></code>. If <code>text.func</code> is NULL, no points are highlighted.</td></tr>
+<tr valign="top"><td><code>legend.func</code></td>
+<td>
+Function for adding a legend to the plot, e.g. <code><a href="maLegendLines.html">maLegendLines</a></code>. If <code>legend.func</code> is NULL, there is no legend.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Optional graphical parameters, see <code><a href="../../graphics/html/par.html">par</a></code>.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function calls the general function <code><a href="maPlot.func.html">maPlot.func</a></code>, which is not specific to microarray data. If there are more than one array in the batch, the plot is done for the first array, by default. Default graphical parameters are chosen for convenience using the function <code><a href="maDefaultPar.html">maDefaultPar</a></code> (e.g. color palette,  axis labels,  plot title) but the user has the option to overwrite these parameters at any point.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="maPlot.func.html">maPlot.func</a></code>, <code><a href="maDefaultPar.html">maDefaultPar</a></code>, <code><a href="maLoessLines.html">maLoessLines</a></code>, <code><a href="maLegendLines.html">maLegendLines</a></code>, <code><a href="maText.html">maText</a></code>, <code><a href="../../graphics/html/plot.html">plot</a></code>, <code><a href="../../stats/html/lowess.html">lowess</a></code>, <code><a href="../../stats/html/loess.html">loess</a></code>, <code><a href="../../graphics/html/legend.html">legend</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# To see the demo type demo(marrayPlots)
+
+# Examples use swirl dataset, for description type ? swirl
+data(swirl)
+
+# - Default arguments
+maPlot(swirl)
+
+# Lowess fit using all spots
+maPlot(swirl, z=NULL, legend.func=NULL)
+
+# Loess fit using all spots
+maPlot(swirl, z=NULL, legend.func=maLegendLines(legend="All spots",col="green"), lines.func=maLoessLines(loess.args=list(span=0.3),col="green"))
+
+# Pre-normalization MA-plot for the Swirl 81 array, with the lowess fits for 
+# individual grid columns and 1% tails of M highlighted
+defs &lt;- maDefaultPar(swirl[, 1], x = "maA", y = "maM", z = "maGridCol")
+legend.func &lt;- do.call("maLegendLines", defs$def.legend)
+lines.func &lt;- do.call("maLowessLines", c(list(TRUE, f = 0.3), defs$def.lines))
+text.func&lt;-maText(subset=maTop(maM(swirl)[,1],h=0.01,l=0.01), labels="o", col="violet")
+maPlot(swirl[, 1], x = "maA", y = "maM", z = "maGridCol", lines.func=lines.func, text.func = text.func, legend.func=legend.func, main = "Swirl array 81: pre-normalization MA-plot")
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

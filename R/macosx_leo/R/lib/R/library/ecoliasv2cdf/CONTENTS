@@ -1,0 +1,17 @@
+Entry: ecoliasv2cdf
+Aliases: ecoliasv2cdf
+Keywords: datasets
+Description: ecoliasv2cdf
+URL: ../../../library/ecoliasv2cdf/html/ecoliasv2cdf.html
+
+Entry: ecoliasv2dim
+Aliases: ecoliasv2dim
+Keywords: datasets
+Description: ecoliasv2dim
+URL: ../../../library/ecoliasv2cdf/html/ecoliasv2dim.html
+
+Entry: i2xy
+Aliases: i2xy xy2i
+Keywords: datasets
+Description: Convert (x,y)-coordinates to single-number indices and back.
+URL: ../../../library/ecoliasv2cdf/html/geometry.html

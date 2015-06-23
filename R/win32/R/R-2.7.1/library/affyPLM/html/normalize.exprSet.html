@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Normalization applied to ExpressionSets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for normalize.ExpressionSet {affyPLM}"><tr><td>normalize.ExpressionSet {affyPLM}</td><td align="right">R Documentation</td></tr></table>
+<h2>Normalization applied to ExpressionSets</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Allows the user to apply normalization routines to ExpressionSets.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+  normalize.ExpressionSet.quantiles(eset,transfn=c("none","log","antilog"))
+  normalize.ExpressionSet.loess(eset,transfn=c("none","log","antilog"),...)
+  normalize.ExpressionSet.contrasts(eset, span = 2/3, choose.subset = TRUE, subset.size = 5000, verbose = TRUE, family = "symmetric",transfn=c("none","log","antilog"))
+  normalize.ExpressionSet.qspline(eset,transfn=c("none","log","antilog"),...)
+  normalize.ExpressionSet.invariantset(eset,prd.td = c(0.003, 0.007),verbose=FALSE,transfn=c("none","log","antilog"),baseline.type=c("mean","median","pseudo-mean","pseudo-median"))
+normalize.ExpressionSet.scaling(eset,trim=0.02,baseline=-1,transfn=c("none","log","antilog"))
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>eset</code></td>
+<td>
+An <code><a href="../../Biobase/html/ExpressionSet-class.html">ExpressionSet</a></code></td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+parameter to be passed to the function <code><a href="../../modreg/html/loess.html">loess</a></code>.</td></tr>
+<tr valign="top"><td><code>choose.subset</code></td>
+<td>
+</td></tr>
+<tr valign="top"><td><code>subset.size</code></td>
+<td>
+</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+verbosity flag</td></tr>
+<tr valign="top"><td><code>family</code></td>
+<td>
+parameter to be passed to the function
+<code><a href="../../modreg/html/loess.html">loess</a></code>.</td></tr>
+<tr valign="top"><td><code>prd.td</code></td>
+<td>
+cutoff parameter (details in the bibliographic
+reference)</td></tr>
+<tr valign="top"><td><code>trim</code></td>
+<td>
+How much to trim from the top and bottom before computing
+the mean when using the scaling normalization</td></tr>
+<tr valign="top"><td><code>baseline</code></td>
+<td>
+Index of array to use as baseline, negative values
+(-1,-2,-3,-4) control different baseline selection methods</td></tr>
+<tr valign="top"><td><code>transfn</code></td>
+<td>
+Transform the ExpressionSet before normalizing. Useful when
+dealing with expression values that are log-scale</td></tr>
+<tr valign="top"><td><code>baseline.type</code></td>
+<td>
+A method of selecting the baseline array</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Additional parameters that may be passed to the
+normalization routine</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function carries out normalization of expression values. In
+general you should either normalize at the probe level or at the
+expression value level, not both.
+</p>
+<p>
+Typing <code>normalize.ExpressionSet.methods</code> should give you a list of
+methods that you may use. note that you can also use the
+<code>normalize</code> function on ExpressionSets. Use <code>method</code> to select the
+normalization method.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A normalized <code><a href="../../Biobase/html/ExpressionSet-class.html">ExpressionSet</a></code>.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Ben Bolstad, <a href="mailto:bmb@bmbolstad.com">bmb@bmbolstad.com</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Bolstad, BM (2004) <EM>Low Level Analysis of High-density
+Oligonucleotide Array Data: Background, Normalization and
+Summarization</EM>. PhD Dissertation. University of California,
+Berkeley.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../affy/html/normalize.html">normalize</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(affybatch.example)
+eset &lt;- rma(affybatch.example,normalize=FALSE,background=FALSE)
+normalize(eset)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affyPLM</em> version 1.16.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

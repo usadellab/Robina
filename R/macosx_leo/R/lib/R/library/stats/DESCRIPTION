@@ -1,0 +1,9 @@
+Package: stats
+Version: 2.7.0
+Priority: base
+Title: The R Stats Package
+Author: R Development Core Team and contributors worldwide
+Maintainer: R Core Team <R-core@r-project.org>
+Description: R statistical functions
+License: GPL (>= 2)
+Built: R 2.7.0; i386-apple-darwin9.3.0; 2008-06-26 12:28:19; unix

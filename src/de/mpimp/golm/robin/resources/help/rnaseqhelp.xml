@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    
+<entry key="rnaseqhelp.test"><![CDATA[<h3>Fischvogel header</h3>
+
+Bi-ba-butzemann is a new technology especially 
+styled towards discovering small dancing gnomes 
+hidden under your bed. In some special cases 
+the gnomes might be hiding under carpets or 
+behind wall paper but never alone.
+thanks.
+]]></entry>
+
+<entry key="rnaseqhelp.fisch"><![CDATA[<h3><![CDATA[<h3>Another header</h3>
+
+Glowing litte fishies are interesting to look
+at but do not talk to them - they might react
+in unexpected ways. 
+]]></entry>
+
+<entry key="rnaseqhelp.callqual"><![CDATA[<h3>Base call qualities</h3>
+
+FastQ sequence files include a base call
+quality score for each nucleotide in the
+reads. The scores encode an error probability
+according to blablabla
+]]></entry>
+
+<entry key="rnaseqhelp.mappingtool"><![CDATA[<h3>Bowtie alignment tool</h3>
+Bowtie is a very fast open source alignment tool especially geared
+towards aligning a
+large number of short reads to a reference
+sequence. It creates a Burrows-Wheeler index
+of the user-supplied reference sequence that
+can be queried very fast. <br>
+<br>
+To tweak the alignment process, several settings
+can be modified:
+<br>
+<br>
+<span style="font-weight: bold;">'seed mismatch'</span>:
+<br>
+The maximal number of mismatches in the seed region of the alignment.
+Values between
+0 (no mismatches tolerated) and 3 are possible.
+<br>
+<br>
+<span style="font-weight: bold;">'seed length'</span>:
+<br>
+Controls the extent of the seed region at the start of the reads and
+<br>
+<br>
+<span style="font-weight: bold;">'mismatch quality'</span>:
+<br>
+Sets the maximal sum of
+base call qualities of all mismatches that
+will be tolerated.
+<br>
+<br>
+The complete bowtie manual, available at
+<a href="http://bowtie-bio.sourceforge.net/manual.shtml">http://bowtie-bio.sourceforge.net/manual.shtml</a>
+offers a large amount of further options.
+RobiNA offers the possibility to pass more arguments
+to bowtie via the 'more args' text field.
+<br>
+<br>
+For further details concerning the method, please see: <br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">Langmead B, Trapnell C,
+Pop M, Salzberg SL. </span>Ultrafast and memory-efficient
+alignment of short DNA sequences to the human genome. Genome Biol.
+2009;10(3):R25. Epub 2009 Mar 4. PubMed PMID: 19261174;
+
+]]></entry>
+
+<entry key="rnaseqhelp.genomicfastainfo"><![CDATA[Genome sequence data has to be
+provided in standard FASTA format.
+Please don't forget to also supply
+a GFF3 formatted annotation file that
+contains information about the locations
+of genes on the chromosomes (or scaffolds).
+]]></entry>
+
+<entry key="rnaseqhelp.gff3info"><![CDATA[<h3>GFF3/GTF annotation file</h3>
+
+To be able to use a genomic sequence as
+a reference to map the reads to, RobiNA
+needs to know the locations of genes in
+the genomic sequence. These locations have
+to be provided in a standard GFF3 or GTF file 
+matching the sequence FASTA file provided.
+For the mapping of the reads, the GFF3 file has
+to provide at least "gene" location entries.
+Please refers to these websites for a detailed
+specification of the file format:
+GFF3: http://www.sequenceontology.org/gff3.shtml   
+GTF: http://mblab.wustl.edu/GTF22.html
+
+]]></entry>
+
+<entry key="rnaseqhelp.consechomo"><![CDATA[<h3>Consecutive homopolymer base calls</h3>
+
+The occurrence of cycle-wise multiplied
+calls of the same nucleobase is a rarely 
+seen technical problem. If it happens, 
+the base called in e.g. cycle 20 to 20+n 
+will be identical within each read across 
+all reads (i.e AAA in read 1, CCC in read 2, 
+CCC in read 3, TTT in read 4 etc). If such
+errors are detected in the input, they will 
+show as peaks reaching up to 100% at individual
+cycles. It is recommended not to use such datasets 
+and investigate possible technical sources.
+]]></entry>
+
+<entry key="rnaseqhelp.kmerfreq"><![CDATA[<h3>K-mer frequencies</h3>
+
+The Kmer frequency check identifies short 
+sequences that occur more often than expected. 
+The computation is based on the probablilty to 
+observe a certain sequence given the probabilities 
+of the occurrence of each nucleotide. N base calls
+are excluded. The plot shows the overenrichment
+of frequent Kmer sequences per cycle (i.e. position 
+in the read). Up to 10 Kmers that occur 3 times more
+often than expected are indicated.
+<br><br>
+In case unclipped, barcoded reads from a multiplexed 
+sequencing run were used as input the barcodes are 
+likely to be detected as overenriched Kmers at the 
+start of the reads.
+]]></entry>
+
+<entry key="rnaseqhelp.basefreq"><![CDATA[<h3>Base call frequencies per position</h3>
+
+The base call frequency plots help identifying 
+positional biases in the call frequency for each 
+base. In principle, if the reads were no generated
+from preselected DNA/RNA that was specifically 
+enriched in certain bases, one would expect no 
+positional differences in the occurrences of each base.
+Biases can be cause by e.g. unclipped barcode sequences, 
+adapters etc.
+]]></entry>
+
+<entry key="rnaseqhelp.basicstats"><![CDATA[<h3>Basic sequence stats</h3>
+
+This module simply procides very basic summary
+stats like N content, number of reads etc. for
+each input file.
+]]></entry>
+
+<entry key="rnaseqhelp.overrep"><![CDATA[<h3>Overrepresented sequences</h3>
+
+This module identifies longer sequences that
+occur more often than expected. These are often
+indicators of technical bias - e.g. contamination
+of the sample with adapter sequences. The Trimmomatic
+adapter clipper module is a convenient method to
+remove them from the data set.
+]]></entry>
+
+<entry key="rnaseqhelp.pvalcutoff"><![CDATA[Choose the cut-off P-value above
+which genes are not regarded as significantly
+differentially expressed any more
+]]></entry>
+
+<entry key="rnaseqhelp.pvalcorr"><![CDATA[<h3>P-value correction</h3>
+Since the statistical assessment of
+differential gene expression for a large
+amount of genes is a multiple testing
+scenario, the obtained raw P-values need
+to be corrected for multiple testing.
+Several methods are available - please
+refer to the cited articles for deeper
+detail:
+<br>
+<br>
+"BH / fdr"<br>
+<span style="font-weight: bold;">Benjamini and Hochberg
+Benjamini, Y., and Hochberg, Y. (1995).</span> Controlling the
+false discovery rate: a practical and powerful approach to multiple
+testing. Journal of the Royal Statistical Society Series B, 57,
+289&ndash;300.
+<br>
+<br>
+"BY"<br>
+<span style="font-weight: bold;">Benjamini and Yekutieli
+Benjamini, Y., and Yekutieli, D. (2001).</span> The control of
+the false discovery rate in multiple testing under dependency. Annals
+of Statistics 29, 1165&ndash;1188.
+<br>
+<br>
+"holm" <br>
+<span style="font-weight: bold;">Holm, S. (1979).</span>
+A simple sequentially rejective multiple test procedure. Scandinavian
+Journal of Statistics, 6, 65&ndash;70.
+<br>
+<br>
+"none" - No multiple testing correction.
+
+]]></entry>
+
+<entry key="rnaseqhelp.lfcone"><![CDATA[<h3>Minimal log2-fold change filter</h3>
+If activated, genes that show a log2 fold
+change value of less than 1 (which means
+an at least 2-fold change in expression
+level) will be considered insignificant
+]]></entry>
+
+<entry key="rnaseqhelp.writerawexprs"><![CDATA[<h3>Write raw expression estimates</h3>
+]]></entry>
+
+<entry key="rnaseqhelp.tagwisedisp"><![CDATA[<h3>Tagwise dispersion estimation</h3>
+
+For statistical analysis, the dispersion 
+of the data needs to be estimated. By default,
+when using edgeR, this will be done globally,
+i.e. across all samples in the dataset and across
+all genes ('tags'), assuming that the dispersion
+will be the roughly the same for all genes. 
+<br><br>
+However, if you expect this not to be the case and
+have a data set with many samples, you can choose to
+estimate the dispersion for each gene individually
+by checking the tagwise dispersion estimation option.
+]]></entry>
+
+<entry key="rnaseqhelp.BARCODESPLITTER"><![CDATA[<h3>Barcode Splitter</h3>
+
+When working with multiplexed data, that
+means several different sample libraries
+have been sequenced in one sequencing run
+(e.g. one lane on a Illumina/Solexa plat-
+form), the different sample libraries are
+usually tagged by a short barcode sequence
+at the 5' end of the reads. To further analyse
+the data, the multiplexed data needs to be
+split into different files - one for each
+of the samples. To do so, you have to supply
+the barcodes used plus a short human readable
+label either by typing the information in 
+the table provided in the barcode splitter
+box or by loading it from a tab-separated
+text file. 
+<br><br>
+You can set the barcode splitter to accept
+mismatches in the barcode sequence, however
+this is not really recommended. Reads that
+have a barcode that does not match to any
+of the user-provided ones will be collected
+in a separated file with file name prefix
+"UNKNOWN".
+<br><br>
+When choosing the barcode splitter module,
+it will automatically always be placed at
+position one of the trimming pipeline.
+]]></entry>
+
+<entry key="rnaseqhelp.ILLUMINACLIP"><![CDATA[<h3>Adapter Clipper</h3>
+
+The raw sequence data may contain substantial
+"contaminations" with e.g. adapter sequences. 
+These should be filtered out before proceeding
+to downstream analyses.
+<br><br>
+The "max. seed mismatch" and "match stringency"
+settings can be used to tweak the adapter search
+performance. The settings chosen should work
+robustly for most cases. However, if you expect
+very short adapters, the match stringency might
+have to be reduced in order to reliably detect
+them.
+<br><br>
+For legal reasons we are not allowed to bundle
+known adapter sequences with the RobiNA software
+bundle - hence it is necessary that the user
+provides these sequences in a standard FASTA-
+formatted text file. Feel free to contact us
+for further information on adapter sequences.
+(please visit http://mapman.gabipd.org/web/guest/forum)
+]]></entry>
+
+<entry key="rnaseqhelp.LEADING"><![CDATA[<h3>Leading Quality Trimmer</h3>
+
+This module will remove nucleotides starting 
+from the 5'-end as long as the quality score
+stays below a user-definable threshold value
+(default 20).
+]]></entry>
+
+<entry key="rnaseqhelp.CROP"><![CDATA[<h3>Read Length Cropper</h3>
+
+The cropper module will simply truncate all
+reads to the length specified.
+]]></entry>
+
+<entry key="rnaseqhelp.TRAILING"><![CDATA[<h3>Trailing Quality Trimmer</h3>
+
+Analogous to the leading trimmer this module
+will remove low-quality nucleotides starting
+from the 3'-end of the reads. The default quality
+cut-off is 3.
+]]></entry>
+
+<entry key="rnaseqhelp.SLIDINGWINDOW"><![CDATA[<h3>Sliding Window Trimmer</h3>
+
+This trimmer will scan across each read using
+a sliding window of user-definable width (default 4).
+As soon as the average quality of nucleotides 
+in the window is below the specified threshold
+value all downstream nucleotides will be removed.
+]]></entry>
+
+<entry key="rnaseqhelp.MINLEN"><![CDATA[<h3>Minimum Length Trimmer</h3>
+
+Reads that are shorter than the specified minimum
+length will be discarded. This trimmer makes most
+sense when used as the last step in a multi-step
+trimming pipeline that first crops reads e.g. based
+on the base call qualities since it can make
+sure that reads that were trimmed too short will be
+excluded.
+]]></entry>
+
+<entry key="rnaseqhelp.ANNOTATION"><![CDATA[<h3>MapMan Annotation</h3>
+
+The MapMen project provides annotation files (mappings)
+that assign e.g. gene identifiers to the functional
+categories defined in the MapMan functional Ontology.
+<br><br>
+The functional categories are called "BINs" and are
+organized in a hierarchical tree structure. In a
+mapping file, each gene is annotated with at least 
+one such BIN, ideally correctly describing it's function.
+In some cases more than one BIN needed to be assigned
+to individual genes in order to fully descrobe the
+function.
+<br><br>
+The MapManStore (click the "download more mappings"
+button to navigate there in your web browser) is a 
+public repository of all available mappings. Users
+can freely download mapping data for various species
+and usually several different platforms (e.g. different
+microarrays or genome relrease versions etc) from 
+this repository and import it into RobiNA.
+]]></entry>
+
+
+<entry key="rnaseqhelp.estimateRPKM"><![CDATA[<h3>Estimate normalized expression level</h3>
+RPKM
+]]></entry>
+
+<entry key="rnaseqhelp.normGC"><![CDATA[<h3>GC content bias correction</h3>
+It has been described that the GC content of the sequenced DNA has an
+impact on sequencing. Regions with a high or low GC content tend to be
+"undersequenced". In addition to this, the bias is not uniform but can
+differ between library preparations and can hence influence
+the results of a differential gene expression analysis.
+<br>
+GC content-based normalization will
+be performed first within and then between lanes(samples).
+<br>
+Please note that the GC normalization step assumes that each sample
+corresponds
+to one lane on the Illumina chip. In case
+you defined samples that are containing
+reads from several different Illumina
+lanes (and maybe also separate library
+preparations) the GC normalization procedure
+might yield wrong output.
+<br>
+<br>
+Several methods for correcting this bias are available - activation of
+the GC content normalization check box allows you to choose one of the
+methods described in <br>
+<br>
+<span style="font-weight: bold;">Risso D, Schwartz K,
+Sherlock G, Dudoit S.</span> GC-Content Normalization for RNA-Seq
+Data. BMC Bioinformatics. 2011 Dec 17;12:480. PubMed PMID: 22177264;
+
+]]></entry>
+
+
+<entry key="rnaseqhelp.countstable_import"><![CDATA[
+
+<h3>Import an existing counts table</h3>
+RobiNA allows the import of precomputed
+counts tables. The analysis workflow will
+jump forward to the statistical analysis step
+since quality checking, trimming and mapping
+are already done (and not recomputable based
+on the count data). When importing a counts table please make sure
+that the format obeys the following restrictions:
+<br>
+<br>
+<ol>
+  <li>The file has to be a tab-separated plain
+text file.
+  </li><br>
+  <li>Numerical data must be integers.
+  </li><br>
+  <li>The count data has to be organized in columns with the
+first column giving the feature (e.g. gene, transcript etc.)
+identifiers and the subsequent columns holding the count data for the
+genes in
+each of the (replicate) conditions.
+Example:
+  </li><br>
+  <li>The header row has to follow the format shown below with
+"ID" as the
+header
+for the identifier column and "condition_n"
+for the data columns. "Condition" denotes any
+experimental condition like "stress", "control"
+or "tissueA", "tissueB"; "mutant", "wildtype" etc. while "n" is the
+number of the replicate.
+Spaces (or tabs etc.) are not allowed in the column headers.
+  </li>
+</ol>
+</span>
+<pre> 	ID    stress_1 stress_2 cont_1  cont_2<br>	gene1 10       12       1       2<br>	gene2 4        5        124     130<br>	gene3 1332     1543     39      25<br>	gene4 350      299      12      15<br><br></pre>
+
+]]></entry>
+
+<entry key="rnaseqhelp.bamsamimport"><![CDATA[<h3>Importing BAM / SAM alignment files
+
+When importing prealigned reads in
+BAM or SAM format, it is necessary
+to provide a GFF3 annotation of the
+reference genome, in case the reads
+were aligned against a genome or
+preliminary genome assembly sequence.
+
+When the alignment was done against
+a transcriptome reference sequence,
+this is not necessary since because
+the hit IDs in the BAM file will be
+the transcript identifiers (as opposed
+to chromosome or contig/scaffold names
+when using a genome).
+]]></entry>
+
+
+<entry key="rnaseqhelp.bamsamstringency"><![CDATA[<h3>Importing BAM / SAM alignment files</h3>
+    
+You can set the level of stringency at
+which the BAM/SAM parser validates the
+format consistency of theinput files.<br>
+    
+Usually, it is recommended to keep the
+stringency at a strict level, enforcing
+complete compliance to the BAM/SAM format
+specification.<br>
+    
+You can, however, if errors occur choose
+to loosen the stringecy and allow import
+of inconsistent files. We strongly advise
+to do this only if, after thoroughly inspecting
+the error, you are convinced that the 
+error is not relevant for the downstream
+analysis.<br>
+    
+Stringency levels:<br>
+<pre>
+strict -  Do the right thing, throw an exception 
+          if something looks wrong.
+    
+lenient - Emit warnings but keep going 
+          if possible.
+    
+silent -  Like LENIENT, only don't emit 
+          warning messages.
+ </pre>
+]]></entry>
+
+
+    
+</properties>

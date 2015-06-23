@@ -1,0 +1,125 @@
+Entry: AnnDbBimap-envirAPI
+Aliases: AnnDbBimap-envirAPI ls ls,Bimap-method exists exists,ANY,ANY,Bimap-method exists,ANY,Bimap,missing-method get get,ANY,ANY,AnnDbBimap-method get,ANY,AnnDbBimap,missing-method [[,AnnDbBimap-method $,AnnDbBimap-method mget mget,AnnDbBimap-method mget,ANY,AnnDbBimap-method eapply eapply,Bimap-method contents,Bimap-method sample sample,Bimap-method sample,environment-method
+Keywords: methods interface
+Description: Environment-like API for AnnDbBimap objects
+URL: ../../../library/AnnotationDbi/html/AnnDbBimap-envirAPI.html
+
+Entry: AnnDbObj-objects
+Aliases: AnnDbObj-objects AnnDbObj class:AnnDbObj AnnDbObj-class dbconn dbconn,environment-method dbconn,AnnDbObj-method dbfile dbfile,environment-method dbfile,AnnDbObj-method dbmeta dbmeta,DBIConnection-method dbmeta,environment-method dbmeta,AnnDbObj-method dbschema dbschema,DBIConnection-method dbschema,environment-method dbschema,AnnDbObj-method dbInfo dbInfo,DBIConnection-method dbInfo,environment-method dbInfo,AnnDbObj-method
+Keywords: classes methods
+Description: AnnDbObj objects
+URL: ../../../library/AnnotationDbi/html/AnnDbObj-class.html
+
+Entry: AnnDbPkg-checker
+Aliases: AnnDbPkg-checker checkMAPCOUNTS
+Keywords: utilities
+Description: Check the SQL data contained in an SQLite-based annotation package
+URL: ../../../library/AnnotationDbi/html/AnnDbPkg-checker.html
+
+Entry: AnnDbPkg-maker
+Aliases: AnnDbPkg-maker AnnDbPkgSeed class:AnnDbPkgSeed AnnDbPkgSeed-class makeAnnDbPkg makeAnnDbPkg,AnnDbPkgSeed-method makeAnnDbPkg,list-method makeAnnDbPkg,character-method loadAnnDbPkgIndex
+Keywords: utilities classes methods
+Description: Creates an SQLite-based annotation package
+URL: ../../../library/AnnotationDbi/html/AnnDbPkg-maker.html
+
+Entry: AnnotationDbi internals
+Aliases: debugSQL class:FlatBimap FlatBimap-class FlatBimap showQCData class:L2Rlink L2Rlink-class L2Rlink initialize,FlatBimap-method initialize,L2Rlink-method show,L2Rlink-method dbFileConnect dbFileDisconnect mergeToNamespaceAndExport createAnnObjs.HUMANCHIP_DB createAnnObjs.MOUSECHIP_DB createAnnObjs.RATCHIP_DB createAnnObjs.FLYCHIP_DB createAnnObjs.YEASTCHIP_DB createAnnObjs.ARABIDOPSISCHIP_DB createAnnObjs.HUMAN_DB createAnnObjs.MALARIA_DB createAnnObjs.MOUSE_DB createAnnObjs.RAT_DB createAnnObjs.FLY_DB createAnnObjs.YEAST_DB createAnnObjs.YEASTLEGACY_DB createAnnObjs.GO_DB createAnnObjs.KEGG_DB createAnnObjs.INPARANOIDDROME_DB createAnnObjs.INPARANOIDHOMSA_DB createAnnObjs.INPARANOIDMUSMU_DB createAnnObjs.INPARANOIDRATNO_DB createAnnObjs.INPARANOIDSACCE_DB createAnnObjs.PFAM_DB createAnnObjs.AFFYHUEX_DB
+Keywords: internal methods classes
+Description: AnnotationDbi internals
+URL: ../../../library/AnnotationDbi/html/AnnotationDbi-internals.html
+
+Entry: Bimap-direction
+Aliases: Bimap-direction direction direction,FlatBimap-method direction,AnnDbBimap-method direction<- direction<-,FlatBimap-method direction<-,AnnDbBimap-method direction<-,AnnDbMap-method revmap revmap,Bimap-method revmap,AnnDbBimap-method revmap,environment-method revmap,list-method Lkeys Lkeys,FlatBimap-method Lkeys,AnnDbBimap-method Rkeys Rkeys,FlatBimap-method Rkeys,AnnDbBimap-method Rkeys,Go3AnnDbBimap-method Rkeys,AnnDbMap-method Llength Llength,Bimap-method Llength,AnnDbBimap-method Rlength Rlength,Bimap-method Rlength,AnnDbBimap-method Rlength,Go3AnnDbBimap-method Rlength,AnnDbMap-method mappedLkeys mappedLkeys,FlatBimap-method mappedLkeys,AnnDbBimap-method mappedLkeys,Go3AnnDbBimap-method mappedLkeys,AgiAnnDbMap-method mappedRkeys mappedRkeys,FlatBimap-method mappedRkeys,AnnDbBimap-method mappedRkeys,Go3AnnDbBimap-method mappedRkeys,AnnDbMap-method count.mappedLkeys count.mappedLkeys,Bimap-method count.mappedLkeys,AnnDbBimap-method count.mappedLkeys,Go3AnnDbBimap-method count.mappedLkeys,AgiAnnDbMap-method count.mappedRkeys count.mappedRkeys,Bimap-method count.mappedRkeys,AnnDbBimap-method count.mappedRkeys,Go3AnnDbBimap-method count.mappedRkeys,AnnDbMap-method Lkeys<- Lkeys<-,FlatBimap-method Lkeys<-,AnnDbBimap-method Rkeys<- Rkeys<-,FlatBimap-method Rkeys<-,AnnDbBimap-method subset subset,Bimap-method subset,AnnDbBimap-method
+Keywords: methods
+Description: Methods for getting/setting the direction of a Bimap object, and undirected methods for getting/counting/setting its keys
+URL: ../../../library/AnnotationDbi/html/Bimap-direction.html
+
+Entry: Bimap-keys
+Aliases: Bimap-keys keys keys,Bimap-method length,Bimap-method mappedkeys mappedkeys,Bimap-method mappedkeys,environment-method mappedkeys,vector-method count.mappedkeys count.mappedkeys,Bimap-method count.mappedkeys,ANY-method isNA isNA,Bimap-method isNA,environment-method isNA,ANY-method keys<- keys<-,Bimap-method [,Bimap-method show,AnnDbTable-method
+Keywords: methods
+Description: Methods for manipulating the keys of a Bimap object
+URL: ../../../library/AnnotationDbi/html/Bimap-keys.html
+
+Entry: Bimap-toTable
+Aliases: Bimap-toTable toTable toTable,FlatBimap-method toTable,AnnDbBimap-method nrow nrow,FlatBimap-method nrow,AnnDbTable-method nrow,AnnDbBimap-method nrow,Go3AnnDbBimap-method ncol ncol,Bimap-method dim,Bimap-method head head,FlatBimap-method tail tail,FlatBimap-method links links,FlatBimap-method links,AnnDbBimap-method links,Go3AnnDbBimap-method count.links count.links,Bimap-method count.links,Go3AnnDbBimap-method nhit nhit,Bimap-method nhit,environment-method nhit,list-method colnames colnames,FlatBimap-method colnames,AnnDbBimap-method colmetanames colmetanames,FlatBimap-method colmetanames,AnnDbBimap-method Lkeyname Lkeyname,Bimap-method Lkeyname,AnnDbBimap-method Rkeyname Rkeyname,Bimap-method Rkeyname,AnnDbBimap-method keyname keyname,Bimap-method tagname tagname,Bimap-method tagname,AnnDbBimap-method Rattribnames Rattribnames,Bimap-method Rattribnames,AnnDbBimap-method Rattribnames<- Rattribnames<-,FlatBimap-method Rattribnames<-,AnnDbBimap-method Rattribnames<-,Go3AnnDbBimap-method
+Keywords: methods
+Description: Methods for manipulating a Bimap object in a data-frame style
+URL: ../../../library/AnnotationDbi/html/Bimap-toTable.html
+
+Entry: Bimap
+Aliases: Bimap Bimap class:Bimap Bimap-class AnnDbBimap class:AnnDbBimap AnnDbBimap-class GoAnnDbBimap class:GoAnnDbBimap GoAnnDbBimap-class Go3AnnDbBimap class:Go3AnnDbBimap Go3AnnDbBimap-class GOTermsAnnDbBimap class:GOTermsAnnDbBimap GOTermsAnnDbBimap-class AnnDbMap class:AnnDbMap AnnDbMap-class IpiAnnDbMap class:IpiAnnDbMap IpiAnnDbMap-class AgiAnnDbMap class:AgiAnnDbMap AgiAnnDbMap-class show,FlatBimap-method show,AnnDbBimap-method summary,Bimap-method summary,AnnDbBimap-method
+Keywords: classes interface
+Description: Bimap objects and the Bimap interface
+URL: ../../../library/AnnotationDbi/html/Bimap.html
+
+Entry: BimapFormatting
+Aliases: BimapFormatting as.list as.list,Bimap-method as.list,AnnDbBimap-method as.list,IpiAnnDbMap-method as.list,AgiAnnDbMap-method as.list,GoAnnDbBimap-method as.list,GOTermsAnnDbBimap-method as.character,AnnDbBimap-method
+Keywords: methods
+Description: Formatting a Bimap as a list or character vector
+URL: ../../../library/AnnotationDbi/html/BimapFormatting.html
+
+Entry: GOTerms-class
+Aliases: class:GOTerms GOTerms-class GOTerms initialize,GOTerms-method GOID GOID,GOTerms-method Term Term,GOTerms-method Ontology Ontology,GOTerms-method Definition Definition,GOTerms-method Synonym Synonym,GOTerms-method Secondary Secondary,GOTerms-method show,GOTerms-method
+Keywords: methods classes
+Description: Class "GOTerms"
+URL: ../../../library/AnnotationDbi/html/GOTerms-class.html
+
+Entry: make_eg_to_go_map
+Aliases: make_eg_to_go_map make_go_to_eg_map
+Keywords: 
+Description: Create GO to Entrez Gene maps for chip-based packages
+URL: ../../../library/AnnotationDbi/html/make_eg_to_go_map.html
+
+Entry: makeARABIDOPSISCHIP_DB
+Aliases: makeARABIDOPSISCHIP_DB
+Keywords: utilities
+Description: Creates a sqlite database, and then makes an annotation package with it
+URL: ../../../library/AnnotationDbi/html/sqlForge-makeARABIDOPSISCHIPDB.html
+
+Entry: makeHUMANCHIP_DB
+Aliases: makeHUMANCHIP_DB makeMOUSECHIP_DB makeRATCHIP_DB makeFLYCHIP_DB
+Keywords: utilities
+Description: Creates a sqlite database, and then makes an annotation package with it
+URL: ../../../library/AnnotationDbi/html/sqlForge-makeCHIPDB.html
+
+Entry: makeYEASTCHIP_DB
+Aliases: makeYEASTCHIP_DB
+Keywords: utilities
+Description: Creates a sqlite database, and then makes an annotation package with it
+URL: ../../../library/AnnotationDbi/html/sqlForge-makeYEASTDB.html
+
+Entry: popARABIDOPSISCHIPDB
+Aliases: popARABIDOPSISCHIPDB
+Keywords: utilities
+Description: Populates an SQLite DB with and produces a schema definition
+URL: ../../../library/AnnotationDbi/html/sqlForge-popARABIDOPSISCHIPDB.html
+
+Entry: popHUMANCHIPDB
+Aliases: popHUMANCHIPDB popMOUSECHIPDB popRATCHIPDB popFLYCHIPDB
+Keywords: utilities
+Description: Populates an SQLite DB with and produces a schema definition
+URL: ../../../library/AnnotationDbi/html/sqlForge-popCHIPDB.html
+
+Entry: popHUMANDB
+Aliases: popHUMANDB popMALARIADB popMOUSEDB popRATDB popFLYDB popYEASTDB
+Keywords: utilities
+Description: Populates an SQLite DB with and produces a schema definition
+URL: ../../../library/AnnotationDbi/html/sqlForge-popDB.html
+
+Entry: popYEASTCHIPDB
+Aliases: popYEASTCHIPDB
+Keywords: utilities
+Description: Populates an SQLite DB with and produces a schema definition
+URL: ../../../library/AnnotationDbi/html/sqlForge-popYEASTCHIPDB.html
+
+Entry: wrapBaseDBPackages
+Aliases: wrapBaseDBPackages
+Keywords: utilities
+Description: Wrap up all the Base Databases into Packages for distribution
+URL: ../../../library/AnnotationDbi/html/sqlForge-wrapDBPackages.html
+
+Entry: toSQLStringSet
+Aliases: toSQLStringSet
+Keywords: manip
+Description: Convert a vector to a quoted string for use as a SQL value list
+URL: ../../../library/AnnotationDbi/html/toSQLStringSet.html

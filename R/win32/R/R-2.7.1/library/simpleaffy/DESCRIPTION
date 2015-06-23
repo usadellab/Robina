@@ -1,0 +1,21 @@
+Package: simpleaffy
+Title: Very simple high level analysis of Affymetrix data
+Version: 2.16.0
+Author: Crispin J Miller
+Description: Provides high level functions for reading Affy .CEL files,
+        phenotypic data, and then computing simple things with it, such
+        as t-tests, fold changes and the like. Makes heavy use of the
+        affy library. Also has some basic scatter plot functions and
+        mechanisms for generating high resolution journal figures...
+Maintainer: Crispin Miller <cmiller@picr.man.ac.uk>
+Depends: R (>= 2.0.0), affy, genefilter, Biobase, methods, utils, gcrma
+Imports: methods, utils
+License: GPL version 2 or later
+URL: http://www.bioconductor.org,
+        http://bioinformatics.picr.man.ac.uk/simpleaffy/
+biocViews: Microarray, OneChannel, QualityControl, Preprocessing,
+        Transcription, DataImport, Statistics, DifferentialExpression,
+        Annotation, ReportWriting, Visualization
+LazyLoad: yes
+Packaged: Mon May 12 03:06:07 2008; biocbuild
+Built: R 2.7.0; i386-pc-mingw32; 2008-05-12 08:47:27; windows

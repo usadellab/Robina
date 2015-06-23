@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Replace default arguments of a function by user supplied values</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maDotsMatch {marray}"><tr><td>maDotsMatch {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Replace default arguments of a function by user supplied values</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function may be used to replace default arguements for any
+functions to user supplied parameters.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maDotsMatch(dots, defaults)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dots</code></td>
+<td>
+List of user supplied argements, e.g. from <code>list(...)</code>.</td></tr>
+<tr valign="top"><td><code>defaults</code></td>
+<td>
+List of  formal arguments of a function, e.g. from the
+function <code><a href="../../base/html/formals.html">formals</a></code>.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>args</code></td>
+<td>
+List of argument of a function.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Jean Yee Hwa Yang
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="maDefaultPar.html">maDefaultPar</a></code>, <code><a href="maDotsDefaults.html">maDotsDefaults</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+dots&lt;-list(x=1:10, y=11:20)
+argsfun &lt;- maDotsMatch(dots, formals(args(plot)))
+do.call("plot", argsfun)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

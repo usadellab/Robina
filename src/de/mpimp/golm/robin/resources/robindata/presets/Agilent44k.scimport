@@ -1,0 +1,7 @@
+#Custom single channel import settings Agilent44k
+#Mon Aug 17 13:21:53 CEST 2009
+ID=ProbeName
+flag=none
+G=gMedianSignal
+layout=none
+Gb=gBGMedianSignal

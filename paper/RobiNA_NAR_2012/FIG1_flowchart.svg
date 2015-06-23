@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100%"
+   height="100%"
+   viewBox="-100 -100 744.09449 1052.3622"
+   id="svg3916"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="FIG1_flowchart.svg">
+  <defs
+     id="defs4026">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path4815"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Send"
+       style="overflow:visible;">
+      <path
+         id="path4821"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path4809"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path4791"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;">
+      <path
+         id="path4803"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="1006"
+     id="namedview4024"
+     showgrid="false"
+     inkscape:zoom="1.31"
+     inkscape:cx="418.42547"
+     inkscape:cy="632.20071"
+     inkscape:window-x="20"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3916" />
+  <title
+     id="title3918">Flowchart Symbols</title>
+  <desc
+     id="desc3920">Alternate description</desc>
+  <metadata
+     id="metadata3922">author: schepers, created: 12-10-2009<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title>Flowchart Symbols</dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <rect
+     style="fill:#ffffff;stroke:#000000;stroke-width:2"
+     ry="23"
+     rx="23"
+     height="46"
+     width="125"
+     y="12.03258"
+     x="457.48468"
+     id="terminal">
+    <title
+       id="title3926">Terminal Symbol</title>
+    <desc
+       id="desc3928">The terminal symbol indicates a starting or stopping point in the logic.  Every flowchart should start and end with one or more terminal symbols.</desc>
+    <point
+       id="point3930"
+       y="-23"
+       x="0"
+       role="port" />
+    <point
+       id="point3932"
+       y="0"
+       x="-62.5"
+       role="port" />
+    <point
+       id="point3934"
+       y="23"
+       x="0"
+       role="port" />
+    <point
+       id="point3936"
+       y="0"
+       x="62.5"
+       role="port" />
+  </rect>
+  <rect
+     style="fill:#ffffff;stroke:#000000;stroke-width:2"
+     height="72"
+     width="106"
+     y="514.75012"
+     x="486.23529"
+     id="process">
+    <title
+       id="title3952">Process Symbol</title>
+    <desc
+       id="desc3954">The process symbol symbol represents any single process in an algorithm, such as assigning a value or performing a calculation.  The flow of control is sequential.</desc>
+    <point
+       id="point3956"
+       y="-36"
+       x="0"
+       role="port" />
+    <point
+       id="point3958"
+       y="0"
+       x="-53"
+       role="port" />
+    <point
+       id="point3960"
+       y="0"
+       x="53"
+       role="port" />
+    <point
+       id="point3962"
+       y="36"
+       x="0"
+       role="port" />
+  </rect>
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-width:2"
+     inkscape:connector-curvature="0"
+     d="m 463.39606,161.15835 h 120 v 72.00001 h -120 z m 12,0 v 72.00001 m 96,-72.00001 v 72.00001"
+     id="predefined-process">
+    <title
+       id="title3965">Predefined Process Symbol</title>
+    <desc
+       id="desc3967">The predefined process symbol symbol represents a module in an algorithm - that is, a predefined process that has its own flowchart.</desc>
+    <point
+       id="point3969"
+       y="-36"
+       x="0"
+       role="port" />
+    <point
+       id="point3971"
+       y="0"
+       x="-60"
+       role="port" />
+    <point
+       id="point3973"
+       y="36"
+       x="0"
+       role="port" />
+    <point
+       id="point3975"
+       y="0"
+       x="60"
+       role="port" />
+  </path>
+  <polygon
+     style="fill:#ffffff;stroke:#000000;stroke-width:2"
+     points="-70,0 0,-45 70,0 0,45 "
+     id="decision"
+     transform="translate(529.59216,451.70028)">
+    <title
+       id="title3978">Decision Symbol</title>
+    <desc
+       id="desc3980">The decision symbol symbol represents a decision in the logic single involving the comparison of two values.  Alternative paths are followed, depending on whether the decision symbol is true or false.</desc>
+    <point
+       id="point3982"
+       y="-45"
+       x="0"
+       role="port" />
+    <point
+       id="point3984"
+       y="0"
+       x="-70"
+       role="port" />
+    <point
+       id="point3986"
+       y="45"
+       x="0"
+       role="port" />
+    <point
+       id="point3988"
+       y="0"
+       x="70"
+       role="port" />
+  </polygon>
+  <polygon
+     style="fill:#ffffff;stroke:#000000;stroke-width:2"
+     points="-30,36 -60,0 -30,-36 30,-36 60,0 30,36 "
+     id="preparation"
+     transform="translate(528.02661,330.31148)">
+    <title
+       id="title3991">Preparation Symbol</title>
+    <desc
+       id="desc3993">The preparation symbol symbol represents a step that establishes conditions for later steps, such as a set-up operation.</desc>
+    <point
+       id="point3995"
+       y="-36"
+       x="0"
+       role="port" />
+    <point
+       id="point3997"
+       y="0"
+       x="-60"
+       role="port" />
+    <point
+       id="point3999"
+       y="36"
+       x="0"
+       role="port" />
+    <point
+       id="point4001"
+       y="0"
+       x="60"
+       role="port" />
+  </polygon>
+  <g
+     id="g6169"
+     transform="translate(46.166043,66.412149)"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547">
+    <polygon
+       transform="translate(28.24427,-29.317166)"
+       id="input-output"
+       points="-67.5,28.5 -37.5,-28.5 67.5,-28.5 37.5,28.5 "
+       style="fill:#dcdcdc;fill-opacity:1;stroke:#000000;stroke-width:2">
+      <title
+         id="title3939">Input/Output Symbol</title>
+      <desc
+         id="desc3941">The input/output symbol represents any single process in an algorithm, such as reading input or writing output.</desc>
+      <point
+         role="port"
+         x="0"
+         y="-28.5"
+         id="point3943" />
+      <point
+         role="port"
+         x="-52.5"
+         y="0"
+         id="point3945" />
+      <point
+         role="port"
+         x="0"
+         y="28.5"
+         id="point3947" />
+      <point
+         role="port"
+         x="52.5"
+         y="0"
+         id="point3949" />
+    </polygon>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4100"
+       y="-33.506618"
+       x="28.203255"
+       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="-33.506618"
+         x="28.203255"
+         id="tspan4102"
+         sodipodi:role="line">Raw data</tspan><tspan
+         id="tspan4104"
+         y="-17.256618"
+         x="28.203255"
+         sodipodi:role="line">import</tspan></text>
+  </g>
+  <polygon
+     transform="translate(73.83779,147.37703)"
+     id="polygon4120"
+     points="-70,0 0,-45 70,0 0,45 "
+     style="fill:#dcdcdc;fill-opacity:1;stroke:#000000;stroke-width:2"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599"
+     inkscape:export-ydpi="599">
+    <title
+       id="title4122">Decision Symbol</title>
+    <desc
+       id="desc4124">The decision symbol symbol represents a decision in the logic single involving the comparison of two values.  Alternative paths are followed, depending on whether the decision symbol is true or false.</desc>
+    <point
+       role="port"
+       x="0"
+       y="-45"
+       id="point4126" />
+    <point
+       role="port"
+       x="-70"
+       y="0"
+       id="point4128" />
+    <point
+       role="port"
+       x="0"
+       y="45"
+       id="point4130" />
+    <point
+       role="port"
+       x="70"
+       y="0"
+       id="point4132" />
+  </polygon>
+  <text
+     sodipodi:linespacing="125%"
+     id="text4148"
+     y="145.18758"
+     x="73.68251"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+     xml:space="preserve"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599"
+     inkscape:export-ydpi="599"><tspan
+       id="tspan4152"
+       y="145.18758"
+       x="73.68251"
+       sodipodi:role="line">Quality check</tspan><tspan
+       y="161.43758"
+       x="73.68251"
+       sodipodi:role="line"
+       id="tspan4156">&amp; filtering</tspan></text>
+  <g
+     id="g6193"
+     transform="translate(-261.49949,292.58595)"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547">
+    <path
+       style="fill:#dcdcdc;fill-opacity:1;stroke:#000000;stroke-width:2"
+       inkscape:connector-curvature="0"
+       d="m 275.40277,-63.920141 h 120 V 8.0798697 h -120 z m 12,0 V 8.0798697 m 96,-72.0000107 V 8.0798697"
+       id="path4134">
+      <title
+         id="title4136">Predefined Process Symbol</title>
+      <desc
+         id="desc4138">The predefined process symbol symbol represents a module in an algorithm - that is, a predefined process that has its own flowchart.</desc>
+      <point
+         id="point4140"
+         y="-36"
+         x="0"
+         role="port" />
+      <point
+         id="point4142"
+         y="0"
+         x="-60"
+         role="port" />
+      <point
+         id="point4144"
+         y="36"
+         x="0"
+         role="port" />
+      <point
+         id="point4146"
+         y="0"
+         x="60"
+         role="port" />
+    </path>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4158"
+       y="-30.946503"
+       x="335.1391"
+       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="-30.946503"
+         x="335.1391"
+         id="tspan4160"
+         sodipodi:role="line">Mapping to</tspan><tspan
+         id="tspan4162"
+         y="-14.696503"
+         x="335.1391"
+         sodipodi:role="line">reference</tspan></text>
+  </g>
+  <g
+     id="g6205"
+     transform="translate(-419.01641,404.46079)"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547">
+    <rect
+       style="fill:#dcdcdc;fill-opacity:1;stroke:#000000;stroke-width:2"
+       height="72"
+       width="106"
+       y="-67.660217"
+       x="439.66336"
+       id="rect4106">
+      <title
+         id="title4108">Process Symbol</title>
+      <desc
+         id="desc4110">The process symbol symbol represents any single process in an algorithm, such as assigning a value or performing a calculation.  The flow of control is sequential.</desc>
+      <point
+         id="point4112"
+         y="-36"
+         x="0"
+         role="port" />
+      <point
+         id="point4114"
+         y="0"
+         x="-53"
+         role="port" />
+      <point
+         id="point4116"
+         y="0"
+         x="53"
+         role="port" />
+      <point
+         id="point4118"
+         y="36"
+         x="0"
+         role="port" />
+    </rect>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4164"
+       y="-35.84967"
+       x="492.61893"
+       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="-35.84967"
+         x="492.61893"
+         id="tspan4166"
+         sodipodi:role="line">Experimental</tspan><tspan
+         id="tspan4168"
+         y="-19.59967"
+         x="492.61893"
+         sodipodi:role="line">design</tspan></text>
+  </g>
+  <g
+     id="g6217"
+     transform="translate(-423.30699,370.28351)"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547">
+    <path
+       style="fill:#dcdcdc;fill-opacity:1;stroke:#000000;stroke-width:2"
+       inkscape:connector-curvature="0"
+       d="m 437.33562,74.262556 h 120 v 72.000014 h -120 z m 12,0 v 72.000014 m 96,-72.000014 v 72.000014"
+       id="path4170">
+      <title
+         id="title4172">Predefined Process Symbol</title>
+      <desc
+         id="desc4174">The predefined process symbol symbol represents a module in an algorithm - that is, a predefined process that has its own flowchart.</desc>
+      <point
+         id="point4176"
+         y="-36"
+         x="0"
+         role="port" />
+      <point
+         id="point4178"
+         y="0"
+         x="-60"
+         role="port" />
+      <point
+         id="point4180"
+         y="36"
+         x="0"
+         role="port" />
+      <point
+         id="point4182"
+         y="0"
+         x="60"
+         role="port" />
+    </path>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4226"
+       y="98.573112"
+       x="497.30634"
+       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan4230"
+         y="98.573112"
+         x="497.30634"
+         sodipodi:role="line">Differential</tspan><tspan
+         id="tspan4234"
+         y="114.82311"
+         x="497.30634"
+         sodipodi:role="line">expression</tspan><tspan
+         id="tspan4236"
+         y="131.07312"
+         x="497.30634"
+         sodipodi:role="line">analysis</tspan></text>
+  </g>
+  <g
+     id="g6230"
+     transform="translate(-419.00325,340.12493)"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547">
+    <polygon
+       style="fill:#dcdcdc;fill-opacity:1;stroke:#000000;stroke-width:2"
+       points="-67.5,28.5 -37.5,-28.5 67.5,-28.5 37.5,28.5 "
+       id="polygon4184"
+       transform="matrix(1.0910897,0,0,1,489.21509,240.82312)">
+      <title
+         id="title4186">Input/Output Symbol</title>
+      <desc
+         id="desc4188">The input/output symbol represents any single process in an algorithm, such as reading input or writing output.</desc>
+      <point
+         id="point4190"
+         y="-28.5"
+         x="0"
+         role="port" />
+      <point
+         id="point4192"
+         y="0"
+         x="-52.5"
+         role="port" />
+      <point
+         id="point4194"
+         y="28.5"
+         x="0"
+         role="port" />
+      <point
+         id="point4196"
+         y="0"
+         x="52.5"
+         role="port" />
+    </polygon>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4238"
+       y="237.54456"
+       x="492.77075"
+       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="237.54456"
+         x="492.77075"
+         id="tspan4240"
+         sodipodi:role="line">Result output</tspan><tspan
+         id="tspan4242"
+         y="253.79456"
+         x="492.77075"
+         sodipodi:role="line">and browser</tspan></text>
+  </g>
+  <path
+     inkscape:connector-curvature="0"
+     id="path6266"
+     d="m 73.80394,66.435646 2e-6,32.251918"
+     style="fill:none;stroke:#000000;stroke-width:2.10000014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547" />
+  <rect
+     style="fill:none;stroke:none"
+     id="rect6280"
+     width="738.16797"
+     height="377.09924"
+     x="-97.709923"
+     y="-98.782852"
+     rx="0"
+     ry="24.10309"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547" />
+  <path
+     inkscape:export-ydpi="599.98547"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     sodipodi:nodetypes="cc"
+     style="fill:none;stroke:#000000;stroke-width:2.10000014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+     d="m 73.80394,192.43565 2e-6,32.25191"
+     id="path6303"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6305"
+     d="m 73.80394,300.43565 2e-6,32.25191"
+     style="fill:none;stroke:#000000;stroke-width:2.10000014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547" />
+  <path
+     inkscape:export-ydpi="599.98547"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     sodipodi:nodetypes="cc"
+     style="fill:none;stroke:#000000;stroke-width:2.10000014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+     d="m 73.80394,408.43565 2e-6,32.25191"
+     id="path6307"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6309"
+     d="m 73.80394,516.43565 2e-6,32.25191"
+     style="fill:none;stroke:#000000;stroke-width:2.10000014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6311"
+     d="m 143.04581,147.21048 32.25191,0"
+     style="fill:none;stroke:#000000;stroke-width:2.10000014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-ydpi="599.98547" />
+  <text
+     xml:space="preserve"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+     x="227.7886"
+     y="143.16342"
+     id="text6323"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599"
+     inkscape:export-ydpi="599"><tspan
+       id="tspan6327"
+       sodipodi:role="line"
+       x="227.7886"
+       y="143.16342">Discard low</tspan><tspan
+       sodipodi:role="line"
+       x="227.7886"
+       y="159.41342"
+       id="tspan6331">quality reads</tspan></text>
+  <rect
+     style="fill:none;stroke:none"
+     id="rect6333"
+     width="361.83209"
+     height="665.64886"
+     x="35.114506"
+     y="76.789665"
+     transform="translate(-100,-100)"
+     ry="24.10309"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     inkscape:export-xdpi="599"
+     inkscape:export-ydpi="599" />
+  <g
+     inkscape:export-ydpi="599.98547"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     transform="translate(191.30337,402.15294)"
+     id="g3105">
+    <polygon
+       style="fill:#dcdcdc;fill-opacity:1;stroke:#000000;stroke-width:2"
+       points="-37.5,-28.5 67.5,-28.5 37.5,28.5 -67.5,28.5 "
+       id="polygon3107"
+       transform="translate(28.24427,-29.317166)">
+      <title
+         id="title3109">Input/Output Symbol</title>
+      <desc
+         id="desc3111">The input/output symbol represents any single process in an algorithm, such as reading input or writing output.</desc>
+      <point
+         id="point3113"
+         y="-28.5"
+         x="0"
+         role="port" />
+      <point
+         id="point3115"
+         y="0"
+         x="-52.5"
+         role="port" />
+      <point
+         id="point3117"
+         y="28.5"
+         x="0"
+         role="port" />
+      <point
+         id="point3119"
+         y="0"
+         x="52.5"
+         role="port" />
+    </polygon>
+    <text
+       xml:space="preserve"
+       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="28.203255"
+       y="-33.506618"
+       id="text3121"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="28.203255"
+         y="-33.506618"
+         id="tspan3125">BAM/SAM</tspan><tspan
+         sodipodi:role="line"
+         x="28.203255"
+         y="-17.256618"
+         id="tspan3129">import</tspan></text>
+  </g>
+  <path
+     inkscape:export-ydpi="599.98547"
+     inkscape:export-xdpi="599.98547"
+     inkscape:export-filename="/Users/marc/Development/workspace/Robin_CURRENT/paper/RobiNA_NAR_2012/FIG1_flow_chart.png"
+     sodipodi:nodetypes="cc"
+     style="fill:none;stroke:#000000;stroke-width:2.10000014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+     d="m 167.09136,373.3767 -36.03034,0"
+     id="path3131"
+     inkscape:connector-curvature="0" />
+</svg>

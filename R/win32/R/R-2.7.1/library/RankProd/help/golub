@@ -1,0 +1,42 @@
+golub                package:RankProd                R Documentation
+
+_s_u_b _s_e_t _o_f _t_h_e _G_e_n_e _e_x_p_r_e_s_s_i_o_n _d_a_t_a_s_e_t _f_r_o_m _G_o_l_u_b _e_t _a_l. (_1_9_9_9)
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Gene expression data (500 genes and 38 tumor mRNA samples)  from
+     the leukemia microarray study of Golub et al.  (1999). Original
+     data set contain 3051 genes
+
+_U_s_a_g_e:
+
+     data(golub)
+
+_V_a_l_u_e:
+
+   golub: matrix of gene expression levels for the  38 tumor mRNA
+          samples, rows correspond to genes  (500 genes) and columns to
+          mRNA samples.
+
+golub.cl: numeric vector indicating the tumor  class, 27 acute
+          lymphoblastic leukemia (ALL) cases  (code 0) and 11 acute
+          myeloid leukemia (AML) cases (code 1). 
+
+golub.gnames: a matrix containing the names of  the 500 genes for the
+          expression matrix 'golub'.  The three columns correspond to
+          the gene 'index',  'ID', and 'Name', respectively.
+
+_S_o_u_r_c_e:
+
+     Golub et al. (1999). Molecular classification of cancer: class
+     discovery and class prediction by gene expression monitoring,
+     _Science_, Vol. 286:531-537.
+      <URL: http://www-genome.wi.mit.edu/MPR/> .
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     S. Dudoit, J. Fridlyand, and T. P. Speed (2002).  Comparison of
+     discrimination methods for the  classification  of tumors using
+     gene expression data.  _Journal of the American Statistical
+     Association_, Vol. 97, No. 457, p. 77-87.
+

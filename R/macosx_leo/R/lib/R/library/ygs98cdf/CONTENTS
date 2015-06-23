@@ -1,0 +1,17 @@
+Entry: i2xy
+Aliases: i2xy xy2i
+Keywords: datasets
+Description: Convert (x,y)-coordinates to single-number indices and back.
+URL: ../../../library/ygs98cdf/html/geometry.html
+
+Entry: ygs98cdf
+Aliases: ygs98cdf
+Keywords: datasets
+Description: ygs98cdf
+URL: ../../../library/ygs98cdf/html/ygs98cdf.html
+
+Entry: ygs98dim
+Aliases: ygs98dim
+Keywords: datasets
+Description: ygs98dim
+URL: ../../../library/ygs98cdf/html/ygs98dim.html

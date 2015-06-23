@@ -1,0 +1,65 @@
+Entry: affinity.spline.coefs
+Aliases: affinity.spline.coefs
+Keywords: datasets
+Description: Spline coefficients for estimation of affinity from probe sequence
+URL: ../../../library/gcrma/html/affinity.spline.coefs.html
+
+Entry: bg.adjust.affinities
+Aliases: bg.adjust.affinities bg.adjust.mm bg.adjust.fullmodel bg.adjust.constant bg.adjust.optical
+Keywords: manip
+Description: Background adjustment with sequence information (internal function)
+URL: ../../../library/gcrma/html/bg.adjust.affinities.html
+
+Entry: bg.adjust.gcrma
+Aliases: bg.adjust.gcrma
+Keywords: manip
+Description: GCRMA background adjust (internal function)
+URL: ../../../library/gcrma/html/bg.adjust.gcrma.html
+
+Entry: bg.parameters.ns
+Aliases: bg.parameters.ns left.sigma PAV average.for.PAV
+Keywords: manip
+Description: Estimation of non-specific Binding Background Parameters
+URL: ../../../library/gcrma/html/bg.parameters.ns.html
+
+Entry: compute.affinities
+Aliases: compute.affinities check.probes base.profiles base.profiles.mm base.profiles.nc compute.affinity.coef compute.affinities.local plotBaseProfiles
+Keywords: manip
+Description: Probe Affinity computation
+URL: ../../../library/gcrma/html/compute.affinities.html
+
+Entry: fast.bkg
+Aliases: fast.bkg mem.bkg
+Keywords: internal
+Description: Internal functions for justGCRMA
+URL: ../../../library/gcrma/html/fast.bkg.html
+
+Entry: gcrma
+Aliases: gcrma gcrma.bg.transformation.fast gcrma.bg.transformation
+Keywords: manip
+Description: Robust Multi-Array expression measure using sequence information
+URL: ../../../library/gcrma/html/gcrma.html
+
+Entry: gcrma.engine
+Aliases: gcrma.engine
+Keywords: manip
+Description: GCRMA background adjust engine(internal function)
+URL: ../../../library/gcrma/html/gcrma.engine.html
+
+Entry: gcrma.engine2
+Aliases: gcrma.engine2
+Keywords: manip
+Description: GCRMA background adjust engine(internal function)
+URL: ../../../library/gcrma/html/gcrma.engine2.html
+
+Entry: getCDF
+Aliases: getCDF getProbePackage
+Keywords: internal
+Description: Functions for Automatic Download of Packages
+URL: ../../../library/gcrma/html/getCDF.html
+
+Entry: justGCRMA
+Aliases: justGCRMA just.gcrma
+Keywords: manip
+Description: Compute GCRMA Directly from CEL Files
+URL: ../../../library/gcrma/html/justGCRMA.html

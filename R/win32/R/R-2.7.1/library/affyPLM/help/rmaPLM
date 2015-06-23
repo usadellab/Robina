@@ -1,0 +1,81 @@
+rmaPLM                package:affyPLM                R Documentation
+
+_F_i_t _a _R_M_A _t_o _A_f_f_y_m_e_t_r_i_x _G_e_n_e_c_h_i_p _D_a_t_a _a_s _a _P_L_M_s_e_t
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function converts an 'AffyBatch' into an 'PLMset' by fitting
+     a multichip model. In particular we concentrate on the RMA model.
+
+_U_s_a_g_e:
+
+     rmaPLM(object,subset=NULL,normalize=TRUE,background=TRUE,background.method="RMA.2",normalize.method="quantile",background.param = list(),normalize.param=list(),output.param=list(),model.param=list(),verbosity.level=0)
+
+_A_r_g_u_m_e_n_t_s:
+
+  object: an 'AffyBatch'
+
+  subset: a vector with the names of probesets to be used. If NULL then
+          all probesets are used.
+
+normalize: logical value. If 'TRUE' normalize data using quantile
+          normalization
+
+background: logical value. If 'TRUE' background correct using RMA
+          background correction
+
+background.method: name of background method to use.
+
+normalize.method: name of normalization method to use.
+
+background.param: A list of parameters for background routines
+
+normalize.param: A list of parameters for normalization routines
+
+output.param: A list of parameters controlling optional output from the
+          routine.
+
+model.param: A list of parameters controlling model procedure
+
+verbosity.level: An integer specifying how much to print out. Higher
+          values indicate more verbose. A value of 0 will print nothing
+
+_D_e_t_a_i_l_s:
+
+     This function fits the RMA as a Probe Level Linear models to all
+     the probesets in an 'AffyBatch'.
+
+_V_a_l_u_e:
+
+     An 'PLMset'
+
+_A_u_t_h_o_r(_s):
+
+     Ben Bolstad bmb@bmbolstad.com
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Bolstad, BM (2004) _Low Level Analysis of High-density
+     Oligonucleotide Array Data: Background, Normalization and
+     Summarization_. PhD Dissertation. University of California, 
+
+      Irizarry RA, Bolstad BM, Collin F, Cope LM, Hobbs B and Speed TP
+     (2003) _Summaries of Affymetrix GeneChip probe level data_ Nucleic
+     Acids Research 31(4):e15 
+
+      Bolstad, BM, Irizarry RA, Astrand, M, and Speed, TP (2003) _A
+     Comparison of Normalization Methods for High Density
+     Oligonucleotide Array Data Based on Bias and Variance._
+     Bioinformatics 19(2):185-193
+
+_S_e_e _A_l_s_o:
+
+     'expresso', 'rma', 'threestep','fitPLM', 'threestepPLM'
+
+_E_x_a_m_p_l_e_s:
+
+     # A larger example testing weight image function
+     data(Dilution)
+     ## Not run: Pset <- rmaPLM(Dilution,output.param=list(weights=TRUE))
+     ## Not run: image(Pset)
+

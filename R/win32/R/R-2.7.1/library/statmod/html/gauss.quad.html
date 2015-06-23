@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Gaussian Quadrature</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for gauss.quad {statmod}"><tr><td>gauss.quad {statmod}</td><td align="right">R Documentation</td></tr></table>
+<h2>Gaussian Quadrature</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Calculate nodes and weights for Gaussian quadrature.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>gauss.quad(n,kind="legendre",alpha=0,beta=0)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>n</code></td>
+<td>
+number of nodes and weights</td></tr>
+<tr valign="top"><td><code>kind</code></td>
+<td>
+kind of Gaussian quadrature, one of <code>"legendre"</code>, <code>"chebyshev1"</code>, <code>"chebyshev2"</code>, <code>"hermite"</code>, <code>"jacobi"</code> or <code>"laguerre"</code></td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+parameter for Jacobi or Laguerre quadrature, must be greater than -1</td></tr>
+<tr valign="top"><td><code>beta</code></td>
+<td>
+parameter for Jacobi quadrature, must be greater than -1</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The integral from <code>a</code> to <code>b</code> of <code>w(x)*f(x)</code> is approximated by <code>sum(w*f(x))</code> where <code>x</code> is the vector of nodes and <code>w</code> is the vector of weights.  The approximation is exact if <code>f(x)</code> is a polynomial of order no more than <code>2n-1</code>.
+The possible choices for <code>w(x)</code>, <code>a</code> and <code>b</code> are as follows:
+</p>
+<p>
+Legendre quadrature: <code>w(x)=1</code> on <code>(-1,1)</code>.
+</p>
+<p>
+Chebyshev quadrature of the 1st kind: <code>w(x)=1/sqrt(1-x^2)</code> on <code>(-1,1)</code>.
+</p>
+<p>
+Chebyshev quadrature of the 2nd kind: <code>w(x)=sqrt(1-x^2)</code> on <code>(-1,1)</code>.
+</p>
+<p>
+Hermite quadrature: <code>w(x)=exp(-x^2)</code> on <code>(-Inf,Inf)</code>.
+</p>
+<p>
+Jacobi quadrature: <code>w(x)=(1-x)^alpha*(1+x)^beta</code> on <code>(-1,1)</code>. Note that Chebyshev quadrature is a special case of this.
+</p>
+<p>
+Laguerre quadrature: <code>w(x)=x^alpha*exp(-x)</code> on <code>(0,Inf)</code>.
+</p>
+<p>
+The method is explained in Golub and Welsch (1969).
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list containing the components
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>nodes</code></td>
+<td>
+vector of values at which to evaluate the function</td></tr>
+<tr valign="top"><td><code>weights</code></td>
+<td>
+vector of weights to give the function values</td></tr>
+</table>
+
+<h3>Note</h3>
+
+<p>
+This function solves a dense <code>n</code>x<code>n</code> eigenvector problem and is therefore slow for large <code>n</code>.
+It could be made far more efficient by using an eigenvector function designed to compute the leading terms of the eigenvectors for tridiagonal matrices.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Golub, G. H., and Welsch, J. H. (1969). Calculation of Gaussian
+quadrature rules. <EM>Mathematics of Computation</EM> <B>23</B>, 221-230.
+</p>
+<p>
+Golub, G. H. (1973). Some modified matrix eigenvalue problems.
+<EM>Siam Review</EM> <B>15</B>, 318-334.
+</p>
+<p>
+Stroud and Secrest (1966). <EM>Gaussian Quadrature Formulas</EM>. Prentice-
+Hall, Englewood Cliffs, N.J.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="gauss.quad.prob.html">gauss.quad.prob</a></code>, <code><a href="../../base/html/integrate.html">integrate</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+out &lt;- gauss.quad(10,"laguerre",alpha=5)
+sum(out$weights * out$nodes) / gamma(6)
+#  mean of gamma distribution with alpha=6
+</pre>
+
+
+
+<hr><div align="center">[Package <em>statmod</em> version 1.3.8 <a href="00Index.html">Index]</a></div>
+
+</body></html>

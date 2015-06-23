@@ -1,0 +1,131 @@
+Entry: 1.StatMod
+Aliases: 1.StatMod
+Keywords: documentation
+Description: Introduction to the StatMod Package
+URL: ../../../library/statmod/html/1Introduction.html
+
+Entry: deprecated
+Aliases: statmod-deprecated randomizedBlock randomizedBlockFit
+Keywords: regression
+Description: Deprecated Functions in statmod Package
+URL: ../../../library/statmod/html/deprecated.html
+
+Entry: Digamma
+Aliases: Digamma canonic.digamma d2cumulant.digamma unitdeviance.digamma cumulant.digamma meanval.digamma varfun.digamma
+Keywords: models
+Description: Digamma generalized linear model family
+URL: ../../../library/statmod/html/digammaf.html
+
+Entry: fitNBP
+Aliases: fitNBP
+Keywords: regression
+Description: Negative Binomial Model for SAGE Libraries with Pearson Estimation of Dispersion
+URL: ../../../library/statmod/html/fitNBP.html
+
+Entry: gauss.quad
+Aliases: gauss.quad
+Keywords: math
+Description: Gaussian Quadrature
+URL: ../../../library/statmod/html/gauss.quad.html
+
+Entry: gauss.quad.prob
+Aliases: gauss.quad.prob
+Keywords: math
+Description: Gaussian Quadrature with Probability Distributions
+URL: ../../../library/statmod/html/gauss.quad.prob.html
+
+Entry: glmgam.fit
+Aliases: glmgam.fit
+Keywords: regression
+Description: Gamma Generalized Linear Model with Identity Link
+URL: ../../../library/statmod/html/glmgam.html
+
+Entry: growthcurve
+Aliases: compareGrowthCurves compareTwoGrowthCurves plotGrowthCurves
+Keywords: regression
+Description: Compare Groups of Growth Curves
+URL: ../../../library/statmod/html/growthcurve.html
+
+Entry: hommel.test
+Aliases: hommel.test
+Keywords: htest
+Description: Test Multiple Comparisons Using Hommel's Method
+URL: ../../../library/statmod/html/hommel.test.html
+
+Entry: invgauss
+Aliases: InverseGaussian dinvgauss pinvgauss qinvgauss rinvgauss
+Keywords: distribution
+Description: Inverse Gaussian Distribution
+URL: ../../../library/statmod/html/invgauss.html
+
+Entry: limdil
+Aliases: limdil
+Keywords: regression
+Description: Limiting Dilution Analysis
+URL: ../../../library/statmod/html/limdil.html
+
+Entry: logmdigamma
+Aliases: logmdigamma
+Keywords: math
+Description: Log Minus Digamma Function
+URL: ../../../library/statmod/html/logmdigamma.html
+
+Entry: matvec
+Aliases: matvec vecmat
+Keywords: array algebra
+Description: Multiply a Matrix by a Vector
+URL: ../../../library/statmod/html/matvec.html
+
+Entry: meanT
+Aliases: meanT
+Keywords: regression
+Description: Mean t-Statistic Between Two Groups of Growth Curves
+URL: ../../../library/statmod/html/meanT.html
+
+Entry: mixedModel2
+Aliases: mixedModel2 mixedModel2Fit
+Keywords: regression
+Description: Fit Mixed Linear Model with 2 Error Components
+URL: ../../../library/statmod/html/mixedmodel.html
+
+Entry: power.fisher.test
+Aliases: power.fisher.test
+Keywords: htest
+Description: Power of Fisher's Exact Test for Comparing Proportions
+URL: ../../../library/statmod/html/power.html
+
+Entry: qresiduals
+Aliases: qresiduals qresid qres.binom qres.pois qres.nbinom qres.gamma qres.invgauss qres.tweedie qres.default
+Keywords: regression
+Description: Randomized Quantile Residuals
+URL: ../../../library/statmod/html/qresiduals.html
+
+Entry: remlscore
+Aliases: remlscore
+Keywords: regression
+Description: REML for Heteroscedastic Regression
+URL: ../../../library/statmod/html/remlscor.html
+
+Entry: remlscoregamma
+Aliases: remlscoregamma
+Keywords: regression
+Description: Approximate REML for gamma regression with structured dispersion
+URL: ../../../library/statmod/html/remlscorgamma.html
+
+Entry: sage.test
+Aliases: sage.test
+Keywords: htest
+Description: Compare Two SAGE Libraries
+URL: ../../../library/statmod/html/sage.test.html
+
+Entry: tweedie
+Aliases: tweedie
+Keywords: regression
+Description: Tweedie Generalized Linear Models
+URL: ../../../library/statmod/html/tweedie.html
+
+Entry: welding
+Aliases: welding
+Keywords: datasets
+Description: Data: Tensile Strength of Welds
+URL: ../../../library/statmod/html/welding.html

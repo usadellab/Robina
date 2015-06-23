@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<shortcuts>
+
+  <programGroup defaultName="RobiNA" 
+  					 location="applications"/>
+
+   <shortcut
+     name="RobiNA"
+     programGroup="yes"
+     desktop="yes"
+     applications="no"
+     startMenu="no"
+     startup="no"
+     target="$INSTALL_PATH/start-robin.sh"
+     commandLine=""
+     workingDirectory="$INSTALL_PATH"
+     description="Start RobiNA"
+     iconFile="$INSTALL_PATH/icons/robinlogo32.png"
+     iconIndex="0"
+     type="Application"
+     encoding="UTF-8"
+     terminal="false"
+     KdeSubstUID="false"
+     initialState="normal">
+     <createForPack name="Base files"/>
+   </shortcut>
+   
+   <shortcut
+     name="RobiNA User's Guide"
+     programGroup="yes"
+     desktop="yes"
+     applications="no"
+     startMenu="no"
+     startup="no"
+     target="acroread $INSTALL_PATH/RobinRobiNAUsersGuide_may12.pdf"
+     url="$INSTALL_PATH/RobinRobiNAUsersGuide_may12.pdf"
+     commandLine=""
+     workingDirectory="$INSTALL_PATH"
+     description="Open RobiNAs User's Guide - requires a PDF reader"
+     iconFile="acroread" 
+	 iconIndex="0"
+     type="Application"
+     encoding="UTF-8"
+     terminal="false"
+     KdeSubstUID="false"
+     initialState="normal">
+     <createForPack name="Robin and RobiNA Manual"/>
+   </shortcut>
+</shortcuts>

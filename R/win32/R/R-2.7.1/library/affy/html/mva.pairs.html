@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: M vs. A Matrix</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for mva.pairs {affy}"><tr><td>mva.pairs {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>M vs. A Matrix</h2>
+
+
+<h3>Description</h3>
+
+<p>
+A matrix of M vs. A plots is produced. Plots are made on the upper
+triangle and the IQR of the Ms are displayed in the lower triangle
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+mva.pairs(x, labels=colnames(x), log.it=TRUE,span=2/3,family.loess="gaussian",
+          digits=3,line.col=2,main="MVA plot",cex=2,...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+A matrix containing the chip data in the columns.</td></tr>
+<tr valign="top"><td><code>labels</code></td>
+<td>
+the names of the variables.</td></tr>
+<tr valign="top"><td><code>log.it</code></td>
+<td>
+logical. If <code>TRUE</code> uses log scale.</td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+span to be used for loess fit.</td></tr>
+<tr valign="top"><td><code>family.loess</code></td>
+<td>
+<code>"gaussian"</code> or <code>"symmetric"</code> as in <code><a href="../../modreg/html/loess.html">loess</a></code>.</td></tr>
+<tr valign="top"><td><code>digits</code></td>
+<td>
+number of digits to use in the display of IQR.</td></tr>
+<tr valign="top"><td><code>line.col</code></td>
+<td>
+color of the loess line.</td></tr>
+<tr valign="top"><td><code>main</code></td>
+<td>
+an overall title for the plot.</td></tr>
+<tr valign="top"><td><code>cex</code></td>
+<td>
+size for text</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+graphical parameters can be given as arguments to <code>mva.plot</code></td></tr>
+</table>
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../graphics/html/pairs.html">pairs</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+    
+    x &lt;- matrix(rnorm(4000),1000,4)
+    x[,1] &lt;- x[,1]^2
+    dimnames(x) &lt;- list(NULL,c("chip 1","chip 2","chip 3","chip 4"))
+    mva.pairs(x,log=FALSE,main="example")
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,46 @@
+\HeaderA{normalize.quantiles.probeset}{Quantile Normalization applied to probesets}{normalize.quantiles.probeset}
+\aliasA{normalize.AffyBatch.quantiles.probeset}{normalize.quantiles.probeset}{normalize.AffyBatch.quantiles.probeset}
+\keyword{manip}{normalize.quantiles.probeset}
+\begin{Description}\relax
+Using a normalization based upon quantiles, this function
+normalizes a matrix of probe level intensities.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+  normalize.AffyBatch.quantiles.probeset(abatch,type=c("separate","pmonly","mmonly","together"),use.median=FALSE,use.log=TRUE)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{abatch}] An \code{\LinkA{AffyBatch}{AffyBatch}}
+\item[\code{type}] how should MM and PM values be handled
+\item[\code{use.median}] use median rather than mean
+\item[\code{use.log}] take logarithms, then normalize
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+This function applies the \LinkA{quantile}{quantile} method in a probeset specific manner.
+
+In particular a probeset summary is normalized using the quantile
+method and then the probes adjusted accordingly.
+\end{Details}
+\begin{Value}
+A normalized \code{AffyBatch}.
+\end{Value}
+\begin{Author}\relax
+Ben Bolstad, \email{bmb@bmbolstad.com}
+\end{Author}
+\begin{References}\relax
+Bolstad, B (2001) \emph{Probe Level Quantile Normalization of High Density
+Oligonucleotide Array Data}. Unpublished manuscript
+\url{http://oz.berkeley.edu/~bolstad/stuff/qnorm.pdf}
+
+Bolstad, B. M., Irizarry R. A., Astrand, M, and Speed, T. P. (2003)
+\emph{A Comparison of Normalization Methods for High Density
+Oligonucleotide Array Data Based on Bias and Variance.}
+Bioinformatics 19(2) ,pp 185-193. \url{http://www.stat.berkeley.edu/~bolstad/normalize/normalize.html}
+\end{References}
+\begin{SeeAlso}\relax
+\code{\LinkA{normalize}{normalize}}, \code{\LinkA{normalize.quantiles}{normalize.quantiles}}
+\end{SeeAlso}
+

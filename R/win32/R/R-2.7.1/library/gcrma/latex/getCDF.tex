@@ -1,0 +1,33 @@
+\HeaderA{getCDF}{Functions for Automatic Download of Packages}{getCDF}
+\aliasA{getProbePackage}{getCDF}{getProbePackage}
+\keyword{internal}{getCDF}
+\begin{Description}\relax
+These are internal functions that are called by \code{justGCRMA} and
+\code{GCRMA} in order to automatically download and install cdf
+environments and probe packages.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+getCDF(cdfname, lib = .libPaths()[1], verbose = TRUE)
+getProbePackage(probepackage, lib = .libPaths()[1], verbose = TRUE)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{cdfname}] Name of the cdfenv to install. 
+\item[\code{probepackage}] Name of the probe package to install. 
+\item[\code{lib}] Directory of the R library where packages will be installed. 
+\item[\code{verbose}] Output informative comments? Defaults to \code{TRUE}
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+Nothing is returned. These functions are called simply to install environments.
+\end{Value}
+\begin{Author}\relax
+James W. MacDonald, based on \code{getCDFinfo}, written by Jeff
+Gentry.
+\end{Author}
+\begin{SeeAlso}\relax
+~~objects to See Also as \code{\LinkA{getCDFinfo}{getCDFinfo}}
+\end{SeeAlso}
+

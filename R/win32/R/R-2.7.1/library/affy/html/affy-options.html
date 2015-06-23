@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Options for the affy package</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for affy-options {affy}"><tr><td>affy-options {affy}</td><td align="right">R Documentation</td></tr></table>
+<h2>Options for the affy package</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Description of the options for the affy package.
+</p>
+
+
+<h3>Note</h3>
+
+<p>
+The affy package options are contained in the Bioconductor options.
+The options are:
+begin{itemize}
+<li><code>use.widgets</code>: a logical used to decide on the default of
+widget use.
+<li><code>compress.cel</code>: a logical
+<li><code>compress.cdf</code>: a logical
+<li><code>probes.loc</code>: a list. Each element of the list is it self a
+list with two elements {it what} and {it where}. When looking for
+the informations about the locations of the probes on the array, the
+elements in the list will be looked at one after the other. The first
+one for which {it what} and {it where} lead to the matching
+locations information is used. The element {it what} can be one of
+{it package}, {it environment} or {it file}. The element {it where}
+depends on the corresponding element {it what}.
+begin{itemize}
+<li>if {it package}: location for the package (like it would be for
+the argument <code>lib.loc</code> for the function <code>library</code>.
+<li>if {it environment}: an <code>environment</code> to look for the
+information
+(like the argument <code>env</code> for the function <code>get</code>).
+<li>if {it file}: a <code>character</code> with the path in which a CDF
+file can be found.
+end{itemize}
+end{itemize}
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## get the options
+opt &lt;- getOption("BioC")
+affy.opt &lt;- opt$affy
+
+## list their names
+names(affy.opt)
+
+## set the option compress.cel
+affy.opt$compress.cel &lt;- TRUE
+options(BioC=opt)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>affy</em> version 1.18.2 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,42 @@
+i2xy              package:ecoliasv2cdf              R Documentation
+
+_C_o_n_v_e_r_t (_x,_y)-_c_o_o_r_d_i_n_a_t_e_s _t_o _s_i_n_g_l_e-_n_u_m_b_e_r _i_n_d_i_c_e_s _a_n_d _b_a_c_k.
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Convert (x,y)-coordinates on the chip (and in the CEL file) to the
+     single-number indices used in AffyBatch and CDF environment, and
+     back.
+
+_U_s_a_g_e:
+
+     i2xy(i)
+     xy2i(x,y)
+
+_A_r_g_u_m_e_n_t_s:
+
+       x: numeric. x-coordinate (from 1 to 544)
+
+       y: numeric. y-coordinate (from 1 to 544)
+
+       i: numeric. single-number index (from 1 to 295936)
+
+_D_e_t_a_i_l_s:
+
+     Type 'i2xy' and 'xy2i' at the R prompt to  view the function
+     definitions.
+
+_S_e_e _A_l_s_o:
+
+     'ecoliasv2cdf'
+
+_E_x_a_m_p_l_e_s:
+
+       xy2i(5,5)
+       i     = 1:(544*544)
+       coord = i2xy(i)
+       j     = xy2i(coord[, "x"], coord[, "y"])
+       stopifnot(all(i==j))
+       range(coord[, "x"])
+       range(coord[, "y"])
+

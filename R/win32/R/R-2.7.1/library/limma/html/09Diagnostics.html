@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Diagnostics and Quality Assessment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for 09.Diagnostics {limma}"><tr><td>09.Diagnostics {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Diagnostics and Quality Assessment</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This page gives an overview of the LIMMA functions available for microarray quality assessment and diagnostic plots.
+</p>
+<p>
+This package provides an <code><a href="anova-method.html">anova</a></code> method which is designed for assessing the quality of an array series or of a normalization method.
+It is not designed to assess differential expression of individual genes.
+<code><a href="anova-method.html">anova</a></code> uses utility functions <code><a href="bwss.html">bwss</a></code> and <code><a href="bwss.matrix.html">bwss.matrix</a></code>.
+</p>
+<p>
+The function <code><a href="arrayWeights.html">arrayWeights</a></code> estimates the empirical reliability of each array following a linear model fit.
+</p>
+<p>
+Diagnostic plots can be produced by
+</p>
+
+<dl>
+</p>
+
+<dt> <code><a href="imageplot.html">imageplot</a></code> </dt><dd>Produces a spatial picture of any spot-specific measure from an array image. If the log-ratios are plotted, then this produces an in-silico representation of the well known false-color TIFF image of an array.
+<code><a href="imageplot3by2.html">imageplot3by2</a></code> will write imageplots to files, six plots to a page.</dd>
+
+
+<dt> <code><a href="plotFB.html">plotFB</a></code> </dt><dd>Plots foreground versus background log-intensies for an array.</dd>
+
+
+<dt> <code><a href="plotma.html">plotMA</a></code> </dt><dd>MA-plots.
+One of the most useful plots of a two-color array.
+<code><a href="plotma3by2.html">plotMA3by2</a></code> will write MA-plots to files, six plots to a page.
+<code><a href="mdplot.html">mdplot</a></code> can also be useful for comparing two one-channel microarrays.</dd>
+
+
+<dt> <code><a href="plotprinttiploess.html">plotPrintTipLoess</a></code> </dt><dd>Produces a grid of MA-plots, one for each print-tip group on an array, together with the corresponding lowess curve.
+Intended to help visualize print-tip loess normalization.</dd>
+
+
+<dt> <code><a href="normalizeprintorder.html">plotPrintorder</a></code> </dt><dd>For an array, produces a scatter plot of log-ratios or log-intensities by print order.</dd>
+
+
+<dt> <code><a href="plotDensities.html">plotDensities</a></code> </dt><dd>Individual channel densities for one or more arrays.
+An essential plot to accompany between array normalization, especially quantile normalization.</dd>
+</dl>
+
+<p>
+<code>plotPrintTipLoess</code> uses utility functions <code><a href="gridspotrc.html">gridr</a></code> and <code><a href="gridspotrc.html">gridc</a></code>.
+<code><a href="plotDensities.html">plotDensities</a></code> uses utility function <code><a href="normalizeWithinArrays.html">RG.MA</a></code>.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

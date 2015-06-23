@@ -1,0 +1,59 @@
+Entry: RP
+Aliases: RP
+Keywords: htest
+Description: Rank Product Analysis of Microarray
+URL: ../../../library/RankProd/html/RP.html
+
+Entry: RPadvance
+Aliases: RPadvance
+Keywords: htest
+Description: Advanced Rank Product Analysis of Microarray
+URL: ../../../library/RankProd/html/RPadvance.html
+
+Entry: RSadvance
+Aliases: RSadvance
+Keywords: htest
+Description: Advanced Rank Sum Analysis of Microarray
+URL: ../../../library/RankProd/html/RSadvance.html
+
+Entry: RandProd-internal
+Aliases: NaReplace NaReplace2 NewdataCom Newdata OriginxyCall OriginxyCall2 RankComp RankProd1 RankProd2 RankSum xyCall
+Keywords: internal
+Description: Internal RandProd functions
+URL: ../../../library/RankProd/html/RankProd-internal.html
+
+Entry: arab
+Aliases: arab arab.cl arab.origin arab.gnames
+Keywords: datasets
+Description: Genomic Response to Brassinosteroid in Arabidopsis
+URL: ../../../library/RankProd/html/arab.html
+
+Entry: golub
+Aliases: golub golub.cl golub.gnames
+Keywords: datasets
+Description: sub set of the Gene expression dataset from Golub et al. (1999)
+URL: ../../../library/RankProd/html/golub.html
+
+Entry: lymphoma
+Aliases: lym.exp
+Keywords: datasets
+Description: Subset of the Intensity data for 8 cDNA slides with CLL and DLBL samples from the Alizadeh et al. paper in Nature 2000
+URL: ../../../library/RankProd/html/lymphoma.html
+
+Entry: plotGene
+Aliases: plotGene
+Keywords: htest
+Description: Graphical Display of The expression levels
+URL: ../../../library/RankProd/html/plotGene.html
+
+Entry: plotRP
+Aliases: plotRP
+Keywords: htest
+Description: Graphical Display of the Rank Product/Sum analysis
+URL: ../../../library/RankProd/html/plotRP.html
+
+Entry: topGene
+Aliases: topGene
+Keywords: htest
+Description: Output Significant Genes
+URL: ../../../library/RankProd/html/topGene.html

@@ -1,0 +1,47 @@
+### etc/Renviron.  Generated from Renviron.in by configure.
+###
+### ${R_HOME}/etc/Renviron
+###
+### Record R system environment variables.
+
+R_PLATFORM=${R_PLATFORM-'i386-apple-darwin9.3.0'}
+## Default printer paper size: first record if user set R_PAPERSIZE
+R_PAPERSIZE_USER=${R_PAPERSIZE}
+R_PAPERSIZE=${R_PAPERSIZE-'a4'}
+## Default print command
+R_PRINTCMD=${R_PRINTCMD-'lpr'}
+## Default TeXMF stuff
+R_LATEXCMD=${R_LATEXCMD-${LATEX-'false'}}
+R_DVIPSCMD=${R_DVIPSCMD-${DVIPS-'false'}}
+R_MAKEINDEXCMD=${R_MAKEINDEX-${MAKEINDEX-'false'}}
+R_RD4DVI=${R_RD4DVI-'ae'}
+R_RD4PDF=${R_RD4PDF-'times,hyper'}
+## Default zip/unzip commands
+R_UNZIPCMD=${R_UNZIPCMD-'/usr/bin/unzip'}
+R_ZIPCMD=${R_ZIPCMD-'/usr/bin/zip'}
+## Default browser
+R_BROWSER=${R_BROWSER-'/usr/bin/open'}
+## Default editor
+EDITOR=${EDITOR-${VISUAL-vi}}
+## Default pager
+PAGER=${PAGER-'/usr/bin/less'}
+## Default PDF viewer
+R_PDFVIEWER=${R_PDFVIEWER-'/usr/bin/open'}
+## Use configure values
+AWK=${AWK-'awk'}
+EGREP=${EGREP-'/usr/bin/grep -E'}
+MAKE=${MAKE-'make'}
+PERL=${PERL-'/usr/bin/perl'}
+SED=${SED-'/usr/bin/sed'}
+TAR=${TAR-'tar'}
+LN_S='ln -s'
+
+R_LIBS_USER=${R_LIBS_USER-'~/R/i386-apple-darwin9.3.0-library/2.7'}
+
+## Aqua subdirs
+R_USE_AQUA_SUBDIRS='yes'
+
+### Local Variables: ***
+### mode: sh ***
+### sh-indentation: 2 ***
+### End: ***

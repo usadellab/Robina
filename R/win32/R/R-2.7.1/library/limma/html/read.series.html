@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Read series of image files</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for read.series {limma}"><tr><td>read.series {limma}</td><td align="right">R Documentation</td></tr></table>
+<h2>Read series of image files</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Read in a series of array image analysis output files as data frames.
+</p>
+<p>
+This function is deprecated in limma 2.9.7 (1 January 2007).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+read.series(slides, path=NULL, suffix="spot", ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>slides</code></td>
+<td>
+character vector giving the names of files to be read in. Any suffix such as ".spot" or ".gpr" which is common to all the files can be omitted.</td></tr>
+<tr valign="top"><td><code>path</code></td>
+<td>
+character string giving the directory containing the files. Can be omitted if the files are in the current working directory.</td></tr>
+<tr valign="top"><td><code>suffix</code></td>
+<td>
+character string giving a suffix such as "spot" or "gpr" to be added to each file. If <code>NULL</code> then no suffix is added.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+any other arguments to be passed to <code>read.table</code></td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function performs a series of calls to <code>read.table</code>.
+The image analysis output files are assumed to have been edited to remove all pre-heading material.
+The files are assumed to contain only column names and data.
+In most cases only can use <code>read.maimages</code> instead.
+</p>
+<p>
+The data.frames produced by this command will typically be processed further using one of the functions <code>rg.spot</code>, <code>rg.genepix</code> or <code>rg.quantarray</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+No value is returned.
+However a series of data.frames are created on the current environment with names of the form filename.suffix.
+The files names are given by the elements of <code>slides</code> and the suffix is given by <code>suffix</code>.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Gordon Smyth
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../base/html/read.table.html">read.table</a></code>.
+</p>
+<p>
+An overview of LIMMA functions for reading data is given in <a href="03reading.html">03.ReadingData</a>.
+</p>
+
+
+
+<hr><div align="center">[Package <em>limma</em> version 2.14.7 <a href="00Index.html">Index]</a></div>
+
+</body></html>

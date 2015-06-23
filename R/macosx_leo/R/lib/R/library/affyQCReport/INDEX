@@ -1,0 +1,9 @@
+QCReport                QC Report for AffyBatch objects
+affyQAReport            Generate a QA Report for Affymetrix arrays
+borderQC1               Distribution of intensities of the border
+                        elements
+borderQC2               Center of intensity QC plots
+correlationPlot         Array-array intensity correlation plot
+signalDist              Intensity distribution plots for a AffyBatch
+                        object
+titlePage               QC report title page with array names

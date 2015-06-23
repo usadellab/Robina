@@ -1,0 +1,15 @@
+Package: preprocessCore
+Version: 1.2.0
+Title: A collection of pre-processing functions
+Author: Benjamin Milo Bolstad <bmb@bmbolstad.com>
+Maintainer: Benjamin Milo Bolstad <bmb@bmbolstad.com>
+Depends: methods
+Description: A library of core preprocessing routines
+License: LGPL version 2 or newer
+Collate: normalize.quantiles.R quantile_extensions.R
+        rma.background.correct.R rcModel.R colSummarize.R
+        subColSummarize.R plmr.R plmd.R init.R
+LazyLoad: yes
+biocViews: Infrastructure
+Packaged: Wed Apr 30 01:48:08 2008; biocbuild
+Built: R 2.7.0; i386-apple-darwin9.3.0; 2008-06-26 12:47:04; unix

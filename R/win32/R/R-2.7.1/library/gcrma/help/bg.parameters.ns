@@ -1,0 +1,41 @@
+bg.parameters.ns            package:gcrma            R Documentation
+
+_E_s_t_i_m_a_t_i_o_n _o_f _n_o_n-_s_p_e_c_i_f_i_c _B_i_n_d_i_n_g _B_a_c_k_g_r_o_u_n_d _P_a_r_a_m_e_t_e_r_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     An internal function to be used by 'gcrma'
+
+_U_s_a_g_e:
+
+     bg.parameters.ns(x, affinities, affinities2 = NULL, affinities3 = NULL, span = 0.2)
+
+_A_r_g_u_m_e_n_t_s:
+
+       x: PM or MM intensities after optical background correction,
+          before non-specific-binding correction.
+
+affinities: Probe affinities for probes with known sequences. Used to
+          estimate the function between non-specific binding and
+          affinities.
+
+affinities2: Probe affinities for the probes whose expected
+          non-specific binding intensity is to be predicted. 
+
+affinities3: Probe affinities for another extra group of probes whose
+          expected non-specific binding intensity is to be predicted. 
+
+    span: 
+
+_V_a_l_u_e:
+
+     a vector of same length as x.
+
+_A_u_t_h_o_r(_s):
+
+     Rafeal Irizarry, Zhijin (Jean) Wu
+
+_S_e_e _A_l_s_o:
+
+     'gcrma'
+

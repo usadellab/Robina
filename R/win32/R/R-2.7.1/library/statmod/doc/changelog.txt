@@ -1,0 +1,117 @@
+18 November 2008: statmod 1.3.8
+
+- qres.nbinom now works in more situations.  It now accepts
+  a model fit from MASS::glm.nb or a model fit using
+  MASS:negative.binomial() when the theta argument is unnamed.
+  Previously the theta argument had to be named, as in
+  negative.binomial(theta=2).
+
+20 July 2008: statmod 1.3.7
+
+- reference added to help page for compareGrowthCurves()
+
+- the saved output from the automatic tests updated for R 2.7.1
+
+07 April 2008: statmod 1.3.6
+
+- fixes to limdil() on estimate and upper bound of the confidence interval when all 
+  cells respond to all tests.
+- bug fix in limdil() which produced wrong calculation of the upper bound 
+  and lower bound of the confidence interval when there are more than one group and
+  no cells responds or all cells respond to all tests in one of the groups. 
+
+24 March 2008: statmod 1.3.5
+
+- The function remlscoregamma(), removed in 2004, restored to the package
+  with updated references.
+
+11 February 2008: statmod 1.3.4
+
+- bug fix in limdil() which produced error when calculating the confidence
+  intervals of multiple groups and all cells respond in one of the groups. 
+
+12 January 2008: statmod 1.3.3
+
+- the limdil function now has the capability to handle and compare
+  multiple experiments or groups.
+
+24 September 2007: statmod 1.3.1
+
+- non-ascii European characters removed from Rd files
+- Shackleton reference added to limdil.Rd
+- fixed some non-matched brackets in other Rd files
+
+15 October 2006: statmod 1.3.0
+
+- package now has a NAMESPACE which simply exports all objects
+- new function fitNBP()
+- new function plotGrowthCurves()
+
+4 January 2006: statmod 1.2.4
+
+- fixes to gauss.quad.prob when n=1 or n=2
+
+12 December 2005: statmod 1.2.3
+
+- remlscore() was failing when rank of X was only 1, now fixed.
+
+20 October 2005: statmod 1.2.2
+
+- mixedModel2Fit() now outputs REML residuals
+- randomizedBlock() & randomizedBlockFit() renamed to mixedModel2() & mixedModel2Fit()
+
+4 July 2005: statmod 1.2.1
+
+- remlscore() now outputs covariance matrices for estimated coefficients
+- redundant copy of randomizedBlockFit() removed
+
+22 June 2005: statmod 1.2.0
+
+- /inst/doc/index.html created
+- change log (this file) moved to /inst/doc directory of package
+- new function limdil()
+
+14 June 2005: statmod 1.1.1
+
+- change to rinvgauss() to avoid numerical problems with subtractive cancellation when lambda<<mu
+
+5 Oct 2004: statmod 1.1.0
+
+- new wrapper functions qresiduals() and qresid() for quantile residuals
+- bug fixes to qres.nbinom() qres.tweedie(), S-Plus code finally changed to R
+
+27 Sep 2004: statmod 1.0.8
+
+- bug fix in tweedie() - stop linkinv checking for neg or small arguments
+
+19 Sep 2004: statmod 1.0.7
+
+- fix problems with remlscor.Rd and remlscorgamma.Rd.  (The function
+  remlscoregamma documented by remlscorgamma.Rd was removed soon after
+  this.)
+- edits to 1.StatMod.Rd and glmgamfit.Rd
+- lm.fit (effects component) now used to transform to residual space in randomizedBlockFit()
+
+20 Mar 2004: statmod 1.0.6
+
+- new overall help entry 1.StatMod
+- edited welding.Rd
+- output component $sigmasquared from randomizedBlock changed to $varcomp
+- arg fixed.estimated changed to only.varcomp in randomizedBlock()
+- edit glmgamfit.Rd
+- continued work on glmgam.fit() to prevent singularity when some mu are very small
+- glmgam.fit doesn't warn when maxit exceeded but instead records number of iteration
+- arguments tol, maxit, trace added to randomizedBlock() and randomizedBlockFit()
+- edit sagetest.Rd
+- edit randomizedBlock.Rd
+
+11 Feb 2004: statmod 1.0.5
+- mlreg.fit() and mlreg.fit.zero() removed
+
+10 Feb 2004: statmod 1.0.4
+- minor bug fixes to glmgam.fit
+- mlreg.fit and mlreg.fit.zero updated to work in R 1.9.0
+
+6 Jan 2004: statmod 1.0.3
+- function fisher.test2() removed
+- bug fix in sage.test() which produced error with zero counts and equal sized libraries

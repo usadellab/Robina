@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Stratified MAD calculation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for maMAD {marray}"><tr><td>maMAD {marray}</td><td align="right">R Documentation</td></tr></table>
+<h2>Stratified MAD calculation</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function computes the median absolute deviation (MAD) of values in <code>y</code> separately within values of <code>x</code>. It is used by <code><a href="maNormMAD.html">maNormMAD</a></code> for MAD scale normalization.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+maMAD(x, y, geo=TRUE, subset=TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+Variables used to stratify the data.</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+A numeric vector.</td></tr>
+<tr valign="top"><td><code>geo</code></td>
+<td>
+If <code>TRUE</code>, the MAD of each group is divided by the
+geometric mean of the MADs across groups (cf. Yang et al. (2002)). This allows observations to
+retain their original units.</td></tr>
+<tr valign="top"><td><code>subset</code></td>
+<td>
+A "logical" or "numeric" vector indicating the subset of points used to compute the MAD. </td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+A numeric vector of MAD values.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Sandrine Dudoit, <a href="http://www.stat.berkeley.edu/~sandrine">http://www.stat.berkeley.edu/~sandrine</a>.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+S. Dudoit and Y. H. Yang. (2002). Bioconductor R packages for exploratory analysis and normalization of cDNA microarray data. In G. Parmigiani, E. S. Garrett, R. A. Irizarry and S. L. Zeger, editors, <EM>The Analysis of Gene Expression Data: Methods and Software</EM>, Springer, New York.<br> <br>
+</p>
+<p>
+Y. H. Yang, S. Dudoit, P. Luu, and T. P. Speed (2001). Normalization for cDNA microarray data. In M. L. Bittner, Y. Chen, A. N. Dorsel, and E. R. Dougherty (eds), <EM>Microarrays: Optical Technologies and Informatics</EM>, Vol. 4266 of <EM>Proceedings of SPIE</EM>.<br> <br>
+</p>
+<p>
+Y. H. Yang, S. Dudoit, P. Luu, D. M. Lin, V. Peng, J. Ngai, and T. P. Speed (2002). Normalization for cDNA microarray data: a robust composite method addressing single and multiple slide systematic variation. <EM>Nucleic Acids Research</EM>, Vol. 30, No. 4.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="maNormMain.html">maNormMain</a></code>, <code><a href="maNormMAD.html">maNormMAD</a></code>, <code><a href="../../stats/html/mad.html">mad</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# See examples for maNormMain.
+
+</pre>
+
+
+
+<hr><div align="center">[Package <em>marray</em> version 1.18.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>
