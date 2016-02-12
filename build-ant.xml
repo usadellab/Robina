@@ -3,12 +3,14 @@
 To Build:
 
 1) Set JAVA_HOME to a 1.7 or earlier JDK - e.g.
-
 	export JAVA_HOME=/usr/java/jdk1.7.0_80
 
-2) Run ant specifying this build file:  
+2) Make sure you have 32-bit libraries:
+    yum -y install glibc.i686
 
+2) Run ant specifying this build file:  
 	ant -f build-ant.xml
+
 
 -->
 
@@ -86,7 +88,7 @@ To Build:
     		</fileset>
 		</copy>
 	
-		<jar jarfile="${dist_jar}/Robin2.jar" basedir="${dist_unpack}" manifest="MANIFEST.MF"/>
+		<jar jarfile="${dist}/Robin2.jar" basedir="${dist_unpack}" manifest="MANIFEST.MF"/>
 
 	</target>
 
@@ -99,13 +101,7 @@ To Build:
         </copy>
 
 		<mkdir dir="dist/installers"/>
-    	
-		<!-- make dummy installer 'from' folders if missing -->
-    	<mkdir dir="installers/images"/>
-    	<mkdir dir="installers/launchers"/>
-        <mkdir dir="installers/packs"/>      	
-        <mkdir dir="installers/text"/>
- 
+    	 
     	<copy todir="dist/installers/images"><fileset dir="installers/images"/></copy>
     	<copy todir="dist/installers/launchers"><fileset dir="installers/launchers"/></copy>
        	<copy todir="dist/installers/packs"><fileset dir="installers/packs"/></copy>      	
@@ -166,7 +162,98 @@ To Build:
     	<copy file="installers/conf/robin_jar_wrapper_launch4j.xml" tofile="dist/installers/conf/robin_jar_wrapper_launch4j.xml"/>
     	<launch4j configFile="dist/installers/conf/robin_jar_wrapper_launch4j.xml"/>
     	<echo>... done</echo>
-                  
+             
+    	<!-- create windows 2000/XP/Vista 32 bit installer package -->
+    	
+    	<IzPack input="dist/installers/conf/robin_izpack_install.xml"
+    	        output="dist/installers/packages/win/RobinInstaller_win32_build${build.number}.jar"
+    	        installerType="standard"
+    	        basedir="dist/installers"
+    	        IzPackDir="dist/installers/"/>
+    	
+    	<!-- create windows 7 64 bit installer package -->
+    	
+    	<IzPack input="dist/installers/conf/robin_izpack_install_x64.xml"
+    	    	output="dist/installers/packages/win/RobinInstaller_win7_x64_build${build.number}.jar"
+    	    	installerType="standard"
+    	    	basedir="dist/installers"
+    	    	IzPackDir="dist/installers/"/>
+
+
+    	<!-- Wrap windows installer packages -->
+
+    	<echo>Wrapping installer for win32 in a native launcher</echo>
+    	<launch4j configFile="dist/installers/conf/robin_launch4j.xml"/>
+    	<echo>... done</echo>
+    	
+    	<echo>Wrapping installer for windows7_x64 in a native launcher</echo>
+    	<launch4j configFile="dist/installers/conf/robin_launch4j_x64.xml"/>
+    	<echo>... done</echo>
+    	
+    	<!-- Pure-java installer packages -->
+    	
+       	<IzPack input="dist/installers/conf/robin_izpack_install_light.xml"
+ 	    	    output="dist/installers/packages/light/RobinInstaller_java_build${build.number}.jar"
+       	    	installerType="standard"
+       	    	basedir="dist/installers"
+        	    IzPackDir="dist/installers/"/>
+
+    	    	
+    	<!-- Mac Witchcraft -->
+        <mkdir dir="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java"/>
+
+        <copy file="dist/installers/packs/src.zip"
+    		  tofile="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/src.zip"
+    		  overwrite="true"/>
+    	
+    	<copy file="dist/Robin2.jar"
+    	    tofile="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/Robin2.jar"
+    	 	overwrite="true"/>
+		
+		<!-- copy the current dist/lib to the mac bundles... new libs still have to be added to the Info.plist manually! -->        
+        
+    	<copy todir="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/lib" overwrite="true">
+            <fileset dir="dist/lib"/>
+        </copy>
+        
+        <copy todir="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/lib/presets">
+    		<fileset dir="${presets-source}"/>
+    	</copy>
+
+        <!-- remove testing configuration files and R start scripts from the mac app bundles -->
+
+    	<delete file="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/robin.conf" verbose="true"/>
+        <delete file="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/R/bin/R" verbose="true"/>
+       	
+    	<echo>MacOSX 10.6 universal (skipped)</echo>
+   <!-- 	
+		<echo>running hdiutil...</echo>
+    	<exec executable="hdiutil">
+    		<arg value="create"/>
+    		<arg value="dist/installers/packages/macosx/dmg/RobiNA_mac_10.6_universal_build${build.number}.dmg"/>
+            <arg value="-volname"/>
+    		<arg value="RobiNA_leopard_universal"/>
+    		<arg value="-srcfolder"/>
+    		<arg value="dist/installers/packages/macosx/app_universal/"/>
+    	</exec>
+    	<echo>... done</echo>
+-->
+
+<!-- genisoimage -D -V "$(PROJECT) $(VERSION)" -no-pad -r -apple -o project-$(VERSION)-uncompressed.dmg $(DARWIN_DIR) -->
+
+		<mkdir dir="dist/installers/packages/macosx/dmg"/>
+
+	    <exec executable="genisoimage">
+    		<arg value="-D"/>
+			<arg value="-V"/>
+			<arg value="RobiNA_leopard_universal"/>
+			<arg value="-no-pad"/>
+			<arg value="-r"/>
+			<arg value="-apple"/>
+			<arg value="-o"/>
+			<arg value="dist/installers/packages/macosx/dmg/RobiNA_mac_10.6_universal_build${build.number}-uncompressed.dmg"/>
+			<arg value="dist/installers/packages/macosx/app_universal/"/>
+		</exec>
     </target>
 
 
