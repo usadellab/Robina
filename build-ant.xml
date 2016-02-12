@@ -1,0 +1,177 @@
+<!--
+
+To Build:
+
+1) Set JAVA_HOME to a 1.7 or earlier JDK - e.g.
+
+	export JAVA_HOME=/usr/java/jdk1.7.0_80
+
+2) Run ant specifying this build file:  
+
+	ant -f build-ant.xml
+
+-->
+
+	
+<project name="Robina" default="installers" basedir=".">
+	<property name="version" value="testing"/>
+	
+	<property name="src" location="src" />
+	<property name="lib" location="lib" />
+
+	<property name="distsrc" location="distSrc" />
+	
+	<property name="dist" location="dist" />
+	<property name="dist_build" location="dist/build" />
+	<property name="dist_lib" location="dist/lib" />
+	<property name="dist_jar" location="dist/jar" />
+	<property name="dist_unpack" location="dist/unpack" />
+
+	<target name="init">
+		<mkdir dir="${dist}" />
+		<mkdir dir="${dist_build}" />
+		<mkdir dir="${dist_lib}"/>
+		<mkdir dir="${dist_jar}" />
+		<mkdir dir="${dist_unpack}"/>
+			
+        <buildnumber file="src/de/mpimp/golm/robin/build.number"/> 
+		        
+        <property name="version.number" value="1.2.3" />
+		        
+        <copy file="Version.template" tofile="${src}/de/mpimp/golm/robin/Version.properties" overwrite="true" />
+        <replace file="${src}/de/mpimp/golm/robin/Version.properties" token="#VERSION#" value="${version.number}_build${build.number}"/>
+		        
+        <copy file="RELEASE_NOTES_TEMPLATE.html" tofile="${src}/de/mpimp/golm/robin/RELEASE_NOTES.html" overwrite="true" />
+        <replace file="${src}/de/mpimp/golm/robin/RELEASE_NOTES.html" token="#VERSION#" value="${version.number}_build${build.number}"/>
+		        			
+			
+	</target>
+
+	<target name="import" depends="init">
+		<copy todir="${dist_lib}">
+			<fileset dir="${lib}">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="compile" depends="import">
+		<javac srcdir="${src}" destdir="${dist_build}" debug="true" source="1.5" target="1.5" includeantruntime="false">
+			<classpath>
+				<fileset dir="${dist_lib}">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+		
+		<copy todir="${dist_build}">
+			<fileset dir="${src}">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="jar" depends="compile">
+		<!--
+		<unjar dest="${dist_unpack}">
+		    <fileset dir="${dist_lib}">
+	            <include name="**/*.jar"/>
+            </fileset>
+        </unjar>
+        
+        <delete dir="${dist_unpack}/META-INF"/>
+	-->
+		<copy todir="${dist_unpack}">
+    		<fileset dir="${dist_build}">
+    		</fileset>
+		</copy>
+	
+		<jar jarfile="${dist_jar}/Robin2.jar" basedir="${dist_unpack}" manifest="MANIFEST.MF"/>
+
+	</target>
+
+	<target name="installers" depends="jar">
+        <property name="presets-source" value="presets"/> 
+        <property name="presets-target" value="dist/lib/presets/"/>
+    	
+        <copy todir="${presets-target}"> 
+        	<fileset dir="${presets-source}"/>
+        </copy>
+
+		<mkdir dir="dist/installers"/>
+    	
+		<!-- make dummy installer 'from' folders if missing -->
+    	<mkdir dir="installers/images"/>
+    	<mkdir dir="installers/launchers"/>
+        <mkdir dir="installers/packs"/>      	
+        <mkdir dir="installers/text"/>
+ 
+    	<copy todir="dist/installers/images"><fileset dir="installers/images"/></copy>
+    	<copy todir="dist/installers/launchers"><fileset dir="installers/launchers"/></copy>
+       	<copy todir="dist/installers/packs"><fileset dir="installers/packs"/></copy>      	
+        <copy todir="dist/installers/text"><fileset dir="installers/text"/></copy>
+    	
+    	<!-- update the src/lib/presets/mappings packs -->
+    	<echo>updating installer packs...</echo>
+    	
+    	<zip destfile="dist/installers/packs/src.zip" basedir="src/" excludes="**/.svn"/>
+    	<zip destfile="dist/installers/packs/lib.zip" basedir="dist/lib/" excludes="**/.svn"/>
+
+        <!-- pack up the presets and copy them to the packs directory -->
+        <zip destfile="dist/installers/packs/presets.zip" basedir="presets/"/>
+
+        <!-- pack up the mappings and copy them to the packs directory -->
+        <zip destfile="dist/installers/packs/mappings.zip" basedir="mappings/"/>
+
+        <mkdir dir="dist/installers/packages/light"/>
+        <mkdir dir="dist/installers/packages/macosx"/>       		
+        <mkdir dir="dist/installers/packages/win"/>
+
+    	<!-- copy contigs and update buildnumber where needed -->
+        <mkdir dir="dist/installers/conf"/>
+
+    	<copy file="installers/conf/shortcutSpec.xml" todir="dist/installers/conf/"/>
+    	<copy file="installers/conf/Unix_shortcutSpec.xml" todir="dist/installers/conf/"/>
+    	
+    	<copy file="installers/conf/robin_launch4j.template.xml" tofile="dist/installers/conf/robin_launch4j.xml" overwrite="true"/>
+    	<replaceregexp file="dist/installers/conf/robin_launch4j.xml" match="__BUILDNUM__" replace="${build.number}" flags="g" />   
+    	
+    	<copy file="installers/conf/robin_launch4j.template_x64.xml" tofile="dist/installers/conf/robin_launch4j_x64.xml" overwrite="true"/>    	
+    	<replaceregexp file="dist/installers/conf/robin_launch4j_x64.xml" match="__BUILDNUM__" replace="${build.number}" flags="g" />
+
+    	<copy file="installers/conf/robin_izpack_install_template.xml" tofile="dist/installers/conf/robin_izpack_install.xml" overwrite="true" />
+        <replace file="dist/installers/conf/robin_izpack_install.xml" token="#VERSION#" value="${version.number}_build${build.number}"/>
+        
+        <copy file="installers/conf/robin_izpack_install_light_template.xml" tofile="dist/installers/conf/robin_izpack_install_light.xml" overwrite="true" />
+        <replace file="dist/installers/conf/robin_izpack_install_light.xml" token="#VERSION#" value="${version.number}_build${build.number}"/>
+        
+        <copy file="installers/conf/robin_izpack_install_x64_template.xml" tofile="dist/installers/conf/robin_izpack_install_x64.xml" overwrite="true" />
+        <replace file="dist/installers/conf/robin_izpack_install_x64.xml" token="#VERSION#" value="${version.number}_build${build.number}"/>
+ 
+        <echo>BUILDING INSTALLERS...</echo>
+    	
+        <property name="launch4j.dir" location="installers/tools/launch4j" />
+        <taskdef name="launch4j"
+            classname="net.sf.launch4j.ant.Launch4jTask"
+            classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
+
+        <property name="IzPack.dir" location="installers/tools/IzPack" />
+    	<taskdef name="IzPack" 
+    	         classname="com.izforge.izpack.ant.IzPackTask"
+    		     classpath="${IzPack.dir}/lib/standalone-compiler.jar"/>
+    	
+    	<!-- create exe wrapper of robin main jar for windows -->
+    	
+    	<echo>Wrapping Robin main jar into native windows launcher</echo>
+    	<copy file="installers/conf/robin_jar_wrapper_launch4j.xml" tofile="dist/installers/conf/robin_jar_wrapper_launch4j.xml"/>
+    	<launch4j configFile="dist/installers/conf/robin_jar_wrapper_launch4j.xml"/>
+    	<echo>... done</echo>
+                  
+    </target>
+
+
+	<target name="clean">
+		<delete dir="${dist}" />
+	</target>
+	
+</project>
