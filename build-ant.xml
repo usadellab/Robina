@@ -15,7 +15,7 @@ To Build:
 -->
 
 	
-<project name="Robina" default="installers" basedir=".">
+<project name="Robina" default="installers_auto" basedir=".">
 	<property name="version" value="testing"/>
 	
 	<property name="src" location="src" />
@@ -45,7 +45,43 @@ To Build:
 		        
         <copy file="RELEASE_NOTES_TEMPLATE.html" tofile="${src}/de/mpimp/golm/robin/RELEASE_NOTES.html" overwrite="true" />
         <replace file="${src}/de/mpimp/golm/robin/RELEASE_NOTES.html" token="#VERSION#" value="${version.number}_build${build.number}"/>
-		        			
+	
+        <!-- Set OS-dependant flags -->
+        <!-- <property name="launch4j.dir" location="installers/tools/launch4j.linux" /> -->
+
+        <condition property="isLinux">
+           <and>
+              <os family="unix"/>
+              <not>
+                <os family="mac"/>
+              </not>
+           </and>
+        </condition>
+
+        <condition property="launch4j.dir" value="installers/tools/launch4j.linux">
+            <and>
+              <os family="unix"/>
+              <not>
+                <os family="mac"/>
+              </not>
+           </and>
+        </condition>
+
+        <condition property="isMacOS">
+            <and> 
+              <os family="unix"/>
+              <os family="mac"/>
+           </and>
+        </condition>
+
+        <condition property="launch4j.dir" value="installers/tools/launch4j.macos">
+            <and>
+              <os family="unix"/>
+              <os family="mac"/>
+           </and>
+        </condition>
+
+	        			
 			
 	</target>
 
@@ -146,7 +182,6 @@ To Build:
  
         <echo>BUILDING INSTALLERS...</echo>
     	
-        <property name="launch4j.dir" location="installers/tools/launch4j.macosx" />
         <taskdef name="launch4j"
             classname="net.sf.launch4j.ant.Launch4jTask"
             classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
@@ -224,10 +259,14 @@ To Build:
 
     	<delete file="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/robin.conf" verbose="true"/>
         <delete file="dist/installers/packages/macosx/app_universal/RobiNA.app/Contents/Resources/Java/R/bin/R" verbose="true"/>
+       
+        </target>
+
+
+        <target name="installers_MacOS" depends="installers" if="isMacOS">
        	
-    	<echo>MacOSX 10.6 universal (skipped)</echo>
-    	
-		<echo>running hdiutil...</echo>
+    	<echo>MacOSX 10.6 universal (on MacOS)</echo>
+	<echo>running hdiutil...</echo>
     	<exec executable="hdiutil">
     		<arg value="create"/>
     		<arg value="dist/installers/packages/macosx/RobiNA_mac_10.6_universal_build${build.number}.dmg"/>
@@ -238,9 +277,15 @@ To Build:
     	</exec>
     	<echo>... done</echo>
 
+        </target>
+
+        <target name="installers_Linux" depends="installers" if="isLinux">      
+
+        <echo>MacOSX 10.6 universal (on Linux)</echo>
+        <echo>running genisoimage...</echo>
 
 <!-- genisoimage -D -V "$(PROJECT) $(VERSION)" -no-pad -r -apple -o project-$(VERSION)-uncompressed.dmg $(DARWIN_DIR) -->
-<!--
+
 		<mkdir dir="dist/installers/packages/macosxg"/>
 
 	    <exec executable="genisoimage">
@@ -254,9 +299,9 @@ To Build:
 			<arg value="dist/installers/packages/macosx/RobiNA_mac_10.6_universal_build${build.number}-uncompressed.dmg"/>
 			<arg value="dist/installers/packages/macosx/app_universal/"/>
 		</exec>
--->
-    </target>
+       </target>
 
+        <target name="installers_auto" depends="installers_MacOS, installers_Linux"/>
 
 	<target name="clean">
 		<delete dir="${dist}" />
