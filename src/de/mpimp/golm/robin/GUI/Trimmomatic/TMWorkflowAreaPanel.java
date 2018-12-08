@@ -7,7 +7,6 @@ package de.mpimp.golm.robin.GUI.Trimmomatic;
 import java.awt.Color;
 import java.awt.dnd.DropTarget;
 import javax.swing.JPanel;
-import sun.awt.OrientableFlowLayout;
 
 /**
  *
