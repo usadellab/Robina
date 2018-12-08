@@ -2,6 +2,7 @@
  * SCGenericImportDialog.java
  *
  * Created on 27. Juli 2009, 11:52
+ * fixed special character
  */
 
 package de.mpimp.golm.robin.GUI.singlechannel;
@@ -223,7 +224,7 @@ public class SCGenericImportDialog extends javax.swing.JDialog {
         jLabel5 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        labeöjshd = new javax.swing.JLabel();
+        labeljshd = new javax.swing.JLabel();
         blockRowSpinner = new javax.swing.JSpinner();
         blockColSpinner = new javax.swing.JSpinner();
         jPanel7 = new javax.swing.JPanel();
@@ -512,10 +513,10 @@ public class SCGenericImportDialog extends javax.swing.JDialog {
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, editLayoutBox, org.jdesktop.beansbinding.ELProperty.create("${selected}"), jLabel10, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
-        labeöjshd.setFont(labeöjshd.getFont().deriveFont((float)11));
-        labeöjshd.setText(org.openide.util.NbBundle.getMessage(SCGenericImportDialog.class, "SCGenericImportDialog.labeöjshd.text")); // NOI18N
+        labeljshd.setFont(labeljshd.getFont().deriveFont((float)11));
+        labeljshd.setText(org.openide.util.NbBundle.getMessage(SCGenericImportDialog.class, "SCGenericImportDialog.labeljshd.text")); // NOI18N
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, editLayoutBox, org.jdesktop.beansbinding.ELProperty.create("${selected}"), labeöjshd, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, editLayoutBox, org.jdesktop.beansbinding.ELProperty.create("${selected}"), labeljshd, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
         blockRowSpinner.setFont(blockRowSpinner.getFont());
@@ -538,7 +539,7 @@ public class SCGenericImportDialog extends javax.swing.JDialog {
                 .addContainerGap()
                 .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel6Layout.createSequentialGroup()
-                        .add(labeöjshd)
+                        .add(labeljshd)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(blockRowSpinner, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE))
                     .add(jPanel6Layout.createSequentialGroup()
@@ -552,7 +553,7 @@ public class SCGenericImportDialog extends javax.swing.JDialog {
             .add(jPanel6Layout.createSequentialGroup()
                 .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
                     .add(blockRowSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(labeöjshd))
+                    .add(labeljshd))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
                     .add(jLabel10)
@@ -1351,7 +1352,7 @@ private int findIndexOfFirstDataRow(String dataFilePath, String sepChar) {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel labeöjshd;
+    private javax.swing.JLabel labeljshd;
     private javax.swing.JComboBox layoutPresetCombo;
     private javax.swing.JButton loadLayoutButton;
     private javax.swing.JButton loadPresetButton;
