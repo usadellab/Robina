@@ -70,6 +70,11 @@ public abstract class RNASeqAbstractMappingProcess implements Runnable {
     public HashMap<String, Integer> getCountsTable() {
         return this.countsTable;
     }
+    
+    /*necessary for Kallisto as parsing happens once done*/
+    public void flushCounts() {
+       
+    }
 
     public boolean isSaveAlignments() {
         return saveAlignments;

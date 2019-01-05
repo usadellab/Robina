@@ -147,12 +147,14 @@ public class RNASeqMappingProcessController implements ActionListener {
                 SimpleIntegerDataFrame countsTable = new SimpleIntegerDataFrame();
                 for (RNASeqAbstractMappingProcess proc : processes) {
                     try {
+                    	proc.flushCounts();
                         countsTable.addColumn(proc.getCountsTable(), proc.getName());
                     } catch (Exception ex) {
                         Exceptions.printStackTrace(ex);
                     }
                 }
-
+                
+                SimpleLogger.getLogger(true).logMessage("writing counts table");
                 File out = new File(dataModel.getDetailedResultsDir(), dataModel.getExperimentName() + "_raw_countstable.txt");
                 try {
                     countsTable.writeToFile(out);
