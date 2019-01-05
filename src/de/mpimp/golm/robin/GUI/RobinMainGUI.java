@@ -986,7 +986,7 @@ private void DGEButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         }
 
         File confFile = new java.io.File(this.getResourcePath(), "robin.conf");
-
+        SimpleLogger.getLogger(true).logMessage(confFile.getAbsolutePath());
         // do we already have a config file?
         if (confFile.exists()) {
             try {
