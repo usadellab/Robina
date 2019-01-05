@@ -326,6 +326,11 @@ public class RNASeqDelegate {
 //                
 //            }};
 //        }
+    
+    
+    /** Import vanilla tab separated tables 
+     * at the moment this requires the user to already have supplied replication identifiers
+    **/
     public boolean importCountsTable(RNASeqDataModel dataModel) throws FileNotFoundException, IOException {
         if (!dataModel.isImportCountsTable()) {
             return false;
