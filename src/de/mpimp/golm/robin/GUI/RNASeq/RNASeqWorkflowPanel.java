@@ -58,6 +58,7 @@ import de.mpimp.golm.robin.rnaseq.RPKM.RNASeqRPKMGenerator;
 import de.mpimp.golm.robin.rnaseq.mapping.RNASeqAbstractMappingProcess;
 import de.mpimp.golm.robin.rnaseq.mapping.RNASeqBAMSAMImporter;
 import de.mpimp.golm.robin.rnaseq.mapping.RNASeqBowtieMappingProcess;
+import de.mpimp.golm.robin.rnaseq.mapping.RNASeqKallistoMappingProcess;
 import de.mpimp.golm.robin.rnaseq.mapping.RNASeqMappingProcessController;
 import de.mpimp.golm.robin.rnaseq.parser.FastQFile;
 import de.mpimp.golm.robin.rnaseq.parser.FastQParser;
@@ -2712,14 +2713,14 @@ public class RNASeqWorkflowPanel extends RobinWorkflow {
             protected ArrayList<FastQFile> doInBackground() throws Exception {
                 ArrayList<FastQFile> passedInputFiles = new ArrayList<FastQFile>();
                 if (qcResultPanel != null) {
-
+                	System.out.println("hallo");
                     for (Component comp : qcResultPanel.getComponents()) {
                         if (comp instanceof RNASeqQCprogressPanel) {
 
                             RNASeqQCprogressPanel progpanel = (RNASeqQCprogressPanel) comp;
                             File pdf = new File(dataModel.getPlotsDir(), progpanel.getInputFile().getName() + ".pdf");
                             progpanel.mouseClicked(null);
-
+                            System.out.println(progpanel.getInputFile().getName());
                             // pass the dataModel as a suppository....bit ugly, but works
                             ActionEvent fake = new ActionEvent(dataModel, 1, "fakeClick");
                             progpanel.getResultPanel().fakeMouseClick(fake);
@@ -3485,6 +3486,8 @@ private void resetMappingControls(java.awt.event.ActionEvent evt) {//GEN-FIRST:e
     this.repaint();
 }//GEN-LAST:event_resetMappingControls
 
+
+/** this starts the mapping process **/
 private void startMappingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startMappingButtonActionPerformed
     this.timeElapsedLabel.setEnabled(true);
     this.stopMappingProcessButton.setEnabled(true);
@@ -3515,6 +3518,7 @@ private void startMappingButtonActionPerformed(java.awt.event.ActionEvent evt) {
     mappingStartMillis = System.currentTimeMillis();
 
     //FIXME this should happen in a worker thread - if at all
+    
     delegate.decompressAllInputFiles();
 
     if (dataModel.getReferenceType() == RNASeqDataModel.REFERENCE_TYPE.GENOME) {
@@ -3620,12 +3624,13 @@ private void startMappingButtonActionPerformed(java.awt.event.ActionEvent evt) {
         }
 
         for (RNASeqSample sample : dataModel.getSamples().values()) {
-            RNASeqBowtieMappingProcess process = null;
-            File indexFile = new File(indexDir, dataModel.getReferenceindexName() + "_" + dataModel.getReferenceType() + "_bwtindex");
-            process = new RNASeqBowtieMappingProcess(
+            RNASeqKallistoMappingProcess process = null;
+            File indexFile = new File(indexDir, dataModel.getReferenceindexName());
+            process = new RNASeqKallistoMappingProcess(
                     this,
                     sample.getSampleName(),
-                    new File(binDir, "bowtie_" + delegate.getSysArchString()),
+                    /**FIXME to bindir**/
+                    new File(new File("D:\\backup\\ZUKUNFTSFORUM\\_______HH",""), "kallisto.exe"),
                     mappingToolSettingPanel.getArgs(),
                     indexFile,
                     sample.getInputFiles());
@@ -4297,11 +4302,12 @@ private void importCountsTableButtonActionPerformed(java.awt.event.ActionEvent e
 
                     // get charts
                     ChartPanel panel = delegate.getCountFreqDistributionChartForColumn(i, countsTable, new Dimension(100, 50));
-                    ChartPanel mismatchPanel = ((RNASeqBowtieMappingProcess) process).getErrorRecorder()
+                  /* ChartPanel mismatchPanel = ((RNASeqBowtieMappingProcess) process).getErrorRecorder()
                             .getMismatchRatesPlot(new Dimension(100, 50), "Positional alignment mismatch");
-
+*/
+                    /**TODO remove mismtach panel **/
                     RNASeqMappingResultPanel rPan =
-                            new RNASeqMappingResultPanel(countsTable.getColname(i), panel, mismatchPanel, process.getReport());
+                            new RNASeqMappingResultPanel(countsTable.getColname(i), panel, panel /*mismatchPanel*/, process.getReport());
 
                     if (process.getPercentAligned() < RobinConstants.PERCENTAGE_READS_ALIGNED_WARNING_THRESHOLD) {
                         badSamples.add(process);
