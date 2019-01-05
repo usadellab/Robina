@@ -95,7 +95,14 @@ public class RTask extends Thread {
     this.sRCall = sRCall;
     }*/
 
-    
+    /**
+     * 
+     * @param path  Pathto where R is
+     * @param cmd   Command to run R
+     * @param args  arguments for R
+     * @param scriptfile the scriptfile that has been genereated and that R should process
+     * most of these come from the robin.conf file
+     */
     public RTask(String path, String cmd, String args, File scriptfile) {
         this.pathToR = path;
         this.startRcommand = cmd;
