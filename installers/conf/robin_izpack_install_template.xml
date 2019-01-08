@@ -140,7 +140,9 @@
             <file src="packs/mappings.zip" targetdir="$USER_HOME/.robindata" unpack="true"/>
             <file src="packs/presets.zip" targetdir="$USER_HOME/.robindata" unpack="true"/>
 
-            <file src="packs/R-2.13.2_win.zip" targetdir="$INSTALL_PATH" unpack="true" os="windows"/>
+            <!--file src="packs/R-2.13.2_win.zip" targetdir="$INSTALL_PATH" unpack="true" os="windows"/-->
+            <file src="packs/R-2.15.0.zip" targetdir="$INSTALL_PATH" unpack="true" os="windows"/>
+
         </pack>
         <!--pack name="Documentation" required="no">
             <description>Javadoc documentation of the source code</description>
