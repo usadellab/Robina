@@ -8,3 +8,4 @@ Genomic data will likely no longer be supported. (Thoughts?)
 In the case of not freely accesibly genomes only offering scafolds and gffs e.g. C.arabica download the files and use e.g. gffread to convert fasta and gff3 to create transcript models like so:  
 gffread -w coffee_transcripts.fa -g /path/to/Ca_scaffolds.fasta Ca_scaffolds.gff3
 
+For a quick tutorial walkthrough please see robinArcas.pdf
