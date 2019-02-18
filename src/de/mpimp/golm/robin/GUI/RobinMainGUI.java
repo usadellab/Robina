@@ -67,6 +67,12 @@ import org.openide.util.Exceptions;
  *
  * @author  marc
  */
+
+/**FIXME 
+ * for running !!!!!!!!!!!!!!!!!! add back installpath!
+ *
+ */
+
 public class RobinMainGUI extends javax.swing.JFrame implements WindowListener {
 
     private String installPath;
@@ -981,10 +987,14 @@ private void DGEButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         // this will throw an error when in test mode on a mac
         if (Utilities.isWindows()) {
             installPath = Utilities.getInstallPath(this, "Robin2.exe");
+            /**FIXME **/ 
+            if (installPath == "") { 
+            installPath="C:\\Program Files\\RobiNA";}
+            
         } else {
             installPath = Utilities.getInstallPath(this, "Robin2.jar");
         }
-
+        SimpleLogger.getLogger(true).logMessage("installPath"+installPath);
         File confFile = new java.io.File(this.getResourcePath(), "robin.conf");
         SimpleLogger.getLogger(true).logMessage(confFile.getAbsolutePath());
         // do we already have a config file?

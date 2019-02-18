@@ -17,7 +17,7 @@ import de.mpimp.golm.robin.data.RNASeqDataModel;
 import de.mpimp.golm.common.gui.SimpleErrorMessage;
 import de.mpimp.golm.common.logger.SimpleLogger;
 import de.mpimp.golm.robin.GUI.ProgressDialog;
-import de.mpimp.golm.robin.rnaseq.mapping.RNASeqBowtieBuildProcess;
+import de.mpimp.golm.robin.rnaseq.mapping.RNASeqIndexBuildProcess;
 import de.mpimp.golm.robin.rnaseq.parser.RNASeqReferenceParser;
 import java.awt.FileDialog;
 import java.awt.Frame;
@@ -256,6 +256,7 @@ private void referenceIndexBoxActionPerformed(java.awt.event.ActionEvent evt) {/
 
     //DEBUG
     System.out.println("chosen refindex="+dataModel.getReferenceindexName());
+    System.out.println(evt);
 
     mainPanel.readyToStartMapping();
 }//GEN-LAST:event_referenceIndexBoxActionPerformed
@@ -315,17 +316,17 @@ private void referenceIndexBoxActionPerformed(java.awt.event.ActionEvent evt) {/
                                 + "%)");
                         JOptionPane.showMessageDialog(RNASeqRefTranscriptomePanel.this,
                                 "The reference contains sequences with ambiguous nucleotides\n"
-                                + "Alignments to these sequences will be considered invalid\n"
-                                + "by BOWTIE when aligning the reads to the reference.",
+                                + "Alignments to these sequences might be considered invalid\n"
+                                + "by kallsio when aligning the reads to the reference.",
                                 "Ambiguous nucleotides in reference", JOptionPane.WARNING_MESSAGE);
                     }
 
                     JOptionPane.showMessageDialog(RNASeqRefTranscriptomePanel.this,
                             "Robin will now prepare the reference sequences for\n"
-                            + "bowtie - this may take a while depending on the size\n"
+                            + "kallisto - this may take a while depending on the size\n"
                             + "of the file you supplied.", "Bulding reference index", JOptionPane.WARNING_MESSAGE);
 
-                    buildNewReferenceIndex();
+                    buildNewTranscriptReferenceIndex();
                 } catch (InterruptedException ex) {
                     SimpleLogger.getLogger(true).logException(ex);
                 } catch (ExecutionException ex) {
@@ -358,12 +359,17 @@ private void referenceIndexBoxActionPerformed(java.awt.event.ActionEvent evt) {/
         mainPanel.readyToStartMapping();
     }
 
-    private void buildNewReferenceIndex() throws IOException {
+    /**
+     * build a reference KALLISTO index showing a progress dialoge etc
+     * @throws IOException
+     */
+    
+    private void buildNewTranscriptReferenceIndex() throws IOException {
 
-        mainPanel.appendToMappingProgressPane("Building Bowtie index", RobinConstants.attrBoldBlack);     // for "+dataModel.getReferenceindexName()
+        mainPanel.appendToMappingProgressPane("Building Kallisto index", RobinConstants.attrBoldBlack);     // for "+dataModel.getReferenceindexName()
 
         final ProgressDialog progress = new ProgressDialog(mainPanel.getMainGUI(), true, true);
-        progress.setText("Building bowtie index...");
+        progress.setText("Building Kallisto index...");
         progress.setIndeterminate(true);
 //        mainPanel.getMainGUI().setGrayedOut(true);
 
@@ -373,14 +379,17 @@ private void referenceIndexBoxActionPerformed(java.awt.event.ActionEvent evt) {/
         String arch = mainPanel.getDelegate().getSysArchString();
         File instDir = new File(mainPanel.getMainGUI().getInstallPath());
         File binDir = new File(instDir, "bin");
-        File bt_build = new File(binDir, "bowtie-build_" + arch);
+        File kallisto_build = new File(binDir, "kallisto.exe"); //dropped arch as we only support x64 now
 
-        SimpleLogger.getLogger(true).logMessage("bowtie_build_cmd: <" + bt_build.getCanonicalPath() + ">");
+        SimpleLogger.getLogger(true).logMessage("kallisto_build_cmd: <" + kallisto_build.getCanonicalPath() + ">");
 
-        final RNASeqBowtieBuildProcess p = new RNASeqBowtieBuildProcess(
+        ArrayList<String> kallarguments = new ArrayList<String>();
+        kallarguments.add("index");
+        final RNASeqIndexBuildProcess p = new RNASeqIndexBuildProcess(
                 dataModel,
-                bt_build.getCanonicalPath(),
-                new ArrayList<String>(), // no args
+                kallisto_build.getCanonicalPath(),
+                kallarguments,
+                "-i",
                 indexPath);
 
         ExecutorService exe = mainPanel.getExecutor();
@@ -390,13 +399,14 @@ private void referenceIndexBoxActionPerformed(java.awt.event.ActionEvent evt) {/
             public void actionPerformed(ActionEvent e) {
                 if (fut.isDone()) {
                     if (p.getExitValue() != 0) {
-                        new SimpleErrorMessage(mainPanel, "Bowtie-build process failed. Exit value:" + p.getExitValue());
+                        new SimpleErrorMessage(mainPanel, "kallisto index-build process failed. Exit value:" + p.getExitValue());
                         progress.dispose();
                         badBuild();
                         return;
                     } else {
                         progress.dispose();
                         mainPanel.getMainGUI().stopBusyAnimation();
+                        tim.stop(); //added this to not have a forever loop as the population triggers a change action event on the button
                         referenceCheckedReadyToGo();
                     }
                 }
@@ -410,6 +420,9 @@ private void referenceIndexBoxActionPerformed(java.awt.event.ActionEvent evt) {/
         tim.stop();
     }
 
+    /**
+     * add transcriptome reference files to list box based on contents in .robin directory
+     */
     private void populateReferenceBox() {
         File[] files = indexDir.listFiles(new FileFilter() {
             public boolean accept(File pathname) {

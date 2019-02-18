@@ -49,11 +49,20 @@ public class RNASeqKallistoMappingProcess extends RNASeqAbstractMappingProcess {
         System.out.println("simple oinv");
       
     }
-
+    
+    /** 
+     *  
+     * @param mainPanel
+     * @param name
+     * @param kallistoPath path to mappers
+     * @param args
+     * @param index
+     * @param queryFiles
+     */
     public RNASeqKallistoMappingProcess(
             RNASeqWorkflowPanel mainPanel,
             String name,
-            final File bowtiePath,
+            final File kallistoPath,
             final ArrayList<String> args,
             final File index,
             final ArrayList<FastQFile> queryFiles) {
@@ -66,11 +75,12 @@ public class RNASeqKallistoMappingProcess extends RNASeqAbstractMappingProcess {
             this.inputFiles = queryFiles;
             this.errorRecorder = new RNASeqBowtieErrorRecorder();
             //initAmbiguousWriter();
-            command.add(bowtiePath.getCanonicalPath());
+            command.add(kallistoPath.getCanonicalPath());
             command.add("quant");
             command.add("--single");
-            command.add("-l 200");
-            command.add("-s 20");
+            command.addAll(args);
+          /*  command.add("-l 200");
+            command.add("-s 20");*/
             KallistoOutFile =  new File(mainPanel.getDataModel().getDetailedResultsDir(),
             			mainPanel.getDataModel().getExperimentName() + "_" + name); 
             command.add("-o");
@@ -78,8 +88,8 @@ public class RNASeqKallistoMappingProcess extends RNASeqAbstractMappingProcess {
             //command.addAll(args);
             command.add("--index");
            
-            //command.add(index.getCanonicalPath());
-            command.add("D:\\backup\\ZUKUNFTSFORUM\\_______HH\\IND");
+            command.add(index.getCanonicalPath());
+            //command.add("D:\\backup\\ZUKUNFTSFORUM\\_______HH\\IND");
 
             /* add individual FASTQ files 
              note that these jointly make up the full file one process one sample! 

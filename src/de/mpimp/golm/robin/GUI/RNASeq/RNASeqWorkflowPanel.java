@@ -21,7 +21,7 @@ import de.mpimp.golm.common.utilities.Utilities;
 import de.mpimp.golm.robin.GUI.*;
 import de.mpimp.golm.robin.GUI.RNASeq.mapping.RNASeqAbstractRefPanel;
 import de.mpimp.golm.robin.GUI.RNASeq.mapping.RNASeqAbtractMappingToolSettingsPanel;
-import de.mpimp.golm.robin.GUI.RNASeq.mapping.RNASeqBowtieSettingsPanel;
+import de.mpimp.golm.robin.GUI.RNASeq.mapping.RNASeqKallistoSettingsPanel;
 import de.mpimp.golm.robin.GUI.RNASeq.mapping.RNASeqMappingResultPanel;
 import de.mpimp.golm.robin.GUI.RNASeq.mapping.RNASeqRefTranscriptomePanel;
 import de.mpimp.golm.robin.GUI.RNASeq.mapping.RNASeqReferenceGenomePanel;
@@ -1834,7 +1834,7 @@ public class RNASeqWorkflowPanel extends RobinWorkflow {
         chooseMappingToolLabel.setEnabled(false);
         chooseMappingToolLabel.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        mappingToolBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bowtie" }));
+        mappingToolBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Kallisto" }));
         mappingToolBox.setEnabled(false);
 
         selectMappingToolLabel.setText(org.openide.util.NbBundle.getMessage(RNASeqWorkflowPanel.class, "RNASeqWorkflowPanel.selectMappingToolLabel.text")); // NOI18N
@@ -3439,7 +3439,7 @@ private void referenceTypeChosen(java.awt.event.ActionEvent evt) {//GEN-FIRST:ev
         referenceDataContainerPanel.add(referenceDataPanel);
     }
 
-    mappingToolSettingPanel = new RNASeqBowtieSettingsPanel(dataModel, this);
+    mappingToolSettingPanel = new RNASeqKallistoSettingsPanel(dataModel, this);
     mappingToolSettingsContainerPanel.add(mappingToolSettingPanel);
     mappingToolSettingsContainerPanel.revalidate();
 
@@ -3626,13 +3626,16 @@ private void startMappingButtonActionPerformed(java.awt.event.ActionEvent evt) {
         for (RNASeqSample sample : dataModel.getSamples().values()) {
             RNASeqKallistoMappingProcess process = null;
             File indexFile = new File(indexDir, dataModel.getReferenceindexName());
+            System.out.println("Bindirectory"+binDir);
+            System.out.println("sysarch"+delegate.getSysArchString());
+
             process = new RNASeqKallistoMappingProcess(
                     this,
                     sample.getSampleName(),
                     /**FIXME to bindir**/
-                    new File(new File("D:\\backup\\ZUKUNFTSFORUM\\_______HH",""), "kallisto.exe"),
+                    new File(binDir, "kallisto.exe"),
                     mappingToolSettingPanel.getArgs(),
-                    indexFile,
+                    new File(indexDir, dataModel.getReferenceindexName() + "_" + dataModel.getReferenceType() + "_bwtindex"),
                     sample.getInputFiles());
 
             //process.setAnnotation(GFFAnno);            

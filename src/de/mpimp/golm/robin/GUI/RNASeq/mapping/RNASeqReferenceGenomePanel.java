@@ -19,7 +19,7 @@ import de.mpimp.golm.robin.data.RNASeqDataModel;
 import de.mpimp.golm.common.gui.MessageWindow;
 import de.mpimp.golm.common.gui.SimpleErrorMessage;
 import de.mpimp.golm.robin.GUI.ProgressDialog;
-import de.mpimp.golm.robin.rnaseq.mapping.RNASeqBowtieBuildProcess;
+import de.mpimp.golm.robin.rnaseq.mapping.RNASeqIndexBuildProcess;
 import de.mpimp.golm.robin.rnaseq.parser.RNASeqReferenceParser;
 import java.awt.FileDialog;
 import java.awt.Frame;
@@ -463,7 +463,7 @@ private void chooseReferenceFileButton1ActionPerformed(java.awt.event.ActionEven
                             + "bowtie - this may take a while depending on the size\n"
                             + "of the file you supplied.", "Bulding reference index", JOptionPane.WARNING_MESSAGE);
 
-                    buildNewReferenceIndex();
+                    buildNewGenomeReferenceIndex();
 
                 } catch (IOException ex) {                    
                     SimpleLogger.getLogger(true).logException(ex);
@@ -490,7 +490,7 @@ private void chooseReferenceFileButton1ActionPerformed(java.awt.event.ActionEven
         }
     }
 
-    private void buildNewReferenceIndex() throws IOException {
+    private void buildNewGenomeReferenceIndex() throws IOException {
 
         mainPanel.appendToMappingProgressPane("Building Bowtie index", RobinConstants.attrBoldBlack);
         final ProgressDialog win = new ProgressDialog(mainPanel.getMainGUI(), true, true);
@@ -514,10 +514,11 @@ private void chooseReferenceFileButton1ActionPerformed(java.awt.event.ActionEven
         File instDir = new File(mainPanel.getMainGUI().getInstallPath());
         File binDir = new File(instDir, "bin");
         File bt_build = new File(binDir, "bowtie-build_" + arch);
-        final RNASeqBowtieBuildProcess p = new RNASeqBowtieBuildProcess(
+        final RNASeqIndexBuildProcess p = new RNASeqIndexBuildProcess(
                 dataModel,
                 bt_build.getCanonicalPath(),
                 new ArrayList<String>(), // no args
+                null, //no switch needed for index
                 indexPath);
 
         ExecutorService exe = mainPanel.getExecutor();
@@ -536,6 +537,8 @@ private void chooseReferenceFileButton1ActionPerformed(java.awt.event.ActionEven
                         win.dispose();
                         mainPanel.getMainGUI().stopBusyAnimation();
                         // when all is done and OK
+                        /**FIXME probably needs a tim.stop() here added but not checked**/
+                        tim.stop();
                         referenceIndexBox.addItem(dataModel.getReferenceFile().getName());
                         referenceIndexBox.setSelectedItem(dataModel.getReferenceFile().getName());
                         referenceCheckedReadyToGo();

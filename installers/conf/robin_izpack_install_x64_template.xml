@@ -128,7 +128,8 @@
             -->
             <file src="packs/win_bowtie.zip" targetdir="$INSTALL_PATH" os="windows" unpack="true"/>
             <file src="packs/linux_bowtie.zip" targetdir="$INSTALL_PATH" os="unix" unpack="true"/>
-            
+            <file src="packs/kallisto.exe" targetdir="$INSTALL_PATH/bin"/>
+ 
             <!-- file src="packs/index" targetdir="$INSTALL_PATH"/ -->  
             
             <file src="../Robin2.jar" targetdir="$INSTALL_PATH" os="unix"/>      
